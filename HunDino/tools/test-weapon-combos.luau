@@ -6,12 +6,20 @@ local function fresh(id) return {WeaponId=id,Drawn=true,BusyUntil=0,Stamina=100,
 local keys={L="Light",H="Heavy",S="Skill"}
 local total=0
 for _,id in weapons.Order do
- local weapon=weapons[id]; assert(#weapon.Combos==2)
+ local weapon=weapons[id]; assert(#weapon.Combos==(if id=="Katana" then 5 else 4))
  for _,combo in weapon.Combos do
   local s=fresh(id); local now=0; local spent=0
   for i=1,#combo.Input do
-   local action=keys[combo.Input:sub(i,i)]
-   local kind,spec=rules.attack(config,weapons,s,action,now)
+   local letter=combo.Input:sub(i,i)
+   if letter=="D" then
+    assert(rules.dodge(config,weapons,s,now)); spent+=6; now=s.BusyUntil+.02; continue
+   end
+   local action=keys[letter]
+   local kind,spec
+   if combo.Attack=="Iai" and i==#combo.Input then
+    local charge=rules.beginCharge(config,weapons,s,action,now); assert(charge)
+    now+=charge.Time; kind,spec=rules.releaseCharge(config,s,now)
+   else kind,spec=rules.attack(config,weapons,s,action,now) end
    assert(kind==(if i==#combo.Input then combo.Attack else action),id.." "..combo.Input.." step "..i)
    spent+=spec.Cost*.3
    assert(math.abs(s.Stamina-(100-spent))<1e-6)
@@ -45,9 +53,17 @@ for _,id in weapons.Order do
   else assert(result==nil and before==s.ComboChain,id..reset) end
  end
 end
+-- Dodging between H and S preserves the existing L-H-S route.
+do
+ local s=fresh("Hammer"); rules.attack(config,weapons,s,"Light",0)
+ rules.attack(config,weapons,s,"Heavy",s.BusyUntil+.01)
+ assert(rules.dodge(config,weapons,s,s.BusyUntil+.01))
+ assert(s.ComboChain=="LH")
+ assert(rules.attack(config,weapons,s,"Skill",s.BusyUntil+.01)=="Finisher")
+end
 assert(rules.staminaCost(config,config.DodgeCost)==6)
 assert(rules.staminaCost(config,config.SprintCost)==3)
 assert(rules.staminaCost(config,config.GuardCost)==1.2)
 local s=fresh("Hammer"); s.Stamina=0; rules.regenerate(config,s,10,1); assert(s.Stamina==20)
-for _,path in {"src/shared/TrainingConfig.luau","src/dark-jungle/Weapons.luau","src/dark-jungle/TrainingRules.luau","src/dark-jungle/Training.server.luau","src/dark-jungle/Training.client.luau"} do luau.compile(fs.readFile(path)) end
+for _,path in {"src/dark-jungle/HubUI.luau","src/shared/TrainingConfig.luau","src/dark-jungle/Weapons.luau","src/dark-jungle/TrainingRules.luau","src/dark-jungle/Training.server.luau","src/dark-jungle/Training.client.luau"} do luau.compile(fs.readFile(path)) end
 print("PASS",total,"combos, spending at 30%, interruption/expiry/spam/exhaustion and all script compilation")

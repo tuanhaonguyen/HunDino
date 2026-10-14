@@ -1,19 +1,33 @@
 {
   "version": "v2.3",
-  "date": "2026-10-08",
-  "userInputSHA256": "6293a5ddc15f96b4cc8d649140867a7e869446c5d9355356ea912cd0e5e3b1dd",
-  "inputBackup": "C:\\Users\\khanh\\OneDrive\\Documents\\ChatGPT\\game roblox\\HunDino\\backups\\HunDino_v2_3_user_6293a5ddc15f.rbxl",
+  "date": "2026-10-09",
+  "userInputSHA256": "8c866132b89a12710ec0cb49b43fe4eb30d8097e51a7e8c5fceb301fa27ea3a6",
+  "inputBackup": "C:\\Users\\khanh\\OneDrive\\Documents\\ChatGPT\\game roblox\\HunDino\\backups\\HunDino_v2_3_before_temple_8c866132b89a.rbxl",
   "desktop": "C:\\Users\\khanh\\OneDrive\\Desktop\\game roblox\\HunDino\\HunDino_DarkJungle_v2_3.rbxl",
   "workspace": "C:\\Users\\khanh\\OneDrive\\Documents\\ChatGPT\\game roblox\\HunDino\\HunDino_DarkJungle_v2_3.rbxl",
-  "outputSHA256": "ce9b59ca9a1438b811f4b0ebb82888eab12cdb1807c8f51816bb5f7a7eea9827",
+  "outputSHA256": "07cf65d9cb5432aef1ea254a16f032c395ad5db6b4618615cc6455858fa74593",
   "changes": [
-    "Release aim on sheathe/sprint",
-    "Unlock mouse and hide reticle in Roblox menu",
-    "Preserve v2.3 binary and UTF-8 text"
+    "28 combos across 7 weapons, dodge continuations and multi-hit finishers",
+    "Stamina costs scaled once to 30% for attacks, dodge, sprint and guard",
+    "Dodge deceleration and one-slot 0.2 second late input queue",
+    "User PNG icons uploaded and four quick-access panels wired",
+    "Game design and disk cleanup report updated",
+    "TempleApproach restored to scale 1 and route endpoints: 10 road slabs and 8 moss borders"
   ],
   "verification": [
-    "12 baseline structural/rule groups passed",
-    "Post-save UTF-8 and embedded-source checks passed",
-    "Studio I, R, Shift/W and Escape input checks passed"
+    "28 combo logic and interruption tests passed",
+    "28 live combo finishers resolved; four narrow/ranged dodge finishers independently hit",
+    "Real inputs L-Q-Space-E: Light Heavy Dodge Finisher, damage 246",
+    "Guard 5 seconds cost 6; sprint 3 seconds cost 9",
+    "Four icons loaded; settings/shop/inventory/play panels exercised",
+    "Post-save sanctuary six groups passed; sources match embedded UTF-8 code",
+    "TempleApproach: all 110 support ray samples passed in Studio",
+    "Live player walked all 10 road segments to temple and back without jumping or mid-route teleportation",
+    "After Studio save: six full-map structural groups and six training sanctuary groups passed; zero road obstacle candidates"
+  ],
+  "previousReleaseSHA256": "8c866132b89a12710ec0cb49b43fe4eb30d8097e51a7e8c5fceb301fa27ea3a6",
+  "knownIssues": [
+    "No full-body animation set, multiplayer 12-client or mobile validation",
+    "Shop is preview UI only; no economy or persistence"
   ]
 }

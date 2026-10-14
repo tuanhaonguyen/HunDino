@@ -14,14 +14,14 @@ test('All seven weapons spend server-defined stamina; reject early repeated atta
   end
  end
 end)
-test('Every weapon has two distinct server-resolved finishers',function()
+test('Four finishers per weapon plus held katana Iai resolve on server',function()
  local keys={L='Light',H='Heavy',S='Skill'}
  for _,id in weapons.Order do
-  assert(#weapons[id].Combos==2)
+  assert(#weapons[id].Combos==(if id=="Katana" then 5 else 4))
   for _,combo in weapons[id].Combos do
    local s=fresh(id); local now=0; local kind
    for letter in combo.Input:gmatch('.') do
-    kind=rules.attack(config,weapons,s,keys[letter],now); now=s.BusyUntil+.02
+    if letter=='D' then assert(rules.dodge(config,weapons,s,now)) elseif combo.Attack=="Iai" and letter=="S" then local c=rules.beginCharge(config,weapons,s,"Skill",now); assert(c); now+=c.Time; kind=rules.releaseCharge(config,s,now) else kind=rules.attack(config,weapons,s,keys[letter],now) end; now=s.BusyUntil+.02
    end
    assert(kind==combo.Attack,id..combo.Input)
   end
@@ -65,7 +65,7 @@ test('UTF-8 UI, anchored geometry and embedded code compile',function()
   if item:IsA('LuaSourceContainer') then luau.compile(item.Source); scripts+=1 end
   if item:IsA('TextLabel') then for _,cp in utf8.codes(item.Text) do assert(not (cp>=128 and cp<=159) and cp~=65533,item:GetFullName()) end end
  end
- assert(scripts==7,'unexpected script count '..scripts)
+ assert(scripts==8,'unexpected script count '..scripts)
  local shared=g:GetService('ReplicatedStorage').Shared
  local function same(source,path)
   local a=source:gsub('\r\n','\n'); local b=fs.readFile(path):gsub('\r\n','\n')
@@ -76,6 +76,7 @@ test('UTF-8 UI, anchored geometry and embedded code compile',function()
   end
   return a==b
  end
+ assert(same(shared.HubUI.Source,'src/dark-jungle/HubUI.luau'))
  assert(same(shared.Weapons.Source,'src/dark-jungle/Weapons.luau'))
  assert(same(shared.TrainingRules.Source,'src/dark-jungle/TrainingRules.luau'))
  assert(same(shared.TrainingConfig.Source,'src/shared/TrainingConfig.luau'))

@@ -1,0 +1,206 @@
+{
+  "date": "2026-10-08",
+  "combos": [
+    {
+      "damage": 246,
+      "combo": "LHS",
+      "finisher": "Địa chấn",
+      "weapon": "Hammer"
+    },
+    {
+      "damage": 468,
+      "combo": "LHLSS",
+      "finisher": "Bão búa cổ đại",
+      "weapon": "Hammer"
+    },
+    {
+      "damage": 186,
+      "combo": "LDS",
+      "finisher": "Lướt bổ thiên thạch",
+      "weapon": "Hammer"
+    },
+    {
+      "damage": 292,
+      "combo": "LLLS",
+      "finisher": "Vũ điệu búa",
+      "weapon": "Hammer"
+    },
+    {
+      "damage": 128,
+      "combo": "LLH",
+      "finisher": "Song kiếm đột phá",
+      "weapon": "SwordShield"
+    },
+    {
+      "damage": 163,
+      "combo": "HLS",
+      "finisher": "Khiên mở đường",
+      "weapon": "SwordShield"
+    },
+    {
+      "damage": 26,
+      "combo": "LDS",
+      "finisher": "Lướt kiếm phản kích",
+      "weapon": "SwordShield"
+    },
+    {
+      "damage": 207,
+      "combo": "HLLS",
+      "finisher": "Vũ điệu thành đồng",
+      "weapon": "SwordShield"
+    },
+    {
+      "damage": 167,
+      "combo": "LLS",
+      "finisher": "Tam nguyệt trảm",
+      "weapon": "Katana"
+    },
+    {
+      "damage": 208,
+      "combo": "HLH",
+      "finisher": "Nhất tuyến phá",
+      "weapon": "Katana"
+    },
+    {
+      "damage": 161,
+      "combo": "LDS",
+      "finisher": "Ảnh bộ trảm",
+      "weapon": "Katana"
+    },
+    {
+      "damage": 261,
+      "combo": "HLLS",
+      "finisher": "Vũ khúc ánh trăng",
+      "weapon": "Katana"
+    },
+    {
+      "damage": 195,
+      "combo": "LHS",
+      "finisher": "Lốc thương",
+      "weapon": "Glaive"
+    },
+    {
+      "damage": 246,
+      "combo": "HHL",
+      "finisher": "Song long kích",
+      "weapon": "Glaive"
+    },
+    {
+      "damage": 34,
+      "combo": "LDS",
+      "finisher": "Lướt thương sao băng",
+      "weapon": "Glaive"
+    },
+    {
+      "damage": 254,
+      "combo": "LLLS",
+      "finisher": "Vũ điệu phong luân",
+      "weapon": "Glaive"
+    },
+    {
+      "damage": 160,
+      "combo": "LLS",
+      "finisher": "Vũ điệu sáu lưỡi",
+      "weapon": "DualDaggers"
+    },
+    {
+      "damage": 166,
+      "combo": "HLH",
+      "finisher": "Tam trảm giao thoa",
+      "weapon": "DualDaggers"
+    },
+    {
+      "damage": 26,
+      "combo": "LDS",
+      "finisher": "Ảnh bộ song nha",
+      "weapon": "DualDaggers"
+    },
+    {
+      "damage": 224,
+      "combo": "HLLS",
+      "finisher": "Vũ điệu cánh bướm",
+      "weapon": "DualDaggers"
+    },
+    {
+      "damage": 198,
+      "combo": "LLS",
+      "finisher": "Ngũ tiễn tỏa",
+      "weapon": "Bow"
+    },
+    {
+      "damage": 209,
+      "combo": "HLS",
+      "finisher": "Tam tiễn truy kích",
+      "weapon": "Bow"
+    },
+    {
+      "damage": 29,
+      "combo": "LDS",
+      "finisher": "Ảnh tiễn",
+      "weapon": "Bow"
+    },
+    {
+      "damage": 292,
+      "combo": "LLHS",
+      "finisher": "Vũ điệu thất tiễn",
+      "weapon": "Bow"
+    },
+    {
+      "damage": 274,
+      "combo": "LHS",
+      "finisher": "Song bổ khai sơn",
+      "weapon": "GreatAxe"
+    },
+    {
+      "damage": 361,
+      "combo": "HHS",
+      "finisher": "Phán quyết rừng sâu",
+      "weapon": "GreatAxe"
+    },
+    {
+      "damage": 209,
+      "combo": "LDS",
+      "finisher": "Lướt phá địa",
+      "weapon": "GreatAxe"
+    },
+    {
+      "damage": 349,
+      "combo": "HLLS",
+      "finisher": "Vũ điệu bão rìu",
+      "weapon": "GreatAxe"
+    }
+  ],
+  "dodgeRetarget": [
+    {
+      "id": "SwordShield",
+      "range": 10.664016723632812,
+      "damage": 99
+    },
+    {
+      "id": "Glaive",
+      "range": 10.478485107421875,
+      "damage": 132
+    },
+    {
+      "id": "DualDaggers",
+      "range": 10.672632217407227,
+      "damage": 126
+    },
+    {
+      "id": "Bow",
+      "range": 16.919105529785156,
+      "damage": 108
+    }
+  ],
+  "keyboardCombo": {
+    "sequence": "Mouse1 Q Space E",
+    "result": "Light Heavy Dodge Finisher",
+    "damage": 246
+  },
+  "stamina": {
+    "guard5seconds": 6,
+    "sprint3seconds": 9,
+    "dodge": 6
+  },
+  "notes": "Combo damage totals depend on test position. Initial side-dodge tests teleported mid-chain; the four narrow/ranged finishers were separately retested with natural movement and retargeted aim."
+}

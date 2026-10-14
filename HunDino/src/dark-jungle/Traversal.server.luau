@@ -1,6 +1,7 @@
 -- Map safety only: shallow decorative water and cliff falls return to sanctuary.
 -- No PvP, loot, paid actions or persistent data are introduced here.
 local Players=game:GetService('Players')
+local PetPlacement=require(game:GetService('ReplicatedStorage'):WaitForChild('Shared'):WaitForChild('PetPlacement'))
 local root=workspace:WaitForChild('HunDinoL0')
 local arrival=root.Lobby:WaitForChild('Arrival')
 local active=true
@@ -16,7 +17,7 @@ while active do
    hrp.AssemblyLinearVelocity=Vector3.zero
    local petFolder=workspace:FindFirstChild('TrainingPets')
    local pet=petFolder and petFolder:FindFirstChild('Pet_'..player.UserId)
-   if pet then pet:PivotTo(arrival.CFrame*CFrame.new(3,-1.5,3)) end
+   if pet then pet:SetAttribute('PetAttackStarted', -1); PetPlacement.place(pet,character,arrival.CFrame,petFolder) end
   end
  end
 end

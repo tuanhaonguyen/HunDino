@@ -10,7 +10,7 @@ local player = Players.LocalPlayer
 local remote = ReplicatedStorage:WaitForChild("HunDinoTrainingAction")
 local Config = require(ReplicatedStorage.Shared.TrainingConfig)
 local Weapons = require(ReplicatedStorage.Shared.Weapons)
-local gui = Instance.new("ScreenGui"); gui.Name = "HunDinoTrainingHUD"; gui.ResetOnSpawn = false; gui.Parent = player:WaitForChild("PlayerGui")
+local gui = Instance.new("ScreenGui"); gui.Name = "HunDinoTrainingHUD"; gui.ResetOnSpawn = false; gui.ZIndexBehavior=Enum.ZIndexBehavior.Sibling; gui.Parent = player:WaitForChild("PlayerGui")
 local function text(name, pos, size, value, textSize)
 	local t = Instance.new("TextLabel"); t.Name = name; t.Position = pos; t.Size = size
 	t.BackgroundColor3 = Color3.fromRGB(16, 31, 30); t.BackgroundTransparency = 0.12
@@ -58,58 +58,55 @@ local function announce(message)
 	notice.Text = message; notice.Visible = true
 	task.delay(5, function() if noticeId == id then notice.Visible = false end end)
 end
-local panel = Instance.new("Frame"); panel.Name="WeaponSelection"; panel.AnchorPoint=Vector2.new(.5,.5)
-panel.Position=UDim2.fromScale(.5,.5); panel.Size=UDim2.fromOffset(650,656)
-panel.BackgroundColor3=Color3.fromRGB(17,34,32); panel.Visible=false; panel.Parent=gui
-local corner=Instance.new("UICorner"); corner.CornerRadius=UDim.new(0,12); corner.Parent=panel
-local scale=Instance.new("UIScale"); scale.Parent=panel
-local function resizePanel() local size=workspace.CurrentCamera.ViewportSize; scale.Scale=math.min(1,(size.X-32)/650,(size.Y-60)/656) end
-workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(resizePanel); resizePanel()
-local function panelText(value,pos,size,textSize)
-	local t=Instance.new("TextLabel"); t.BackgroundTransparency=1; t.Text=value; t.TextWrapped=true
-	t.TextColor3=Color3.fromRGB(237,229,202); t.Font=Enum.Font.GothamMedium; t.TextSize=textSize; t.Position=pos; t.Size=size; t.Parent=panel; return t
+local hub
+local readyAt=0; local inputSerial=0
+local held={Light=false,Heavy=false,Skill=false}
+local chargeId=0; local activeCharge
+local chargeHUD=text("Charge",UDim2.new(.5,-170,.65,0),UDim2.fromOffset(340,44),"",16)
+chargeHUD.Visible=false
+local function cancelHeld()
+ for k in held do held[k]=false end
+ activeCharge=nil; chargeHUD.Visible=false
+ remote:FireServer("ChargeCancel")
+ if readyAt==math.huge then readyAt=os.clock()+.15 end
 end
-panelText("KHO VŨ KHÍ LUYỆN TẬP",UDim2.fromOffset(20,16),UDim2.fromOffset(570,35),23)
-panelText("Chọn một vũ khí • Nhấn R để rút sau khi trang bị",UDim2.fromOffset(20,54),UDim2.fromOffset(610,30),15)
-local close=Instance.new("TextButton"); close.Name="Close"; close.Text="×"; close.TextSize=25; close.Font=Enum.Font.GothamMedium
-close.Size=UDim2.fromOffset(40,38); close.Position=UDim2.new(1,-48,0,12); close.BackgroundTransparency=1; close.TextColor3=Color3.fromRGB(236,224,192); close.Parent=panel
-close.Activated:Connect(function() panel.Visible=false end)
+local inventory=require(ReplicatedStorage.Shared:WaitForChild("EquipmentInventory")).create(player,gui,Weapons,remote)
+local panel=inventory.Frame
+local baseTransit=require(ReplicatedStorage.Shared:WaitForChild("BaseTransitMenu")).create(player,gui,function(id) remote:FireServer("BaseTransitSelect",id) end)
 local function recipe(input)
- local key={L="Trái",H="Q",S="E"}; local parts={}
+ local key={L="Trái",H="Q",S="E",D="Space"};local parts={}
  for letter in input:gmatch(".") do table.insert(parts,key[letter]) end
  return table.concat(parts," → ")
 end
 local function recipes(weapon)
  local lines={}
- for _,combo in weapon.Combos do table.insert(lines,weapon.Attacks[combo.Attack].Name..": "..recipe(combo.Input)) end
+ for _,combo in weapon.Combos do table.insert(lines,weapon.Attacks[combo.Attack].Name..": "..recipe(combo.Input)..(if weapon.Attacks[combo.Attack].ChargeTime then " (giữ E)" else "")) end
  return table.concat(lines,"\n")
 end
-local comboHUD=text("ComboGuide",UDim2.new(0,20,.5,-90),UDim2.fromOffset(330,168),"",14)
+local comboHUD=text("ComboGuide",UDim2.new(0,20,.5,-90),UDim2.fromOffset(330,270),"",14)
 comboHUD.Visible=false
-local buttons={}
-for i,id in Weapons.Order do
-	local w=Weapons[id]; local button=Instance.new("TextButton"); button.Name=id; button.Text=""
-	button.Size=UDim2.fromOffset(298,120); button.Position=UDim2.fromOffset(20+((i-1)%2)*312,100+math.floor((i-1)/2)*130)
-	button.BackgroundColor3=Color3.fromRGB(35,58,53); button.AutoButtonColor=true; button.Parent=panel
-	local c=Instance.new("UICorner"); c.CornerRadius=UDim.new(0,7); c.Parent=button
-	local title=Instance.new("TextLabel"); title.Name="Name"; title.BackgroundTransparency=1; title.Size=UDim2.new(1,-20,0,28); title.Position=UDim2.fromOffset(10,7)
-	title.Font=Enum.Font.GothamBold; title.TextSize=18; title.TextColor3=Color3.fromRGB(239,228,195); title.Text=w.Name; title.Parent=button
-	local desc=Instance.new("TextLabel"); desc.BackgroundTransparency=1; desc.Size=UDim2.new(1,-20,0,77); desc.Position=UDim2.fromOffset(10,37)
-	desc.Font=Enum.Font.GothamMedium; desc.TextSize=12; desc.TextWrapped=true; desc.TextColor3=Color3.fromRGB(178,205,190); desc.Text=recipes(w); desc.Parent=button
-	button.Activated:Connect(function() remote:FireServer("EquipWeapon",id); panel.Visible=false end)
-	buttons[id]=button
-end
-panelText("Trái = chuột trái • Nối sau mỗi đòn, trong 1,35 giây\nI: đóng túi • G: chọn tại giá • Tiêu hao thể lực còn 30%",UDim2.fromOffset(20,616),UDim2.fromOffset(610,34),13)
-local openButton=Instance.new("TextButton"); openButton.Name="OpenWeapons"; openButton.Text="I  •  CHỌN VŨ KHÍ"
-openButton.Font=Enum.Font.GothamBold; openButton.TextSize=14; openButton.TextColor3=Color3.fromRGB(236,224,189)
-openButton.BackgroundColor3=Color3.fromRGB(32,64,53); openButton.Position=UDim2.new(1,-240,0,85); openButton.Size=UDim2.fromOffset(220,38); openButton.Parent=gui
 local function toggleMenu()
+ baseTransit:Close()
+	cancelHeld(); inputSerial+=1
+	if hub then hub:Close() end
 	if panel.Visible then panel.Visible=false; return end
-	if not player:GetAttribute("InTraining") then announce("Vào bãi luyện tập để chọn vũ khí."); return end
 	if player:GetAttribute("Drawn") then announce("Nhấn R cất vũ khí trước khi mở túi."); return end
 	panel.Visible=true; aiming=false; locked=false; remote:FireServer("Sprint",false); remote:FireServer("Aim",false); remote:FireServer("Guard",false)
 end
-openButton.Activated:Connect(toggleMenu)
+
+local refreshPreferences=function() end
+hub=require(ReplicatedStorage.Shared.HubUI).create(player,gui,{
+ Inventory=toggleMenu,
+ BeforeOpen=function()
+  baseTransit:Close()
+  cancelHeld(); inputSerial+=1
+  panel.Visible=false; aiming=false; locked=false
+  remote:FireServer("Sprint",false); remote:FireServer("Aim",false); remote:FireServer("Guard",false)
+ end,
+ Travel=function(destination) remote:FireServer("TravelMenu",destination) end,
+ Preferences=function() refreshPreferences() end,
+})
+local function menuOpen() return panel.Visible or hub:IsOpen() or baseTransit:IsOpen() end
 local function aimDirection(ranged, dodge)
 	local character = player.Character
 	local hum = character and character:FindFirstChildOfClass("Humanoid")
@@ -132,12 +129,34 @@ local function aimDirection(ranged, dodge)
 	return if dir.Magnitude > 0.01 then dir.Unit else Vector3.new(0, 0, -1)
 end
 local function send(action)
-	remote:FireServer(action, aimDirection(player:GetAttribute("WeaponId")=="Bow" and (action=="Light" or action=="Heavy" or action=="Skill"),action=="Dodge"))
+ local function dispatch()
+  if menuOpen() or GuiService.MenuIsOpen or UIS:GetFocusedTextBox() then return end
+  local id=player:GetAttribute("WeaponId")
+  local ranged=id=="Bow"
+  local direction=aimDirection(ranged and (action=="Light" or action=="Heavy" or action=="Skill"),action=="Dodge")
+  local charge=(ranged and action=="Light") or (id=="Katana" and action=="Skill" and player:GetAttribute("ComboChain")=="LHHD")
+  if charge then
+   if activeCharge then return end
+   chargeId+=1; local token=chargeId
+   activeCharge={Id=token,Action=action,Started=os.clock(),Time=if ranged then Weapons.Bow.Charge.Time else Weapons.Katana.Attacks.Iai.ChargeTime}
+   remote:FireServer("ChargeStart",{Id=token,Action=action,Direction=direction})
+   if not held[action] then
+    remote:FireServer("ChargeRelease",{Id=token,Direction=direction}); activeCharge=nil
+   end
+  else
+   remote:FireServer(action,direction)
+  end
+ end
+ inputSerial+=1; local serial=inputSerial; local remaining=readyAt-os.clock()
+ if remaining>0 and remaining<=.2 and action~="Jump" then
+  task.delay(remaining+.03,function() if serial==inputSerial then dispatch() end end)
+ elseif remaining<=0 then dispatch() end
 end
 -- Consume Space before Roblox's default jump binding. The server arbitrates
 -- jump/dodge together, so simultaneous keys cannot combine their impulses.
 local function movementAction(actionName, inputState)
-	if inputState == Enum.UserInputState.Begin and not panel.Visible and not UIS:GetFocusedTextBox() and not GuiService.MenuIsOpen then
+	if inputState == Enum.UserInputState.Begin and not menuOpen() and not UIS:GetFocusedTextBox() and not GuiService.MenuIsOpen then
+		if activeCharge then cancelHeld() end
 		if actionName == "HunDinoJump" then send("Jump") else send("Dodge") end
 	end
 	return Enum.ContextActionResult.Sink
@@ -160,28 +179,40 @@ script.Destroying:Connect(function()
 end)
 UIS.InputBegan:Connect(function(input, processed)
 	if processed or UIS:GetFocusedTextBox() then return end
-	if panel.Visible or GuiService.MenuIsOpen then return end
-	if input.UserInputType == Enum.UserInputType.MouseButton1 then send("Light")
+	if menuOpen() or GuiService.MenuIsOpen then return end
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then held.Light=true; send("Light")
 	elseif input.UserInputType==Enum.UserInputType.MouseButton2 and player:GetAttribute("WeaponId")=="Bow" and player:GetAttribute("Drawn") then aiming=true; remote:FireServer("Aim",true)
 	elseif input.KeyCode==Enum.KeyCode.F then remote:FireServer("Guard",true)
-	elseif input.KeyCode == Enum.KeyCode.Q then send("Heavy")
-	elseif input.KeyCode == Enum.KeyCode.E then send("Skill")
+	elseif input.KeyCode == Enum.KeyCode.Q then held.Heavy=true; send("Heavy")
+	elseif input.KeyCode == Enum.KeyCode.E then held.Skill=true; send("Skill")
 	elseif input.KeyCode == Enum.KeyCode.R then
-		aiming=false; remote:FireServer("Aim",false); remote:FireServer("Draw")
+		cancelHeld(); inputSerial+=1; aiming=false; remote:FireServer("Aim",false); remote:FireServer("Draw")
 	elseif input.KeyCode == Enum.KeyCode.LeftShift then
-		aiming=false; remote:FireServer("Aim",false); remote:FireServer("Sprint", true)
+		cancelHeld(); inputSerial+=1; aiming=false; remote:FireServer("Aim",false); remote:FireServer("Sprint", true)
 	elseif input.KeyCode == Enum.KeyCode.LeftControl then locked = not locked; center.Visible = locked end
 end)
 UIS.InputEnded:Connect(function(input)
+ local action=if input.UserInputType==Enum.UserInputType.MouseButton1 then "Light" elseif input.KeyCode==Enum.KeyCode.Q then "Heavy" elseif input.KeyCode==Enum.KeyCode.E then "Skill" else nil
+ if action then
+  held[action]=false
+  if activeCharge and activeCharge.Action==action then
+   remote:FireServer("ChargeRelease",{Id=activeCharge.Id,Direction=aimDirection(player:GetAttribute("WeaponId")=="Bow",false)})
+   activeCharge=nil; chargeHUD.Visible=false; readyAt=os.clock()+.12
+  end
+ end
 	if input.KeyCode == Enum.KeyCode.LeftShift then remote:FireServer("Sprint", false) end
 	if input.KeyCode==Enum.KeyCode.F then remote:FireServer("Guard",false) end
 	if input.UserInputType==Enum.UserInputType.MouseButton2 then aiming=false; remote:FireServer("Aim",false) end
 end)
+GuiService.MenuOpened:Connect(function() cancelHeld(); inputSerial+=1 end)
 UIS.WindowFocusReleased:Connect(function()
+	cancelHeld(); inputSerial+=1
 	remote:FireServer("Sprint", false); locked = false; center.Visible = false
 	aiming=false; remote:FireServer("Aim",false); remote:FireServer("Guard",false)
 end)
 local function characterAdded(character)
+ baseTransit:Close()
+	cancelHeld(); readyAt=0; inputSerial+=1; hub:Close()
 	restoreBowView()
 	local hum = character:WaitForChild("Humanoid")
 	-- Use the normal jump state/animation; Space is consumed by the binding above.
@@ -198,7 +229,7 @@ RunService:BindToRenderStep("HunDinoBowView", Enum.RenderPriority.Camera.Value-1
 	local character=player.Character; local hum=character and character:FindFirstChildOfClass("Humanoid")
 	local camera=workspace.CurrentCamera
 	local want=aiming and hum and hum.Health>0 and player:GetAttribute("WeaponId")=="Bow"
-		and player:GetAttribute("Drawn") and not panel.Visible and not GuiService.MenuIsOpen and not UIS:GetFocusedTextBox()
+		and player:GetAttribute("Drawn") and not menuOpen() and not GuiService.MenuIsOpen and not UIS:GetFocusedTextBox()
 		and camera.CameraType==Enum.CameraType.Custom
 	if bowView and (bowView.Humanoid~=hum or bowView.Camera~=camera or not hum or hum.Health<=0) then restoreBowView() end
 	if want and not bowView then
@@ -212,7 +243,7 @@ RunService:BindToRenderStep("HunDinoBowView", Enum.RenderPriority.Camera.Value-1
 	hum.CameraOffset=bowView.Offset+Vector3.new(2.6,.65,0)*bowBlend
 	camera.FieldOfView=bowView.FOV+(58-bowView.FOV)*bowBlend
 	setZoom(bowView.Distance+(8.5-bowView.Distance)*bowBlend)
-	UIS.MouseDeltaSensitivity=bowView.Sensitivity*(1-.35*bowBlend)
+	UIS.MouseDeltaSensitivity=bowView.Sensitivity*(1-.35*bowBlend)*(player:GetAttribute("AimSensitivity") or 1)
 	UIS.MouseIconEnabled=if want then false else bowView.MouseIcon
 	if not want and bowBlend<.001 then setZoom(bowView.Distance); restoreBowView() end
 end)
@@ -220,7 +251,7 @@ RunService:BindToRenderStep("HunDinoTrainingCamera", Enum.RenderPriority.Camera.
 	local character = player.Character
 	local hum = character and character:FindFirstChildOfClass("Humanoid")
 	if hum and hum.MoveDirection.Magnitude > 0.1 then lastDirection = hum.MoveDirection.Unit end
-	if not player:GetAttribute("Drawn") or GuiService.MenuIsOpen or panel.Visible or not hum or hum.Health<=0 then
+	if not player:GetAttribute("Drawn") or GuiService.MenuIsOpen or menuOpen() or not hum or hum.Health<=0 then
 		if aiming then remote:FireServer("Aim",false) end
 		aiming=false
 	end
@@ -230,20 +261,91 @@ RunService:BindToRenderStep("HunDinoTrainingCamera", Enum.RenderPriority.Camera.
 		if flat.Magnitude>.01 then hum.AutoRotate=false; root.CFrame=CFrame.lookAt(root.Position,root.Position+flat) end
 	end
 	local canControl=hum and hum.Health>0 and not GuiService.MenuIsOpen and not UIS:GetFocusedTextBox()
-	center.Visible=canControl and not panel.Visible and (locked or (player:GetAttribute("WeaponId")=="Bow" and player:GetAttribute("Drawn"))) or false
-	if canControl and (locked or aiming) and not panel.Visible then
+	center.Visible=canControl and not menuOpen() and (locked or (player:GetAttribute("WeaponId")=="Bow" and player:GetAttribute("Drawn"))) or false
+	if canControl and (locked or aiming) and not menuOpen() then
 		UIS.MouseBehavior = Enum.MouseBehavior.LockCenter; appliedMouseLock = true
 	elseif appliedMouseLock then
 		UIS.MouseBehavior = Enum.MouseBehavior.Default; appliedMouseLock = false
 	end
 end)
+local chargeClock=0
+-- Procedural R6/R15 poses, composed on C0 so default Animator tracks remain intact.
+-- Root collision stays upright; only the visual rig curls/rolls.
+local poseCache=setmetatable({},{__mode="k"})
+local function restorePose(record)
+ for motor,base in record.Bases do if motor.Parent then motor.C0=base end end
+end
+RunService.PreSimulation:Connect(function()
+ for _,viewer in Players:GetPlayers() do
+  local character=viewer.Character
+  local hum=character and character:FindFirstChildOfClass("Humanoid")
+  local root=character and character:FindFirstChild("HumanoidRootPart")
+  if not root or not hum then continue end
+  local elapsed=workspace:GetServerTimeNow()-(character:GetAttribute("EvadeStart") or -100)
+  local duration=character:GetAttribute("EvadeDuration") or .5
+  local mode=if elapsed>=0 and elapsed<duration then character:GetAttribute("EvadeMode") else nil
+  local charging=character:GetAttribute("ChargePose")
+  local old=poseCache[character]
+  if hum.Health<=0 or (not mode and not charging) then
+   if old then restorePose(old); poseCache[character]=nil end
+   continue
+  end
+  if not old then
+   old={Bases={},Root=nil}; poseCache[character]=old
+   for _,joint in character:GetDescendants() do
+    if joint:IsA("Motor6D") then
+     old.Bases[joint]=joint.C0
+     if joint.Part0==root then old.Root=joint end
+    end
+   end
+  end
+  local t=math.clamp(elapsed/duration,0,1)
+  local blend=if mode then math.min(1,t/.12,(1-t)/.15) else 1
+  for joint,base in old.Bases do
+   if not joint.Parent then continue end
+   local n=joint.Name:lower()
+   local offset=CFrame.identity
+   if joint==old.Root then
+    if mode=="Roll" then
+     offset=CFrame.new(0,-.65*blend,0)*CFrame.Angles(-math.pi*2*t,0,0)
+    elseif mode=="BowSlide" then
+     local dir=character:GetAttribute("EvadeDirection") or root.CFrame.RightVector
+     local side=root.CFrame.RightVector:Dot(dir)
+     offset=CFrame.new(0,-.6*blend,0)*CFrame.Angles(-.3*blend,0,-.35*side*blend)
+    elseif mode then offset=CFrame.Angles(-.3*blend,0,0)
+    elseif charging=="Iai" then offset=CFrame.new(0,-.35,0)*CFrame.Angles(.2,.3,0)
+    elseif charging=="Bow" then offset=CFrame.Angles(0,-.15,0) end
+   elseif n:find("hip") then
+    if mode=="Roll" then offset=CFrame.Angles(-1.2*blend,0,0)
+    elseif mode=="BowSlide" then offset=CFrame.Angles((if n:find("left") then -.8 else .55)*blend,0,0)
+    elseif charging=="Iai" then offset=CFrame.Angles(-.35,0,0) end
+   elseif n:find("knee") and (mode=="Roll" or mode=="BowSlide") then
+    offset=CFrame.Angles(1.4*blend,0,0)
+   elseif n:find("shoulder") then
+    if mode=="Roll" then offset=CFrame.Angles(-1.4*blend,0,0)
+    elseif charging=="Iai" then offset=CFrame.Angles(.5,if n:find("right") then -.7 else .3,0)
+    elseif charging=="Bow" then offset=CFrame.Angles(math.pi/2,if n:find("right") then -.8 else .2,0) end
+   end
+   joint.C0=offset*base
+  end
+ end
+end)
+RunService.RenderStepped:Connect(function(dt)
+ if not activeCharge then chargeHUD.Visible=false; return end
+ local character=player.Character; local hum=character and character:FindFirstChildOfClass("Humanoid")
+ if not hum or hum.Health<=0 then cancelHeld(); return end
+ local alpha=math.clamp((os.clock()-activeCharge.Started)/activeCharge.Time,0,1)
+ chargeHUD.Visible=not menuOpen(); chargeHUD.Text=(if alpha>=1 then "ĐẦY LỰC" else "TỤ LỰC "..math.floor(alpha*100).."%")..(if player:GetAttribute("WeaponId")=="Bow" then " • Nhả để bắn" else " • Rút đao khi đầy")
+ chargeHUD.TextColor3=if alpha>=1 then Color3.fromRGB(255,211,90) else Color3.fromRGB(200,244,224)
+ chargeClock+=dt
+ if chargeClock>=.12 then chargeClock=0; remote:FireServer("ChargeAim",aimDirection(player:GetAttribute("WeaponId")=="Bow",false)) end
+end)
 local function refresh()
 	local inTraining = player:GetAttribute("InTraining")
-	openButton.Visible=inTraining==true
-	if not inTraining then panel.Visible=false end
+	
 	local id=player:GetAttribute("WeaponId") or "Hammer"; local weapon=Weapons[id]
 	local chain=player:GetAttribute("ComboChain") or ""
-	comboHUD.Visible=inTraining==true and player:GetAttribute("Drawn")==true and not panel.Visible
+	comboHUD.Visible=inTraining==true and player:GetAttribute("Drawn")==true and not menuOpen() and player:GetAttribute("ShowComboGuide")~=false
 	local nextKeys={}
 	for _,combo in weapon.Combos do
 		if #chain>0 and combo.Input:sub(1,#chain)==chain then
@@ -252,7 +354,7 @@ local function refresh()
 	end
 	comboHUD.Text="COMBO • "..weapon.Name.."\n"..recipes(weapon)
 		.."\n"..(if #chain>0 then "Đã nối: "..recipe(chain).." | Tiếp: "..table.concat(nextKeys," / ") else "Nối sau mỗi đòn, trong 1,35 giây")
-	for key,button in buttons do button.BackgroundColor3=if key==id then Color3.fromRGB(56,100,78) else Color3.fromRGB(35,58,53) end
+	
 	title.Text = "HUNDINO • " .. (if inTraining then "BÃI LUYỆN TẬP" else "TRẠI THỢ SĂN")
 		.. "\nBase " .. tostring(player:GetAttribute("BaseId") or "…") .. " / 12"
 	local value = player:GetAttribute("Stamina") or Config.MaxStamina
@@ -260,15 +362,20 @@ local function refresh()
 	stats.Text = weapon.Name..(if player:GetAttribute("Drawn") then " • Đã rút" else " • Đang cất")
 		.. " • " .. (if player:GetAttribute("TrainingArmor") then "Giáp tập" else "Chưa mặc giáp")
 		.. "\nBạn: " .. (player:GetAttribute("TrainingDamage") or 0) .. "  |  Pet: " .. (player:GetAttribute("PetDamage") or 0)
-	help.Text="R: Rút / cất • I: Chọn vũ khí\nChuột trái: Đánh thường • Q: Đánh mạnh\nE: "..weapon.Skill.."\nV: Nhảy • Space: Lướt\nShift: Chạy • Ctrl: Ghim tâm • G: Tương tác"
-		..(if id=="Bow" then "\nGiữ chuột phải: Ngắm"..(if player:GetAttribute("BowBoost") then " • MŨI TÊN CƯỜNG HÓA" else "") elseif id=="SwordShield" then "\nF: Giữ thế đỡ" else "")
+	help.Text="R: Rút / cất • I: Túi đồ\nChuột trái: Đánh thường • Q: Đánh mạnh\nE: "..weapon.Skill.."\nV: Nhảy • Space: Né / nối combo\nShift: Chạy • Ctrl: Ghim tâm • G: Tương tác"
+		..(if id=="Bow" then "\nPhải: Ngắm • Giữ Trái: Tụ lực"..(if player:GetAttribute("BowBoost") then " • MŨI TÊN CƯỜNG HÓA" else "") elseif id=="SwordShield" then "\nF: Giữ thế đỡ" else "")
 end
-for _, attr in {"InTraining", "BaseId", "Stamina", "Drawn", "TrainingArmor", "TrainingDamage", "PetDamage", "WeaponId", "Blocking", "BowBoost", "ComboChain"} do
+for _, attr in {"InTraining", "BaseId", "Stamina", "Drawn", "TrainingArmor", "TrainingDamage", "PetDamage", "WeaponId", "Blocking", "BowBoost", "ComboChain", "InCombat"} do
 	player:GetAttributeChangedSignal(attr):Connect(refresh)
 end
+refreshPreferences=refresh
+panel:GetPropertyChangedSignal("Visible"):Connect(refresh)
 refresh()
 remote.OnClientEvent:Connect(function(event, a, b, c)
-	if event == "Message" then announce(a)
+	if event == "BaseTransitOpen" then
+  cancelHeld();inputSerial+=1;hub:Close();panel.Visible=false;aiming=false;locked=false
+  baseTransit:Open(a)
+ elseif event == "Message" then announce(a)
 	elseif event == "Jump" and player.Character == a then
 		local hum = a:FindFirstChildOfClass("Humanoid")
 		local root = a:FindFirstChild("HumanoidRootPart")
@@ -276,9 +383,19 @@ remote.OnClientEvent:Connect(function(event, a, b, c)
 			and hum.FloorMaterial ~= Enum.Material.Air then
 			hum:ChangeState(Enum.HumanoidStateType.Jumping)
 		end
+	elseif event=="ChargeStart" then
+  if activeCharge and activeCharge.Id==b then activeCharge.Time=a; readyAt=math.huge end
+ elseif event=="ChargeStop" then
+  activeCharge=nil; chargeHUD.Visible=false; readyAt=os.clock()
+ elseif event=="ChargeRejected" then
+  if activeCharge and activeCharge.Id==a then activeCharge=nil; chargeHUD.Visible=false; readyAt=os.clock() end
+ elseif event == "Dodge" then
+		readyAt=os.clock()+a
 	elseif event == "Attack" then
+		readyAt=os.clock()+(c or 0)
 		if b then announce("COMBO • "..b) end
 	elseif event == "ComboFX" then
+		if player:GetAttribute("ShowComboFX")==false then return end
 		-- Short local trails make the finisher readable without adding collision.
 		local color=if b=="Slam" then Color3.fromRGB(255,191,89) else Color3.fromRGB(113,235,214)
 		local count=if b=="Thrust" then 1 else 8
@@ -299,11 +416,12 @@ remote.OnClientEvent:Connect(function(event, a, b, c)
 	elseif event == "Shot" then
 		local distance=(b-a).Magnitude; if distance<.01 then return end
 		local arrow=Instance.new("Part"); arrow.Name="TrainingArrow"; arrow.Anchored=true; arrow.CanCollide=false; arrow.CanQuery=false; arrow.CanTouch=false
-		arrow.Size=Vector3.new(.1,.1,2.6); arrow.Material=Enum.Material.Neon; arrow.Color=if c then Color3.fromRGB(255,208,91) else Color3.fromRGB(129,222,201)
+		arrow.Size=Vector3.new(.1,.1,2.6); arrow.Material=Enum.Material.Neon; arrow.Color=if c then Color3.fromRGB(255,208,91) else Color3.fromRGB(115,255,140)
 		arrow.CFrame=CFrame.lookAt(a,b); arrow.Parent=workspace
 		local flight=math.clamp(distance/260,.06,.8)
 		TweenService:Create(arrow,TweenInfo.new(flight,Enum.EasingStyle.Linear),{CFrame=CFrame.lookAt(b,b+(b-a))}):Play(); Debris:AddItem(arrow,flight+.12)
 	elseif event == "Hit" then
+		if player:GetAttribute("ShowDamage")==false then return end
 		local anchor = Instance.new("Part"); anchor.Size = Vector3.one; anchor.CFrame = CFrame.new(a + Vector3.new(0, 2, 0))
 		anchor.Transparency = 1; anchor.Anchored = true; anchor.CanCollide = false; anchor.CanQuery = false; anchor.Parent = workspace
 		local billboard = Instance.new("BillboardGui"); billboard.Size = UDim2.fromOffset(120, 50); billboard.AlwaysOnTop = true; billboard.Parent = anchor
@@ -315,3 +433,4 @@ remote.OnClientEvent:Connect(function(event, a, b, c)
 		TweenService:Create(number, TweenInfo.new(0.8), {TextTransparency = 1}):Play(); Debris:AddItem(anchor, 0.85)
 	end
 end)
+

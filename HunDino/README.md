@@ -1,8 +1,24 @@
 # HunDino — Dark Jungle và bãi tập
 
+**Lướt Dark Step — 15/10/2026:** Space đi xa hơn khoảng 14% trong lượt đo sàn phẳng, thêm khói tối, bóng nhân vật tan dần và tư thế lao người. Thời gian và thể lực không đổi. Xem [hồ sơ và kiểm tra](DARK_STEP.md).
+
+**Dịch chuyển base ↔ sảnh — 15/10/2026:** mỗi base có bệ giữ G để về trung tâm; bệ tại sảnh mở bảng chọn Base 1–12, đánh dấu base của bạn và hiện tên chủ. Pet đi cùng, ghé base khác không đổi quyền sở hữu. Xem [cách dùng và kiểm tra](BASE_TRANSIT.md).
+
+**Nhận base ngẫu nhiên — 15/10/2026:** khi vào server, bốc một số từ 1–12. Số đã có chủ bị loại khỏi lượt bốc, tiếp tục bốc trong các số còn lại đến khi gặp base trống. Mỗi lượt tối đa 12 lần; đủ chủ thì báo server đầy. Base được giữ khi hồi sinh và trả lại khi thoát; chưa lưu quyền sở hữu qua phiên. Đã kiểm tra không trùng, còn đúng một base trống và kín cả 12 base bằng `tools/test-random-base.luau`; chạy Play xác nhận số base và biển chủ đồng bộ. Backup trước sửa: `backups/HunDino_v2_3_before_random_base_20261015.rbxl`.
+
+**Túi đồ Người/Pet — 15/10/2026:** mỗi phần có Vũ khí chỉ hiện tên và Giáp gồm năm ô Đầu/Thân/Tay/Eo/Chân. Xem trước nhân vật bên trái, bảng giáp ở giữa, món đang chọn bên phải; trang bị Người/Pet độc lập. Đã lưu bản Studio trong Documents. Xem [cách dùng và kết quả kiểm tra](INVENTORY.md).
+
+**Khôi phục tụ lực cung — 15/10/2026:** chỉ giữ chuột trái để tụ, nhả để bắn; **Q giữ nguyên là đòn mạnh**, E là kỹ năng. HUD phần trăm/đầy lực và kiểm tra thời gian giữ trên server đã được ghép vào bản Studio trong Documents. Xem [hồ sơ sửa và cách thử](BOW_CHARGE_RESTORE.md).
+
+**Bộ bảy vũ khí Pro — 15/10/2026:** đã cập nhật model, tư thế pet và VFX theo mẫu mới. Bản chứa các cập nhật pet/vũ khí vừa lưu bằng Studio nằm trong **Documents/ChatGPT/game roblox/HunDino/HunDino_DarkJungle_v2_3.rbxl**. Xem [nội dung và kiểm tra](WEAPONS_PRO.md); dùng `tools/test-weapons-pro.luau` cho bản này. Đường dẫn Desktop bên dưới là hồ sơ của mốc trước.
+
+**Cập nhật combo/UI v2.3:** 7 vũ khí × 4 combo, nối chuỗi qua lướt, tiêu hao thể lực còn 30%. Bốn icon Cửa hàng/Cài đặt/Chơi/Túi đồ đã nối với UI. Xem [cách thử 28 combo](COMBOS_V2_3.md), [thiết kế hiện hành mục 25.8](THIET_KE_GAME.md) và [danh sách file có thể dọn](DON_DEP_DU_AN.md). Shop mới là giao diện xem; chưa có giao dịch.
+
 **Map đang phát triển: `HunDino_DarkJungle_v2_3.rbxl`.** Mở bản trong `C:\Users\khanh\OneDrive\Desktop\game roblox\HunDino`. Đây là bản người dùng lưu ngày 08/10/2026, tiếp tục từ v2.2; giữ chữ tiếng Việt khi lưu bằng định dạng Roblox Place `.rbxl`. Bãi tập rộng 460 × 420 studs, có sân võ, bốn làn cung và **bảy loại vũ khí**. Cất vũ khí rồi nhấn **I** để chọn; **R** rút/cất, **V** nhảy, **Space** lướt. Cung có góc ngắm lệch vai, giữ chuột phải để ngắm. Xem [hướng dẫn và kết quả thử](TRAINING_SANCTUARY.md).
 
 **Không đồng bộ `default.project.json` vào Dark Jungle:** cấu hình này dành cho L0, sẽ thay code chuyển khu và điều khiển mới bằng code cũ. Không dựng lại map khi chưa lưu các sửa thủ công sang file riêng.
+
+**Sửa đường đền 09/10/2026:** đã căn lại 10 mặt đường TempleApproach cùng 8 viền rêu; đi thử hai chiều và kiểm tra map/bãi tập sau lưu đều đạt. Hồ sơ tại mục 25.9.
 
 ## Tài liệu bản L0.1 cũ
 

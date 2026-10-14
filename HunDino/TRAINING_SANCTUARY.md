@@ -1,5 +1,17 @@
 # HunDino — Bãi luyện tập v2.3
 
+**Đợt combo/UI 08/10/2026:** phạm vi và thông số mới ở [COMBOS_V2_3.md](COMBOS_V2_3.md), thay các mô tả combo/thể lực cũ bên dưới. Mỗi vũ khí có bốn chuỗi, có lướt nối và múa; mọi chi phí còn 30%. UI dùng bốn icon người dùng, Shop chưa giao dịch. Thiết kế cập nhật tại 25.8; việc dọn file ở [DON_DEP_DU_AN.md](DON_DEP_DU_AN.md).
+
+Kiểm tra đợt này:
+
+- Logic 28 chuỗi, ngắt/hết hạn, chống spam/thiếu thể lực, tiêu hao 30% và biên dịch source: đạt bằng `tools/test-weapon-combos.luau`.
+- Studio chạy đủ 28 chuỗi ra đúng tên đòn cuối. Thử riêng lướt ngang rồi ngắm lại: kiếm/khiên, thương, song dao, cung có sát thương đòn cuối lần lượt 99/132/126/108.
+- Chuột và phím thật: Trái → Q → Space → E búa ghi đúng Light, Heavy, Dodge, Finisher; gây tổng 246. Xếp thao tác sớm cuối đòn hoạt động, không cắt thời gian hồi.
+- Giữ F 5 giây: thể lực 100 → 94; chạy Shift/W 3 giây: 100 → 91. Lướt tiêu hao 6 trong chuỗi.
+- Bốn icon tải thành công; Túi đồ cuộn đủ bảy vũ khí, nhãn tiếng Việt không tràn; Cài đặt thay trạng thái và độ nhạy; Shop hiển thị Sắp mở; Play về trại đưa pet theo, cách chủ khoảng 5,1 studs.
+- Sáu nhóm kiểm tra bãi tập và source nhúng sau lưu đạt. Không có lỗi gameplay trong Output ở các phiên kiểm tra. Cảm giác lướt và hoạt ảnh toàn thân vẫn cần phản hồi người dùng; chưa kiểm chứng 12 client hoặc điện thoại.
+- **Đã sửa ngày 09/10/2026:** khôi phục tỷ lệ/vị trí của TempleApproach, căn đủ 10 mặt đường và 8 viền rêu. 110 điểm dò đều có nền; nhân vật đi tới đền rồi quay lại không kẹt. Sau lưu: cả sáu nhóm kiểm tra map và sáu nhóm bãi tập đạt. Chi tiết tại thiết kế mục 25.9.
+
 Cập nhật ngày 08/10/2026, tiếp tục bản v2.3 người dùng đã lưu từ công việc ngày 07/10: mở rộng bãi tập, sửa chữ, thêm bộ bảy vũ khí và sửa camera cung.
 
 ## File để chơi và chỉnh tiếp

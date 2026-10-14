@@ -1,6 +1,6 @@
 -- Các giá trị L0 là cấu hình thử, không phải cân bằng cuối của game.
 return {
-	Version = "v2.3-combos",
+	Version = "v2.3-evade-charge",
 	-- Costs here and in Weapons are base costs; scale once when spending.
 	StaminaCostScale = 0.30,
 	GuardCost = 4,
@@ -13,8 +13,15 @@ return {
 	SprintCost = 10,
 	SheatheTime = 1,
 	DodgeCost = 20,
-	DodgeTime = 0.4,
-	DodgeSpeed = 34,
+	DodgeTime = 0.55,
+	DodgeSpeed = 66,
+	CombatGrace = 3,
+	Evades = {
+		Travel = {Time=.55, Speed=66, EndSpeed=16},
+		Roll = {Time=.5, Speed=42, EndSpeed=14},
+		Combo = {Time=.4, Speed=38, EndSpeed=16},
+		BowSlide = {Time=.5, Speed=48, EndSpeed=16},
+	},
 	ComboWindow = 1.35,
 	DummyHealth = 1000,
 	PetDamage = 12,

@@ -17,7 +17,7 @@ local weapons = {
 	DualDaggers={Name="Song dao",Description="Hai lưỡi • Nhanh, sát thương mỗi hit thấp",Skill="Liên kích",
 		Attacks={Light=strike(13,5,.09,.32,7,{Hits=2}),Heavy=strike(22,11,.2,.65,8,{Hits=2}),Skill=strike(17,20,.12,.85,8,{Hits=4})}},
 	Bow={Name="Cung",Description="Giữ chuột phải để ngắm • Bắn theo tâm",Skill="Tam tiễn",Ranged=true,
-		Attacks={Light=strike(29,7,.14,.5,180),Heavy=strike(66,15,.55,1.05,210),Skill=strike(24,19,.3,.9,180,{Shots=3})}},
+		Attacks={Light=strike(40,7,.12,.48,200),Heavy=strike(82,15,.38,.88,230),Skill=strike(30,19,.24,.85,200,{Shots=3})}},
 	GreatAxe={Name="Rìu đại hai lưỡi",Description="Tầm quét rộng • Sát thương lớn",Skill="Bổ cuồng nộ",
 		Attacks={Light=strike(43,10,.28,.7,11),Heavy=strike(83,19,.55,1.2,12),Skill=strike(104,26,.5,1.35,13,{Arc=0})}},
 }
@@ -65,4 +65,57 @@ weapons.GreatAxe.Combos = {
 weapons.GreatAxe.Attacks.Rend = strike(74,29,0.42,1.4,14,{Name="Song bổ khai sơn",Hits=2,HitInterval=0.32,Arc=0,Style="Slam"})
 weapons.GreatAxe.Attacks.Execution = strike(195,34,0.7,1.55,15,{Name="Phán quyết rừng sâu",Arc=0.5,Style="Slam"})
 
+table.insert(weapons.Hammer.Combos,{Input="LDS",Attack="Vault"})
+weapons.Hammer.Attacks.Vault=strike(150,24,0.28,1.05,13,{Name="Lướt bổ thiên thạch",Style="Slam",Arc=0})
+
+table.insert(weapons.Hammer.Combos,{Input="LLLS",Attack="Dance"})
+weapons.Hammer.Attacks.Dance=strike(46,28,0.18,1.25,12,{Name="Vũ điệu búa",Hits=4,HitInterval=0.2,Arc=-1,Style="Spin"})
+
+table.insert(weapons.SwordShield.Combos,{Input="LDS",Attack="Counter"})
+weapons.SwordShield.Attacks.Counter=strike(99,22,0.18,0.85,12,{Name="Lướt kiếm phản kích",Style="Thrust",Arc=0.75})
+
+table.insert(weapons.SwordShield.Combos,{Input="HLLS",Attack="Dance"})
+weapons.SwordShield.Attacks.Dance=strike(27,26,0.2,1.1,10,{Name="Vũ điệu thành đồng",Hits=4,HitInterval=0.18,Arc=0,Style="Shield"})
+
+table.insert(weapons.Katana.Combos,{Input="LDS",Attack="Afterimage"})
+weapons.Katana.Attacks.Afterimage=strike(130,25,0.16,0.95,14,{Name="Ảnh bộ trảm",Style="Sweep",Arc=0})
+
+table.insert(weapons.Katana.Combos,{Input="HLLS",Attack="Dance"})
+weapons.Katana.Attacks.Dance=strike(28,28,0.15,1.2,12,{Name="Vũ khúc ánh trăng",Hits=5,HitInterval=0.16,Arc=-0.3,Style="Flurry"})
+
+table.insert(weapons.Glaive.Combos,{Input="LDS",Attack="Comet"})
+weapons.Glaive.Attacks.Comet=strike(132,26,0.2,1.05,19,{Name="Lướt thương sao băng",Style="Thrust",Arc=0.8})
+
+table.insert(weapons.Glaive.Combos,{Input="LLLS",Attack="Dance"})
+weapons.Glaive.Attacks.Dance=strike(38,30,0.24,1.4,16,{Name="Vũ điệu phong luân",Hits=4,HitInterval=0.22,Arc=-1,Style="Spin"})
+
+table.insert(weapons.DualDaggers.Combos,{Input="LDS",Attack="Fang"})
+weapons.DualDaggers.Attacks.Fang=strike(42,23,0.12,0.9,10,{Name="Ảnh bộ song nha",Hits=3,HitInterval=0.2,Style="Thrust",Arc=0.7})
+
+table.insert(weapons.DualDaggers.Combos,{Input="HLLS",Attack="Dance"})
+weapons.DualDaggers.Attacks.Dance=strike(16,28,0.1,1.2,9,{Name="Vũ điệu cánh bướm",Hits=8,HitInterval=0.12,Arc=-0.5,Style="Flurry"})
+
+table.insert(weapons.Bow.Combos,{Input="LDS",Attack="Comet"})
+weapons.Bow.Attacks.Comet=strike(108,24,0.18,0.8,230,{Name="Ảnh tiễn",Style="Burst",Shots=1})
+
+table.insert(weapons.Bow.Combos,{Input="LLHS",Attack="Dance"})
+weapons.Bow.Attacks.Dance=strike(24,30,0.2,1.4,200,{Name="Vũ điệu thất tiễn",Style="Burst",Shots=7,ShotInterval=0.14,Spread=0})
+
+table.insert(weapons.GreatAxe.Combos,{Input="LDS",Attack="Break"})
+weapons.GreatAxe.Attacks.Break=strike(166,28,0.35,1.2,14,{Name="Lướt phá địa",Style="Slam",Arc=0})
+
+table.insert(weapons.GreatAxe.Combos,{Input="HLLS",Attack="Dance"})
+weapons.GreatAxe.Attacks.Dance=strike(60,34,0.3,1.5,15,{Name="Vũ điệu bão rìu",Hits=3,HitInterval=0.3,Arc=-1,Style="Spin"})
+
+-- Server measures hold duration, never trusts client damage.
+weapons.Bow.Charge={Time=1.2,Multiplier=3.6,HeavyMultiplier=2.4,MaxHold=4.2}
+weapons.Bow.Attacks.Fan.Damage=34
+weapons.Bow.Attacks.Burst.Damage=44
+weapons.Bow.Attacks.Comet.Damage=130
+weapons.Bow.Attacks.Dance.Damage=29
+for _,spec in weapons.DualDaggers.Attacks do
+ spec.Damage=math.floor(spec.Damage*.90+.5)
+end
+table.insert(weapons.Katana.Combos,{Input="LHHDS",Attack="Iai"})
+weapons.Katana.Attacks.Iai=strike(135,34,.16,.95,18,{Name="Nhất thiểm rút đao",Style="Thrust",Arc=.65,ChargeTime=1.5,ChargeMultiplier=2.6})
 return weapons

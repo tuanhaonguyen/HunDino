@@ -57,7 +57,7 @@ test('Every active script compiles; exactly one base owner system',function()
   assert(not s.Source:find('Giant tree is falling',1,true))
   assert(s.Name~='BaseClaimSystem')
  end end
- assert(#scripts==(if sanctuary then 7 else 5),'Unexpected script count '..#scripts)
+ assert(#scripts==(if sanctuary then 8 else 5),'Unexpected script count '..#scripts)
  local src=g:GetService('ServerScriptService').HunDinoTraining.Source
  assert(src:find('else map.Lobby.Arrival.CFrame',1,true))
 end)

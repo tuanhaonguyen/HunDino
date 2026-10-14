@@ -1,19 +1,19 @@
 # Hồ sơ thiết kế game Roblox săn khủng long
 
-Phiên bản: 0.22 — Cập nhật: 28/09/2026
+Phiên bản hồ sơ: 0.23 — Cập nhật: 09/10/2026 — Bản game đang phát triển: v2.3
 
-Tài liệu làm việc chung, được cập nhật trong suốt quá trình phát triển. **Ưu tiên hiện tại là mục 25: sảnh 12 base và bãi luyện tập L0**, theo yêu cầu mới của người dùng. Đã có map do người dùng dựng và bản phát triển L0.1 kèm source; chưa xác nhận chạy bằng Play trong Studio. **Mục 23–24** giữ thiết kế vòng săn P1 để nối sau L0, chưa triển khai săn/bắt/thưởng/lưu tài khoản.
+Tài liệu làm việc chung, được cập nhật trong suốt quá trình phát triển. **Giai đoạn hiện tại: hoàn thiện sảnh Dark Jungle 12 base và bãi luyện tập v2.3**, kế thừa L0. Đã chạy thử trong Roblox Studio: bộ bảy vũ khí/28 combo, di chuyển, giao diện và chuyển khu/pet. Đường TempleApproach đã sửa và kiểm tra sau lưu. Chưa hoàn thành game săn khủng long; nhiệm vụ, quái săn, bắt giữ, thưởng và lưu tài khoản vẫn là phần kế tiếp chưa triển khai.
 
-**Đọc nhanh:** đọc mục 25 và README dự án trước khi làm tiếp; mục 1–22 lưu định hướng; mục 23–24 dành cho P1 sau bước sảnh/luyện tập. Nhật ký ở mục 15 là lịch sử, không phải danh sách quyết định hiện hành. Các đề xuất trong ảnh không mặc nhiên là yêu cầu người dùng đã chốt.
+**Đọc nhanh:** mục 25.1–25.5 là trạng thái hiện hành; 25.6–25.9 là nhật ký các đợt gần nhất; 25.10 ghi việc còn mở và bước tiếp theo. Mục 1–22 giữ định hướng toàn game; mục 23–24 giữ kế hoạch vòng săn P1 để nối sau bãi tập. Các thông số bãi tập là cấu hình thử, không tự chốt cân bằng săn. Nhật ký cũ không thay thế trạng thái hiện hành.
 
 | Nhóm | Cách sử dụng | Trạng thái hiện tại |
 | --- | --- | --- |
-| Yêu cầu đã thống nhất | Giữ khi làm hệ thống tương ứng; xem nhãn ở từng mục | Đã ghi thiết kế, chưa lập trình |
-| Ưu tiên hiện tại L0 | Map sảnh 12 base, khu chuyển sang luyện tập, búa/giáp/đòn đánh/hình nộm/pet cơ bản | Đã tạo bản phát triển; kiểm tra trực tiếp trong Studio còn mở, xem mục 25 |
-| P1 sau L0 | Solo trên PC, búa với combo ngắn, một quái/một đòn, pet cơ bản, săn/bắt, thưởng, nâng cấp, một ống và lưu | Giữ kế hoạch P1-0 → P1-G; tái sử dụng phần L0 đã đạt, không bắt đầu lại từ đầu |
-| Định hướng toàn game ngoài P1 | Điện thoại hoàn chỉnh, săn đội, bảy vũ khí, nhiều loài/hệ, năm ống, sảnh 12 người, pet nâng cao | Để mốc sau; vẫn giữ yêu cầu game hỗ trợ hai nền tảng |
-| Cấu hình thử | Thông số và cách xử lý do trợ lý đề xuất tại mục 23–24 | Có thể điều chỉnh sau thử nghiệm; chưa phải chốt toàn game |
-| Chưa chốt | Các lựa chọn được đánh dấu còn mở | Không tự coi là quyết định; chỉ giải quyết khi bước làm phụ thuộc vào chúng |
+| Yêu cầu toàn game đã thống nhất | Giữ khi làm hệ thống tương ứng; xem nhãn từng mục | Một phần nền tảng đã triển khai; không đồng nghĩa mọi yêu cầu đã lập trình |
+| Ưu tiên hiện tại | Sảnh Dark Jungle 12 base, bãi tập 460 × 420, bảy vũ khí/28 combo, giáp/pet mẫu và UI | Đã có bản v2.3 chơi thử PC; chi tiết và giới hạn kiểm chứng tại mục 25 |
+| Vòng săn P1 tiếp theo | Một quái/một đòn, săn/bắt, thưởng, nâng cấp, một ống và lưu | Chưa hoàn thành vòng săn; tái sử dụng nền tảng hiện có, không dựng lại từ đầu |
+| Định hướng mở rộng | Săn đội, nhiều loài/hệ, năm ống, pet nâng cao, điện thoại | Chưa triển khai; sảnh 12 base và bảy vũ khí đã có ở bãi tập, chưa chứng minh săn đội/hiệu năng 12 người |
+| Cấu hình thử hiện hành | Phím, combo, thể lực, camera và UI v2.3 tại mục 25 | Đã triển khai thử; còn cần phản hồi cảm giác chơi và cân bằng |
+| Chưa chốt | Quyết định toàn game và lựa chọn được đánh dấu còn mở | Chỉ giải quyết trước bước triển khai phụ thuộc; không coi góp ý chưa duyệt là quyết định |
 
 ## 1. Cách đọc và cập nhật
 
@@ -281,6 +281,8 @@ Trạng thái hiện tại: đang triển khai L0 tại mục 25 trên map 12 ba
 
 - **28/09/2026 — v0.22:** Người dùng chốt đổi 16 → 12 người, bắt đầu dự án và ưu tiên map/base + bãi luyện tập. Đọc HunDino1.rbxl hiện có: 12 base, 3539 đối tượng và script mẫu. Tạo bản sao nguyên vẹn, xuất bản phát triển L0.1 với source búa/giáp mẫu/hình nộm/pet cơ bản/cổng chuyển khu. Chín nhóm kiểm tra tự động đạt; thao tác Studio bị lỗi nên chưa xác nhận Play. Giữ P1 để nối sau; chưa mở hệ thống săn, thưởng hoặc lưu.
 
+- **09/10/2026 — v0.23:** Đồng bộ hồ sơ với game v2.3: Dark Jungle 12 base, bãi tập lớn, bảy vũ khí/28 combo, thể lực còn 30%, lướt/camera cung, bốn UI và sửa đường TempleApproach. Thay trạng thái L0 cũ bằng kết quả đã thử Studio; phân biệt tính năng thử, phần chưa triển khai và việc chưa kiểm chứng. Giữ nguyên các quyết định toàn game còn mở.
+
 ## 16. Đánh giá mức độ sẵn sàng — 21/09/2026
 
 **Lưu ý cập nhật 28/09:** phần đánh giá dưới đây dành cho vòng săn. Ưu tiên triển khai đã chuyển sang sảnh/luyện tập L0 ở mục 25.
@@ -371,7 +373,7 @@ Hai cách xác định hướng: **theo hướng di chuyển** và **theo hướ
 
 ## 18. Làm rõ từng phần — Trang bị, vũ khí và chiến đấu
 
-**Trạng thái:** yêu cầu nền tảng đã được ghi nhận. Góp ý và câu hỏi bên dưới chưa tự trở thành quyết định. Vật dụng bắt giữ ở mục 21; cấu hình vũ khí bản thử ở mục 23.
+**Trạng thái:** yêu cầu nền tảng đã được ghi nhận. Góp ý và câu hỏi bên dưới chưa tự trở thành quyết định. Vật dụng bắt giữ ở mục 21; cấu hình vòng săn P1 ở mục 23. Bãi tập hiện đã có bảy vũ khí/28 combo; cấu hình triển khai và phím hiện hành ở mục 25, chưa chốt cân bằng toàn game.
 
 ### Túi đồ và trang bị khởi đầu — đã thống nhất
 
@@ -393,7 +395,7 @@ Hai cách xác định hướng: **theo hướng di chuyển** và **theo hướ
 | Búa tạ | Đầu búa lớn, thân/cán to như khúc củi; chuỗi đòn kết hợp kỹ năng mở ra combo đặc biệt, là phần quan trọng của sức mạnh vũ khí; cần tạo cảm giác đòn đánh có lực |
 | Rìu đại hai lưỡi | Hai mảng lưỡi ở hai bên; tấn công mượt, thiên về sức tấn công |
 
-Danh sách trên là phạm vi định hướng game. **P1 đã chọn búa làm trước** trong cấu hình thử mục 23; sáu loại còn lại để sau. Không cần chọn lại vũ khí trước khi bắt đầu P1-A.
+Danh sách trên là phạm vi định hướng game. **Bãi tập v2.3 đã có đủ bảy vũ khí, mỗi loại bốn combo** theo yêu cầu mới, xem mục 25. Kế hoạch vòng săn P1 tại mục 23 vẫn dùng búa để kiểm chứng với quái trước; sáu loại còn lại đã có mẫu luyện tập nhưng chưa được cân bằng/tích hợp vào săn.
 
 **Định hướng cân bằng đã nêu:** song dao dùng nhiều đòn nhẹ; búa có sát thương mỗi đòn cao hơn và có chuỗi thao tác mở combo đặc biệt. Người dùng muốn cả hai có chỗ đứng trong cách chơi hiệu quả. Đánh giá búa phải xét cả khả năng thực hiện combo đặc biệt, không chỉ tốc độ và sát thương đánh thường. Chỉ số, thời gian combo, thể lực, khả năng đánh trúng và cơ hội ra đòn cần thử trước khi xác nhận cân bằng.
 
@@ -892,9 +894,9 @@ Mục 23 xác định cấu hình và thứ tự; mục 24 giải thích vận h
 
 - **P1 tối thiểu 0–D:** PC, búa/combo ngắn, một quái/một đòn, pet cơ bản, săn thường hạ hoặc bắt; dữ liệu thử trong bộ nhớ.
 - **P1 đầy đủ 0–G:** thêm thưởng, thương nhân/chế bẫy, nâng cấp, cá thể/một ống và lưu qua lần thoát đã kiểm tra.
-- **Ngoài P1:** điện thoại hoàn chỉnh, săn đội/10%, ba quái/map, quái giao chiến, hệ/biến thể, nhiều đòn, đầu/chân/đuôi, combo dài, bảy vũ khí, nhiệm vụ chỉ bắt sống, năm ống, sảnh 12 người, tham quan base, kỷ lục hoàn chỉnh, pet nâng cao.
+- **Ngoài nghiệm thu vòng săn P1:** điện thoại hoàn chỉnh, săn đội/10%, ba quái/map, quái giao chiến, hệ/biến thể, nhiều đòn quái, đầu/chân/đuôi, nhiệm vụ chỉ bắt sống, năm ống, tham quan base, kỷ lục và pet nâng cao. Bảy vũ khí/combo dài và sảnh 12 base đã có trong bãi tập v2.3; việc cân bằng chúng cho săn và kiểm chứng đủ 12 người vẫn chưa làm.
 - **Còn mở toàn game:** máu theo đội/phạm vi thưởng 10%, quái kết liễu nhau, đuôi, chia biến thể, bố trí base; chỉ cần giải quyết trước mốc liên quan.
-- P1 chưa hoàn thành bước nào. L0 đang xây một phần nền tảng búa/pet nhưng chưa phải vòng săn; khi chuyển sang P1 cần đối chiếu tiêu chí và tái sử dụng. Kho bộ nhớ không chứng minh lưu qua lần thoát; PC đạt không có nghĩa điện thoại đã được kiểm tra.
+- Chưa nghiệm thu mốc P1 nào theo đầy đủ tiêu chí vòng săn. Bãi tập v2.3 đã có nền tảng bảy vũ khí/28 combo, thể lực, UI, pet mẫu và sảnh; khi chuyển sang P1 phải đối chiếu lại tiêu chí và tái sử dụng phần đã đạt. Kho bộ nhớ không chứng minh lưu qua lần thoát; PC đạt không có nghĩa điện thoại đã được kiểm tra.
 
 ### 24.3. Vòng đời nhiệm vụ dùng thử
 
@@ -1145,52 +1147,133 @@ Tra cứu ngày 27/09/2026; dùng làm căn cứ cho thiết kế kỹ thuật, 
 - [Roblox — Player data and purchasing](https://create.roblox.com/docs/cloud-services/data-stores/player-data-purchasing): quản lý dữ liệu người chơi, khóa phiên, xử lý lỗi và ghi dữ liệu theo thứ tự. Phần P1 bên trên là thiết kế riêng, chưa dùng mã ví dụ này để tuyên bố sẵn sàng phát hành.
 
 
-## 25. Giai đoạn hiện tại — sảnh 12 base và bãi luyện tập L0
+## 25. Giai đoạn hiện tại — sảnh Dark Jungle 12 base và bãi luyện tập v2.3
 
-### 25.1. Quyết định và giới hạn
+### 25.1. Quyết định và giới hạn hiện hành
 
-**Đã chốt bởi người dùng:** giảm sảnh từ 16 xuống 12 người; mỗi người một base. Có map cơ bản 12 base nhưng muốn sáng tạo hơn. Ưu tiên nâng map/sảnh và làm khu di chuyển sang luyện tập, rồi vũ khí, giáp, đòn đánh, hình nộm và pet. Người dùng sẽ tiếp tục làm rõ thiết kế toàn game. Không chờ chốt hết hệ thống săn mới làm phần nền tảng này.
+**Đã chốt bởi người dùng:** sảnh 12 người, mỗi người một base; ưu tiên map, khu luyện tập, vũ khí, giáp, đòn đánh, hình nộm và pet trước hệ thống săn. Tiếp tục bản v2.3 đã lưu, cải thiện cảnh quan theo hướng dark fantasy jungle. Bộ bãi tập mở rộng thành bảy vũ khí, mỗi loại bốn combo, có nối lướt và chuỗi múa; giảm tiêu hao thể lực xuống còn 30% mức cũ; dùng bốn icon Shop, Settings, Play, Inventory do người dùng tạo.
 
-**Phương án thử của trợ lý:** giữ trại trong rừng và vị trí các base, bổ sung sân đón dễ nhận biết cùng cổng có biển. Bãi tập nằm tách xa trong cùng một Place để thử đi/về cục bộ; chưa quyết định đây là kiến trúc map cuối. Búa là vũ khí thử đầu; giáp/pet dùng mô hình khối tự dựng. Chưa phải đồ họa cuối cùng.
+**Phạm vi bản thử:** trại và bãi tập trong cùng Place, chuyển qua cổng G hoặc UI Chơi. Vũ khí/giáp/pet hiện là mô hình thử; hiệu ứng combo chưa phải bộ animation toàn thân hoàn chỉnh. Sảnh có 12 base nhưng chưa kiểm chứng đủ 12 client; cần kiểm tra MaxPlayers = 12 khi xuất bản.
 
-**Ngoài lần triển khai L0 này:** nhiệm vụ săn, boss thật, bẫy/bắt, tỷ lệ rơi đồ, chế/nâng cấp, kho cá thể/ống nghiệm, DataStore, quái đánh nhau, các vũ khí còn lại, hệ/biến dị, pet hồi/choáng và hệ trang bị pet, hoàn thiện điện thoại. Mọi yêu cầu này vẫn giữ trong hồ sơ.
+**Chưa triển khai trong giai đoạn này:** nhiệm vụ săn, quái săn thực, bẫy/bắt, phần thưởng/rơi đồ, chế/nâng cấp, tiền/giao dịch, kho cá thể/ống nghiệm, DataStore, quái giao chiến, hệ/biến thể, pet hồi/choáng và trang bị pet đầy đủ, điều khiển điện thoại hoàn chỉnh. Những yêu cầu này vẫn giữ trong hồ sơ.
 
-### 25.2. Bản phát triển đã tạo
+### 25.2. Nội dung đã triển khai trong v2.3
 
-| Phần | Nội dung trong L0.1 | Trạng thái |
+| Phần | Hiện trạng | Giới hạn |
 | --- | --- | --- |
-| Map nguồn | Bản sao HunDino1.rbxl trên Desktop; nguyên bản không thay đổi | Đã sao lưu và đối chiếu |
-| Sảnh | Đủ 12 base giữ vị trí; sân đón, cổng, biển số/chủ base; một điểm xuất hiện chung | Đã dựng file; cần Play/duyệt thẩm mỹ |
-| Cây cảnh | 14 cụm cây/đá cản sân đón dời sang mép rừng trong bản phát triển; giữ đủ đối tượng map gốc | Đã kiểm tra số đối tượng |
-| Base trong phiên | Gán base trống, trả khi rời; giới hạn 12 ở script | Có code; chưa thử 12 client. Cần đặt MaxPlayers = 12 khi xuất bản |
-| Khu luyện tập | Cổng G đi/về trong cùng Place, 3 hình nộm, giá giáp, bảng reset thống kê | Có map + code; cần thử trực tiếp |
-| Búa | R rút/cất 1 giây; chuột trái/Q/E; thường → mạnh → kỹ năng kết thúc; kiểm tra tầm, hướng, vật cản | Logic combo kiểm tra đạt; chưa kiểm chứng cảm giác/hit trong engine |
-| Di chuyển | Shift tự cất rồi chạy; Ctrl ghim tâm; Space lướt thử; dùng/hồi thể lực | Có code; chưa có hoạt ảnh lộn/né hoàn chỉnh hoặc i-frame |
-| Giáp | Mẫu giáp ngực/vai, mặc/tháo ở giá trang bị | Chỉ ngoại hình thử, chưa chỉ số phòng thủ/chế tạo |
-| Pet | Theo chủ, qua cổng cùng chủ, đánh hình nộm chủ vừa đánh theo chu kỳ; có kiểm tra vật cản | Cần thử đường đi; chưa tìm đường vòng, có thể mắc cây/tường |
-| Giao diện | Vị trí/base, phím, trạng thái búa/giáp, thể lực, sát thương riêng người/pet và số nổi | Có code; cần kiểm tra màn hình thật |
+| Map chính | Dark Jungle có 12 base, đường nối, cây cổ thụ, khu đền, ba tầng thác và mặt nước | Thẩm mỹ/hiệu năng còn cần đánh giá; không coi đã hoàn thiện đồ họa |
+| Đường đền | Sửa 10 WalkSurface và 8 MossEdging của TempleApproach; khôi phục tỷ lệ/vị trí nối tuyến | Đã đi thử hai chiều; chi tiết 25.9 |
+| Base trong phiên | Gán base trống và trả khi người chơi rời | Chưa có lưu bố trí/cá thể; chưa thử 12 client |
+| Bãi tập | 460 × 420 studs; sân võ ba hình nộm; bốn làn cung 30/60/90/120 studs; nhà vũ khí, hồ, cây, đèn và cổng về | Cùng Place; chưa có quái tấn công |
+| Vũ khí | Búa, kiếm & khiên, katana, thương cán dài, song dao, cung, rìu đại hai lưỡi; mỗi loại bốn combo, tổng 28 | Thông số và hoạt ảnh thử; chưa cân bằng săn |
+| Combo/lướt | Máy chủ xác nhận chuỗi, nhịp, thể lực và sát thương; có nối lướt, nhiều hit và chuỗi múa | Không thêm i-frame; cảm giác cần người dùng thử |
+| Cung | Camera lệch vai phải, chuyển zoom/FOV mượt, tâm giữa viewport; hủy ngắm khi cất/chạy/mở menu phù hợp | Bắn raycast; chưa mô phỏng đạn cong |
+| Giáp/khiên | Giáp ngoại hình mẫu; F giữ thế đỡ với kiếm & khiên | Chưa kiểm chứng giảm sát thương do bãi chưa có địch tấn công |
+| Pet | Theo chủ, đánh hình nộm theo nhịp và đi cùng khi chuyển khu | Chưa có hồi chủ/choáng/trang bị nâng cao; không khẳng định mọi đường đi đều hết kẹt |
+| UI | Bốn icon mở Túi đồ, Chơi, Cài đặt, Cửa hàng; HUD thể lực/combo/sát thương; chữ tiếng Việt qua kiểm tra UTF-8 | Túi đồ/cài đặt trong phiên; Shop chỉ xem, ghi Sắp mở |
+| Dữ liệu | Trang bị thử, base và thống kê hoạt động trong phiên | Chưa lưu tài khoản, không có giao dịch hoặc thưởng săn |
 
-### 25.3. Phím và thông số L0 dùng thử
+### 25.3. Điều khiển và thông số thử hiện hành
 
-- WASD di chuyển; R rút/cất; Shift chạy sau cất; Ctrl ghim tâm tự tạo. Shift Lock mặc định tắt trong bản phát triển.
-- Chuột trái thường (36 sát thương / 8 thể lực / 0,55 giây), Q mạnh (70 / 16 / 1,10), E kỹ năng (50 / 12 / 0,70). Đúng chuỗi thường → mạnh → E thì đòn cuối là 140 / 20 / 1,20. Chờ đòn trước kết thúc; cửa sổ nối 1 giây sau khi kết thúc đòn trước.
-- Thể lực tối đa 100; hồi 20/giây sau 0,75 giây nghỉ. Chạy tốn 10/giây. Space lướt tốn 20, kéo dài 0,4 giây; đây là chuyển động thử, chưa phải bộ hoạt ảnh né cuối.
-- Hình nộm 1000 máu, về đầy khi hết; không có thưởng. Pet 12 sát thương mỗi 4 giây vào mục tiêu chủ vừa đánh khi còn gần.
-- G tương tác cổng/giá giáp/reset; thay giáp và reset cần cất búa. Bảng reset chỉ xóa thống kê của chính người thao tác.
-- Chuột phải vẫn xoay camera mặc định; chưa có cung hoặc chế độ ngắm riêng trong L0. Phím/cơ chế toàn game giữ ở mục 17–18.
+| Thao tác | Phím/điều kiện |
+| --- | --- |
+| Di chuyển / chạy | WASD / Shift; chạy sau cất vũ khí |
+| Rút/cất / chọn vũ khí | R / I hoặc Túi đồ; chọn khi cất và ở bãi tập |
+| Thường / mạnh / kỹ năng | Chuột trái / Q / E |
+| Nhảy / lướt | V / Space; Space không đồng thời nhảy mặc định |
+| Ghim tâm / ngắm cung | Ctrl / giữ chuột phải khi rút cung |
+| Giữ khiên | F với kiếm & khiên |
+| Tương tác | Giữ G gần cổng, giá giáp, giá vũ khí hoặc bảng thống kê |
+| Chuyển trại ↔ bãi tập | Cổng hoặc Chơi; phải cất vũ khí/dừng động tác |
 
-### 25.4. Kiểm tra và bước tiếp tục
+- Bảy vũ khí có bốn chuỗi mỗi loại. Bảng 28 chuỗi, sát thương, số hit và thể lực đòn cuối ở [COMBOS_V2_3.md](COMBOS_V2_3.md); đây là cấu hình thử hiện tại.
+- Nối trong 1,35 giây sau đòn; cho nhập sớm một thao tác trong 0,2 giây cuối. Lướt giữ chuỗi; chuỗi có bước lướt sẽ ghi nhận bước đó. Cất/đổi, giữ khiên, chạy, nhảy, chuyển khu, chết hoặc hết hạn ngắt chuỗi.
+- Chi phí thể lực nhân 0,30 đúng một lần, tức còn 30% mức cũ: lướt 6; chạy 3/giây; khiên 1,2/giây. Búa thường/mạnh/kỹ năng: 2,4/4,8/3,6. Đòn cuối theo bảng combo.
+- Thể lực tối đa 100, hồi 20/giây sau 0,75 giây nghỉ. Lướt kéo dài 0,4 giây, giảm tốc 34 → 16 studs/giây, giữ vận tốc đi bộ khi tiếp tục di chuyển.
+- Camera cung lệch vai phải, zoom 8,5 studs, FOV 58; độ nhạy ngắm cơ sở 65%, có tùy chọn trong Cài đặt. Nhả ngắm/cất/hồi sinh trả camera; menu Esc nhả chuột.
+- Hình nộm tự hồi để luyện, không phát thưởng. Pet và giáp vẫn là mẫu trong bãi tập.
 
-**Đã đạt:** 9 nhóm kiểm tra bằng Lune: biên dịch toàn bộ source Luau, combo đúng/sai/hết hạn, chặn đánh trong thời gian chờ, không đánh khi cất/chạy/thiếu thể lực, hồi đúng nhịp và có trần, bảo toàn đối tượng và vị trí 12 base, đúng một điểm spawn/cổng/ba hình nộm, code trong map khớp source.
+### 25.4. Kiểm chứng hiện tại
 
-**Chưa xác nhận:** mở và Play trong Roblox Studio, cảm giác búa/camera/lướt, đường đi pet, đường vào/ra cổng, hoạt động nhiều client và hiệu năng 12 người. Công cụ điều khiển cửa sổ bị lỗi nhập liệu/foreground; không coi các kiểm tra ngoài engine là bằng chứng Play đã đạt. Checklist thao tác đầy đủ ở README.
+**Đã kiểm tra và đạt đến 09/10/2026:**
 
-**Tiếp tục đúng chỗ đang dở:** mở HunDino_L0.rbxlx → Play → sửa lỗi đỏ nếu có → thử vòng sảnh/cổng/búa/hình nộm/pet → lấy ý kiến về bố cục → cải thiện map/hoạt ảnh. Tái sử dụng source hiện có. Không chạy lại trình dựng map nếu đang có sửa thủ công chưa được lưu riêng; không thay map đang làm bằng template Rojo trống.
+- Logic 28 combo, ngắt/hết hạn/thiếu thể lực và biên dịch source. Trong Studio, cả 28 chuỗi ra đúng đòn cuối; thử riêng bốn đòn cuối tầm hẹp/tầm xa sau lướt có sát thương.
+- Phím/chuột thật Trái → Q → Space → E với búa ghi đúng chuỗi, tổng sát thương 246. Giữ khiên 5 giây tiêu 6; chạy 3 giây tiêu 9 thể lực.
+- Bốn icon tải được, UI mở và thao tác được, chọn vũ khí/cài đặt/chuyển khu hoạt động; pet theo khi về trại. Kiểm tra UTF-8 của source/UI đạt.
+- TempleApproach: 110 điểm dò có nền đỡ; đi đủ 10 đoạn tới đền và quay lại không cần nhảy hoặc dịch chuyển giữa tuyến.
+- Sau lưu bằng Studio: sáu nhóm kiểm tra cấu trúc map và sáu nhóm bãi tập đạt; không có vật cản đường được bộ kiểm tra phát hiện. Không có lỗi gameplay trong Output ở các phiên đã thử.
 
-### 25.5. File làm việc
+**Chưa xác nhận:** tải đủ 12 client, điện thoại, hiệu năng trên máy yếu, bộ hoạt ảnh toàn thân, cảm giác lướt/camera theo đánh giá người dùng và cân bằng chiến đấu với quái thật. Các kiểm tra trên không chứng minh vòng săn hoặc lưu tiến trình đã hoàn thành.
 
-- Thư mục dự án đang làm: C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino.
-- Map phát triển: HunDino_L0.rbxlx. Map nguồn bảo toàn: HunDino_original.rbxl. Bản Desktop HunDino1.rbxl vẫn giữ nguyên.
-- Hồ sơ trong thư mục HunDino là bản dùng cùng code; bản THIET_KE_GAME.md ở thư mục cha được đồng bộ cùng nội dung v0.22 lần này. Các lần cập nhật sau cần giữ hai bản khớp, tránh đọc nhầm bản cũ ở Desktop.
-- Chỉ source mới trong Training.server.luau, Training.client.luau, TrainingConfig.luau, CombatRules.luau được dùng cho L0; script chào mẫu cũ không có gameplay.
-- Không có dữ liệu lưu tài khoản; base, trang bị mẫu, sát thương tập và thể lực đều chỉ trong phiên. Không có tài sản kiếm được hoặc trao thưởng nên không liên quan bảo toàn chiến lợi phẩm của P1.
+### 25.5. File làm việc và cách tiếp tục
+
+- Map mở/chỉnh tiếp trong Studio: **C:/Users/khanh/OneDrive/Desktop/game roblox/HunDino/HunDino_DarkJungle_v2_3.rbxl**.
+- Source, công cụ, tài liệu và bản map đồng bộ: **C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino**. Giữ định dạng .rbxl; không dùng bản L0/v2.2 làm đầu vào thay thế v2.3.
+- File map đã lưu sau sửa TempleApproach có SHA256: 07cf65d9cb5432aef1ea254a16f032c395ad5db6b4618615cc6455858fa74593. Đây là dấu mốc đối chiếu, sẽ đổi khi lưu thêm.
+- Hồ sơ này được đồng bộ tới bản Desktop trong HunDino và bản THIET_KE_GAME.md ở thư mục cha Documents/game roblox. Phiên bản hồ sơ 0.23 độc lập với phiên bản map v2.3.
+- Source hiện hành ở src/dark-jungle, gồm điều khiển/chiến đấu, Weapons, TrainingRules, HubUI và chuyển khu. Không đồng bộ default.project.json dành cho L0 vào map hiện tại; không dựng lại toàn map bằng bộ dựng cũ.
+- Lưu bằng Studio để giữ Terrain; Lune chỉ dùng đọc/kiểm tra bản map hiện tại. Luôn bảo toàn sửa thủ công mới nhất trước khi đồng bộ file.
+- Bản trước sửa đường đền: backups/HunDino_v2_3_before_temple_8c866132b89a.rbxl. Danh sách file có thể dọn tại DON_DEP_DU_AN.md; chưa xóa file.
+- Kết quả thử chi tiết: TRAINING_SANCTUARY.md, COMBOS_V2_3.md và Training_v2_3_release.json.
+
+### 25.6. Cập nhật phạm vi luyện tập v2.2 — 07/10/2026
+
+Theo yêu cầu mới của người dùng, mở rộng bãi tập và đưa cả bảy vũ khí tại mục 18 vào để lựa chọn, thử đòn trên hình nộm. Giới hạn búa đầu tiên ở L0/P1 trước đây là lịch sử triển khai; không còn giới hạn bộ vũ khí của **bãi tập v2.2**.
+
+- Bãi tập 460 × 420 studs, sân võ ba hình nộm, bốn làn cung 30/60/90/120 studs, nhà vũ khí, giá giáp, hồ/cây/đèn trang trí và cổng đi/về. Sảnh giữ 12 base.
+- Bảy mẫu: búa, kiếm & khiên, katana, thương cán dài, song dao, cung, rìu đại hai lưỡi. Có mô hình, thường/mạnh/kỹ năng, thể lực và nhịp riêng. Búa giữ chuỗi thử thường → mạnh → kỹ năng kết thúc. Cung có ngắm và buff một mũi sau ngắm/lướt.
+- I chọn vũ khí khi đang cất và ở bãi tập; R rút/cất, chuột trái/Q/E đánh, V nhảy, Space lướt, G tương tác. Kiếm & khiên dùng F giữ thế đỡ thử; chưa có giảm sát thương từ địch vì bãi chưa có địch tấn công.
+- Thông số/hoạt ảnh này phục vụ thử nghiệm, không tự chốt combo đầy đủ, cân bằng, cơ chế kỹ năng cuối hoặc kiến trúc nhiệm vụ săn. Trang bị/giáp/pet vẫn chưa có dữ liệu lưu tài khoản.
+- File tại mốc lịch sử này: **HunDino_DarkJungle_v2_2.rbxlx trên Desktop/game roblox/HunDino**; hiện đã chuyển sang v2.3 theo 25.5. Source hiện hành ở Documents/ChatGPT/game roblox/HunDino; xem TRAINING_SANCTUARY.md để đọc kết quả kiểm tra và cách cập nhật an toàn. Không dùng bản L0 hoặc đồng bộ cấu hình Rojo cũ vào map mới.
+
+### 25.7. Tiếp tục bản người dùng v2.3 — 08/10/2026
+
+- File làm việc mới: **HunDino_DarkJungle_v2_3.rbxl** tại Desktop/game roblox/HunDino, do người dùng lưu từ v2.2. Tiếp tục nội dung hiện có, không dựng lại map hoặc quay về L0.
+- Giữ bãi tập lớn, bảy vũ khí, giáp/pet mẫu và camera cung lệch vai. Ngắm chuyển mượt, tâm giữa màn hình trùng tia bắn; R cất cung hoặc Shift chạy sẽ hủy ngắm. Menu Esc được nhả chuột.
+- Dùng định dạng Roblox Place `.rbxl` cho bản chỉnh tiếp: bản XML cũ có trường hợp bảng tiếng Việt bị đổi mã khi Studio lưu. Source và hướng dẫn hiện hành ở Documents/ChatGPT/game roblox/HunDino. Mọi thông số vũ khí vẫn chỉ là thử nghiệm.
+
+### 25.8. Combo, lướt và bốn nút nhanh — 08/10/2026
+
+**Yêu cầu mới:** mỗi vũ khí có bốn combo, có chuỗi kết hợp lướt và chuỗi múa; giảm mọi tiêu hao thể lực còn 30% mức trước; làm lướt bớt khựng. Dùng bộ icon Shop, Settings, Play, Inventory do người dùng tạo. Từ giai đoạn này cập nhật hồ sơ cùng mỗi đợt triển khai.
+
+**Cấu hình bãi tập đã triển khai thử:** bảy vũ khí, tổng 28 chuỗi. Búa có chuỗi ngắn Trái → Q → E và chuỗi dài Trái → Q → Trái → E → E. Mỗi loại thêm Trái → Space → E và một chuỗi múa riêng. Danh sách đầy đủ, số hit, mức tiêu hao đòn kết thúc: [COMBOS_V2_3.md](COMBOS_V2_3.md). Những câu chưa chốt ở mục 18 và giới hạn búa đầu tiên ở P1 là định hướng/lịch sử toàn game; không giới hạn bãi tập hiện tại.
+
+- Chờ đòn trước hết động tác rồi nối trong 1,35 giây; cho nhập sớm một đòn trong 0,2 giây cuối. Máy chủ vẫn quyết định thời gian, thể lực và sát thương.
+- Lướt giữ tiến trình combo; nếu chuỗi có bước lướt thì ghi nhận bước đó. Chuỗi không cần lướt vẫn tiếp tục được sau lướt. Cất/đổi, giữ khiên, chạy, nhảy, chuyển khu, chết hoặc hết hạn ngắt tiến trình. Đánh hụt vẫn có thể nối trong cấu hình thử.
+- Mọi chi phí nhân 0,30 đúng một lần: chạy 3/giây, lướt 6/lần, khiên 1,2/giây. Hồi 20/giây, tối đa 100, trễ hồi 0,75 giây giữ nguyên. Thông số cũ tại 25.3 là lịch sử.
+- Lướt vẫn 0,4 giây nhưng giảm tốc từ 34 về 16, không hạ tốc độ đi bộ xuống 8 trong lướt, giữ vận tốc theo hướng đi khi kết thúc. Không thêm i-frame.
+- Hoạt ảnh mới là chuyển động vũ khí/vệt đòn; bộ animation toàn thân và cân bằng săn thật chưa chốt.
+
+| Nút | Nội dung hiện tại | Chưa triển khai |
+|---|---|---|
+| Inventory / Túi đồ | Bảy vũ khí miễn phí trong phiên, xem bốn chuỗi mỗi loại; trang bị trong bãi tập khi cất | Kho tài khoản, chiến lợi phẩm, lưu DataStore |
+| Play / Chơi | Chuyển trại ↔ bãi tập, đưa pet theo; yêu cầu cất/dừng động tác; cổng G vẫn hoạt động | Bảng nhiệm vụ săn và ghép đội |
+| Settings / Cài đặt | Bật/tắt hướng dẫn, số sát thương, hiệu ứng combo; độ nhạy ngắm 100/75/50% | Lưu cài đặt qua phiên, điều khiển điện thoại đầy đủ |
+| Shop / Cửa hàng | Giao diện bình hồi, bộ bẫy, thuốc ngủ; ghi rõ Sắp mở | Mua bán, tiền, giá và cấp vật phẩm |
+
+**Quản lý file:** tiếp tục cùng tên `HunDino_DarkJungle_v2_3.rbxl`; giữ bản trước sửa và đồng bộ tài liệu. Chưa xóa lịch sử. Danh sách file giữ/có thể dọn và đối chiếu bản trùng ở [DON_DEP_DU_AN.md](DON_DEP_DU_AN.md).
+
+**Kiểm chứng:** 28 chuỗi đã ra đúng đòn kết thúc trong Studio; kiểm tra nhập sớm/lướt bằng phím thật, thể lực chạy/khiên, bốn UI và chuyển trại/pet đạt. Kết quả sau lưu ở TRAINING_SANCTUARY.md. Bản Desktop đầu vào có 10 miếng đường TempleApproach không khớp điểm tuyến cũ; lỗi đã tồn tại trước đợt combo/UI. Đợt đó giữ nguyên hình học; lỗi đã được sửa sau theo yêu cầu người dùng ngày 09/10/2026, xem 25.9.
+
+### 25.9. Sửa đường vào đền TempleApproach — 09/10/2026
+
+- Theo yêu cầu sửa lỗi đã ghi nhận ở 25.8, tiếp tục trên bản v2.3 hiện hành.
+- Nguyên nhân: cả Model TempleApproach bị thu nhỏ còn khoảng 0,877 lần và dịch khỏi tuyến gốc, trong khi RouteStart/RouteEnd vẫn giữ điểm nối cũ. Khôi phục tỷ lệ 1 và căn tuyến theo các điểm này.
+- Đã sửa đủ 10 WalkSurface cùng 8 MossEdging. Mặt đường rộng 20 studs, dày 2 studs, các đoạn nối chồng 1,2 studs; giữ Anchored và CanCollide.
+- Kiểm chứng trong Studio: 110 điểm dò mặt đường đều có nền đỡ; nhân vật đi đủ 10 đoạn tới đền rồi quay về, không nhảy hoặc dịch chuyển giữa tuyến, không kẹt.
+- Sau khi lưu bằng Studio: sáu nhóm kiểm tra map đạt, không có vật cản đường được phát hiện; sáu nhóm kiểm tra bãi tập/source cũng đạt. Cảnh báo bộ đọc Lune về thuộc tính Terrain chưa hỗ trợ chỉ xuất hiện khi đọc kiểm tra; không dùng Lune ghi lại map.
+- Lỗi TempleApproach ghi tại 25.8 đã giải quyết. File tiếp tục dùng HunDino_DarkJungle_v2_3.rbxl trên Desktop; bản Documents được đồng bộ. Có bản sao trước sửa trong backups/HunDino_v2_3_before_temple_8c866132b89a.rbxl.
+- Công cụ sửa riêng: tools/repair-temple-approach.luau, chỉ chạy trong Studio Edit; không dựng lại toàn map.
+
+### 25.10. Việc còn mở và bước tiếp theo
+
+**Giai đoạn hiện tại vẫn là hoàn thiện bản luyện tập v2.3.** Bản có thể chơi thử trên PC; chưa gọi là hoàn thành toàn game hoặc vòng săn P1.
+
+1. Người dùng thử bảy vũ khí/bốn combo, cảm giác lướt và ngắm cung; ghi nhận cụ thể để chỉnh tiếp trên v2.3.
+2. Tiếp tục hoàn thiện cảnh quan/UI/hoạt ảnh trong phạm vi luyện tập khi có yêu cầu; không tự chốt model hoặc bộ animation thử là bản cuối.
+3. Kiểm tra nhiều client, hiệu năng sảnh 12 base và đường đi pet trước khi xác nhận mốc tương ứng hoàn thành.
+4. Khi chuyển sang vòng săn, đối chiếu mục 23–24 với code có sẵn; bổ sung AI quái, bắt giữ, thưởng, nâng cấp/cá thể và lưu theo từng bước, tái sử dụng nền tảng hiện tại.
+
+**Chưa chốt toàn game vẫn giữ nguyên:** thông số/cân bằng vũ khí với quái, cơ chế săn đội và đóng góp 10%, chi tiết các loài/hệ/bộ phận, phần thưởng/công thức, kho/trưng bày, pet nâng cao và các mục đang gắn nhãn còn mở. Thông số thử v2.3 không tự thay các quyết định này.
+
+Đợt đồng bộ hồ sơ này chỉ cập nhật trạng thái, hướng dẫn và dẫn chiếu; không thay đổi map, mã nguồn hoặc tự triển khai thêm hệ thống.
