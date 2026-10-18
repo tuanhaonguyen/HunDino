@@ -1,0 +1,26 @@
+-- Prototype combat tuning; shared by all server-created controllers.
+-- Rest durations are real seconds and live in DinosaurRouteController.
+return {
+	MaxHealth = 1200,
+	MaxDamagePerHit = 200,
+	MaxWeaponRange = 250,
+	MinimumHitInterval = .08,
+	AttackTokenLifetime = 8,
+	BiteDamage = 24,
+	BiteWindup = .95,
+	BiteActiveSeconds = .18,
+	BiteRecovery = .45,
+	BiteCooldown = 3.5,
+	BiteRange = 36,
+	BiteMinimumFacingDot = .2,
+	BiteHitboxSize = Vector3.new(26, 16, 36),
+	BiteForwardOffset = 18,
+	BiteHeightAboveGround = 8,
+	ChaseSpeed = 16,
+	ChaseStopDistance = 18,
+	LeashDistance = 260,
+	AggroTimeout = 25,
+	BlockedTimeout = 2.5,
+	CampMargin = 20,
+	HealthbarDistance = 220,
+}

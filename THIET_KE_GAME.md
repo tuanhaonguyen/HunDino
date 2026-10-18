@@ -1,10 +1,12 @@
 # Hồ sơ thiết kế game Roblox săn khủng long
 
-Phiên bản hồ sơ: 0.23 — Cập nhật: 09/10/2026 — Bản game đang phát triển: v2.3
+Phiên bản hồ sơ: 0.32 — Cập nhật: 17/10/2026 — Sảnh/bãi tập: v2.3 — Khu săn nối sảnh: H1.3.1
 
-Tài liệu làm việc chung, được cập nhật trong suốt quá trình phát triển. **Giai đoạn hiện tại: hoàn thiện sảnh Dark Jungle 12 base và bãi luyện tập v2.3**, kế thừa L0. Đã chạy thử trong Roblox Studio: bộ bảy vũ khí/28 combo, di chuyển, giao diện và chuyển khu/pet. Đường TempleApproach đã sửa và kiểm tra sau lưu. Chưa hoàn thành game săn khủng long; nhiệm vụ, quái săn, bắt giữ, thưởng và lưu tài khoản vẫn là phần kế tiếp chưa triển khai.
+**Bản game hiện hành:** mở `HunDino/HunDino_DarkJungle_v2_3.rbxl` trong Documents. Sảnh ↔ Rừng cổ đã nối cùng Place, có nút Chơi/cổng G, Pet theo cùng và đồng hồ riêng. H1.3 thêm nghỉ 60 giây ở mọi điểm, thanh máu/hitbox và khủng long phản công người đánh; xem mục 30. File săn riêng H1.1 giữ làm nguồn. Chưa có mục tiêu nhiệm vụ hoặc thưởng.
 
-**Đọc nhanh:** mục 25.1–25.5 là trạng thái hiện hành; 25.6–25.9 là nhật ký các đợt gần nhất; 25.10 ghi việc còn mở và bước tiếp theo. Mục 1–22 giữ định hướng toàn game; mục 23–24 giữ kế hoạch vòng săn P1 để nối sau bãi tập. Các thông số bãi tập là cấu hình thử, không tự chốt cân bằng săn. Nhật ký cũ không thay thế trạng thái hiện hành.
+Tài liệu làm việc chung, được cập nhật trong suốt quá trình phát triển. **Sảnh/bãi tập v2.3 và khu săn Rừng cổ H1.3 đã đi–về và thử chiến đấu với con mẫu trong cùng bản game.** Vị trí/hình học các khu giữ theo backup mới nhất. Chưa hoàn thành game săn khủng long; nhiệm vụ, bắt giữ, thưởng và lưu tài khoản vẫn là các bước triển khai tiếp.
+
+**Đọc nhanh:** mục 30 là combat hiện hành, mục 29 là mốc nối sảnh; mục 28/27 giữ mốc H1.1/H1.0; mục 26 giữ ý tưởng đã duyệt; mục 25 mô tả sảnh/bãi tập. Mục 1–22 giữ định hướng toàn game; mục 23–24 giữ kế hoạch vòng săn P1. Thông số bản thử không tự chốt cân bằng toàn game; nhật ký cũ không thay trạng thái mới.
 
 | Nhóm | Cách sử dụng | Trạng thái hiện tại |
 | --- | --- | --- |
@@ -283,6 +285,18 @@ Trạng thái hiện tại: đang triển khai L0 tại mục 25 trên map 12 ba
 
 - **09/10/2026 — v0.23:** Đồng bộ hồ sơ với game v2.3: Dark Jungle 12 base, bãi tập lớn, bảy vũ khí/28 combo, thể lực còn 30%, lướt/camera cung, bốn UI và sửa đường TempleApproach. Thay trạng thái L0 cũ bằng kết quả đã thử Studio; phân biệt tính năng thử, phần chưa triển khai và việc chưa kiểm chứng. Giữ nguyên các quyết định toàn game còn mở.
 
+- **15/10/2026 — v0.24:** Người dùng yêu cầu duyệt demo 3D khu săn trước khi dựng Roblox; thiên nhiên bí hiểm nhưng không quá tối. Chốt lấy giờ thực khi vào khu săn rồi tăng tốc 2 phút thật/giờ trong map từ khi bắt đầu nhiệm vụ. Chi tiết tại mục 26; bố cục và trang trí vẫn là đề xuất.
+
+- **15/10/2026 — v0.25:** Người dùng yêu cầu mỗi khủng long có 8 khu để di chuyển qua lại: 3 khu hiện tại là khu chính, 5 khu còn lại là điểm đi qua/nghỉ chân. Mở rộng demo và ghi tại mục 26.4; bố trí 8 khu dùng chung là cách hiểu thử, chưa chốt lịch AI hoặc thời gian nghỉ. Chưa dựng vào Roblox.
+
+- **15/10/2026 — v0.26:** Người dùng chỉ định vòng A → R2 → C → R3 → B → R4 → R5 → R1 → A, nghỉ ở điểm xuất phát, cho đảo chiều/đi nhánh ngắn B → R1 và áp dụng nhiều tuyến cho cả ba con. Bổ sung mạng đường và các tuyến xem thử tại mục 26.5; chưa triển khai AI trong Roblox.
+
+- **15/10/2026 — v0.27:** Người dùng xác nhận “được tôi thấy rất ổn rồi” sau demo nhiều tuyến hai chiều. Ghi nhận duyệt phương án ý tưởng tại mục 26.6 để làm cơ sở dựng khung map; không coi kích thước thử, lịch AI hoặc hiệu năng đã được kiểm chứng.
+
+- **16/10/2026 — v0.30:** Ghép Rừng cổ vào bản sảnh v2.3, nối menu/cổng G đi–về với Pet; clock riêng, hồi sinh/ra biên/hết giờ về sảnh. 188 kiểm tra Edit và Play đạt; 15.066 part gốc giữ nguyên, 34 script biên dịch. Xem mục 29 và HUNTING_LINK.md.
+- **15/10/2026 — v0.29:** Bổ sung 360 cây, 150 cụm dương xỉ, 100 khối đá thành chín dải chia khu và nối con mẫu đi/nghỉ/đảo tuyến. Kiểm tra map 291/291, sáu vòng tuyến 148/148; xem mục 28. Mốc H1.0 được sao lưu trước sửa.
+- **15/10/2026 — v0.28:** Theo yêu cầu bắt đầu tạo map sau khi có khủng long mẫu, dựng và lưu khung Rừng cổ H1.0 riêng bằng Studio. Có Terrain, 8 khu + trại, 13 đường quái hai chiều + hai đường trại, con mẫu giữ rig ở A, cây/đá/phế tích/nấm sáng và đồng hồ 30 lần. 288 kiểm tra live và Play đi lại đạt; chi tiết/giới hạn tại mục 27. Không ghi đè map sảnh hoặc place model gốc.
+
 ## 16. Đánh giá mức độ sẵn sàng — 21/09/2026
 
 **Lưu ý cập nhật 28/09:** phần đánh giá dưới đây dành cho vòng săn. Ưu tiên triển khai đã chuyển sang sảnh/luyện tập L0 ở mục 25.
@@ -535,6 +549,7 @@ Phương án số của v0.20 được giữ để tham khảo **sau P1**, chưa
 - **Nhiệm vụ săn thông thường:** tiêu diệt hoặc bắt thành công mục tiêu chính đều thắng. Săn con khác không tự thay thế mục tiêu chính; hết bẫy vẫn có thể tiếp tục tiêu diệt mục tiêu.
 - **Nhiệm vụ bắt sống:** phải bắt được mục tiêu chính. Hết khả năng bắt theo giới hạn vật dụng là điều kiện thất bại người dùng nêu; xử lý khi đội còn vật dụng và khi lỡ giết mục tiêu xem mục 21.
 - Thời gian cho một nhiệm vụ dự kiến **khoảng 40 phút**; chưa chốt chính xác thời điểm bắt đầu đếm hoặc cách xử lý hết giờ.
+- Chu kỳ sáng/tối khu săn khởi tạo từ giờ thực và tăng tốc **2 phút thật = 1 giờ trong map** từ lúc bắt đầu nhiệm vụ; xem mục 26. Đồng hồ môi trường không làm ngắn thời lượng nhiệm vụ hoặc thu hoạch.
 
 ### Giới hạn tử vong và hồi sinh — đã thống nhất
 
@@ -1277,3 +1292,177 @@ Theo yêu cầu mới của người dùng, mở rộng bãi tập và đưa c�
 **Chưa chốt toàn game vẫn giữ nguyên:** thông số/cân bằng vũ khí với quái, cơ chế săn đội và đóng góp 10%, chi tiết các loài/hệ/bộ phận, phần thưởng/công thức, kho/trưng bày, pet nâng cao và các mục đang gắn nhãn còn mở. Thông số thử v2.3 không tự thay các quyết định này.
 
 Đợt đồng bộ hồ sơ này chỉ cập nhật trạng thái, hướng dẫn và dẫn chiếu; không thay đổi map, mã nguồn hoặc tự triển khai thêm hệ thống.
+
+## 26. Ý tưởng khu săn và chu kỳ ngày/đêm — 15/10/2026
+
+### 26.1. Phạm vi hiện tại
+
+- **Đã thống nhất:** làm demo 3D có thể xem và chỉnh để góp ý trước; chỉ dựng vào Roblox sau bước duyệt ý tưởng. Không coi demo là map chơi được, AI, va chạm hoặc đường đi đã kiểm chứng.
+- **Đã thống nhất:** thiên nhiên bí hiểm hơn nhưng không quá tối. Sáng/tối thay đổi theo thời gian trong cuộc săn; ban đêm vẫn cần đọc được đường đi, quái và động tác chiến đấu.
+- **Đề xuất trong demo:** rừng lòng chảo, hồ trung tâm, trại phía nam, ba bãi săn quanh hồ và đường nối thành vòng; phế tích phụ. Tăng cây cổ thụ, rễ bạnh, dây leo, dương xỉ, sương nhẹ và nấm sáng ven đường. Chưa chốt bố cục, kích thước, màu hay mức sáng cuối cùng.
+- Mẫu thử dùng khung 1.080 × 1.080 studs; giữ thao tác người dùng đã thử: trại rộng 120 studs, mật độ cây 70%. Đây là giá trị bản xem, không phải thông số map chính thức.
+
+### 26.2. Đồng hồ và ánh sáng — yêu cầu người dùng
+
+1. Khi vào khu săn, đồng hồ/ánh sáng khởi tạo theo giờ thực tại thời điểm vào. Ví dụ ngoài đời 14:00 thì trong map bắt đầu là 14:00; giữ cả phần phút.
+2. Khi nhiệm vụ bắt đầu, **mỗi 2 phút thật tương ứng 1 giờ trong map**: thời gian môi trường chạy nhanh gấp 30 lần. Không đồng bộ lại giờ thực liên tục để ghi đè đồng hồ đang tăng tốc.
+3. Giờ trong map = giờ khởi tạo + thời gian thật từ khi bắt đầu nhiệm vụ × 30; chuyển qua nửa đêm bình thường.
+4. Sáng/tối đổi dần qua ban ngày, hoàng hôn, ban đêm và bình minh. Ban đêm giữ ánh sáng nền đủ quan sát; đề xuất ánh trăng, nấm sáng và đèn trại làm điểm định hướng.
+5. Đồng hồ tăng tốc áp dụng cho lượt ở khu săn đến khi rời khu săn về sảnh trung tâm; lượt săn tiếp theo khởi tạo lại theo giờ thực lúc vào. Không mang giờ tăng tốc của cuộc săn áp lên sảnh.
+6. Ví dụ vào 14:00: sau 2 phút săn → 15:00; 8 phút → 18:00; 20 phút → 00:00 hôm sau; 40 phút → 10:00 hôm sau. Cuộc săn 40 phút đi qua **20 giờ trong map**.
+7. Đây là đồng hồ môi trường, không rút ngắn thời lượng nhiệm vụ, hồi chiêu, bẫy 13 giây, choáng pet 30 giây hoặc 120 giây thu hoạch. Hoàn thành sớm vẫn có giai đoạn thu hoạch rồi về sảnh như mục 20.
+
+### 26.3. Lựa chọn thử và điểm còn mở
+
+- Demo lấy giờ thực theo **UTC+7**, có ô đổi giờ vào và thanh tiến độ 0–40 phút để xem ánh sáng. Nút xem nhanh chỉ trình diễn 1 giây = 1 phút săn; phép quy đổi trong lượt săn vẫn là 2 phút thật/giờ trong map.
+- Demo chưa mô phỏng nhiệm vụ thắng/thua hoặc chuyển về sảnh. Mốc 40 phút là giới hạn thanh xem thử, không mặc định nhiệm vụ luôn thành công ở phút 40.
+- **Đề xuất kỹ thuật:** một đồng hồ chung do máy chủ giữ cho mỗi lượt săn; các thành viên cùng lượt thấy cùng giờ, không dùng đồng hồ môi trường riêng theo từng máy.
+- **Chưa chốt:** múi giờ khởi tạo khi đội có người ở nhiều múi giờ, xử lý chờ trước lúc bắt đầu nhiệm vụ, mức sáng nền cuối cùng và ánh sáng của sảnh. Việc tiếp tục đồng hồ qua 120 giây thu hoạch đến khi rời khu săn là cách hiểu hiện tại theo yêu cầu, cần đối chiếu khi triển khai.
+
+**Trạng thái:** cập nhật bản xem ý tưởng và hồ sơ; chưa sửa place `.rbxl`, source gameplay hoặc hệ thống Lighting trong Roblox Studio.
+
+### 26.4. Tám khu di chuyển cho mỗi khủng long
+
+**Đã thống nhất theo yêu cầu người dùng:** mỗi con khủng long có **8 khu để di chuyển qua lại**, gồm **3 khu chính hiện tại** và **5 khu phụ để đi qua/nghỉ chân**. Không chỉ giới hạn mỗi con ở một bãi chính.
+
+**Mạng khu dùng trong bản xem:** cả ba con đều tiếp cận được cùng một mạng 8 khu, với các tuyến qua A/B/C và R1–R5 như yêu cầu tại mục 26.5. Trại người chơi tách riêng, không tính vào 8 khu của thú. Chưa thiết kế thêm lãnh thổ hoặc điểm nghỉ dành riêng cho từng loài.
+
+| Khu | Vai trò | Cảnh quan đang đề xuất |
+| --- | --- | --- |
+| A | Chính | Bãi ven hồ rộng, dễ quan sát giao chiến |
+| B | Chính | Rừng đá, khoảng trống ở giữa |
+| C | Chính | Tổ/bãi cao phía bắc |
+| R1 | Nghỉ chân | Gốc cổ thụ, rễ bạnh và bóng tán |
+| R2 | Nghỉ chân | Hõm đá phủ rêu, lối vào/ra hai phía |
+| R3 | Nghỉ chân | Tận dụng khu phế tích sẵn có |
+| R4 | Nghỉ chân | Bờ suối/vũng nước nhỏ |
+| R5 | Nghỉ chân | Lùm dương xỉ ven hồ |
+
+- Demo cho chọn con A/B/C, tuyến và chiều đi để xem mô hình chuyển khu. Mỗi con có thể tiếp cận đủ 8 khu; gồm vòng đi đủ 8 khu và nhánh ngắn quay về nghỉ theo mục 26.5. Không yêu cầu mọi tuyến ngắn đều phải đi qua đủ 8 khu.
+- Mạng đường có vòng quanh hồ và nhánh rẽ; không hiểu tuyến mẫu là lịch bắt buộc hoặc yêu cầu mỗi con phải ghé đủ 8 khu trong một nhiệm vụ.
+- **Đề xuất:** giữ lối chuyển khu và mặt nền đủ thoáng cho thân/đuôi thú, người chơi đuổi theo và pet; giữ cửa ra/vào các điểm nghỉ. Cần thử va chạm, quay đầu và tìm đường thật khi dựng Roblox.
+- **Chưa chốt:** điều kiện đổi khu khi bị săn, thời gian ở mỗi khu, nghỉ/ngủ/uống nước, hồi máu tại điểm nghỉ và tần suất các con gặp nhau. Điểm nghỉ không tự đồng nghĩa vùng an toàn, hồi máu hoặc không thể giao chiến.
+- Khung 1.080 × 1.080 studs và kích thước khu vẫn là giá trị phác thảo; sẽ điều chỉnh theo tỷ lệ thú và khoảng cách di chuyển sau góp ý.
+
+**Trạng thái:** đã mở rộng bản xem ý tưởng; chưa triển khai AI di chuyển hoặc sửa map Roblox.
+
+### 26.5. Nhiều tuyến hai chiều và nghỉ ở điểm xuất phát
+
+**Đã thống nhất theo yêu cầu người dùng:**
+
+- Con A xuất hiện ở khu A và nghỉ chân trước khi đi. Tuyến được chỉ định: **A → R2 → C → R3 → B → R4 → R5 → R1 → A**.
+- Có thể đi đảo chiều và chọn nhánh khác. Ví dụ người dùng: từ A đi **R1 → R5 → R4 → B**, sau đó đi **thẳng B → R1 → A** để về nghỉ; không bắt buộc hoàn thành trọn vòng qua đủ 8 khu mỗi lần.
+- Áp dụng nguyên tắc cho cả ba con: con A/B/C có điểm xuất phát tương ứng A/B/C, nghỉ lúc xuất hiện, đi qua các khu theo nhiều tuyến rồi có thể quay về điểm xuất phát nghỉ chân.
+- Người dùng cho phép tạo thêm đường nối và tuyến khác. Không khóa cả ba con vào một vòng duy nhất hoặc một chiều cố định.
+
+**Đường nối thêm trong demo:** B ↔ R1 men bờ nam hồ; C ↔ B qua sườn đông; C ↔ R5 qua bờ tây. Đây là đường nối trực tiếp giữa hai khu, không đòi dừng ở các khu khác trên đường. Các nhánh cũ vẫn đi được hai chiều.
+
+**Các lộ trình xem thử:** vòng đủ 8 khu của A giữ đúng yêu cầu; các tuyến B/C và các nhánh chéo là đề xuất của trợ lý trong phạm vi người dùng cho phép. Mỗi hàng đều có thể đảo chiều.
+
+| Con | Loại tuyến | Lộ trình |
+| --- | --- | --- |
+| A | Vòng đủ 8 khu — người dùng chỉ định | A → R2 → C → R3 → B → R4 → R5 → R1 → A |
+| A | Nhánh ngắn theo ví dụ người dùng | A → R1 → R5 → R4 → B → R1 → A |
+| A | Đường chéo đề xuất | A → R5 → C → B → R1 → A |
+| B | Vòng đủ 8 khu | B → R4 → R5 → R1 → A → R2 → C → R3 → B |
+| B | Nhánh ngắn | B → R1 → A → R5 → R4 → B |
+| B | Đường chéo | B → C → R2 → A → R1 → R5 → B |
+| C | Vòng đủ 8 khu | C → R3 → B → R4 → R5 → R1 → A → R2 → C |
+| C | Nhánh ngắn | C → R5 → R1 → A → R2 → C |
+| C | Đường chéo | C → B → R1 → R5 → C |
+
+- Demo có 3 lựa chọn tuyến và chiều thuận/ngược cho từng con. Đổi tuyến xem thử sẽ đưa riêng con được chọn về điểm xuất phát; đây là thao tác xem phương án, không phải quy tắc dịch chuyển trong gameplay.
+- Demo hiển thị nghỉ trước khi đi và sau khi về điểm xuất phát; nhấn nút để chuyển sang chặng tiếp theo. Chưa tự đặt thời gian nghỉ, xác suất chọn tuyến hay lịch bắt buộc.
+- **Đề xuất khi lập trình sau:** AI chọn nhánh trên mạng đường hai chiều, có thể đổi hướng; ưu tiên theo hành vi và tình huống cuộc săn. Chưa chốt đổi tuyến lúc nào, quy tắc tránh lặp, phản ứng khi bị săn hoặc cơ chế hồi phục khi nghỉ.
+- Chưa kiểm chứng bề rộng, độ dốc, va chạm, tìm đường cho thân/đuôi quái trên Roblox; vị trí và hình dáng các đường mới vẫn có thể chỉnh trong giai đoạn duyệt bố cục.
+
+**Trạng thái:** cập nhật demo và hồ sơ; chưa dựng đường hoặc AI này trong Roblox Studio.
+
+### 26.6. Duyệt bản ý tưởng — 15/10/2026
+
+Người dùng xác nhận bản demo hiện tại ổn sau khi xem bố cục và các tuyến bổ sung. **Đã duyệt ở mức ý tưởng** để làm cơ sở dựng khung map Roblox:
+
+- Rừng cổ có thiên nhiên bí hiểm nhưng vẫn đủ sáng để quan sát; hồ làm mốc định hướng, có cây lớn, rễ, dây leo, dương xỉ, sương nhẹ và nấm sáng.
+- Mạng 8 khu dùng chung cho ba con: A/B/C là ba khu chính và điểm xuất phát tương ứng; R1–R5 là năm điểm đi qua/nghỉ chân; trại người chơi tách riêng.
+- Nghỉ ở điểm xuất phát, di chuyển theo nhiều tuyến hai chiều và có thể quay về nghỉ; giữ hai tuyến A người dùng chỉ định và các đường nối B ↔ R1, C ↔ B, C ↔ R5 trong bản xem.
+- Giờ môi trường lấy giờ thực lúc vào khu săn, tăng tốc từ khi nhiệm vụ bắt đầu theo tỷ lệ 2 phút thật = 1 giờ trong map; giữ mức sáng ban đêm đủ nhìn đường và giao chiến.
+
+Kích thước 1.080 × 1.080 studs, bề rộng khu/đường, mật độ cây 70% và hình học chi tiết vẫn là giá trị thử để điều chỉnh theo tỷ lệ quái và trải nghiệm trong Roblox. Thời gian nghỉ, lựa chọn tuyến của AI, điều kiện đổi khu khi bị săn và các điểm còn mở ở 26.3–26.5 chưa tự được chốt bằng việc duyệt hình ảnh.
+
+Bước triển khai kế tiếp là dựng khung địa hình và đường nối theo bản ý tưởng này, giữ sảnh/bãi tập v2.3 hiện có, rồi kiểm tra tỷ lệ, độ dốc, va chạm và không gian quay đầu trước khi làm chi tiết. Đợt xác nhận này chỉ cập nhật hồ sơ; chưa sửa place hoặc source Roblox.
+
+## 27. Khung map săn Rừng cổ H1.0 — 15/10/2026
+
+**Yêu cầu mới:** đã có một con khủng long thử nghiệm; chuyển từ duyệt ý tưởng sang tạo map. Thực hiện trên phiên `Dinosaur01_TRex_Visual.rbxl` đang mở và Save As sang file khu săn riêng trước khi dựng. Không tự đưa thêm ba loài hoặc nhân bản ba con giống nhau.
+
+### 27.1. Bản làm việc và phạm vi đã dựng
+
+- Mở **C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/HunDino_HuntingRainforest_v1.rbxl**. Đã lưu bằng Studio; SHA256 `6335460f3a9b9e9fbb6b862f8289fe08c2297a1d8a6c3756e236514a9deb9395`, dung lượng 1.210.141 byte.
+- Giữ nguyên file `Dinosaur01_TRex_Visual.rbxl` và map sảnh/bãi tập `HunDino_DarkJungle_v2_3.rbxl`. Bản sao trước dựng: `HunDino/backups/Dinosaur01_before_hunting_map_20261015.rbxl`.
+- Dựng Terrain/hồ, tám khu quái A/B/C/R1–R5, trại người chơi, cây/cổ thụ/rễ/dây leo/dương xỉ, đá rêu/phế tích và nấm sáng dẫn đường. Đây là khung cảnh có thể chỉnh, chưa là đồ họa hoàn thiện.
+- Nới mặt bằng theo tỷ lệ con mẫu: **1.620 × 1.620 studs**, đường quái rộng **72 studs**. Giữ bố cục từ demo, cao độ nhẹ, bo góc và san nền theo bề rộng đường.
+- Đủ **13 đường quái hai chiều + hai đường trại**. Cấu hình giữ chín lộ trình và các nhánh B ↔ R1, C ↔ B, C ↔ R5. Đã có node/waypoint để nối AI sau.
+- Con mẫu đặt ở A, giữ 255 BasePart/21 MeshPart/bảy Motor6D/247 WeldConstraint/một thân gốc Anchored. Tắt và cất bộ điều khiển xem khủng long F/G/R/C cũ; giữ module/runtime rig trên model, không tự bật đi vòng cũ.
+- Runtime ánh sáng lấy giờ thực UTC+7 khi Play và tăng tốc 30 lần; có sáng/tối, ánh trăng/nền sáng và hiệu chỉnh nâng vùng tối. **Đây là đồng hồ xem map; chưa nối bắt đầu/kết thúc nhiệm vụ thật hoặc về sảnh**. Trong Edit để 14:00 cho dễ xem.
+- Play có camera nhân vật bình thường, Shift chạy; M mở bảng chọn khu xem nhanh chỉ trong Studio. Bảng này không phải cơ chế dịch chuyển chính thức của cuộc săn.
+
+### 27.2. Kết quả kiểm chứng và giới hạn
+
+- 288/288 kiểm tra live đạt; 4.308 điểm dò nền trên tâm/hai bên đường không phát hiện hố hoặc lệch mặt quá ngưỡng. Độ dốc mặt nền lớn nhất đo được 18,82°; không thấy vật trang trí có va chạm chắn hành lang 40 × 50 studs đã dò.
+- Play đi từ A tới R2 và qua tuyến C–R5, kết thúc với 100 máu. Phím M và bấm chọn C hoạt động; camera Custom, bộ GUI mẫu cũ không còn chiếm điều khiển; nhật ký lỗi client lượt cuối rỗng.
+- Đo tỷ lệ đồng hồ qua hai giây thực được xấp xỉ 30 lần. Đã xem cảnh ban ngày và ban đêm; mức sáng vẫn cần phản hồi người dùng.
+- Đọc file sau Save: source/runtime khớp file làm việc sau chuẩn hóa xuống dòng; 25 script biên dịch được, rig con mẫu nguyên vẹn. Lune chỉ đọc vì chưa hỗ trợ đầy đủ thuộc tính Terrain `VoxelGridAssetContentMap`; lưu map bằng Studio.
+- **Chưa làm:** AI quái tự chạy/nghỉ/đảo tuyến, đấu/bắt quái, nhiệm vụ/phần thưởng/lưu, kết nối khu săn riêng tới sảnh. Mạng đường đi được với người chơi không chứng minh AI của quái đã tìm đường được.
+- **Chưa kiểm chứng:** nhiều client, điện thoại, hiệu năng máy yếu và độ vừa của mọi loại quái tương lai. Kích thước/mật độ cây là cấu hình thử có thể sửa.
+
+Tài liệu chi tiết/cách xem: `HunDino/HUNTING_MAP.md`. Source: `HunDino/src/hunting/`. Kết quả và ảnh: `HunDino/assets/hunting/`. Tiếp tục chỉnh trên file H1.0 đã lưu; không chạy lại bộ dựng L0 hoặc ghi lại Terrain bằng Lune.
+
+## 28. Rừng dày, vách đá ngăn khu và khủng long đi tuyến H1.1 — 15/10/2026
+
+Người dùng thấy map còn thoáng và con mẫu chưa di chuyển; yêu cầu bổ sung cây/vách đá chia không gian và cho con mẫu đi lại. Tiếp tục trên `HunDino_HuntingRainforest_v1.rbxl`; sao lưu trước sửa tại `HunDino/backups/HuntingRainforest_before_density_routes_20261015.rbxl`.
+
+- Bổ sung **360 cây nhiều tầng tán, 150 cụm dương xỉ và 100 khối đá rêu** thành chín dải; các dải nội bộ chia A/R2, R2/C, B/R3, B/R4, R1/R5 và vùng R5/R4. Giữ khe đi qua, bãi chiến đấu và hồ; không sửa Terrain/đường hiện có.
+- Con mẫu duy nhất ở A tự tuần tra: vòng đủ tám khu giữ đúng `A → R2 → C → R3 → B → R4 → R5 → R1 → A`, rồi lần lượt thử hai nhánh còn lại và đổi chiều mỗi vòng. Giữ bộ hàm/rig cũ, tắt MotionRuntime đi vòng tròn, dùng DinosaurRouteController điều khiển thân cùng sáu khớp; JawRuntime vẫn giữ.
+- Thông số thử có thể sửa: nghỉ đầu 5 giây, tốc độ 12 studs/giây; về A nghỉ 20 giây, điểm R nghỉ 6 giây, B/C nghỉ 4 giây. Quay theo đường trước khi tiến, bám nền và dừng nếu thiếu đất. Đây là giá trị thực hiện để xem thử, chưa chốt cân bằng game.
+- HUD thêm khu khủng long vừa qua/đang tới và trạng thái nghỉ. Phím M tiếp tục chọn khu trong Studio. Mở Play và chờ khoảng năm giây để thấy con mẫu bắt đầu.
+- **Kiểm chứng:** 291/291 kiểm tra map đạt; sáu vòng A (ba tuyến × hai chiều) trên bản sao đạt 148/148, đúng thứ tự, về A nghỉ, không thiếu nền hoặc giao vật cản trong 1.804 lần dò hộp bao toàn thân. Play thường xác nhận đi A → R2 rồi tiếp tục C; đo khoảng 36,49 studs/ba giây, client nhận trạng thái và không có lỗi runtime ở lượt kiểm tra.
+- **Còn lại:** tuần tra hiện chưa né vật cản động, đuổi/đánh người chơi hoặc phản ứng khi bị săn; chưa có nhiệm vụ/phần thưởng/bắt giữ hoặc nối về sảnh. Chưa thử hiệu năng điện thoại/máy yếu/nhiều client sau khi tăng cây. Không tự thêm con mới ở B/C.
+
+Source thêm: `DinosaurRouteController.luau`, `EnhanceHuntingForest.luau` trong `HunDino/src/hunting/`. Hồ sơ chi tiết/cách chỉnh: `HunDino/HUNTING_MAP.md`; kết quả: `assets/hunting/validation-h11.json`, `routes-h11.json`, `saved-place.json`.
+
+## 29. Nối sảnh ↔ khu săn H1.2 — 16/10/2026
+
+Người dùng yêu cầu liên kết map đi săn với sảnh. Đã thực hiện trên bản `HunDino/HunDino_DarkJungle_v2_3.rbxl`, sao lưu ngay trước ghép tại `backups/Hub_before_hunting_link_20261016.rbxl`.
+
+- **Vào:** Chơi → VÀO KHU SĂN · RỪNG CỔ, hoặc giữ G tại cổng đá rêu bên trái sảnh. **Về:** nút trong HUD, menu Chơi hoặc cổng G tại trại săn. Dùng cùng luồng travel để cất vũ khí/hủy động tác, tải vùng đích và chuyển cả Pet; giữ base/trang bị.
+- Ghép khu săn vào **cùng Place** tại offset `(0,0,6500)`, giữ vị trí các khu cũ. Copy Terrain bằng bốn vùng native, dịch cả node/đường và thuộc tính waypoint. Không Clear Terrain hoặc xây lại sảnh. File săn H1.1 giữ riêng làm nguồn; không cần PlaceId khác để thử Play.
+- Clock theo từng người: lấy giờ vào UTC+7 do server cấp, tăng tốc 30 lần trên client đang săn; về sảnh/chết thì phục hồi Lighting/Atmosphere/màu. Người ở sảnh không chịu clock săn. Pet và điều khiển bản sảnh giữ Shift chạy, V nhảy, Space lướt.
+- Lượt xem thử mặc định **40 phút** có thể chỉnh, hết giờ tự về cùng Pet; chưa phải nhiệm vụ có mục tiêu/thưởng. Người đầu tiên vào khởi động tuần tra con mẫu; người cuối ra thì dừng và phục hồi về A. Chết/hồi sinh hoặc ra biên cũng dọn phiên và về sảnh. M chỉ chọn khu trong Studio khi đang săn, không khởi động lại đồng hồ.
+- **Kiểm tra:** 188/188 Edit; đi–về bằng UI/cổng G thật; Pet và base/trang bị giữ đúng; client clock rừng tách server/sảnh và phục hồi chính xác. Chết/ra biên/timeout đạt; timeout thử với 30 giây rồi đã phục hồi 2.400 giây trước Save. Yêu cầu từ base xa/đích sai/M ngoài rừng bị từ chối; bãi tập vẫn đi–về được; không thấy lỗi runtime ở lượt kiểm tra.
+- Đọc file sau Save: 15.066 part gốc và 16 source không liên quan giữ nguyên so với backup ngay trước ghép; 10 source hiện hành khớp, 34 script biên dịch. Các chỉnh Welcome/đá có sẵn của người dùng không bị trả về snapshot cũ.
+- **Còn lại:** combat săn, đuổi/bắt quái, nhiệm vụ/thưởng/lưu và server săn riêng theo đội; chưa thử nhiều client thực, điện thoại hoặc máy yếu.
+
+Chi tiết/file kiểm chứng/source tại `HunDino/HUNTING_LINK.md`. Bản chung đã lưu bằng Studio; không dùng Lune ghi file có Terrain và không đồng bộ bộ dựng L0 lên bản này.
+
+## 30. Nghỉ một phút, thanh máu và phản công H1.3 — 17/10/2026
+
+Người dùng yêu cầu mỗi chỗ dừng chân nghỉ một phút, thêm thanh máu/hitbox tấn công và cho khủng long đánh lại người đã tấn công nó. Tiếp tục trên bản chung `HunDino/HunDino_DarkJungle_v2_3.rbxl`; giữ bản săn riêng H1.1. Backup ngay trước sửa: `HunDino/backups/Hub_before_dinosaur_combat_20261016.rbxl`.
+
+- **Đã thống nhất và triển khai:** A/B/C/R1–R5, kể cả điểm xuất phát, đều nghỉ **60 giây thực**. Không quy đổi theo đồng hồ rừng tăng tốc. HUD đếm giây còn lại; mạng tuyến và các lựa chọn chiều đi giữ nguyên. Đây thay thế các số nghỉ mẫu 5/20/6/4 giây ở mốc H1.1 trong bản chung.
+- Con mẫu có thanh máu cập nhật theo sát thương và bốn vùng trúng tại thân, đầu, hai chân để người đứng mặt đất đánh được. Vùng cắn sát đất báo cam trước, đỏ khi hoạt động; kiểm tra hướng, khoảng cách, vật cản và overlap nhân vật thật; mỗi lần cắn chỉ trừ máu một lần.
+- Bình thường chỉ tuần tra/nghỉ; người đi ngang không gây chú ý. Đòn vũ khí hợp lệ kích hoạt đuổi/phản công người đánh. Có thể né sang bên trong nhịp báo trước. Khi mất mục tiêu, ra xa, ngừng bị đánh lâu, người chết hoặc về sảnh thì bỏ đuổi; trở lại vị trí tuyến đã gián đoạn và tiếp tục phần nghỉ còn lại.
+- **Cân bằng mẫu có thể sửa:** 1.200 HP; cắn 24 HP; báo trước 0,65 giây, vùng trúng hoạt động 0,18 giây, hồi chiêu 2,5 giây; đuổi 16 studs/giây, giới hạn 260 studs và bỏ đuổi sau 25 giây không bị đánh. Không tự coi các số này là cân bằng toàn game đã duyệt.
+- Đã nối bảy vũ khí/cung và bộ combo hiện có với sát thương server trong khu săn; túi đồ dùng được khi cất vũ khí. Giữ cơ chế tụ lực cung; loạt tên có nhịp để mọi mũi hợp lệ được nhận. Không có remote nhận sát thương tự khai từ client.
+- Máu con mẫu dùng chung trong server. Người đầu vào khởi động, người cuối ra khôi phục A/đầy máu; người mới vào khi vẫn còn người săn không hồi lại máu. HP 0 dừng AI đến khi phiên reset. Pet chỉ theo cùng; chưa hỗ trợ đánh quái. Chưa thêm khủng long B/C, hoạt cảnh chết, bắt giữ, nhiệm vụ, thưởng hoặc lưu tiến trình.
+- **Kiểm chứng:** 96/96 bài kiểm tra bản sao đạt, đủ 60 giây tại cả tám khu, hurtbox/thanh máu, trúng/né/cooldown/LOS, người đi ngang, thoát và chết/reset. Bài thử dùng adapter Player trên module bản sao vì command context thiếu WritePlayer; source cài đặt giữ guard Player thật. Sáu nhóm luật vũ khí đạt. Play với người thật: búa trừ 36, cung tụ lực trừ 104, ba tên trừ đủ 72; khủng long phản công, về sảnh hủy đòn/mục tiêu và reset khi phiên hết người. Ảnh native xác nhận thanh máu hiển thị.
+- Đọc file sau Save: toàn bộ **23.693 part** cảnh khớp backup trước combat; rig vẫn 255 part/21 MeshPart/7 Motor6D/247 WeldConstraint/một thân neo. 14 source hiện hành khớp file làm việc, 44 script biên dịch; 14 source không liên quan giữ nguyên so với trước ghép sảnh. Lưu native Studio, không ghi Terrain bằng Lune.
+
+Hồ sơ chi tiết/cách thử: `HunDino/DINOSAUR_COMBAT.md`; bằng chứng: `assets/hunting/combat-validation.json`, `connected-saved.json`, `dinosaur-healthbar-h13.jpg`. Chưa thử nhiều client thực, điện thoại hoặc cân bằng trận săn hoàn chỉnh.
+
+### 30.1. Chậm cú cắn và kéo dài quãng lướt H1.3.1 — 17/10/2026
+
+Người dùng thấy đòn khủng long quá nhanh, muốn chậm thêm 0,3 giây, nghỉ giữa đòn lâu hơn và lướt xa hơn để né. Đã tăng báo trước **0,65 → 0,95 giây**, chu kỳ bắt đầu đòn **2,5 → 3,5 giây**. Thời gian nghỉ ở điểm vẫn 60 giây thực; sát thương cắn và hitbox giữ nguyên.
+
+Lướt hiện hành dùng cấu hình Studio chính xác: tốc độ đầu **42 → 72 studs/giây**, thời lượng **0,4 → 0,5 giây**; vẫn thực chi 6 thể lực, giữ đường giảm tốc/VFX và các điều kiện đang bận/hết thể lực. Quãng lý thuyết 9,87 → 17,33 studs; client Play đo **16,55 studs**, lượt né ngang **16,77 studs** không tăng số lần trúng cắn. Đo cảnh báo 0,9504 giây và chu kỳ 3,5153 giây. Lướt đang bị khóa trong hồi động tác vũ khí hoặc lướt quá trễ vẫn có thể trúng; không thêm bất tử.
+
+96/96 kiểm tra combat đạt; kiểm tra dash, nguồn cấu hình/server/VFX sau Save đạt. Bằng chứng `HunDino/assets/hunting/combat-pacing-h131.json`. Backup `HunDino/backups/Hub_before_combat_pacing_20261017.rbxl`. Lưu bản chung bằng Studio; không thay file rừng riêng hoặc nguồn Evades hiện đại khác với bản đang cài.

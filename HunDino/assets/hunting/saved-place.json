@@ -1,0 +1,29 @@
+{
+  "animalZones": 8,
+  "bytes": 1423660,
+  "camps": 1,
+  "compiledScripts": 27,
+  "dinosaur": {
+    "anchors": 1,
+    "meshes": 21,
+    "motors": 7,
+    "parts": 255,
+    "welds": 247
+  },
+  "forestEnhancement": {
+    "FernClusters": 150,
+    "Parts": 4786,
+    "RockPillars": 100,
+    "Seed": 792130,
+    "Stage": "Complete",
+    "Trees": 360,
+    "Version": "H1.1"
+  },
+  "hubConnectionReady": false,
+  "humanPaths": 2,
+  "mainPaths": 13,
+  "routeAIReady": true,
+  "savedPlace": "HunDino_HuntingRainforest_v1.rbxl",
+  "terrainWriteMethod": "Roblox Studio Save",
+  "validation": "passed"
+}

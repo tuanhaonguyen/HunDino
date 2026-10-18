@@ -1,4 +1,4 @@
--- L0: sảnh + bãi tập; không có thưởng, DataStore hay nhiệm vụ săn.
+-- Connected lobby, training sanctuary and forest visit; no hunt combat/rewards yet.
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
@@ -12,6 +12,15 @@ local PetAnimator = require(ReplicatedStorage.Shared:WaitForChild("PetAnimator")
 local PetPlacement = require(ReplicatedStorage.Shared:WaitForChild("PetPlacement"))
 local ArmorEquipment=require(ReplicatedStorage.Shared:WaitForChild("ArmorEquipment"))
 local map = workspace:WaitForChild("HunDinoL0")
+local forest = workspace:WaitForChild("HuntingRainforest")
+local huntingConfig = require(ReplicatedStorage:WaitForChild("HuntingMapConfig"))
+local huntingRuntime = game:GetService("ServerScriptService"):WaitForChild("HuntingRuntime")
+local hunting = require(huntingRuntime:WaitForChild("HuntingSession")).new(forest, huntingConfig,
+	workspace:WaitForChild("Dinosaur01_TRex_Visual"), require(huntingRuntime:WaitForChild("DinosaurRouteController")))
+local dinosaurCombat = require(huntingRuntime:WaitForChild("DinosaurCombat")).new(
+	workspace:WaitForChild("Dinosaur01_TRex_Visual"), forest, huntingConfig, hunting)
+hunting.Combat = dinosaurCombat
+dinosaurCombat:Start()
 local dummies = map.Training.Dummies
 local remote = Instance.new("RemoteEvent")
 remote.Name = "HunDinoTrainingAction"; remote.Parent = ReplicatedStorage
@@ -207,7 +216,7 @@ local function startPetAttack(s, target)
 end
 local function attack(s, action, direction, releasedKind, releasedSpec)
 	local weapon=Weapons[s.WeaponId]
-	if not s.InTraining or not directionOK(direction,weapon.Ranged) then return end
+	if not (s.InTraining or s.InHunting) or not directionOK(direction,weapon.Ranged) then return end
 	local now = os.clock()
 	local kind,spec=releasedKind,releasedSpec
 	if not kind then kind,spec=Rules.attack(Config,Weapons,s,action,now) end
@@ -223,11 +232,18 @@ local function attack(s, action, direction, releasedKind, releasedSpec)
 	s.WeaponModel:SetAttribute("WeaponAttackDuration", spec.Duration)
 	s.WeaponModel:SetAttribute("WeaponAttackWindup", spec.Windup)
 	s.WeaponModel:SetAttribute("WeaponAttackHits", (if weapon.Ranged then spec.Shots else spec.Hits) or 1)
-	s.WeaponModel:SetAttribute("WeaponAttackHitInterval", (if weapon.Ranged then spec.ShotInterval else spec.HitInterval) or (if weapon.Ranged then 0 else 0.13))
+	s.WeaponModel:SetAttribute("WeaponAttackHitInterval", (if weapon.Ranged then spec.ShotInterval else spec.HitInterval) or (if weapon.Ranged then (if s.InHunting then .09 else 0) else 0.13))
 	s.WeaponModel:SetAttribute("WeaponAttackSequence", (s.WeaponModel:GetAttribute("WeaponAttackSequence") or 0) + 1)
 	remote:FireClient(s.Player, "Attack", kind, spec.Name, spec.Duration)
 	-- A serial prevents a late recovery callback from overwriting the next strike.
 	s.AttackSerial=(s.AttackSerial or 0)+1; local serial=s.AttackSerial
+	local attackToken=tostring(s.Player.UserId)..":"..string.format("%.6f",workspace:GetServerTimeNow())..":"..serial
+	local function forestHit(applied,point)
+		if applied>0 then
+			s.Player:SetAttribute("HuntingDamage",(s.Player:GetAttribute("HuntingDamage") or 0)+applied)
+			remote:FireAllClients("Hit",point,applied,false)
+		end
+	end
 	local windup = s.RestPose * CFrame.Angles(math.rad(100), 0, math.rad(-30))
 	if spec.Style=="Thrust" then windup=s.RestPose*CFrame.new(0,0,.7)*CFrame.Angles(math.pi/2,0,0)
 	elseif spec.Style=="Spin" or spec.Style=="Sweep" then windup=s.RestPose*CFrame.Angles(0,-1.4,math.pi/2) end
@@ -240,7 +256,7 @@ local function attack(s, action, direction, releasedKind, releasedSpec)
 			local params=RaycastParams.new(); params.FilterType=Enum.RaycastFilterType.Exclude
 			params.FilterDescendantsInstances={s.Character,pets}
 			for i=1,spec.Shots or 1 do
-				if i>1 and spec.ShotInterval then task.wait(spec.ShotInterval) end
+				if i>1 and (spec.ShotInterval or s.InHunting) then task.wait(spec.ShotInterval or .09) end
 				if not alive(s) or s.Character~=character or states[s.Player]~=s or s.AttackSerial~=serial then return end
 				local origin=s.Root.Position+Vector3.new(0,.8,0)
 				local angle=math.rad(math.ceil((i-1)/2)*(if i%2==0 then -1 else 1)*(spec.Spread or 4))
@@ -249,7 +265,13 @@ local function attack(s, action, direction, releasedKind, releasedSpec)
 				local endpoint=if result then result.Position else origin+aim*spec.Range
 				remote:FireAllClients("Shot",origin,endpoint,boosted and i==1)
 				if result then
-					for _,dummy in dummies:GetChildren() do if result.Instance:IsDescendantOf(dummy) then
+					if s.InHunting and dinosaurCombat:FromRayHit(result.Instance) then
+						local amount=math.floor(spec.Damage*(if boosted and i==1 then 1.25 else 1)+.5)
+						if dinosaurCombat:CanHit(s.Player,result.Position,spec.Range+2) then
+							forestHit(dinosaurCombat:Damage(s.Player,amount,result.Position,attackToken..":arrow:"..i),result.Position)
+						end
+					end
+					for _,dummy in dummies:GetChildren() do if s.InTraining and result.Instance:IsDescendantOf(dummy) then
 						hit(s,dummy,math.floor(spec.Damage*(if boosted and i==1 then 1.25 else 1)+.5),false); s.LastTarget=dummy; s.TargetUntil=os.clock()+12
 						break
 					end end
@@ -267,10 +289,15 @@ local function attack(s, action, direction, releasedKind, releasedSpec)
 			if spec.Style=="Shield" and s.OffGrip then TweenService:Create(s.OffGrip,TweenInfo.new(.1),{C0=s.OffRest*CFrame.new(.4,.3,-1.2)}):Play() end
 			if spec.Name then remote:FireAllClients("ComboFX",s.Root.CFrame,spec.Style,spec.Range) end
 			if s.OffGrip and s.WeaponId=="DualDaggers" then TweenService:Create(s.OffGrip,TweenInfo.new(.1),{C0=s.OffRest*CFrame.Angles(-1.5,0,if n%2==0 then .4 else -.4)}):Play() end
+			if s.InHunting then
+				local applied,point=dinosaurCombat:MeleeStrike(s.Player,s.Root.Position+Vector3.new(0,.8,0),direction,
+					spec.Range,spec.Arc or .3,spec.Damage,attackToken..":melee:"..n)
+				if applied>0 then forestHit(applied,point) end
+			end
 			for _, dummy in dummies:GetChildren() do
 				local delta = dummy.Target.Position - s.Root.Position
 				local targetFlat = Vector3.new(delta.X, 0, delta.Z)
-				if delta.Magnitude <= spec.Range and targetFlat.Magnitude > 0 and direction:Dot(targetFlat.Unit) >= (spec.Arc or .3)
+				if s.InTraining and delta.Magnitude <= spec.Range and targetFlat.Magnitude > 0 and direction:Dot(targetFlat.Unit) >= (spec.Arc or .3)
 					and lineOfSight(s, dummy.Target.Position, dummy) then
 					hit(s, dummy, spec.Damage, false); s.LastTarget = dummy; s.TargetUntil = now + 12
 				end
@@ -293,7 +320,7 @@ local function cancelCharge(s)
 end
 local function releaseCharge(s,direction)
  if not s.Charge then return end
- if not alive(s) or not s.InTraining then cancelCharge(s);return end
+ if not alive(s) or not (s.InTraining or s.InHunting) then cancelCharge(s);return end
  local c=s.Charge;local aim=if directionOK(direction,true) then direction else c.Direction
  local kind,spec=Rules.releaseCharge(Config,s,os.clock())
  s.Character:SetAttribute("ChargePose",nil);weaponPose(s)
@@ -306,30 +333,38 @@ local function toggleDraw(s, target)
 	s.ChangeDraw = target
 	message(s, (if target then "Đang rút " else "Đang cất ")..Weapons[s.WeaponId].Name.."…")
 end
-local function travel(s, destination, arrivalOverride, arrivalMessage)
-	if s.Travelling then return end
-	if os.clock() < s.BusyUntil then return end
+local function travel(s, destination, arrivalOverride, arrivalMessage, force)
+	if not alive(s) or s.Travelling then return false end
+	if not force and os.clock() < s.BusyUntil then return false end
 	cancelCharge(s)
-	s.InTraining = destination == "Training"; s.Drawn = false; s.WantSprint = false; s.Sprinting = false
+	s.AttackSerial = (s.AttackSerial or 0) + 1
+	s.Drawn = false; s.WantSprint = false; s.Sprinting = false
 	s.ChangeDraw = nil; Rules.clearCombo(s); s.LastTarget = nil; s.BusyUntil = os.clock() + 0.5
-	s.Blocking=false; s.Aiming=false; s.BowBoostUntil=0
+	s.Blocking=false; s.Aiming=false; s.BowBoostUntil=0; s.DodgingUntil=nil; s.BaseTransitUntil=nil
+	for _, name in {"DodgeVelocity", "DodgeAttachment"} do local old=s.Root:FindFirstChild(name);if old then old:Destroy() end end
 	s.Humanoid.AutoRotate = true; weaponPose(s)
-	local cf = arrivalOverride or (if s.InTraining then map.Training.Arrival.CFrame * CFrame.Angles(0, 0, 0)
+	local cf = arrivalOverride or (if destination == "Hunting" then forest.Camp.CampArrival.CFrame
+		elseif destination == "Training" then map.Training.Arrival.CFrame
 		else map.Lobby.Arrival.CFrame)
 	s.Travelling = true
  local before = s.Character
  s.BusyUntil = math.huge
  pcall(function() s.Player:RequestStreamAroundAsync(cf.Position, 3) end)
  s.Travelling = false
- if not alive(s) or states[s.Player] ~= s or s.Character ~= before then return end
+ if not alive(s) or states[s.Player] ~= s or s.Character ~= before then return false end
  s.BusyUntil = os.clock() + 0.5
  s.Character:PivotTo(cf); s.Root.AssemblyLinearVelocity = Vector3.zero; s.Root.AssemblyAngularVelocity=Vector3.zero
 	s.PetAnimator:CancelAttack(); s.PetTarget = nil
 	s.Pet:SetAttribute("PetAttackStarted", -1)
 	PetPlacement.place(s.Pet, s.Character, cf, pets)
+	if destination == "Hunting" then hunting:Enter(s.Player) else hunting:Exit(s.Player) end
+	s.InTraining = destination == "Training"; s.InHunting = destination == "Hunting"
 	s.Player:SetAttribute("InTraining", s.InTraining)
-	message(s, arrivalMessage or (if s.InTraining then "Nhấn I chọn vũ khí, R để rút. Cận chiến bên trái, cung bên phải." else "Đã trở về trại thợ săn."))
+	s.Player:SetAttribute("Area", destination)
+	message(s, arrivalMessage or (if s.InHunting then "Đã vào Rừng cổ cùng Pet. Về sảnh bằng menu Chơi hoặc cổng ở trại săn."
+		elseif s.InTraining then "Nhấn I chọn vũ khí, R để rút. Cận chiến bên trái, cung bên phải." else "Đã trở về trại thợ săn."))
 	sync(s)
+	return true
 end
 local function bindPrompt(part, callback)
 	local prompt = part:FindFirstChildOfClass("ProximityPrompt")
@@ -342,7 +377,7 @@ local function bindPrompt(part, callback)
 end
 local transit=map:WaitForChild("BaseTransit")
 local function transitReady(s)
- if s.Travelling or s.InTraining or s.Drawn or s.Charge or s.Blocking or s.Sprinting or os.clock()<s.BusyUntil then
+ if s.Travelling or s.InTraining or s.InHunting or s.Drawn or s.Charge or s.Blocking or s.Sprinting or os.clock()<s.BusyUntil then
   message(s,"Cất vũ khí và dừng động tác trước khi dịch chuyển.");return false
  end
  return true
@@ -367,6 +402,15 @@ local function selectBaseTransit(s,id)
 end
 bindPrompt(map.Lobby.ToTraining, function(s) travel(s, "Training") end)
 bindPrompt(map.Training.ToLobby, function(s) travel(s, "Lobby") end)
+bindPrompt(map.HuntingTransit.ToHunting, function(s)
+	if s.InHunting or s.InTraining then return end
+	if transitReady(s) then travel(s, "Hunting") end
+end)
+bindPrompt(forest.Camp.ReturnToLobby, function(s)
+	if not s.InHunting then return end
+	if s.Drawn or s.Charge or s.Blocking or s.Sprinting then message(s,"Cất vũ khí và dừng động tác trước khi về sảnh.");return end
+	travel(s, "Lobby")
+end)
 bindPrompt(map.Training.EquipmentRack, function(s)
 	if s.Drawn then message(s, "Cất vũ khí bằng R trước khi thay giáp."); return end
 	equipArmor(s, not s.Player:GetAttribute("TrainingArmor")); s.BusyUntil = os.clock() + 0.3
@@ -383,8 +427,8 @@ end
 local function equipInventory(s,value)
  if typeof(value)~="table" or (value.Target~="Player" and value.Target~="Pet")
   or (value.Kind~="Weapons" and value.Kind~="Armor") then return end
- if not s.InTraining or s.Drawn or s.Charge or s.Blocking or s.Sprinting or os.clock()<s.BusyUntil then
-  message(s,"Trang bị trong bãi tập khi đã cất vũ khí và dừng động tác.");return
+ if not (s.InTraining or s.InHunting) or s.Drawn or s.Charge or s.Blocking or s.Sprinting or os.clock()<s.BusyUntil then
+  message(s,"Trang bị ở bãi tập hoặc khu săn khi đã cất vũ khí và dừng động tác.");return
  end
  if value.Kind=="Weapons" then
   if typeof(value.Id)~="string" or not table.find(Weapons.Order,value.Id) then return end
@@ -412,7 +456,7 @@ remote.OnServerEvent:Connect(function(player, action, value)
 	if action=="BaseTransitSelect" then selectBaseTransit(s,value)
  elseif action=="EquipInventory" then equipInventory(s,value)
  elseif action=="ChargeStart" then
-  if typeof(value)~="table" or typeof(value.Id)~="number" or value.Id~=value.Id or value.Id<=0 or value.Id%1~=0 or value.Id>1e9 or not s.InTraining then return end
+  if typeof(value)~="table" or typeof(value.Id)~="number" or value.Id~=value.Id or value.Id<=0 or value.Id%1~=0 or value.Id>1e9 or not (s.InTraining or s.InHunting) then return end
   if not directionOK(value.Direction,true) then remote:FireClient(player,"ChargeRejected",value.Id);return end
   local c=Rules.beginCharge(Config,Weapons,s,value.Action,now)
   if not c then remote:FireClient(player,"ChargeRejected",value.Id);return end
@@ -429,9 +473,17 @@ remote.OnServerEvent:Connect(function(player, action, value)
  elseif action == "EquipWeapon" then
 		equipWeapon(s,value)
 	elseif action == "TravelMenu" then
-		if value~="Training" and value~="Lobby" then return end
-		if s.Drawn or s.Blocking or now<s.BusyUntil or s.Sprinting then
+		if value~="Training" and value~="Lobby" and value~="Hunting" then return end
+		if s.Travelling or s.Drawn or s.Charge or s.Blocking or now<s.BusyUntil or s.Sprinting then
 			message(s,"Cất vũ khí và dừng động tác trước khi chuyển khu."); return
+		end
+		if value=="Hunting" then
+			if s.InHunting then message(s,"Bạn đang ở Rừng cổ.");return end
+			if s.InTraining or (s.Root.Position-map.Lobby.Arrival.Position).Magnitude>160 then
+				message(s,"Về sảnh trung tâm rồi chọn vào Rừng cổ.");return
+			end
+		elseif value=="Training" and s.InHunting then
+			message(s,"Về sảnh trước khi vào bãi luyện tập.");return
 		end
 		travel(s,value)
 	elseif action == "Aim" then
@@ -508,18 +560,22 @@ local function setup(player)
 	owners[baseId] = player; player:SetAttribute("BaseId", baseId); baseSign(baseId, player.DisplayName)
 	local function characterAdded(character)
 		local old = states[player]; if old then destroyPet(old) end
+		hunting:Exit(player)
+		player:SetAttribute("Area", "Lobby")
+		player.RespawnLocation = map.Lobby.LobbySpawn
 		local humanoid = character:WaitForChild("Humanoid")
 		local rootPart = character:WaitForChild("HumanoidRootPart")
 		if player.Character ~= character or not player.Parent then return end
 		local s = {
 			Player = player, Character = character, Humanoid = humanoid, Root = rootPart,
 			Stamina = Config.MaxStamina, LastSpend = 0, BusyUntil = 0, Drawn = false,
-			ComboStep = 0, ComboUntil = 0, Damage = 0, PetDamage = 0, InTraining = false,
+			ComboStep = 0, ComboUntil = 0, Damage = 0, PetDamage = 0, InTraining = false, InHunting = false,
 			WantSprint = false, Sprinting = false, PacketWindow = 0, Packets = 0, LastJumpAt = -math.huge,
 			WeaponId=player:GetAttribute("WeaponId") or "Hammer", Blocking=false, Aiming=false, BowBoostUntil=0,
 		}
 		states[player] = s
 		player:SetAttribute("InTraining", false)
+		player:SetAttribute("HuntingDamage",0)
 		createWeapon(s); equipArmor(s, true); createPet(s); sync(s)
 		local previousHealth=humanoid.Health
 		humanoid.HealthChanged:Connect(function(health)
@@ -527,7 +583,10 @@ local function setup(player)
 			previousHealth=health
 		end)
 		humanoid.Died:Connect(function()
+			if states[player] ~= s then return end
 			cancelCharge(s); s.WantSprint = false; s.LastTarget = nil; destroyPet(s)
+			s.InHunting=false;s.InTraining=false;hunting:Exit(player)
+			player:SetAttribute("InTraining",false);player:SetAttribute("Area","Lobby")
 		end)
 	end
 	player.CharacterAdded:Connect(characterAdded)
@@ -535,20 +594,47 @@ local function setup(player)
 end
 Players.PlayerAdded:Connect(setup)
 Players.PlayerRemoving:Connect(function(player)
+	hunting:Exit(player)
 	local s = states[player]; if s then destroyPet(s) end
 	states[player] = nil
 	local id = player:GetAttribute("BaseId")
 	if id and owners[id] == player then owners[id] = nil; baseSign(id, "Chưa có chủ") end
 end)
 for _, player in Players:GetPlayers() do task.spawn(setup, player) end
+local previewRemote=Instance.new("RemoteEvent");previewRemote.Name="HuntingMapPreviewJump";previewRemote.Parent=ReplicatedStorage
+local previewCooldown={}
+previewRemote.OnServerEvent:Connect(function(player,id)
+	local s=states[player]
+	if not RunService:IsStudio() or typeof(id)~="string" or not alive(s) or not s.InHunting or s.Travelling then return end
+	local now=os.clock()
+	if now-(previewCooldown[player] or -math.huge)<.5 or now<s.BusyUntil or s.Drawn or s.Charge or s.Blocking or s.Sprinting then return end
+	previewCooldown[player]=now
+	local zone
+	for _,q in huntingConfig.Zones do if q.id==id then zone=q;break end end
+	if not zone then return end
+	local point=huntingConfig.position(zone)
+	local offset=if id=="A" then Vector3.new(65,6,35) else Vector3.new(0,6,26)
+	travel(s,"Hunting",CFrame.lookAt(point+offset,point+Vector3.new(0,6,0)),"Đã tới khu "..id.." để xem trong Studio.")
+end)
+Players.PlayerRemoving:Connect(function(player) previewCooldown[player]=nil end)
+script.Destroying:Connect(function() hunting:Destroy();dinosaurCombat:Destroy();previewRemote:Destroy() end)
 local accumulator = 0
 RunService.Heartbeat:Connect(function(dt)
 	accumulator += dt; if accumulator < 0.1 then return end
 	local petAnimationDt = accumulator
 	dt = math.min(accumulator, 0.25); accumulator = 0
 	local now = os.clock()
+	for _,player in hunting:Expired() do
+		local s=states[player]
+		if alive(s) and s.InHunting and not s.Travelling then
+			task.spawn(travel,s,"Lobby",nil,"Hết thời gian thám hiểm Rừng cổ. Đã trở về sảnh cùng Pet.",true)
+		end
+	end
 	for _, s in states do
 		if not alive(s) then continue end
+		if s.InHunting and not s.Travelling and hunting:IsOutside(s.Root.Position) then
+			task.spawn(travel,s,"Lobby",nil,"Đã đưa bạn và Pet về sảnh an toàn.",true)
+		end
 		if s.Charge and now-s.Charge.Started>=s.Charge.MaxHold then releaseCharge(s,s.Charge.Direction) end
 		if s.ChangeDraw ~= nil and now >= s.BusyUntil then
 			s.Drawn = s.ChangeDraw; s.ChangeDraw = nil; weaponPose(s)

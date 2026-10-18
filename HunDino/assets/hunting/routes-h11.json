@@ -1,0 +1,326 @@
+{
+  "ok": true,
+  "version": "HuntingRouteTest.2",
+  "network": {
+    "routes": 9,
+    "paths": 13,
+    "ok": true,
+    "errors": []
+  },
+  "checks": 148,
+  "footprintQueries": 1804,
+  "failures": [],
+  "cases": {
+    "1": {
+      "route": 1,
+      "steps": 3192,
+      "snapshot": {
+        "RestRemaining": 2,
+        "VisitedZones": {
+          "1": "A",
+          "2": "R2",
+          "3": "C",
+          "4": "R3",
+          "5": "B",
+          "6": "R4",
+          "7": "R5",
+          "8": "R1",
+          "9": "A"
+        },
+        "DistanceTravelled": 3477.683850372304,
+        "Speed": 0,
+        "FootSupportLocal": "4.615512847900391, -23.162858963012695, 5.200428009033203",
+        "Reversed": false,
+        "State": "RestingHome",
+        "GroundMisses": 0,
+        "TargetZone": "A",
+        "SupportPosition": "-397.5, 0, 135",
+        "CompletedCycles": 1,
+        "CompletedLegs": 8,
+        "RouteIndex": 1,
+        "CurrentZone": "A"
+      },
+      "obstacles": [],
+      "reversed": false,
+      "groundMisses": 0,
+      "obstructionSamples": 0,
+      "maxSupportGroundError": 0.19289398193359375,
+      "initialRest": {
+        "state": "RestingHome",
+        "speed": 0,
+        "rootShift": 0.014803157187998295,
+        "supportShift": 0.0000019073486328125,
+        "travelDelta": 0
+      },
+      "visited": {
+        "1": "A",
+        "2": "R2",
+        "3": "C",
+        "4": "R3",
+        "5": "B",
+        "6": "R4",
+        "7": "R5",
+        "8": "R1",
+        "9": "A"
+      },
+      "maxGaitRadians": 0.1919841170310974,
+      "minimumFacingDot": 0.9030802249908447
+    },
+    "2": {
+      "route": 1,
+      "steps": 3176,
+      "snapshot": {
+        "RestRemaining": 2,
+        "VisitedZones": {
+          "1": "A",
+          "2": "R1",
+          "3": "R5",
+          "4": "R4",
+          "5": "B",
+          "6": "R3",
+          "7": "C",
+          "8": "R2",
+          "9": "A"
+        },
+        "DistanceTravelled": 3477.6837593437995,
+        "Speed": 0,
+        "FootSupportLocal": "4.615512847900391, -23.162858963012695, 5.200428009033203",
+        "Reversed": true,
+        "State": "RestingHome",
+        "GroundMisses": 0,
+        "TargetZone": "A",
+        "SupportPosition": "-397.5, 0, 135",
+        "CompletedCycles": 1,
+        "CompletedLegs": 8,
+        "RouteIndex": 1,
+        "CurrentZone": "A"
+      },
+      "obstacles": [],
+      "reversed": true,
+      "groundMisses": 0,
+      "obstructionSamples": 0,
+      "maxSupportGroundError": 0.1807403564453125,
+      "initialRest": {
+        "state": "RestingHome",
+        "speed": 0,
+        "rootShift": 0.014803157187998295,
+        "supportShift": 0.0000019073486328125,
+        "travelDelta": 0
+      },
+      "visited": {
+        "1": "A",
+        "2": "R1",
+        "3": "R5",
+        "4": "R4",
+        "5": "B",
+        "6": "R3",
+        "7": "C",
+        "8": "R2",
+        "9": "A"
+      },
+      "maxGaitRadians": 0.1919841170310974,
+      "minimumFacingDot": 0.9030321836471558
+    },
+    "3": {
+      "route": 2,
+      "steps": 2595,
+      "snapshot": {
+        "RestRemaining": 2,
+        "VisitedZones": {
+          "1": "A",
+          "2": "R1",
+          "3": "R5",
+          "4": "R4",
+          "5": "B",
+          "6": "R1",
+          "7": "A"
+        },
+        "DistanceTravelled": 2831.3930048839384,
+        "Speed": 0,
+        "FootSupportLocal": "4.615512847900391, -23.162858963012695, 5.200428009033203",
+        "Reversed": false,
+        "State": "RestingHome",
+        "GroundMisses": 0,
+        "TargetZone": "A",
+        "SupportPosition": "-397.5, 0, 135",
+        "CompletedCycles": 1,
+        "CompletedLegs": 6,
+        "RouteIndex": 2,
+        "CurrentZone": "A"
+      },
+      "obstacles": [],
+      "reversed": false,
+      "groundMisses": 0,
+      "obstructionSamples": 0,
+      "maxSupportGroundError": 0.18122291564941406,
+      "initialRest": {
+        "state": "RestingHome",
+        "speed": 0,
+        "rootShift": 0.014803157187998295,
+        "supportShift": 0.0000019073486328125,
+        "travelDelta": 0
+      },
+      "visited": {
+        "1": "A",
+        "2": "R1",
+        "3": "R5",
+        "4": "R4",
+        "5": "B",
+        "6": "R1",
+        "7": "A"
+      },
+      "maxGaitRadians": 0.1919841170310974,
+      "minimumFacingDot": 0.9067774415016174
+    },
+    "4": {
+      "route": 2,
+      "steps": 2595,
+      "snapshot": {
+        "RestRemaining": 2,
+        "VisitedZones": {
+          "1": "A",
+          "2": "R1",
+          "3": "B",
+          "4": "R4",
+          "5": "R5",
+          "6": "R1",
+          "7": "A"
+        },
+        "DistanceTravelled": 2831.393122703361,
+        "Speed": 0,
+        "FootSupportLocal": "4.615512847900391, -23.162858963012695, 5.200428009033203",
+        "Reversed": true,
+        "State": "RestingHome",
+        "GroundMisses": 0,
+        "TargetZone": "A",
+        "SupportPosition": "-397.5, 0, 135",
+        "CompletedCycles": 1,
+        "CompletedLegs": 6,
+        "RouteIndex": 2,
+        "CurrentZone": "A"
+      },
+      "obstacles": [],
+      "reversed": true,
+      "groundMisses": 0,
+      "obstructionSamples": 0,
+      "maxSupportGroundError": 0.18001365661621094,
+      "initialRest": {
+        "state": "RestingHome",
+        "speed": 0,
+        "rootShift": 0.014803157187998295,
+        "supportShift": 0.0000019073486328125,
+        "travelDelta": 0
+      },
+      "visited": {
+        "1": "A",
+        "2": "R1",
+        "3": "B",
+        "4": "R4",
+        "5": "R5",
+        "6": "R1",
+        "7": "A"
+      },
+      "maxGaitRadians": 0.19198349118232727,
+      "minimumFacingDot": 0.9067774415016174
+    },
+    "5": {
+      "route": 3,
+      "steps": 3252,
+      "snapshot": {
+        "RestRemaining": 2,
+        "VisitedZones": {
+          "1": "A",
+          "2": "R5",
+          "3": "C",
+          "4": "B",
+          "5": "R1",
+          "6": "A"
+        },
+        "DistanceTravelled": 3573.962299027152,
+        "Speed": 0,
+        "FootSupportLocal": "4.615512847900391, -23.162858963012695, 5.200428009033203",
+        "Reversed": false,
+        "State": "RestingHome",
+        "GroundMisses": 0,
+        "TargetZone": "A",
+        "SupportPosition": "-397.5, 0, 135",
+        "CompletedCycles": 1,
+        "CompletedLegs": 5,
+        "RouteIndex": 3,
+        "CurrentZone": "A"
+      },
+      "obstacles": [],
+      "reversed": false,
+      "groundMisses": 0,
+      "obstructionSamples": 0,
+      "maxSupportGroundError": 0.18000030517578125,
+      "initialRest": {
+        "state": "RestingHome",
+        "speed": 0,
+        "rootShift": 0.014803157187998295,
+        "supportShift": 0.0000019073486328125,
+        "travelDelta": 0
+      },
+      "visited": {
+        "1": "A",
+        "2": "R5",
+        "3": "C",
+        "4": "B",
+        "5": "R1",
+        "6": "A"
+      },
+      "maxGaitRadians": 0.1919841170310974,
+      "minimumFacingDot": 0.9182605147361755
+    },
+    "6": {
+      "route": 3,
+      "steps": 3253,
+      "snapshot": {
+        "RestRemaining": 2,
+        "VisitedZones": {
+          "1": "A",
+          "2": "R1",
+          "3": "B",
+          "4": "C",
+          "5": "R5",
+          "6": "A"
+        },
+        "DistanceTravelled": 3573.962513766784,
+        "Speed": 0,
+        "FootSupportLocal": "4.615512847900391, -23.162858963012695, 5.200428009033203",
+        "Reversed": true,
+        "State": "RestingHome",
+        "GroundMisses": 0,
+        "TargetZone": "A",
+        "SupportPosition": "-397.5, 0, 135",
+        "CompletedCycles": 1,
+        "CompletedLegs": 5,
+        "RouteIndex": 3,
+        "CurrentZone": "A"
+      },
+      "obstacles": [],
+      "reversed": true,
+      "groundMisses": 0,
+      "obstructionSamples": 0,
+      "maxSupportGroundError": 0.1814441680908203,
+      "initialRest": {
+        "state": "RestingHome",
+        "speed": 0,
+        "rootShift": 0.014803157187998295,
+        "supportShift": 0.0000019073486328125,
+        "travelDelta": 0
+      },
+      "visited": {
+        "1": "A",
+        "2": "R1",
+        "3": "B",
+        "4": "C",
+        "5": "R5",
+        "6": "A"
+      },
+      "maxGaitRadians": 0.19198349118232727,
+      "minimumFacingDot": 0.9067774415016174
+    }
+  },
+  "groundQueries": 1804
+}

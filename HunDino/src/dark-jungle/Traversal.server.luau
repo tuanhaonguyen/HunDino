@@ -12,7 +12,7 @@ while active do
   local character=player.Character
   local hrp=character and character:FindFirstChild('HumanoidRootPart')
   local hum=character and character:FindFirstChildOfClass('Humanoid')
-  if hrp and hum and hum.Health>0 and hrp.Position.Y < -16 then
+  if hrp and hum and hum.Health>0 and player:GetAttribute('InHunting')~=true and hrp.Position.Y < -16 then
    character:PivotTo(arrival.CFrame)
    hrp.AssemblyLinearVelocity=Vector3.zero
    local petFolder=workspace:FindFirstChild('TrainingPets')

@@ -126,7 +126,7 @@ function Inventory.create(player,gui,weapons,remote)
 	local info=label(detail,"SelectionInfo","",12,311,248,74,14)
 	local equip=button(panel,"EquipSelected","TRANG BỊ",786,595,248,42);equip.BackgroundColor3=Color3.fromRGB(98,80,43)
 	local remove=button(panel,"RemoveSelected","Tháo món đang mặc",786,544,248,34)
-	local hint=label(panel,"EquipHint","Trang bị trong bãi tập khi đã cất vũ khí",330,595,422,42,13)
+	local hint=label(panel,"EquipHint","Trang bị ở bãi tập hoặc khu săn khi đã cất vũ khí",330,595,422,42,13)
 	local cells,weaponButtons={},{ }
 	local function equippedWeapon()
 		return player:GetAttribute(if api.Target=="Pet" then "PetWeaponId" else "WeaponId") or "Hammer"

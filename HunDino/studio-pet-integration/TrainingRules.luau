@@ -43,7 +43,7 @@ function Rules.attack(config,weapons,state,action,now)
  return kind,spec
 end
 function Rules.canEquip(state,weapons,id,now)
- return typeof(id)=="string" and weapons[id]~=nil and id~="Order" and state.InTraining
+ return typeof(id)=="string" and weapons[id]~=nil and id~="Order" and (state.InTraining or state.InHunting)
   and not state.Drawn and not state.Blocking and not state.Sprinting and now>=state.BusyUntil
 end
 function Rules.regenerate(config,state,now,dt)

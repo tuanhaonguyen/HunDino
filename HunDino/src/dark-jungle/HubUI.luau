@@ -35,10 +35,14 @@ function Hub.create(player,gui,callbacks)
   callbacks.BeforeOpen(); body:ClearAllChildren(); overlay.Visible=true; callbacks.Preferences()
   heading.Text=({Shop="THƯƠNG NHÂN",Settings="CÀI ĐẶT",Play="BẮT ĐẦU HÀNH TRÌNH"})[id]
   if id=="Play" then
-   label(body,"Intro","Trại thợ săn • 12 base\nLuyện vũ khí, thử combo và đồng hành cùng pet.",0,0,572,64)
-   button(body,"Training","VÀO BÃI LUYỆN TẬP",36,96,500,60,function() api:Close(); callbacks.Travel("Training") end)
-   button(body,"Lobby","VỀ TRẠI THỢ SĂN",36,174,500,60,function() api:Close(); callbacks.Travel("Lobby") end)
-   label(body,"Hunts","Nhiệm vụ săn khủng long — chưa mở ở bản luyện tập.",20,263,532,64)
+   label(body,"Intro","Trại thợ săn • 12 base\nVào Rừng cổ khám phá hoặc luyện vũ khí tại bãi tập.",0,0,572,64)
+   local hunting=player:GetAttribute("InHunting")==true
+   button(body,"Hunting",if hunting then "ĐANG Ở RỪNG CỔ" else "VÀO KHU SĂN · RỪNG CỔ",36,80,500,58,function()
+    api:Close(); if not player:GetAttribute("InHunting") then callbacks.Travel("Hunting") end
+   end)
+   button(body,"Training","VÀO BÃI LUYỆN TẬP",36,152,500,58,function() api:Close(); callbacks.Travel("Training") end)
+   button(body,"Lobby","VỀ SẢNH TRUNG TÂM",36,224,500,58,function() api:Close(); callbacks.Travel("Lobby") end)
+   label(body,"Hunts","Rừng cổ có khủng long tuần tra và thời gian ngày/đêm riêng cho chuyến đi.",20,301,532,64)
   elseif id=="Shop" then
    label(body,"Intro","Đồ tiếp tế cho những chuyến săn sắp tới",0,0,572,44,18)
    local items={"Bình hồi máu","Bộ bẫy cơ bản","Thuốc ru ngủ"}

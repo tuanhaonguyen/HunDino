@@ -1,0 +1,266 @@
+{
+  "paths": {
+    "1": {
+      "attributeErrors": 0,
+      "segments": 27,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "A_R1"
+    },
+    "2": {
+      "attributeErrors": 0,
+      "segments": 45,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "R1_R5"
+    },
+    "3": {
+      "attributeErrors": 0,
+      "segments": 35,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "R5_R4"
+    },
+    "4": {
+      "attributeErrors": 0,
+      "segments": 31,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "R4_B"
+    },
+    "5": {
+      "attributeErrors": 0,
+      "segments": 42,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "B_R3"
+    },
+    "6": {
+      "attributeErrors": 0,
+      "segments": 42,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "R3_C"
+    },
+    "7": {
+      "attributeErrors": 0,
+      "segments": 51,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "C_R2"
+    },
+    "8": {
+      "attributeErrors": 0,
+      "segments": 31,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "R2_A"
+    },
+    "9": {
+      "attributeErrors": 0,
+      "segments": 46,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "A_R5"
+    },
+    "10": {
+      "attributeErrors": 0,
+      "segments": 40,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "R5_B"
+    },
+    "11": {
+      "attributeErrors": 0,
+      "segments": 83,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "B_R1"
+    },
+    "12": {
+      "attributeErrors": 0,
+      "segments": 64,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "C_B"
+    },
+    "13": {
+      "attributeErrors": 0,
+      "segments": 96,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "C_R5"
+    },
+    "14": {
+      "attributeErrors": 0,
+      "segments": 41,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "Camp_R1"
+    },
+    "15": {
+      "attributeErrors": 0,
+      "segments": 44,
+      "geometryErrors": 0,
+      "adapterErrors": 0,
+      "name": "Camp_R4"
+    }
+  },
+  "checks": 188,
+  "terrain": {
+    "probes": {
+      "1": {
+        "groundY": 43.178,
+        "probe": {
+          "y": 40,
+          "x": -700,
+          "z": 5850
+        }
+      },
+      "2": {
+        "groundY": 14.391,
+        "probe": {
+          "y": 30,
+          "x": 680,
+          "z": 7150
+        }
+      },
+      "3": {
+        "groundY": -10,
+        "probe": {
+          "y": 10,
+          "x": 0,
+          "z": 6500
+        }
+      }
+    },
+    "importSize": {
+      "y": 176,
+      "x": 1632,
+      "z": 1632
+    }
+  },
+  "ok": true,
+  "passed": 188,
+  "portals": {
+    "1": {
+      "path": "Workspace.HunDinoL0.HuntingTransit.ToHunting",
+      "prompt": "Workspace.HunDinoL0.HuntingTransit.ToHunting.HuntingTransitPrompt",
+      "position": {
+        "y": 22.25,
+        "x": -58,
+        "z": 142
+      }
+    },
+    "2": {
+      "path": "Workspace.HuntingRainforest.Camp.ReturnToLobby",
+      "prompt": "Workspace.HuntingRainforest.Camp.ReturnToLobby.HuntingTransitPrompt",
+      "position": {
+        "y": 15.9,
+        "x": -38,
+        "z": 7092
+      }
+    }
+  },
+  "players": [],
+  "zones": {
+    "1": {
+      "groundY": 15.2,
+      "node": {
+        "y": 13,
+        "x": -397.5,
+        "z": 6635
+      },
+      "terrainY": 15,
+      "id": "A"
+    },
+    "2": {
+      "groundY": 29.2,
+      "node": {
+        "y": 27,
+        "x": 420,
+        "z": 6552.5
+      },
+      "terrainY": 29,
+      "id": "B"
+    },
+    "3": {
+      "groundY": 64.2,
+      "node": {
+        "y": 62,
+        "x": -52.5,
+        "z": 6042.5
+      },
+      "terrainY": 64,
+      "id": "C"
+    },
+    "4": {
+      "groundY": 16.2,
+      "node": {
+        "y": 14,
+        "x": -450,
+        "z": 6927.5
+      },
+      "terrainY": 16,
+      "id": "R1"
+    },
+    "5": {
+      "groundY": 36.2,
+      "node": {
+        "y": 34,
+        "x": -525,
+        "z": 6312.5
+      },
+      "terrainY": 36,
+      "id": "R2"
+    },
+    "6": {
+      "groundY": 44.2,
+      "node": {
+        "y": 42,
+        "x": 420,
+        "z": 6087.5
+      },
+      "terrainY": 44,
+      "id": "R3"
+    },
+    "7": {
+      "groundY": 22.2,
+      "node": {
+        "y": 20,
+        "x": 465,
+        "z": 6875
+      },
+      "terrainY": 22,
+      "id": "R4"
+    },
+    "8": {
+      "groundY": 16.2,
+      "node": {
+        "y": 14,
+        "x": 75,
+        "z": 6830
+      },
+      "terrainY": 16,
+      "id": "R5"
+    },
+    "9": {
+      "groundY": 14.2,
+      "node": {
+        "y": 12,
+        "x": 0,
+        "z": 7047.5
+      },
+      "terrainY": 14,
+      "id": "Camp"
+    }
+  },
+  "version": "ConnectedHuntValidation.1",
+  "warnings": [],
+  "surfaceCount": 718,
+  "failures": [],
+  "context": "Edit",
+  "enabledSpawns": {
+    "1": "Workspace.HunDinoL0.Lobby.LobbySpawn"
+  }
+}

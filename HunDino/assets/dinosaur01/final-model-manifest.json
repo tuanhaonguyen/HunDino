@@ -1,0 +1,129 @@
+{
+  "anchors": 1,
+  "feathers": 1005,
+  "lowerTeeth": 19,
+  "meshes": [
+    {
+      "meshId": "Content(Uri=rbxassetid://121019436231530)",
+      "name": "body_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://106335657959096)",
+      "name": "head_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://114551099454207)",
+      "name": "left leg_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://90420521589780)",
+      "name": "right leg_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://105142680844262)",
+      "name": "left arm_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://119097459947687)",
+      "name": "right arm_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://138512445151895)",
+      "name": "tail_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://86047195026723)",
+      "name": "UpperDentition"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://134358752256830)",
+      "name": "CleanCrestSoft"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://71912153431612)",
+      "name": "CleanCrestDark"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://100153238084703)",
+      "name": "CleanCrestBase"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://94036216143883)",
+      "name": "TRex_PlumesSoft"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://106598031696284)",
+      "name": "TRex_PlumesDark"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://88895847447039)",
+      "name": "DenseUndercoat"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://110717356364976)",
+      "name": "TailUndercoat"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://116739879102403)",
+      "name": "CleanNostrils"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://71407473187850)",
+      "name": "CleanEyePupils"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://123300266710600)",
+      "name": "CleanEyeIris"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://137937662554985)",
+      "name": "CleanEyeSockets"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://83285149006572)",
+      "name": "jaw_geom"
+    },
+    {
+      "meshId": "Content(Uri=rbxassetid://80481317773867)",
+      "name": "LowerDentition"
+    }
+  ],
+  "model": "Workspace.Dinosaur01_TRex_Visual",
+  "motors": 7,
+  "parts": 255,
+  "pbr": 8,
+  "previewKeys": {
+    "Bite": "F",
+    "Camera": "C",
+    "Reset": "R",
+    "Walk": "G"
+  },
+  "runtimeValidation": {
+    "biteWhileWalking": true,
+    "cameraToggle": true,
+    "connectedParts": 255,
+    "jawHingeError": 9.5367431640625e-7,
+    "keyboardBite": true,
+    "keyboardWalk": true,
+    "maxFootY": 0.8092823028564453,
+    "maxLegSwingDegrees": 10.983925171300047,
+    "minFootY": -0.04558753967285156,
+    "mouseBite": true,
+    "mouseStop": true,
+    "reset": true,
+    "resetPositionError": 0,
+    "stoppedDrift": 0,
+    "walkTravelStuds": 20.87947654724121
+  },
+  "savedPlace": "Dinosaur01_TRex_Visual.rbxl",
+  "savedPlaceValidation": "passed",
+  "scripts": [
+    "JawController",
+    "JawRuntime",
+    "MotionController",
+    "MotionRuntime"
+  ],
+  "stage": "HeadCleaned_WalkAndBitePreview",
+  "upperTeeth": 21,
+  "welds": 247
+}

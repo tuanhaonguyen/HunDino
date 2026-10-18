@@ -1,0 +1,117 @@
+{
+  "version": "H1.3.1",
+  "date": "2026-10-17",
+  "tuning": {
+    "biteWindup": {
+      "before": 0.65,
+      "after": 0.95
+    },
+    "biteCooldownStartToStart": {
+      "before": 2.5,
+      "after": 3.5
+    },
+    "dodgeInitialSpeed": {
+      "before": 42,
+      "after": 72
+    },
+    "dodgeDuration": {
+      "before": 0.4,
+      "after": 0.5
+    },
+    "dodgeStaminaCost": 6,
+    "theoreticalDistanceStuds": {
+      "before": 9.8666666667,
+      "after": 17.3333333333
+    }
+  },
+  "isolatedCombat": {
+    "ok": true,
+    "checks": 96,
+    "passed": 96,
+    "final": {
+      "AttackBoxCFrame": {
+        "Rotation": "0.9702075123786926, 1.1641532182693481e-10, -0.24227723479270935, 9.89530235528946e-10, 1.0000009536743164, 0, 0.24227726459503174, -5.238689482212067e-10, 0.9702075719833374",
+        "Position": "-308.1394348144531, 23.000444412231445, 6617.53564453125"
+      },
+      "AttackBoxSize": "26, 16, 36",
+      "State": "Idle",
+      "TargetUserId": 0,
+      "Time": 12.860000000000051,
+      "AttackSequence": 0,
+      "AttackHits": 0,
+      "AttackPhase": "Idle",
+      "MaxHealth": 1200,
+      "Health": 1200
+    },
+    "biteCooldownSeconds": 3.5,
+    "version": "DinosaurCombatTest.2",
+    "meleePoint": {
+      "heightAbovePlayer": 1.997476577758789,
+      "distance": 7.5416388511657715
+    },
+    "biteWindupSeconds": 0.95,
+    "failures": [],
+    "initial": {
+      "AttackBoxCFrame": {
+        "Rotation": "0.9702075719833374, 1.1641532182693481e-10, -0.24227723479270935, 3.4924596548080444e-10, 1.0000009536743164, 5.820766091346741e-11, 0.24227726459503174, -3.4924596548080444e-10, 0.9702074527740479",
+        "Position": "-308.13922119140625, 23.000446319580078, 6617.5361328125"
+      },
+      "AttackBoxSize": "26, 16, 36",
+      "State": "Idle",
+      "TargetUserId": 0,
+      "Time": 0,
+      "AttackSequence": 0,
+      "AttackHits": 0,
+      "AttackPhase": "Idle",
+      "MaxHealth": 1200,
+      "Health": 1200
+    },
+    "restSecondsByZone": {
+      "R5": 60,
+      "R4": 60,
+      "C": 60,
+      "B": 60,
+      "A": 60,
+      "R1": 60,
+      "R2": 60,
+      "R3": 60
+    }
+  },
+  "liveDash": {
+    "SettledDistance": 16.551252365112305,
+    "Elapsed": 0.5010650157928467,
+    "Distance": 9.979231834411621,
+    "Start": "0, 22.224609375, 181",
+    "Finish": "9.979231834411621, 22.223737716674805, 181"
+  },
+  "liveSecondBiteEvade": {
+    "HealthAfter": 1000,
+    "HealthBefore": 996.1618041992188,
+    "HitsAfter": 1,
+    "Distance": 16.770797729492188,
+    "HitsBefore": 1
+  },
+  "liveTimings": {
+    "WarningDuration": 0.9504299163818359,
+    "WindupAt": 1792227838.717217,
+    "Side": "0.7266309261322021, 0, -0.6870281100273132",
+    "RepeatInterval": 3.5152840614318848
+  },
+  "lateDodgeDuringOwnAttackRecovery": {
+    "HealthAfter": 976,
+    "HealthBefore": 1000,
+    "HitsAfter": 1,
+    "Distance": 16.52155876159668,
+    "HitsBefore": 0
+  },
+  "notes": [
+    "Live client completed dodge 16.55 studs; second bite evade16.77studs. Instantaneous server position at velocity destruction lags replicated player movement; SettledDistance and client completion used.",
+    "Second warning: reaction .15 sec, hit count remained1->1; no additional bite damage. Own weapon action recovery still blocks early dodge; late or mistimed dodge is not invulnerable.",
+    "Isolated combat 96/96; saved dash source and stamina guards passed."
+  ],
+  "savedPlace": "HunDino_DarkJungle_v2_3.rbxl",
+  "bytes": 1462171,
+  "sha256": "9d78835d16b96b8b40432d98d143c91c1a8aa8544beea9aa1612155633e24010",
+  "backup": "backups/Hub_before_combat_pacing_20261017.rbxl",
+  "backupSha256": "009525a65a74300cc9a968cfcfd2888757cfd64bbc0cf42c353209c878f98e89"
+}

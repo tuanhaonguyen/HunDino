@@ -1,5 +1,7 @@
 # Lướt Dark Step — 15/10/2026
 
+**Bản chung hiện hành H1.3.1 — 17/10/2026:** tăng mạnh quãng lướt theo yêu cầu né khủng long: `DodgeSpeed=72`, `DodgeTime=0.5` trong `studio-pet-integration/TrainingConfig.luau`, thực chi vẫn 6 thể lực. Tích phân đường giảm tốc cho 17,33 studs; đo client Play 16,55 studs, thử né ngang 16,77 studs không trúng cú cắn lượt hai. Đã thử cùng cảnh báo cắn mới 0,95 giây/chu kỳ 3,5 giây; `tools/test-dark-step.luau --saved` đạt. Bản `src/shared/TrainingConfig.luau` có các chế độ Evades riêng là nguồn khác, không cài thay cấu hình đang dùng của Studio. Các số dưới đây là mốc thử cũ 15/10.
+
 Nhấn Space như trước. Quãng lướt được tăng nhẹ bằng cách đổi tốc độ đầu từ 34 lên 42, giữ nguyên thời gian 0,4 giây, đường giảm tốc và thể lực 6 điểm thực chi. Đo cùng sàn phẳng bằng vị trí lúc DodgeVelocity được tạo/xóa: trước 8,51 studs, sau 9,74 studs, tăng khoảng 14%. Khoảng đi thực tế còn tùy địa hình và va chạm.
 
 Hiệu ứng gồm khói tối lúc xuất phát và dừng, dải tím tối ngắn, các bản sao bóng mờ theo tư thế/vị trí nhân vật tan dần trong 0,38 giây. Có tư thế chúi thân theo hướng lướt, hai tay đưa về sau và trả về hoạt ảnh thường khi kết thúc. Không làm nhân vật thật vô hình hoặc thêm bất tử.

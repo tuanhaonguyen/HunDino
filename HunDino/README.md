@@ -1,5 +1,11 @@
 # HunDino — Dark Jungle và bãi tập
 
+**Chỉnh nhịp né H1.3.1 — 17/10/2026:** cú cắn báo trước 0,95 giây (+0,3), chu kỳ hai lần tấn công 3,5 giây (+1). Lướt xa khoảng 16,5–16,8 studs trong Play, vẫn tốn 6 thể lực. Đã lưu/kiểm tra bản chung; xem [thông số hiện hành](DINOSAUR_COMBAT.md).
+
+**Khủng long phản công H1.3 — 17/10/2026:** trên bản chung **HunDino_DarkJungle_v2_3.rbxl trong Documents**, mọi điểm nghỉ A/B/C/R1–R5 đều 60 giây thực. Con mẫu có thanh máu 1.200 HP, vùng trúng thân/đầu/chân và cú cắn có báo trước; chỉ đuổi/đánh người đã gây sát thương. Vũ khí và cung hiện có đã dùng được trong rừng. Đã thử Play, 96 kiểm tra tích hợp và 6 nhóm luật vũ khí đạt; xem [cách thử và thông số](DINOSAUR_COMBAT.md). Chưa có bắt giữ, nhiệm vụ hoặc thưởng.
+
+**Đã nối sảnh ↔ Rừng cổ H1.2 — 16/10/2026:** mở **HunDino_DarkJungle_v2_3.rbxl trong Documents/ChatGPT/game roblox/HunDino**, bấm **Play → Chơi → VÀO KHU SĂN · RỪNG CỔ**, hoặc giữ **G** tại cổng đá rêu bên trái sảnh. Pet đi cùng, giữ base/trang bị; về bằng nút bên trái hoặc cổng ở trại săn. Đồng hồ rừng riêng từng người chạy 30 lần, về sảnh khôi phục ánh sáng. Bản thử mặc định 40 phút và tự về khi hết giờ. Combat được bổ sung ở H1.3 bên trên; nhiệm vụ/thưởng chưa có. Xem [hướng dẫn và kiểm chứng bản nối](HUNTING_LINK.md). File săn riêng H1.1 giữ làm bản nguồn; [hồ sơ cảnh quan](HUNTING_MAP.md).
+
 **Lướt Dark Step — 15/10/2026:** Space đi xa hơn khoảng 14% trong lượt đo sàn phẳng, thêm khói tối, bóng nhân vật tan dần và tư thế lao người. Thời gian và thể lực không đổi. Xem [hồ sơ và kiểm tra](DARK_STEP.md).
 
 **Dịch chuyển base ↔ sảnh — 15/10/2026:** mỗi base có bệ giữ G để về trung tâm; bệ tại sảnh mở bảng chọn Base 1–12, đánh dấu base của bạn và hiện tên chủ. Pet đi cùng, ghé base khác không đổi quyền sở hữu. Xem [cách dùng và kiểm tra](BASE_TRANSIT.md).

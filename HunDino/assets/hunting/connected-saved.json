@@ -1,0 +1,138 @@
+{
+  "animalZones": 8,
+  "backup": "backups/Hub_before_hunting_link_20261016.rbxl",
+  "backupBytes": 520854,
+  "bytes": 1462171,
+  "camps": 1,
+  "canonicalSources": [
+    {
+      "saved": "ReplicatedStorage.HuntingMapConfig",
+      "source": "src/hunting/ConnectedHuntingConfig.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.HuntingBaseConfig",
+      "source": "src/hunting/HuntingMapConfig.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.HuntingEnvironmentClock",
+      "source": "src/hunting/EnvironmentClock.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntingSession",
+      "source": "src/hunting/HuntingSession.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurRouteController",
+      "source": "src/hunting/DinosaurRouteController.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurCombat",
+      "source": "src/hunting/DinosaurCombat.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurCombatConfig",
+      "source": "src/hunting/DinosaurCombatConfig.luau"
+    },
+    {
+      "saved": "ServerScriptService.HunDinoTraining",
+      "source": "studio-pet-integration/Training.server.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoTraining",
+      "source": "studio-pet-integration/Training.client.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.HubUI",
+      "source": "src/dark-jungle/HubUI.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.TrainingRules",
+      "source": "studio-pet-integration/TrainingRules.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.TrainingConfig",
+      "source": "studio-pet-integration/TrainingConfig.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.EquipmentInventory",
+      "source": "src/dark-jungle/EquipmentInventory.luau"
+    },
+    {
+      "saved": "ServerScriptService.JungleTraversal",
+      "source": "src/dark-jungle/Traversal.server.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.ConnectedHuntingViewer",
+      "source": "src/hunting/ConnectedHuntingViewer.client.luau"
+    }
+  ],
+  "combat": {
+    "biteActiveSeconds": 0.18,
+    "biteCooldownSeconds": 3.5,
+    "biteDamage": 24,
+    "biteWindupSeconds": 0.95,
+    "defaultRestSeconds": 60,
+    "leashStuds": 260,
+    "maxHealth": 1200,
+    "runtimeVolumesGeneratedOnPlay": true
+  },
+  "combatBaseline": "backups/Hub_before_dinosaur_combat_20261016.rbxl",
+  "combatBaselineBytes": 1452607,
+  "combatScenePartsPreserved": 23693,
+  "compiledScripts": 47,
+  "dinosaur": {
+    "anchors": 1,
+    "meshes": 21,
+    "motors": 7,
+    "parts": 255,
+    "welds": 247
+  },
+  "dodge": {
+    "durationSeconds": 0.5,
+    "initialSpeed": 72,
+    "staminaCost": 6
+  },
+  "enabledSpawns": 1,
+  "humanPaths": 2,
+  "huntDurationSeconds": 2400,
+  "intentionalOriginalScriptChanges": [
+    "ReplicatedStorage.Shared.EquipmentInventory",
+    "ReplicatedStorage.Shared.HubUI",
+    "ReplicatedStorage.Shared.TrainingConfig",
+    "ReplicatedStorage.Shared.TrainingRules",
+    "ServerScriptService.HunDinoTraining",
+    "ServerScriptService.JungleTraversal",
+    "StarterPlayer.StarterPlayerScripts.HunDinoTraining"
+  ],
+  "mainPaths": 13,
+  "originalGeometryPreserved": {
+    "DarkJungle": 13879,
+    "HunDinoL0": 1187
+  },
+  "originalScriptsUnchanged": 13,
+  "savedPlace": "HunDino_DarkJungle_v2_3.rbxl",
+  "terrain": {
+    "importCells": [
+      408,
+      44,
+      408
+    ],
+    "importStuds": [
+      1632,
+      176,
+      1632
+    ],
+    "liveGroundValidation": "see connected-validation.json",
+    "originalTerrainVoxelEquality": "not inspected by Lune; unsupported Terrain fields are never serialized",
+    "writeMethod": "Roblox Studio native CopyRegion/PasteRegion and Save"
+  },
+  "timeScale": 30,
+  "timezoneOffsetMinutes": 420,
+  "validation": "passed",
+  "version": "ConnectedHuntSavedValidation.3-H1.3.1",
+  "worldOffset": [
+    0,
+    0,
+    6500
+  ]
+}

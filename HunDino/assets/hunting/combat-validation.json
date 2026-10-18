@@ -1,0 +1,112 @@
+{
+  "version": "H1.3",
+  "date": "2026-10-17",
+  "isolated": {
+    "initial": {
+      "AttackBoxCFrame": {
+        "Rotation": "0.9702075719833374, 1.1641532182693481e-10, -0.24227723479270935, 3.4924596548080444e-10, 1.0000009536743164, 5.820766091346741e-11, 0.24227726459503174, -3.4924596548080444e-10, 0.9702074527740479",
+        "Position": "-308.13922119140625, 23.000446319580078, 6617.5361328125"
+      },
+      "AttackBoxSize": "26, 16, 36",
+      "State": "Idle",
+      "TargetUserId": 0,
+      "Time": 0,
+      "AttackSequence": 0,
+      "AttackHits": 0,
+      "AttackPhase": "Idle",
+      "MaxHealth": 1200,
+      "Health": 1200
+    },
+    "checks": 96,
+    "passed": 96,
+    "final": {
+      "AttackBoxCFrame": {
+        "Rotation": "0.9702075123786926, 1.1641532182693481e-10, -0.24227723479270935, 9.89530235528946e-10, 1.0000009536743164, 0, 0.24227726459503174, -5.238689482212067e-10, 0.9702075719833374",
+        "Position": "-308.1394348144531, 23.000444412231445, 6617.53564453125"
+      },
+      "AttackBoxSize": "26, 16, 36",
+      "State": "Idle",
+      "TargetUserId": 0,
+      "Time": 10.95000000000002,
+      "AttackSequence": 0,
+      "AttackHits": 0,
+      "AttackPhase": "Idle",
+      "MaxHealth": 1200,
+      "Health": 1200
+    },
+    "meleePoint": {
+      "heightAbovePlayer": 1.997476577758789,
+      "distance": 7.5416388511657715
+    },
+    "version": "DinosaurCombatTest.1",
+    "restSecondsByZone": {
+      "R5": 60,
+      "R4": 60,
+      "C": 60,
+      "B": 60,
+      "A": 60,
+      "R1": 60,
+      "R2": 60,
+      "R3": 60
+    },
+    "ok": true,
+    "failures": []
+  },
+  "testPlayerAdapter": "Disposable module copy changes Player instance type gate for table mocks because Studio command context lacks WritePlayer. Production module and actual Player tested separately in Play.",
+  "live": {
+    "melee": {
+      "root": "-381.70953369140625, 18.426513671875, 6630.5419921875",
+      "hp": 1164,
+      "state": "Chasing",
+      "drawn": true,
+      "damage": 36,
+      "phase": "Idle",
+      "dino": "-390.1151123046875, 38.36045837402344, 6633.50634765625",
+      "playerHealth": 986.1460571289062,
+      "seq": 1,
+      "hits": 1
+    },
+    "chargedBow": {
+      "state": "Chasing",
+      "bowDamage": 104,
+      "evidence": {
+        "BeforeHealth": 991.1375122070312,
+        "MinimumHealth": 968.6497192382812,
+        "BeforeBowHealth": 1164,
+        "MeleeDamage": 36,
+        "RetaliationHits": 5
+      },
+      "charging": false,
+      "target": 11605296816,
+      "hp": 1060,
+      "allDamage": 140,
+      "weapon": "Bow"
+    },
+    "bowThreeArrowVolley": {
+      "damageThisVolley": 72,
+      "phase": "Idle",
+      "state": "Chasing",
+      "hp": 1128,
+      "allDamage": 212
+    },
+    "returnToLobby": {
+      "dinoHealth": 1200,
+      "root": "0, 22.224609375, 181",
+      "hpAtExit": 988.5051879882812,
+      "state": "Idle",
+      "inHunting": false,
+      "hpAfter": 1000,
+      "target": 0,
+      "phase": "Idle",
+      "hits": 0,
+      "area": "Lobby"
+    }
+  },
+  "unitRuleGroupsPassed": 6,
+  "notes": [
+    "Actual unprovoked player retained 1000 HP near dinosaur; no attacks before first weapon hit.",
+    "Native UI screenshot confirms healthbar visible, health text and fill updated.",
+    "Humanoid has ordinary regeneration; isolated test verifies exact 24 HP per bite.",
+    "Single real client tested. Multiplayer and mobile not tested."
+  ]
+}

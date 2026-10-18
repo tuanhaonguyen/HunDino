@@ -1,0 +1,312 @@
+{
+  "paths": {
+    "1": {
+      "missingGround": 0,
+      "roadHits": 162,
+      "humanOnly": false,
+      "samples": 162,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 27,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 0.41,
+      "maxGroundSlopeDegrees": 0.41,
+      "decorObstacles": [],
+      "name": "A_R1"
+    },
+    "2": {
+      "missingGround": 0,
+      "roadHits": 270,
+      "humanOnly": false,
+      "samples": 270,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 45,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 1.3,
+      "maxGroundSlopeDegrees": 3.52,
+      "decorObstacles": [],
+      "name": "R1_R5"
+    },
+    "3": {
+      "missingGround": 0,
+      "roadHits": 210,
+      "humanOnly": false,
+      "samples": 210,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 35,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 4.74,
+      "maxGroundSlopeDegrees": 5.34,
+      "decorObstacles": [],
+      "name": "R5_R4"
+    },
+    "4": {
+      "missingGround": 0,
+      "roadHits": 186,
+      "humanOnly": false,
+      "samples": 186,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 31,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 2.7,
+      "maxGroundSlopeDegrees": 3.37,
+      "decorObstacles": [],
+      "name": "R4_B"
+    },
+    "5": {
+      "missingGround": 0,
+      "roadHits": 252,
+      "humanOnly": false,
+      "samples": 252,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 42,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 9.3,
+      "maxGroundSlopeDegrees": 9.3,
+      "decorObstacles": [],
+      "name": "B_R3"
+    },
+    "6": {
+      "missingGround": 0,
+      "roadHits": 252,
+      "humanOnly": false,
+      "samples": 252,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 42,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 11.09,
+      "maxGroundSlopeDegrees": 12.03,
+      "decorObstacles": [],
+      "name": "R3_C"
+    },
+    "7": {
+      "missingGround": 0,
+      "roadHits": 306,
+      "humanOnly": false,
+      "samples": 306,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 51,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 13.14,
+      "maxGroundSlopeDegrees": 14.87,
+      "decorObstacles": [],
+      "name": "C_R2"
+    },
+    "8": {
+      "missingGround": 0,
+      "roadHits": 186,
+      "humanOnly": false,
+      "samples": 186,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 31,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 7.39,
+      "maxGroundSlopeDegrees": 7.39,
+      "decorObstacles": [],
+      "name": "R2_A"
+    },
+    "9": {
+      "missingGround": 0,
+      "roadHits": 276,
+      "humanOnly": false,
+      "samples": 276,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 46,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 2.15,
+      "maxGroundSlopeDegrees": 5.63,
+      "decorObstacles": [],
+      "name": "A_R5"
+    },
+    "10": {
+      "missingGround": 0,
+      "roadHits": 240,
+      "humanOnly": false,
+      "samples": 240,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 40,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 5.91,
+      "maxGroundSlopeDegrees": 8.43,
+      "decorObstacles": [],
+      "name": "R5_B"
+    },
+    "11": {
+      "missingGround": 0,
+      "roadHits": 498,
+      "humanOnly": false,
+      "samples": 498,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 83,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 7.12,
+      "maxGroundSlopeDegrees": 7.29,
+      "decorObstacles": [],
+      "name": "B_R1"
+    },
+    "12": {
+      "missingGround": 0,
+      "roadHits": 384,
+      "humanOnly": false,
+      "samples": 384,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 64,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 13.21,
+      "maxGroundSlopeDegrees": 14.15,
+      "decorObstacles": [],
+      "name": "C_B"
+    },
+    "13": {
+      "missingGround": 0,
+      "roadHits": 574,
+      "humanOnly": false,
+      "samples": 576,
+      "groundHeightErrors": 0,
+      "terrainHits": 2,
+      "segments": 96,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 16.24,
+      "maxGroundSlopeDegrees": 18.82,
+      "decorObstacles": [],
+      "name": "C_R5"
+    },
+    "14": {
+      "missingGround": 0,
+      "roadHits": 246,
+      "humanOnly": true,
+      "samples": 246,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 41,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 1.67,
+      "maxGroundSlopeDegrees": 1.68,
+      "decorObstacles": [],
+      "name": "Camp_R1"
+    },
+    "15": {
+      "missingGround": 0,
+      "roadHits": 264,
+      "humanOnly": true,
+      "samples": 264,
+      "groundHeightErrors": 0,
+      "terrainHits": 0,
+      "segments": 44,
+      "obstructionSampleCount": 0,
+      "maxSurfaceSlopeDegrees": 6.12,
+      "maxGroundSlopeDegrees": 6.12,
+      "decorObstacles": [],
+      "name": "Camp_R4"
+    }
+  },
+  "ok": true,
+  "routes": {
+    "1": {
+      "route": 1,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "A"
+    },
+    "2": {
+      "route": 2,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "A"
+    },
+    "3": {
+      "route": 3,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "A"
+    },
+    "4": {
+      "route": 1,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "C"
+    },
+    "5": {
+      "route": 2,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "C"
+    },
+    "6": {
+      "route": 3,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "C"
+    },
+    "7": {
+      "route": 1,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "B"
+    },
+    "8": {
+      "route": 2,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "B"
+    },
+    "9": {
+      "route": 3,
+      "reverse": true,
+      "missingLegs": [],
+      "forward": true,
+      "home": "B"
+    }
+  },
+  "dinosaur": {
+    "parts": 255,
+    "anchoredParts": 1,
+    "distanceFromA": 7.78,
+    "unboundJoints": 0,
+    "position": {
+      "y": 38.44,
+      "x": -392.18,
+      "z": 140.68
+    },
+    "welds": 247,
+    "motors": 7
+  },
+  "version": "HuntingMapValidation.1",
+  "warnings": [],
+  "conflictingPreviewScripts": [],
+  "failures": [],
+  "counts": {
+    "animalZones": 8,
+    "groundSamples": 4308,
+    "checks": 291,
+    "camps": 1,
+    "passed": 291,
+    "routes": 9,
+    "reverseRoutes": 9,
+    "warnings": 0,
+    "obstructionQueries": 1266,
+    "humanPaths": 2,
+    "failed": 0,
+    "mainPaths": 13
+  },
+  "context": "Edit"
+}

@@ -1,0 +1,41 @@
+{
+  "version": "ConnectedHuntPlay.1",
+  "date": "2026-10-16",
+  "place": "HunDino_DarkJungle_v2_3.rbxl",
+  "status": "passed",
+  "checks": {
+    "realPlayMenuEntry": true,
+    "realGEntryPortal": true,
+    "realGReturnPortal": true,
+    "hudReturn": true,
+    "petFollows": true,
+    "baseAndEquipmentPreserved": true,
+    "studioZoneJumpPreservesEntry": true,
+    "deathRespawnsLobbyWithPet": true,
+    "outOfBoundsReturnsLobby": true,
+    "expiryReturnsLobby": true,
+    "malformedDestinationDenied": true,
+    "distantBaseEntryDenied": true,
+    "previewOutsideHuntDenied": true,
+    "trainingRoundTrip": true,
+    "serverAndClientErrors": []
+  },
+  "observations": {
+    "baseIdInFirstPlay": 7,
+    "petDistanceStuds": 5.9336,
+    "serverClockHeldAt": 16.100000381469727,
+    "entryForestClock": 23.056447777748108,
+    "clientClockRestored": true,
+    "clientAmbientRestored": true,
+    "clientBrightnessRestored": true,
+    "expiryTestDurationSeconds": 30,
+    "savedDurationSeconds": 2400,
+    "lastHunterResetsDinosaur": true,
+    "activeHuntersAfterReturn": 0
+  },
+  "limitations": [
+    "One actual client tested; multiple-player session lifecycle reviewed/mocked only.",
+    "No hunt combat, rewards, objectives or separate team servers.",
+    "Lune saved verification reads Terrain partially; no Lune serialization used."
+  ]
+}

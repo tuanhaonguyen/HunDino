@@ -1,0 +1,10 @@
+local model = script.Parent
+local controller = require(model:WaitForChild("MotionController")).new(model)
+model:WaitForChild("WalkRequest").Event:Connect(function(enabled)
+	controller:SetWalking(enabled)
+end)
+model:WaitForChild("ResetMotionRequest").Event:Connect(function()
+	require(model.JawController).new(model):Cancel()
+	controller:Reset()
+end)
+script.Destroying:Connect(function() controller:Destroy() end)

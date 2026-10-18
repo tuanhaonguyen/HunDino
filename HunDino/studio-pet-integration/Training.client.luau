@@ -107,7 +107,11 @@ hub=require(ReplicatedStorage.Shared.HubUI).create(player,gui,{
  Travel=function(destination) remote:FireServer("TravelMenu",destination) end,
  Preferences=function() refreshPreferences() end,
 })
-local function menuOpen() return panel.Visible or hub:IsOpen() or baseTransit:IsOpen() end
+local function menuOpen()
+ local forestGUI=player.PlayerGui:FindFirstChild("HuntingMapViewer")
+ local picker=forestGUI and forestGUI:FindFirstChild("ZonePicker")
+ return panel.Visible or hub:IsOpen() or baseTransit:IsOpen() or (forestGUI and forestGUI.Enabled and picker and picker.Visible) or false
+end
 local function aimDirection(ranged, dodge)
 	local character = player.Character
 	local hum = character and character:FindFirstChildOfClass("Humanoid")
@@ -276,10 +280,11 @@ RunService.RenderStepped:Connect(function(dt)
 end)
 local function refresh()
 	local inTraining = player:GetAttribute("InTraining")
+ local inHunting = player:GetAttribute("InHunting")==true
 	
 	local id=player:GetAttribute("WeaponId") or "Hammer"; local weapon=Weapons[id]
 	local chain=player:GetAttribute("ComboChain") or ""
-	comboHUD.Visible=inTraining==true and player:GetAttribute("Drawn")==true and not menuOpen() and player:GetAttribute("ShowComboGuide")~=false
+	comboHUD.Visible=(inTraining==true or inHunting) and player:GetAttribute("Drawn")==true and not menuOpen() and player:GetAttribute("ShowComboGuide")~=false
 	local nextKeys={}
 	for _,combo in weapon.Combos do
 		if #chain>0 and combo.Input:sub(1,#chain)==chain then
@@ -289,19 +294,28 @@ local function refresh()
 	comboHUD.Text="COMBO • "..weapon.Name.."\n"..recipes(weapon)
 		.."\n"..(if #chain>0 then "Đã nối: "..recipe(chain).." | Tiếp: "..table.concat(nextKeys," / ") else "Nối sau mỗi đòn, trong 1,35 giây")
 	
-	title.Text = "HUNDINO • " .. (if inTraining then "BÃI LUYỆN TẬP" else "TRẠI THỢ SĂN")
+	title.Text = "HUNDINO • " .. (if inHunting then "RỪNG CỔ" elseif inTraining then "BÃI LUYỆN TẬP" else "TRẠI THỢ SĂN")
 		.. "\nBase " .. tostring(player:GetAttribute("BaseId") or "…") .. " / 12"
-	local value = player:GetAttribute("Stamina") or Config.MaxStamina
+	stats.Visible=true
+ local value = player:GetAttribute("Stamina") or Config.MaxStamina
 	bar.Size = UDim2.fromScale(value / Config.MaxStamina, 1); staminaText.Text = "THỂ LỰC " .. value .. " / " .. Config.MaxStamina
 	stats.Text = weapon.Name..(if player:GetAttribute("Drawn") then " • Đã rút" else " • Đang cất")
 		.. " • " .. (if player:GetAttribute("TrainingArmor") then "Giáp tập" else "Chưa mặc giáp")
 		.. "\nBạn: " .. (player:GetAttribute("TrainingDamage") or 0) .. "  |  Pet: " .. (player:GetAttribute("PetDamage") or 0)
+	if inHunting then stats.Text=weapon.Name..(if player:GetAttribute("Drawn") then " • Đã rút" else " • Đang cất")
+		.."\nSát thương săn: "..(player:GetAttribute("HuntingDamage") or 0) end
 	help.Text="R: Rút / cất • I: Túi đồ\nChuột trái: Đánh thường • Q: Đánh mạnh\nE: "..weapon.Skill.."\nV: Nhảy • Space: Lướt\nShift: Chạy • Ctrl: Ghim tâm • G: Tương tác"
 		..(if id=="Bow" then "\nPhải: Ngắm • Giữ Trái: Tụ lực"..(if player:GetAttribute("BowBoost") then " • MŨI TÊN CƯỜNG HÓA" else "") elseif id=="SwordShield" then "\nF: Giữ thế đỡ" else "")
+ if inHunting then help.Text..="\nKhủng long sẽ phản công khi bị đánh." end
 end
-for _, attr in {"InTraining", "BaseId", "Stamina", "Drawn", "TrainingArmor", "TrainingDamage", "PetDamage", "WeaponId", "Blocking", "BowBoost", "ComboChain"} do
+for _, attr in {"InTraining", "InHunting", "BaseId", "Stamina", "Drawn", "TrainingArmor", "TrainingDamage", "HuntingDamage", "PetDamage", "WeaponId", "Blocking", "BowBoost", "ComboChain"} do
 	player:GetAttributeChangedSignal(attr):Connect(refresh)
 end
+player:GetAttributeChangedSignal("InHunting"):Connect(function()
+ baseTransit:Close(); hub:Close(); panel.Visible=false
+ cancelHeld(); inputSerial+=1; aiming=false; locked=false; center.Visible=false
+ restoreBowView()
+end)
 refreshPreferences=refresh
 panel:GetPropertyChangedSignal("Visible"):Connect(refresh)
 refresh()
