@@ -1,5 +1,13 @@
 # Chế bẫy sắt trong Inventory — 26/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Công thức bẫy sắt Inventory đã có trong bản phát hành 27/10. Số 83.656 kiểm/157 script là mốc chế bẫy 26/10, không phải số kiểm của local mới nhất.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 Trong bản chính **HunDino_MerchantWeapons_20261026.rbxl**, mở **I → CHẾ TẠO**. Công thức: **1 bẫy thô + 1 sắt → 1 bẫy sắt**. Trang hiển thị mô hình bẫy sắt, số nguyên liệu `Hiện có / 1`, thanh đủ/thiếu nguyên liệu, số bẫy sắt trong kho và nút **CHẾ TẠO 1 BẪY SẮT**.
 
 Có thể xem công thức từ xa. Nút chỉ hoạt động khi đứng gần bàn chế tạo tại base của chủ, đã cất vũ khí bằng R, không ở lượt săn và hồ sơ sẵn sàng. Mỗi lần bấm chế một bẫy; không tốn xu. Vật tư chế ra vào kho, không cộng vào phần đang mang trong chuyến săn cũ.

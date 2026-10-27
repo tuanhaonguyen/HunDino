@@ -1,5 +1,13 @@
 # Pet đồng hành — P1-C
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Mốc Pet đánh mỗi 4 giây bên dưới là lịch sử; luật mới 26/10 là một đòn rồi về chủ chờ ít nhất 10 giây, có bảo vệ ngưỡng bắt 10% và tự hồi. Xem BOW_PET_FIXES.md.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Hiện hành 26/10/2026:** bản chính là **HunDino_MerchantWeapons_20261026.rbxl**, đã gộp cửa hàng với sửa cung/Pet/di chuyển. Pet đánh khủng long một lần rồi về chủ, chờ ít nhất 10 giây tính từ đòn trước; dừng tại ngưỡng bắt 10% HP. Tự hồi sau 5 giây an toàn không bị đánh, 10 HP/giây; dưới 25% rút ra xa. Về sảnh hoặc bắt đầu lượt săn mới hồi đầy, giữ nguyên hồi chiêu chữa chủ. Xem [BOW_PET_FIXES.md](BOW_PET_FIXES.md) và mục 42 thiết kế; số liệu kiểm P1-C phía dưới là lịch sử.
 
 **Cập nhật lớp lưu 20/10/2026:** v2.4 đã nối dữ liệu tiến trình vào hồ sơ tài khoản; xem [PERSISTENCE.md](PERSISTENCE.md) và thiết kế mục 39. Kiểm logic/Studio test đã có; nghiệm thu cloud qua thoát/vào còn chờ game xuất bản. Các câu chỉ giữ trong phiên và số liệu dưới đây thuộc mốc trước lớp lưu.

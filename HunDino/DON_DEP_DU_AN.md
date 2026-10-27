@@ -1,5 +1,13 @@
 # File đang dùng và kế hoạch dọn HunDino
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> File chơi chính là MerchantWeapons; v2.4/SaveGame và các bản cũ là mốc đối chiếu. Không xóa backup hoặc dữ liệu local khi đọc báo cáo; xem phụ lục kiểm kê toàn dự án.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
 
 Kiểm kê trạng thái ngày 20/10: **bản làm việc là v2.4 trong Documents**, kế thừa các đợt đến kho cá thể ngày 19/10. File `HunDino_DarkJungle_v2_4.rbxl` hiện **4.220.334 byte (~4,02 MiB)**. Giữ toàn bộ `src/`, `studio-pet-integration/`, `assets/`, `tools/`, `.git/` ở thư mục gốc dự án và mọi `backups/`; giữ cả v2.3 và file săn/model riêng làm mốc nguồn.

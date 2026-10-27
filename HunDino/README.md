@@ -1,12 +1,20 @@
 # HunDino — Dark Jungle và bãi tập
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Báo cáo tổng hợp đã cập nhật toàn bộ hệ thống, kiểm kê tệp và danh sách việc còn lại. Các số liệu/ghi chú “chưa Publish” trong phần mốc 26/10 bên dưới giữ ý nghĩa lịch sử.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Git / push code:** xem [HUONG_DAN_GIT.md](../HUONG_DAN_GIT.md). Làm việc trên `developer`; `main` yêu cầu kiểm tra và chủ repo duyệt qua PR.
 
 **Sửa kẹt ống khi dịch chuyển — 27/10/2026:** bản chính `HunDino_MerchantWeapons_20261026.rbxl` đã chỉnh bố cục 60 ống tại 12 base và mã dựng lại. Thử giữ G/chọn từng base/đi ra/về sảnh đủ 12 base đạt; 252 mẫu hộp thân người không vướng ống. Lưu native, giữ map ngoài cụm ống, Terrain và các source gameplay/lưu hiện hành. **Sửa ống này chưa Publish**; cloud v14 còn bố cục cũ. Xem [chi tiết](BIO_TUBES.md).
 
 **Sửa tải hồ sơ sau phát hành — 27/10/2026:** bản Roblox **v14** và file chính `HunDino_MerchantWeapons_20261026.rbxl` đã nhận lại biên nhận HelloHunDino cũ. Máy chủ thật xác nhận `ProfileReady=true`, `Saved`, `DataStore`; hồ sơ vẫn có 210 xu, độ nhạy 75% và biên nhận mã đã dùng. Không reset/cấp lại thưởng. Bản lưu native đạt 85.318 kiểm tra, 163 script biên dịch, giữ hình học và toàn bộ 70 trường Terrain. Chi tiết và giới hạn kiểm chứng: [bản ghi phát hành](PHAT_HANH_20261027.md).
 
-**Đã xuất bản bản hiện hành — 27/10/2026:** `HunDino_MerchantWeapons_20261026.rbxl` đã cập nhật vào [HunDino SaveGame](https://www.roblox.com/games/103801986821599/), Place `103801986821599`, **phiên bản 12**. Đã mở lại từ Roblox, xác nhận 163 source và 30 điểm quặng của bản mới; chế độ TestMemory tắt. Các ghi chú “Chưa Publish” bên dưới là trạng thái ở từng mốc trước lần xuất bản này. Ảnh `AvatarHundino.png` đã được xác định; thao tác đổi icon đang chờ truy cập Creator Dashboard bằng trình duyệt được cấp quyền. Xem [bản ghi phát hành](PHAT_HANH_20261027.md).
+**Mốc xuất bản v12 trước sửa hồ sơ — 27/10/2026:** `HunDino_MerchantWeapons_20261026.rbxl` đã cập nhật vào [HunDino SaveGame](https://www.roblox.com/games/103801986821599/), Place `103801986821599`, **phiên bản 12**. Đã mở lại từ Roblox, xác nhận 163 source và 30 điểm quặng của bản mới; chế độ TestMemory tắt. Các ghi chú “Chưa Publish” bên dưới là trạng thái ở từng mốc trước lần xuất bản này. Ảnh `AvatarHundino.png` đã được xác định; thao tác đổi icon đang chờ truy cập Creator Dashboard bằng trình duyệt được cấp quyền. Xem [bản ghi phát hành](PHAT_HANH_20261027.md).
 
 **Công thức bẫy sắt trong Inventory — 26/10/2026:** **I → CHẾ TẠO → 1 bẫy thô + 1 sắt → 1 bẫy sắt**. Có số nguyên liệu đang có và nút chế tạo; đứng gần bàn ở base của bạn, cất vũ khí bằng R để bấm. Đã thử hai lần chế liên tiếp, khóa khi thiếu nguyên liệu/đứng xa, lưu native vào bản chính MerchantWeapons và đối chiếu bảo toàn map/Terrain. Chưa Publish. Xem [cách dùng và kiểm chứng](INVENTORY_CRAFTING.md).
 
@@ -32,7 +40,7 @@
 
 **Bản để mở/chỉnh tiếp:** [HunDino_DarkJungle_v2_4.rbxl](HunDino_DarkJungle_v2_4.rbxl) tại `Documents/ChatGPT/game roblox/HunDino`; ngày bản game 20/10/2026. [Hồ sơ v0.41](THIET_KE_GAME.md) giữ cùng nội dung với bản ở thư mục cha; mục 39 ghi lớp lưu; mục 38 giữ bước hiện đại hóa UI.
 
-**Đã có:** sảnh/12 base ngẫu nhiên và dịch chuyển, bãi tập 7 vũ khí/28 combo, Pro/cung/lướt, T-Rex/combat, H2.0, bay admin, Pet P1-C, nhiệm vụ/bắt P1-D, kinh tế P1-E và kho cá thể P1-F bước đầu. UI dùng bảng màu Dark Hunter, Inventory đủ năm tab **Người / Pet / Vật phẩm / Khủng long / Chế tạo**, HUD Boss/Pet/nhiệm vụ và vòng tiến độ giữ phím. **Còn chờ:** ống trưng bày, nghiệm thu lưu cloud, giao dịch Chế tạo trong Inventory, hồi quy P1-G, săn đội và nghiệm thu điện thoại/nhiều client. Bàn chế/nâng P1-E tại base đã có.
+**Đã có:** sảnh/12 base ngẫu nhiên và dịch chuyển, bãi tập 7 vũ khí/28 combo, Pro/cung/lướt, T-Rex/combat, H2.0, bay admin, Pet P1-C, nhiệm vụ/bắt P1-D, kinh tế P1-E và kho cá thể P1-F bước đầu. UI dùng bảng màu Dark Hunter, Inventory đủ năm tab **Người / Pet / Vật phẩm / Khủng long / Chế tạo**, HUD Boss/Pet/nhiệm vụ và vòng tiến độ giữ phím. **Còn chờ:** hồi quy P1-G, cloud toàn vòng kinh tế/cá thể/ống, săn đội và nghiệm thu điện thoại/nhiều client. Ống trưng bày và công thức bẫy sắt Inventory đã triển khai; cloud v14 đã kiểm tải/lưu hồ sơ thực. Bàn chế/nâng P1-E tại base đã có.
 
 **Bản lưu UI hiện hành:** **4.250.777 byte**, lưu bằng Roblox Studio; phạm vi cài là bảy source UI sửa và hai source trình bày mới. Đã thử năm tab, trang bị độc lập, mua/nhặt/chế vật tư, giữ B đặt bẫy và gọi Pet hồi máu trong Play desktop; đã căn bố cục giả lập màn hình ngang nhỏ. Trạng thái bắt/mổ, Pet choáng và cá thể mẫu dùng fixture phía client để kiểm hiển thị, không tính là bắt/mổ thật trong đợt UI. Xem [phạm vi, bản lưu và kiểm chứng UI](UI_MODERNIZATION.md).
 

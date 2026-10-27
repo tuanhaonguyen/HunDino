@@ -1,5 +1,13 @@
 # Modern Dark Hunter UI — 20/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> UI đã có công thức chế bẫy, thao tác ống, cửa hàng mới; không còn là khung Chế tạo chờ. Giả lập màn hình không thay nghiệm thu cảm ứng/thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Cập nhật lớp lưu 20/10/2026:** v2.4 đã nối dữ liệu tiến trình vào hồ sơ tài khoản; xem [PERSISTENCE.md](PERSISTENCE.md) và thiết kế mục 39. Kiểm logic/Studio test đã có; nghiệm thu cloud qua thoát/vào còn chờ game xuất bản. Các câu chỉ giữ trong phiên và số liệu dưới đây thuộc mốc trước lớp lưu.
 
 **Trạng thái: đã cài vào đúng v2.4, thử native Studio Play, lưu bằng Ctrl+S và đối chiếu bản lưu thành công ngày 20/10/2026.** Bản lưu hiện có **4.250.777 byte**, 120 script biên dịch được và đủ chín source UI khớp mã nguồn. Desktop thử ở **1.453 × 808**; đã căn bố cục khi giả lập điện thoại ngang, chưa nghiệm thu toàn bộ gameplay cảm ứng.

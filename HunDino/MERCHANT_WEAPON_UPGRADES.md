@@ -1,5 +1,13 @@
 # Sửa cửa hàng và cấp riêng từng vũ khí — 26/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Cấp riêng bảy vũ khí và cửa hàng đã nằm trong đợt Publish 27/10, cloud v14 thêm sửa hồ sơ; các hash/kiểm tra cửa hàng bên dưới thuộc mốc triển khai riêng.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Bản chính hiện hành:** người dùng đã chọn ghép cung/Pet/di chuyển vào **HunDino_MerchantWeapons_20261026.rbxl**. Đã ghép và lưu native; mở **CHOI_CUA_HANG.cmd** hoặc **CHOI_VA_LUU.cmd**. Chi tiết bản gộp và kiểm chứng: [BOW_PET_FIXES.md](BOW_PET_FIXES.md), thiết kế mục 42. Chưa xuất bản bản gộp lên Roblox.
 
 Theo lệnh tiếp theo ngày 26/10, **I → CHẾ TẠO** đã có công thức **1 bẫy thô + 1 sắt → 1 bẫy sắt**, giao dịch tại bàn base chủ. Bản lưu và bằng chứng mới nhất ở [INVENTORY_CRAFTING.md](INVENTORY_CRAFTING.md), thiết kế mục 43; các số liệu ghép bên dưới là mốc trước lần thêm công thức này.

@@ -1,5 +1,13 @@
 # HunDino SaveGame
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Cloud mới nhất có bằng chứng là v14, sửa Economy:InvalidProfile; v12 là lần upload trước. Local hiện có thêm sửa đường base chưa Publish; hai kho local/cloud vẫn tách riêng.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Bản sửa hiện hành 27/10/2026:** file `HunDino_MerchantWeapons_20261026.rbxl` và Roblox v14 đã sửa lỗi `Economy:InvalidProfile` khi tài khoản từng dùng HelloHunDino. Giữ nguyên kho lưu, biên nhận và tiến trình; máy chủ thật xác nhận tải sẵn sàng và lưu DataStore thành công. Xem `PHAT_HANH_20261027.md`.
 
 ## Chơi và lưu trên máy
@@ -17,7 +25,7 @@ Bộ lưu chỉ nghe tại `127.0.0.1:18764`, không gửi dữ liệu lên mạ
 
 ## Lưu trên Roblox
 
-**Cập nhật 27/10/2026:** đã Publish bản chính `HunDino_MerchantWeapons_20261026.rbxl` vào đúng game dưới đây, **PlaceVersion 12**. Đã nạp lại bản cloud để xác nhận nội dung mới; không đổi StoreName/Scope và không reset dữ liệu tài khoản. Lần này xác nhận phát hành, không phải một lượt kiểm hồi quy toàn bộ gameplay/cloud persistence. Chi tiết: `PHAT_HANH_20261027.md`.
+**Cập nhật 27/10/2026:** đã Publish bản chính `HunDino_MerchantWeapons_20261026.rbxl` vào đúng game dưới đây, **PlaceVersion 12 ở lần upload đầu, sau đó v14 sửa tương thích hồ sơ**. Đã nạp lại bản cloud để xác nhận nội dung mới; không đổi StoreName/Scope và không reset dữ liệu tài khoản. Lần này xác nhận phát hành, không phải một lượt kiểm hồi quy toàn bộ gameplay/cloud persistence. Chi tiết: `PHAT_HANH_20261027.md`.
 
 Đã tạo bản riêng **HunDino SaveGame**: [Mở game](https://www.roblox.com/games/103801986821599/) · [Creator Dashboard](https://create.roblox.com/dashboard/creations/experiences/10772272829/overview). Có thể mở nhanh bằng **CHOI_TREN_ROBLOX.url**. PlaceId `103801986821599`, GameId `10772272829`, thuộc tài khoản chủ dự án `11605296816`. Tạo mới với PC, chưa mở Public. Không cập nhật đè các game HunDino cũ.
 

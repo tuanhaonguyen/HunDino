@@ -1,5 +1,13 @@
 # Ống nghiệm sinh học — P1-F.2
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Đã sửa đường vào 12 base, đồng bộ metadata dựng lại; 60 ống/12.000 Part giữ nguyên. Play 12 base và 252 mẫu đường đi đạt; sửa mới chỉ local.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 Mỗi Base có 5 ống trong `Workspace.SpecimenTubeDisplays.Base1..Base12`.
 Đội hình theo thứ tự trái sang phải là **1, 2, 5, 3, 4** theo mặt trước cụm.
 Mỗi base có vị trí/góc cụm riêng để chừa đường từ bệ dịch chuyển tới SpawnPad và sảnh.

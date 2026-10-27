@@ -1,5 +1,13 @@
 # Mã HelloHunDino — 22/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> V14 đã khôi phục tương thích biên nhận HelloHunDino trên ba module hiện hành, không reset hoặc phát lại thưởng. Có 350 kiểm HelloHunDino trong hồi quy mới; số 243 trong phần 22/10 là mốc cũ.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 Đã cài vào Studio và xuất bản lên [HunDino SaveGame](https://www.roblox.com/games/103801986821599/), PlaceId `103801986821599`. Studio xác nhận: `Published new changes in "HunDino SaveGame" to Roblox.`
 
 Vào lại game, mở **Cài đặt → Nhập code**, nhập `HelloHunDino`, bấm **Đổi mã**. Mọi tài khoản đều nhận được **50 xu, 2 bẫy thô, 2 bẫy sắt và 2 thuốc ngủ**. Mỗi tài khoản nhận một lần; vào lại hoặc đổi máy không mở lại lượt nhận. Chấp nhận chữ hoa/thường và khoảng trắng đầu/cuối.

@@ -1,5 +1,13 @@
 # Sảnh ↔ Rừng cổ H1.2 — 16/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Tính năng trong tài liệu này được đối chiếu cùng bản chính hiện hành; các file v2.x/SaveGame, tham số và kết quả thử cũ trong phần dưới là mốc lịch sử, không tự chứng nhận toàn bộ bản mới. Phạm vi còn chờ: P1-G toàn vòng, cloud kinh tế/cá thể/ống, nhiều client và thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
 
 Bản chung hiện hành là [v2.4](HunDino_DarkJungle_v2_4.rbxl) trong Documents, nối sảnh/12 base/bãi tập với **H2.0 Thung Lũng Sương Xám 4.000 × 4.500**. Nhận nhiệm vụ bằng **J** tại sảnh; khi chưa có nhiệm vụ, menu Chơi/cổng G vẫn cho thám hiểm. Mỗi máy chủ chỉ có một lượt nhiệm vụ solo với một T-Rex chung. Trong nhiệm vụ, ba lần chết đầu về trại, lần thứ tư/hết 40 phút thì thất bại; ra biên giữ lượt, thắng có 120 giây rồi về sảnh.

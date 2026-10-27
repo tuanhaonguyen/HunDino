@@ -1,14 +1,22 @@
 # Hồ sơ thiết kế game Roblox săn khủng long
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Đã đồng bộ trạng thái theo báo cáo hôm nay; mục 45 ghi phát hành v14, sửa tương thích, local sửa 12 base và phạm vi còn chờ. Các mục thử cũ giữ số liệu theo thời điểm.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/BAO_CAO_TIEN_DO_2026-10-27.md>). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Sửa nhận nguyên liệu Khám phá — 21/10/2026:** trên Place HunDino cloud (`103261391098991`), hạ T-Rex trong Khám phá cũng mở mổ xác: **R cất vũ khí, giữ G 1,5 giây**, tối đa **3 lượt/người/xác trong 120 giây**, đưa da/răng/vảy vào **I → Vật phẩm**. Người đã gây sát thương có phần riêng; không mở lại phần từ cùng xác khi rời/vào lại. Khám phá không dành bẫy/thuốc, cấp thưởng xu/xương của nhiệm vụ hoặc tăng thống kê nhiệm vụ. Đã kiểm luật **227/10 nhóm**, tích hợp native **25** và hồi quy mổ **121**; Play TestMemory thực nhận 2 da/1 vảy, giữ qua sảnh/tải lại hồ sơ thử. Đây không phải nghiệm thu DataStore thật. Source và bản sao native `HunDino_ExplorationLoot_20261021.rbxl` được ghi tại [EXPLORATION_LOOT.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/EXPLORATION_LOOT.md>); chưa Publish game live. Mục Chế tạo Inventory tiếp tục để sau.
 
-Phiên bản hồ sơ: 0.44 — Cập nhật: 27/10/2026 — Sửa kẹt ống khi dịch chuyển đến 12 base — Giữ cửa hàng, chế tạo, chiến đấu, khai quặng và lưu tài khoản
+Phiên bản hồ sơ: 0.45 — Cập nhật: 27/10/2026 — Sửa kẹt ống khi dịch chuyển đến 12 base — Giữ cửa hàng, chế tạo, chiến đấu, khai quặng và lưu tài khoản
 
 **Bản đang làm theo lựa chọn người dùng:** **HunDino/HunDino_MerchantWeapons_20261026.rbxl** trong Documents. Mở **HunDino/CHOI_CUA_HANG.cmd** hoặc **HunDino/CHOI_VA_LUU.cmd** rồi Play. Giữ cửa hàng/nâng riêng bảy vũ khí, công thức bẫy sắt, sửa cung/Pet/di chuyển, khai quặng và lớp lưu hiện hành. Cloud đã phát hành v14 với sửa tương thích hồ sơ; riêng sửa ống tại **mục 44** mới lưu local, **chưa Publish**. SaveGame và v2.4 là các mốc cũ để đối chiếu.
 
 **Lưu tiến trình — 20/10/2026:** đã nối lớp DataStore theo tài khoản vào trang bị Người/Pet, giáp từng ô, cài đặt, xu/nguyên liệu/vật tư, chế bẫy, nâng búa, kho cá thể, mã chống nhận trùng, thống kê săn và hồi chiêu hồi chủ của Pet. Mua/chế/nâng/thưởng ghi trước khi báo thành công; trang bị/cài đặt gom lưu sau 2 giây, tự lưu dự phòng 30 giây và lưu khi rời/đóng máy chủ. Có trạng thái tải/lưu/lỗi, nút lưu và thử tải lại. Xem **mục 39** và [PERSISTENCE.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/PERSISTENCE.md>).
 
-**Giới hạn kiểm chứng hiện hành:** bản chính là file cục bộ (GameId/PlaceId = 0), dùng bộ lưu trên máy qua launcher; các phép thử sửa chiến đấu dùng TestMemory riêng. Bản Roblox SaveGame trước đó đã kiểm giữ độ nhạy qua thoát/vào ngày 22/10 (xem LUU_GAME.md), chưa thay cho hồi quy kinh tế/cá thể đầy đủ trên cloud hoặc nghiệm thu bản gộp mới. Khi tải thất bại, hệ thống tiếp tục chặn tiến trình thay vì tạo hồ sơ trắng. Săn đội, hồi quy P1-G toàn vòng và nghiệm thu điện thoại/nhiều client còn chờ; phạm vi từng mốc cũ được giữ tại phần tương ứng.
+**Giới hạn kiểm chứng hiện hành:** local dùng bộ lưu trên máy qua launcher; các phép thử sửa chiến đấu/base dùng TestMemory riêng. Cloud v14 đã kiểm tải/lưu DataStore thực sau vá biên nhận HelloHunDino và vào lại thấy trang bị; chưa thay cho hồi quy kinh tế/cá thể/ống đầy đủ. Sửa đường base mới nhất chỉ local. Khi tải thất bại, hệ thống tiếp tục chặn tiến trình thay vì tạo hồ sơ trắng. Săn đội, hồi quy P1-G toàn vòng và nghiệm thu điện thoại/nhiều client còn chờ; phạm vi từng mốc cũ được giữ tại phần tương ứng.
 
 **Đọc nhanh:** mục 42 là sửa cung/Pet/di chuyển đã gộp; mục 41 là cửa hàng/cấp riêng bảy vũ khí; mục 39 là nền lưu tài khoản, mục 38 UI, mục 36 kho cá thể, mục 34 kinh tế, mục 33 nhiệm vụ/bẫy/bắt, mục 32 Pet, mục 31 H2 và mục 30 combat. Các câu “chỉ giữ trong phiên/chưa DataStore”, cấp búa duy nhất hoặc Pet đánh mỗi 4 giây tại mốc cũ là lịch sử; không thay quy tắc hiện hành ở mục mới. Mục 1–22 giữ định hướng; mục 23–24 giữ kế hoạch P1. Thông số thử chưa phải cân bằng toàn game.
 
@@ -1811,3 +1819,11 @@ Play thực tế với TestMemory riêng: giữ G mở bảng, bấm từng Base
 Lưu native Studio vào bản chính: **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`. Inspector chỉ đọc đạt **129.779 kiểm tra / 164 source biên dịch** (thêm module backup); các source gameplay/lưu khác giữ nguyên. Fingerprint 49.221 instance ngoài cụm ống và byte của toàn bộ 70 trường Terrain khớp backup. Backup tại `HunDino/backups/base-clearance-20261027/` và `ServerStorage.BaseClearanceBackup_20261027`.
 
 Bằng chứng: `HunDino/assets/base-clearance/studio-play.json`, `survey.json`, `saved-inspection.json`; kiểm lại bằng `HunDino/tools/inspect-base-clearance-saved.luau`. Chi tiết vận hành: `HunDino/BIO_TUBES.md`. **Sửa ống này chưa Publish**; cloud v14 là mốc trước sửa. Chưa kiểm nhiều người cùng lúc hoặc Roblox Player với bố cục mới.
+
+## 45. Tổng hợp tiến độ toàn dự án — 27/10/2026
+
+Đã rà soát lại nhóm mã nguồn, tài sản, công cụ, tài liệu và các bản Place. Bản local chính sau sửa đường 12 base là 4.495.025 byte, hash `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`, inspector đạt 129.779 kiểm / 164 source. Bản cloud có bằng chứng mới nhất là v14, nguồn 4.481.440 byte; đã sửa từ chối biên nhận HelloHunDino cũ và giữ dữ liệu thật, Player xác nhận Saved/DataStore rồi vào lại thấy trang bị. Sửa bố cục ống 12 base chưa Publish.
+
+Khai thác sắt đã có 30 model trên bản nạp lại cloud, 402 kiểm logic đạt; báo cáo inspector thêm quặng cũ vẫn Ok=false cần đối soát riêng, không phải kiểm mới nhất. Cửa hàng, chế bẫy Inventory, Pet/cung, kho cá thể và ống đã triển khai. Còn hồi quy P1-G toàn vòng, cloud kinh tế/cá thể/ống qua phiên mới, nhiều client, thiết bị thật/hiệu năng và icon. Git hiện có mốc 677f3da trên developer; không còn dùng kết luận workspace chưa đồng bộ từ 18/10.
+
+Số liệu cũ ở mục 1–44 giữ nguyên theo thời điểm. Báo cáo 27/10 có bảng mốc local/cloud, bằng chứng, kiểm kê nhóm tệp, chỉ mục toàn bộ tài liệu và ưu tiên tiếp theo; đợt đồng bộ này chỉ sửa Markdown, không sửa mã/game/hồ sơ hoặc Publish.

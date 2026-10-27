@@ -1,5 +1,13 @@
 # Bộ bảy vũ khí Pro — 15/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Tính năng trong tài liệu này được đối chiếu cùng bản chính hiện hành; các file v2.x/SaveGame, tham số và kết quả thử cũ trong phần dưới là mốc lịch sử, không tự chứng nhận toàn bộ bản mới. Phạm vi còn chờ: P1-G toàn vòng, cloud kinh tế/cá thể/ống, nhiều client và thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
 
 Bộ bảy model/VFX Pro cho Người/Pet và mẫu trưng bày được kế thừa trong [v2.4](HunDino_DarkJungle_v2_4.rbxl). Người/Pet chọn vũ khí độc lập qua [Inventory](INVENTORY.md); [combo](COMBOS_V2_3.md) và [tụ lực cung](BOW_CHARGE_RESTORE.md) tiếp tục áp dụng. Chỉ chuột trái tụ lực cung, Q là đòn mạnh. [Pet P1-C](PET_COMPANION.md) hỗ trợ trong rừng; nâng búa P1-E +15% chỉ áp dụng búa của chủ, không tăng sát thương Pet hoặc vũ khí khác. Bảng model/VFX và kiểm chứng bên dưới thuộc mốc 15/10.

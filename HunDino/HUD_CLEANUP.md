@@ -1,5 +1,13 @@
 # Dọn HUD và chuyển lưu thủ công vào Cài đặt — 21/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Thanh lưu thường trực đã bỏ, tự lưu và Save game trong Cài đặt giữ hoạt động. Cloud v14 đã có xác nhận Saved; chưa nghiệm thu mọi giao dịch.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 Đã sửa và thử phần hiển thị trong Studio để thanh máu không che giữa màn hình và bỏ thanh thông báo lưu thường trực. Cơ chế tự lưu trên server giữ nguyên; đã kiểm chứng tự lưu và nút Save game bằng DataStore riêng của Studio. **Đã lưu bản native [HunDino_HUDClean_20261021.rbxl](HunDino_HUDClean_20261021.rbxl) và đối chiếu thành công: 8.766 kiểm tra, 130 script biên dịch, không có khác biệt ngoài phạm vi cho phép.**
 
 ## Bốn source thay đổi

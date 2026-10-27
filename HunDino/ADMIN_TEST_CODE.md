@@ -1,5 +1,13 @@
 # Nhập code thử cho admin — 21/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Tính năng trong tài liệu này được đối chiếu cùng bản chính hiện hành; các file v2.x/SaveGame, tham số và kết quả thử cũ trong phần dưới là mốc lịch sử, không tự chứng nhận toàn bộ bản mới. Phạm vi còn chờ: P1-G toàn vòng, cloud kinh tế/cá thể/ống, nhiều client và thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 **Cập nhật SaveGame 22/10/2026:** đã khôi phục **Cài đặt → Nhập code** vào `HunDino_SaveGame.rbxl` và bản Roblox riêng [HunDino SaveGame](https://www.roblox.com/games/103801986821599/). Luật ghép với kinh tế SaveGame đạt 346 kiểm tra / 11 nhóm; đã thử nhập mã sai qua UI và nhận lỗi server trong cả Studio lẫn Roblox Player, không sử dụng mã admin thật. Đã sửa lớp nền đóng bảng khi bấm ô nhập. Bản SaveGame bật LocalFile khi chạy Studio; Roblox Player dùng DataStore cloud. Các số liệu và Place của đợt 21/10 bên dưới là mốc lịch sử.
 
 Mã: **`HUNDINO-ADMIN-500`**. Chỉ tài khoản **tunzdangcap / UserId 11605296816** được nhận. Mã cấp **500 xu** và **10 da, 10 răng, 10 vảy, 10 xương, 10 sắt**; không cấp bẫy hoặc thuốc. Không cho tài khoản khác nhận dù biết mã hoặc gửi remote trực tiếp.

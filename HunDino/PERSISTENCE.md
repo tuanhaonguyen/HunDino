@@ -1,5 +1,13 @@
 # Lưu tiến trình tài khoản HunDino — 20/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> V14 sửa bộ đọc biên nhận HelloHunDino; Player xác nhận ProfileReady/Saved/DataStore, 210 xu và độ nhạy 75%, rồi rejoin thấy trang bị. Chưa nghiệm thu mọi giao dịch/cá thể/ống qua server mới.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 Hệ thống này bổ sung lưu tiến trình cho bản **HunDino_DarkJungle_v2_4.rbxl**: lựa chọn vũ khí/giáp của Người và Pet, vật phẩm đã mua/chế tạo, nguyên liệu, xu, cấp búa, cá thể bắt sống, cài đặt và một số thống kê. Khi vào lại, server tải hồ sơ trước khi khởi tạo trang bị. Lưu tài khoản là một hệ thống riêng với thao tác **Ctrl+S lưu file Roblox Place**: file `.rbxl` chứa map và mã nguồn; tiến trình từng tài khoản nằm trong kho dữ liệu của game đã xuất bản.
 
 **Mức kiểm chứng hiện có:** các bộ kiểm tra dữ liệu thuần đã đạt; luồng tích hợp đã thử trong Studio bằng **TestMemory được bật rõ ràng riêng trong Play**. Chưa kiểm chứng thoát rồi vào lại qua DataStore Roblox thật. Việc lưu native và đối chiếu bản `.rbxl` cuối là bước kiểm tra riêng, chưa lấy kết quả của mốc UI trước để chứng nhận bản persistence này.

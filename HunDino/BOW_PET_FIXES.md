@@ -1,5 +1,13 @@
 # Cung, Pet và hướng di chuyển — 26/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Luật hiện hành: Pet một đòn 12 sát thương rồi về chủ chờ ít nhất 10 giây; cung 40–120 studs, E cấp 1 là 72 khi trúng đủ. Bản gộp đã nằm trong đợt phát hành 27/10; sửa ống local mới hơn chưa Publish.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 Bản chính theo lựa chọn người dùng là **HunDino_MerchantWeapons_20261026.rbxl**. Mở **CHOI_CUA_HANG.cmd** hoặc **CHOI_VA_LUU.cmd** rồi Play. Đã ghép các sửa chiến đấu với cửa hàng, nâng riêng bảy vũ khí và lưu tiến trình. Bản gộp chưa Publish; ứng dụng Roblox đang chạy sẽ chưa có cập nhật này. SaveGame giữ thêm bản sửa riêng làm mốc đối chiếu.
 
 ## Luật hiện hành
