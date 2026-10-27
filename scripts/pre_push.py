@@ -21,7 +21,13 @@ def main():
     reason = None
     if len(sys.argv) < 2 or sys.argv[1] != "origin":
         reason = "Only the configured origin is allowed."
-    elif not updates or any(len(u) != 4 or u[0] != "refs/heads/developer" or u[2] != "refs/heads/developer" or set(u[1]) == {"0"} for u in updates):
+    elif not updates:
+        # Git sends an empty update list when all requested refs are current.
+        # Nothing is transferred, so there is no commit or branch update to gate.
+        (report / "report.md").write_text("# Nothing to push\n\nAll requested refs are already up to date. No remote refs were changed; validation was not needed.\n", encoding="utf-8")
+        (report / "push.json").write_text(json.dumps({"utc": stamp, "updates": [], "phase": "no-op; all requested refs already current"}, indent=2))
+        return 0
+    elif any(len(u) != 4 or u[0] != "refs/heads/developer" or u[2] != "refs/heads/developer" or set(u[1]) == {"0"} for u in updates):
         reason = "Only developer -> developer pushes are allowed. Direct main pushes, deletions and tags are blocked."
     elif git("branch", "--show-current") != "developer":
         reason = "The current branch must be developer."
