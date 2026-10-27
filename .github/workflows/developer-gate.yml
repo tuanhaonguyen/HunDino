@@ -1,0 +1,43 @@
+name: Developer gate
+
+on:
+  push:
+    branches: [developer, main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install pinned tools
+        run: |
+          mkdir -p .reports/ci-${{ github.run_id }}-${{ github.run_attempt }}
+          python3 scripts/bootstrap.py 2>&1 | tee .reports/ci-${{ github.run_id }}-${{ github.run_attempt }}/bootstrap.log
+      - name: Compile, build, scan and test
+        run: python3 scripts/validate.py --report-dir .reports/ci-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Publish report summary
+        if: always()
+        run: |
+          report=.reports/ci-${{ github.run_id }}-${{ github.run_attempt }}/report.md
+          if [ -f "$report" ]; then cat "$report" >> "$GITHUB_STEP_SUMMARY"; else echo 'Validation could not finish. Inspect the job logs and bootstrap.log.' >> "$GITHUB_STEP_SUMMARY"; fi
+      - name: Save a separate report for this push or PR attempt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: report-${{ github.event_name }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .reports/ci-${{ github.run_id }}-${{ github.run_attempt }}/
+          retention-days: 90
+          if-no-files-found: error
+

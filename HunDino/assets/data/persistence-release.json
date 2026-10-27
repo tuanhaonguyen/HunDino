@@ -1,0 +1,17 @@
+{
+  "Version": "Persistence.1",
+  "Date": "2026-10-20",
+  "Place": "HunDino_DarkJungle_v2_4.rbxl",
+  "Baseline": "backups/Hub_v24_before_persistence_20261020.rbxl",
+  "BaselineSHA256": "fa8e4b988c5a9d3172eeb270ed5cc110e23f646e66468789eafed2897b939b89",
+  "SavedSHA256": "6e64e2be559d42d13a5b2ffa6baa5248bae31db16c477c8341a95a9703dcb99e",
+  "SavedBytes": 4263368,
+  "NativeValidation": "passed",
+  "SourceBindings": 29,
+  "CompiledScripts": 125,
+  "NativeChecks": 70035,
+  "CloudVerified": false,
+  "PublishPrivate": "User authorized; in progress",
+  "SchemaVersion": 1,
+  "EconomyVersion": 2
+}

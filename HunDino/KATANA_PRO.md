@@ -1,5 +1,11 @@
 # Nâng cấp katana theo mẫu — 15/10/2026
 
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Mẫu katana nâng cấp ngày 15/10 là mốc trước bộ bảy vũ khí Pro. Trên [v2.4](HunDino_DarkJungle_v2_4.rbxl), dùng hệ VFX chung trong [WEAPONS_PRO.md](WEAPONS_PRO.md); LocalScript katana riêng cũ không còn chạy. Giữ hồ sơ/model/backup bên dưới để truy nguồn, không cài lại KatanaEffects cũ lên bản chung. Xem [Inventory](INVENTORY.md) cho trang bị Người/Pet độc lập.
+
+## Hồ sơ nâng katana — trước bộ Pro chung
+
 Đã sửa và lưu bằng Studio vào `HunDino_DarkJungle_v2_3.rbxl` trong thư mục Documents hiện tại. Có map sao lưu trước sửa tại `backups/HunDino_v2_3_before_katana_20261015.rbxl`; code Studio trước sửa tại `backups/studio_before_katana_20261015.json`. Trong Studio có bản sao katana, mẫu trưng bày và code sửa trong `ServerStorage.KatanaUpgradeBackup_20261015`.
 
 ## Nội dung đã ghép

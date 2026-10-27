@@ -1,0 +1,19 @@
+{
+  "Baseline": "backups/bow-pet-20261026/HunDino_SaveGame.rbxl",
+  "Bytes": 4366934,
+  "Checks": 83458,
+  "Ok": true,
+  "OpaqueTerrainProperties": 70,
+  "QAFlagsRemoved": true,
+  "SHA256": "e8413d78cf5ab5d6902e7e88205ff15514e5b4bc4b8438d0164652b4bf12e70f",
+  "SceneHash": "d8cca91b673788676d4aa98213969f51e55f32c21f7dc332eb545492d67655d8",
+  "ScriptsCompiled": 148,
+  "SourceBindings": 9,
+  "Target": "HunDino_SaveGame.rbxl",
+  "VoxelContentMap": {
+    "bytes": 38,
+    "sha256": "477acdbf3c01127e049662ab2f85568da85c24f63e8c4222d0395ab9e035032d"
+  },
+  "WorkspaceJoints": 723,
+  "WorkspaceParts": 47064
+}

@@ -1,0 +1,28 @@
+{
+  "placeId": 103801986821599,
+  "gameId": 10772272829,
+  "name": "HunDino SaveGame",
+  "local": {
+    "mode": "LocalFile",
+    "ready": true,
+    "sensitivityBefore": 1,
+    "sensitivityAfterSave": 0.5,
+    "sensitivityAfterHelperRestartAndPlay": 0.5,
+    "sensitivityAfterRapidStopPlay": 0.5,
+    "gateEnabledAfterLoad": false,
+    "diskPath": "local-save/profiles.json",
+    "casAndRestartTests": 5
+  },
+  "cloud": {
+    "client": "Roblox Player VNG",
+    "loadedSuccessfully": true,
+    "sensitivityBefore": 1,
+    "sensitivityAfter": 0.75,
+    "savedConfirmationVisible": true,
+    "savedConfirmationUTC7": "00:41:39",
+    "rejoinVerified": true,
+    "sensitivityAfterRejoin": 0.75,
+    "rejoinSavedConfirmationUTC7": "00:43:07",
+    "scope": "Settings persistence in the real Roblox client; economy/capture full cloud regression not performed"
+  }
+}

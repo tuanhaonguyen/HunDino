@@ -55,13 +55,15 @@ function Rules.beginCharge(config,weapons,state,action,now)
  if state.WeaponId~="Bow" or action~="Light" then return nil end
  local kind,spec=Rules.attack(config,weapons,state,action,now);if not kind then return nil end
  local setting=weapons.Bow.Charge
- local charge={Kind=kind,Spec=spec,Started=now,Time=setting.Time,Multiplier=setting.Multiplier,MaxHold=setting.MaxHold}
+ local charge={Kind=kind,Spec=spec,Started=now,Time=setting.Time,Multiplier=setting.Multiplier,MaxHold=setting.MaxHold,
+  MinRange=setting.MinRange,MaxRange=setting.MaxRange}
  state.Charge=charge;state.BusyUntil=math.huge;return charge
 end
 function Rules.releaseCharge(config,state,now)
  local c=state.Charge;if not c then return nil end
  local alpha=math.clamp((now-c.Started)/c.Time,0,1)
  local spec=table.clone(c.Spec);spec.Damage=math.floor(spec.Damage*(1+(c.Multiplier-1)*alpha)+.5)
+ if c.MinRange and c.MaxRange then spec.Range=c.MinRange+(c.MaxRange-c.MinRange)*alpha end
  state.Charge=nil;state.BusyUntil=now+spec.Duration;state.LastSpend=state.BusyUntil;state.ComboUntil=state.BusyUntil+config.ComboWindow
  return c.Kind,spec,alpha
 end

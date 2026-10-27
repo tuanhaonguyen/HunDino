@@ -1,0 +1,55 @@
+{
+  "entry": {
+    "active": true,
+    "entryHours": 8.535034166640706,
+    "timeScale": 30,
+    "palette": "0.556863, 0.611765, 0.356863",
+    "hud": true,
+    "cc": false,
+    "position": "0, 23.374839782714844, 4650",
+    "started": 1792373526.123,
+    "base": 5,
+    "area": "Hunting"
+  },
+  "ok": true,
+  "combat": {
+    "state": "Idle",
+    "health": 1171,
+    "target": 0,
+    "hits": 7,
+    "attacks": 7,
+    "damage": 29
+  },
+  "returned": {
+    "dinoHealth": 1200,
+    "gradingRestored": true,
+    "active": false,
+    "waterRestored": true,
+    "paletteRestored": true,
+    "hud": false,
+    "dinoAttacks": 0,
+    "position": "-8.215010893763974e-09, 22.22484016418457, 181",
+    "clockRestored": true,
+    "base": 5,
+    "area": "Lobby",
+    "petDistance": 5.933424472808838
+  },
+  "walking": {
+    "island": {
+      "reached": true,
+      "finalX": 150.76344299316406,
+      "finalY": 87.37671661376953,
+      "seconds": 31.734790383838117,
+      "minimumRootY": 67.8893814086914,
+      "swimmingFrames": 0
+    },
+    "cave": {
+      "crossed": true,
+      "seconds": 5.550042086280882,
+      "baseY": 475.4319763183594,
+      "minimumRootY": 478.6000671386719,
+      "finalZ": 8408.2548828125
+    },
+    "note": "Island and cave walking were observed in the preceding native Play run; entry/combat/return were repeated after reopening the saved file."
+  }
+}

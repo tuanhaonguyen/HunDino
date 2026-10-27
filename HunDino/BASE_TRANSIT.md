@@ -1,5 +1,15 @@
 # Điểm dịch chuyển base ↔ sảnh trung tâm — 15/10/2026
 
+**Cập nhật 27/10/2026:** bản chính `HunDino_MerchantWeapons_20261026.rbxl` đã sửa cụm ống
+đè điểm đến tại Base 3, 5, 6, 10 và kiểm đủ 12 base. Không đổi bệ/điểm dịch chuyển;
+đổi bố cục ống và metadata để chừa lối đi. Play chọn từng base, đi ra và giữ G về sảnh
+đều đạt; kiểm hộp thân người trên 252 mẫu không vướng ống. Bản sửa đã lưu local,
+chưa Publish. Xem [ống nghiệm](BIO_TUBES.md). Phần dưới ghi lại triển khai dịch chuyển ban đầu.
+
+Các bệ dịch chuyển 12 base ↔ sảnh tiếp tục dùng trong [v2.4](HunDino_DarkJungle_v2_4.rbxl) tại Documents/ChatGPT/game roblox/HunDino. Base được bốc ngẫu nhiên trong các số còn trống, giữ qua hồi sinh trong phiên và trả khi thoát; ghé base khác không đổi quyền sở hữu. Bàn chế/nâng P1-E chỉ giao dịch tại base của chủ; xem [kinh tế](HUNT_ECONOMY.md). Chưa có lưu quyền sở hữu base/trưng bày theo tài khoản.
+
+## Hồ sơ triển khai và kiểm chứng — 15/10/2026
+
 Đã thêm vào bản Studio trong Documents/ChatGPT/game roblox/HunDino/HunDino_DarkJungle_v2_3.rbxl.
 
 - **Ở base:** đến bệ tròn viền xanh ngọc, giữ G để về sảnh trung tâm. Mỗi base có một bệ, nằm phía hướng vào trung tâm, cách SpawnPad khoảng 26 studs.

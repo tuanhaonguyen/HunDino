@@ -1,0 +1,36 @@
+-- Fixed, grounded sites in the current 4,000 x 4,500 valley. World coordinates.
+local C={Version="IronMining.1",FolderName="MineableIron",StrikeSeconds=2.2,RespawnSeconds=300,Reach=9,MaxHits=3}
+C.Nodes={
+	{Id="IRON_01",Index=1,Name="Bìa trạm",Position=Vector3.new(230,21.0503,4880),Approach=Vector3.new(230,24.059,4874),Yaw=137.5},
+	{Id="IRON_02",Index=2,Name="Bìa trạm Tây",Position=Vector3.new(-450,34.1852,4920),Approach=Vector3.new(-450,37.1054,4914),Yaw=275},
+	{Id="IRON_03",Index=3,Name="Đồng cỏ Nam",Position=Vector3.new(350,41.9422,5170),Approach=Vector3.new(350,44.6234,5164),Yaw=52.5},
+	{Id="IRON_04",Index=4,Name="Đồi thấp",Position=Vector3.new(-470,41.7842,5220),Approach=Vector3.new(-470,44.846,5214),Yaw=190},
+	{Id="IRON_05",Index=5,Name="Gần đồi sồi",Position=Vector3.new(-1000,69.3453,5280),Approach=Vector3.new(-1000,71.9066,5274),Yaw=327.5},
+	{Id="IRON_06",Index=6,Name="Bìa thông Nam",Position=Vector3.new(-1260,92.4136,5650),Approach=Vector3.new(-1260,94.7875,5644),Yaw=105},
+	{Id="IRON_07",Index=7,Name="Đường hồ phía Nam",Position=Vector3.new(-660,90.0837,5740),Approach=Vector3.new(-660,92.0386,5734),Yaw=242.5},
+	{Id="IRON_08",Index=8,Name="Đồng cỏ Thu",Position=Vector3.new(70,66.8199,5630),Approach=Vector3.new(70,68.9829,5624),Yaw=20},
+	{Id="IRON_09",Index=9,Name="Đồi phía Đông",Position=Vector3.new(680,73.4102,5650),Approach=Vector3.new(680,76.2046,5644),Yaw=157.5},
+	{Id="IRON_10",Index=10,Name="Lối đi Đông Nam",Position=Vector3.new(1480,58.9078,5380),Approach=Vector3.new(1480,61.7913,5374),Yaw=295},
+	{Id="IRON_11",Index=11,Name="Rìa đầm Nam",Position=Vector3.new(1760,82.5563,5790),Approach=Vector3.new(1760,85.6664,5784),Yaw=72.5},
+	{Id="IRON_12",Index=12,Name="Rìa đầm Đông",Position=Vector3.new(1800,92.3824,6330),Approach=Vector3.new(1800,95.4867,6324),Yaw=210},
+	{Id="IRON_13",Index=13,Name="Rìa đầm Bắc",Position=Vector3.new(1750,109.5387,6920),Approach=Vector3.new(1750,112.1742,6914),Yaw=347.5},
+	{Id="IRON_14",Index=14,Name="Đường khe đá",Position=Vector3.new(1240,154.8557,7150),Approach=Vector3.new(1240,157.1056,7144),Yaw=125},
+	{Id="IRON_15",Index=15,Name="Ven suối",Position=Vector3.new(1030,198.7622,7350),Approach=Vector3.new(1030,200.8487,7344),Yaw=262.5},
+	{Id="IRON_16",Index=16,Name="Khe đá chẻ",Position=Vector3.new(410,263.6461,7750),Approach=Vector3.new(410,266.1489,7744),Yaw=40},
+	{Id="IRON_17",Index=17,Name="Đường xưởng gỗ",Position=Vector3.new(50,246.7711,7620),Approach=Vector3.new(50,248.3295,7614),Yaw=177.5},
+	{Id="IRON_18",Index=18,Name="Bìa xưởng gỗ",Position=Vector3.new(-550,225.1031,7700),Approach=Vector3.new(-550,226.9164,7694),Yaw=315},
+	{Id="IRON_19",Index=19,Name="Rừng thông Bắc",Position=Vector3.new(-1050,224.6837,7530),Approach=Vector3.new(-1050,227.4118,7524),Yaw=92.5},
+	{Id="IRON_20",Index=20,Name="Rừng thông Tây",Position=Vector3.new(-1570,187.3797,7150),Approach=Vector3.new(-1570,189.8145,7144),Yaw=230},
+	{Id="IRON_21",Index=21,Name="Gần thông cổ",Position=Vector3.new(-1520,145.5835,6630),Approach=Vector3.new(-1520,148.6586,6624),Yaw=7.5},
+	{Id="IRON_22",Index=22,Name="Lối thông già",Position=Vector3.new(-1230,142.7281,6220),Approach=Vector3.new(-1230,145.2592,6214),Yaw=145},
+	{Id="IRON_23",Index=23,Name="Bờ hồ Tây",Position=Vector3.new(-850,129.5433,6640),Approach=Vector3.new(-850,132.4712,6634),Yaw=282.5},
+	{Id="IRON_24",Index=24,Name="Bờ hồ Bắc Tây",Position=Vector3.new(-410,116.5289,6880),Approach=Vector3.new(-410,119.096,6874),Yaw=60},
+	{Id="IRON_25",Index=25,Name="Bờ hồ Bắc Đông",Position=Vector3.new(460,139.2672,7028),Approach=Vector3.new(460,141.1923,7022),Yaw=197.5},
+	{Id="IRON_26",Index=26,Name="Sườn núi Tây",Position=Vector3.new(-1340,369.6787,8180),Approach=Vector3.new(-1340,372.3424,8174),Yaw=335},
+	{Id="IRON_27",Index=27,Name="Đường lên tổ núi",Position=Vector3.new(-730,317.9735,8090),Approach=Vector3.new(-730,320.7448,8084),Yaw=112.5},
+	{Id="IRON_28",Index=28,Name="Gần hang núi",Position=Vector3.new(-390,461.2558,8462),Approach=Vector3.new(-384,463.8367,8462),Yaw=250},
+	{Id="IRON_29",Index=29,Name="Sườn núi trung tâm",Position=Vector3.new(300,420.0114,8260),Approach=Vector3.new(300,423.1689,8254),Yaw=27.5},
+	{Id="IRON_30",Index=30,Name="Sườn núi Đông",Position=Vector3.new(1100,303.9625,8120),Approach=Vector3.new(1100,305.8317,8114),Yaw=165},
+}
+return C
+

@@ -1,0 +1,107 @@
+{
+  "version": "HUDCleanupPlayValidation.1",
+  "date": "2026-10-21",
+  "studioId": "576ec8a4-2788-44c9-a3fe-ae64b534af15",
+  "placeId": 103261391098991,
+  "desktop": {
+    "viewport": [
+      1453,
+      768
+    ],
+    "bossNormal": [
+      430,
+      54
+    ],
+    "bossExpanded": [
+      430,
+      76
+    ],
+    "bossPosition": [
+      511.5,
+      8
+    ],
+    "clientFixtures": [
+      "Normal",
+      "WeakTrap",
+      "Dead",
+      "Captured",
+      "Menu",
+      "ExitRestoresTrue",
+      "ExitPreservesFalse"
+    ],
+    "passed": true
+  },
+  "save": {
+    "storage": "DataStore",
+    "store": "HunDinoProfiles_Studio_v1",
+    "loadedReady": true,
+    "autosave": {
+      "before": 1792583937,
+      "after": 1792583968,
+      "manualSaveClicked": false,
+      "persistentSaveHUD": false
+    },
+    "manualSave": {
+      "input": "Native click Cài đặt → Save game",
+      "before": 1792583968,
+      "after": 1792584005,
+      "state": "Saved",
+      "text": "Đã lưu tài khoản lúc 19:00:05 (UTC+7).",
+      "button": "SAVE GAME · 4s",
+      "active": false,
+      "persistentSaveHUD": false
+    },
+    "testMemoryButtonDisabled": true,
+    "rejoinLoadRetested": false
+  },
+  "landscape": {
+    "device": "iPhone 17 Pro simulator",
+    "viewport": [
+      750,
+      381
+    ],
+    "safeGUI": [
+      750,
+      323
+    ],
+    "fixture": "client-only InHunting=true, QuestState=nil",
+    "bossNormal": [
+      318.200012,
+      39.9599991
+    ],
+    "bossExpanded": [
+      318.200012,
+      56.2400017
+    ],
+    "bossPosition": [
+      253.399994,
+      8
+    ],
+    "bossVisible": true,
+    "questVisible": false,
+    "comboVisible": false,
+    "flyPosition": [
+      12,
+      56
+    ],
+    "restored": true
+  },
+  "cleanup": {
+    "playStopped": true,
+    "desktopRestored": true,
+    "studioMemoryTestConfig": false,
+    "accountAttrsEmpty": true
+  },
+  "limitations": [
+    "Boss state coverage uses client-only presentation fixtures; no server quest result or reward fabricated.",
+    "No physical-device touch or multiplayer acceptance in this pass.",
+    "DataStore confirmation tested against Studio-specific store; live published acceptance not claimed."
+  ],
+  "nativeCopy": {
+    "file": "HunDino_HUDClean_20261021.rbxl",
+    "source": "HunDino_ExplorationLoot_20261021.rbxl downloaded natively by Studio",
+    "bytes": 4307744,
+    "sha256": "db5e9bb423f6cca6557e54a15be7b26897d8ee30251235b644c69cd0f4338b20",
+    "canonicalUIBindings": 4
+  }
+}

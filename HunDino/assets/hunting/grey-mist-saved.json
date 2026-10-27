@@ -1,0 +1,166 @@
+{
+  "archivedForestPartsPreserved": 8348,
+  "baseline": "backups/Hub_before_grey_mist_valley_20261019.rbxl",
+  "baselineBytes": 1462171,
+  "bytes": 4163257,
+  "canonicalSources": [
+    {
+      "saved": "ReplicatedStorage.HuntingBaseConfig",
+      "source": "src/hunting/GreyMistValleyConfig.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.HuntingMapConfig",
+      "source": "src/hunting/ConnectedHuntingConfig.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.HuntingEnvironmentClock",
+      "source": "src/hunting/EnvironmentClock.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntingSession",
+      "source": "src/hunting/HuntingSession.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurRouteController",
+      "source": "src/hunting/DinosaurRouteController.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurCombat",
+      "source": "src/hunting/DinosaurCombat.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurCombatConfig",
+      "source": "src/hunting/DinosaurCombatConfig.luau"
+    },
+    {
+      "saved": "ServerScriptService.HunDinoTraining",
+      "source": "studio-pet-integration/Training.server.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoTraining",
+      "source": "studio-pet-integration/Training.client.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.ConnectedHuntingViewer",
+      "source": "src/hunting/ConnectedHuntingViewer.client.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.HubUI",
+      "source": "src/dark-jungle/HubUI.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.TrainingConfig",
+      "source": "studio-pet-integration/TrainingConfig.luau"
+    },
+    {
+      "saved": "ServerStorage.GreyMistBuild.BuildGreyMistValley",
+      "source": "src/hunting/BuildGreyMistValley.luau"
+    },
+    {
+      "saved": "ServerStorage.GreyMistBuild.ValleyArtKit",
+      "source": "src/hunting/ValleyArtKit.luau"
+    },
+    {
+      "saved": "ServerStorage.GreyMistBuild.ValleyLandmarks",
+      "source": "src/hunting/ValleyLandmarks.luau"
+    },
+    {
+      "saved": "ServerStorage.GreyMistBuild.ValleyDressing",
+      "source": "src/hunting/ValleyDressing.luau"
+    }
+  ],
+  "checksPassed": 26259,
+  "combat": {
+    "biteDamage": 24,
+    "cooldownSeconds": 3.5,
+    "maxHealth": 1200,
+    "windupSeconds": 0.95
+  },
+  "compiledScripts": 75,
+  "dinosaur": {
+    "anchors": 1,
+    "footSupport": [
+      -520,
+      90.23001098632812,
+      6420.00048828125
+    ],
+    "maximumRotationError": 3.2186508178710938e-6,
+    "maximumTranslationError": 0.000492081162519753,
+    "meshes": 21,
+    "motors": 7,
+    "parts": 255,
+    "translation": [
+      -123.20712280273438,
+      74.95001220703125,
+      -215.47509765625
+    ],
+    "welds": 247
+  },
+  "dodge": {
+    "durationSeconds": 0.5,
+    "initialSpeed": 72,
+    "staminaCost": 6
+  },
+  "intentionalOriginalScriptChanges": [
+    "ReplicatedStorage.HuntingBaseConfig",
+    "ReplicatedStorage.HuntingEnvironmentClock",
+    "ReplicatedStorage.HuntingMapConfig",
+    "ReplicatedStorage.Shared.HubUI",
+    "ServerScriptService.HunDinoTraining",
+    "ServerScriptService.HuntingRuntime.DinosaurCombat",
+    "ServerScriptService.HuntingRuntime.DinosaurRouteController",
+    "ServerScriptService.HuntingRuntime.HuntingSession",
+    "StarterPlayer.StarterPlayerScripts.ConnectedHuntingViewer",
+    "StarterPlayer.StarterPlayerScripts.HunDinoTraining"
+  ],
+  "map": {
+    "animalPaths": 13,
+    "animalZones": 8,
+    "biomes": 8,
+    "camps": 1,
+    "depth": 4500,
+    "humanPaths": 3,
+    "huntDurationSeconds": 2400,
+    "north": "positive Z",
+    "restSeconds": 60,
+    "terrainTiles": 1152,
+    "timeScale": 30,
+    "treeTemplates": {
+      "birch": 6,
+      "oak": 6,
+      "pine": 12,
+      "willow": 1
+    },
+    "trees": 2400,
+    "width": 4000,
+    "worldOffset": [
+      0,
+      0,
+      6500
+    ]
+  },
+  "originalGeometryPreserved": {
+    "DarkJungle": 13879,
+    "HunDinoL0": 1210
+  },
+  "originalScriptsPreserved": 37,
+  "preservedHuntingTransitParts": 23,
+  "preservedLobbyBaseParts": 15089,
+  "savedPlace": "HunDino_DarkJungle_v2_3.rbxl",
+  "terrain": {
+    "inspection": "Native Terrain fields are not decoded or serialized by this inspector",
+    "maximumBounds": [
+      2000,
+      704,
+      8752
+    ],
+    "minimumBounds": [
+      -2000,
+      -64,
+      4248
+    ],
+    "writeMethod": "Roblox Studio native Terrain operations and native Save"
+  },
+  "validation": "passed",
+  "version": "GreyMistSavedValidation.1-H2.0"
+}

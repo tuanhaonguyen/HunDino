@@ -1,0 +1,171 @@
+{
+  "baseline": "backups/Hub_v24_before_specimen_collection_20261019.rbxl",
+  "baselineBytes": 4214535,
+  "canonicalSources": [
+    {
+      "saved": "ServerScriptService.HunDinoTraining",
+      "source": "studio-pet-integration/Training.server.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoTraining",
+      "source": "studio-pet-integration/Training.client.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.ConnectedHuntingViewer",
+      "source": "src/hunting/ConnectedHuntingViewer.client.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.HubUI",
+      "source": "src/dark-jungle/HubUI.luau"
+    },
+    {
+      "saved": "ReplicatedStorage.Shared.EquipmentInventory",
+      "source": "src/dark-jungle/EquipmentInventory.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurCombat",
+      "source": "src/hunting/DinosaurCombat.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurRouteController",
+      "source": "src/hunting/DinosaurRouteController.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntingSession",
+      "source": "src/hunting/HuntingSession.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntQuestRules",
+      "source": "src/hunting/HuntQuestRules.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntCaptureController",
+      "source": "src/hunting/HuntCaptureController.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntQuestService",
+      "source": "src/hunting/HuntQuestService.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoHuntQuest",
+      "source": "src/hunting/HuntQuest.client.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.PetCombatRules",
+      "source": "src/hunting/PetCombatRules.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.PetCompanionController",
+      "source": "src/hunting/PetCompanionController.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoPetCompanion",
+      "source": "src/hunting/PetCompanion.client.luau"
+    },
+    {
+      "saved": "ServerScriptService.AdminFly.Main",
+      "source": "src/admin/AdminFly.server.luau"
+    },
+    {
+      "saved": "ServerScriptService.AdminFly.AdminFlyPolicy",
+      "source": "src/admin/AdminFlyPolicy.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoAdminFly",
+      "source": "src/admin/AdminFly.client.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntEconomyRules",
+      "source": "src/hunting/HuntEconomyRules.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntEconomyService",
+      "source": "src/hunting/HuntEconomyService.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.HuntHarvestController",
+      "source": "src/hunting/HuntHarvestController.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoEconomy",
+      "source": "src/hunting/HuntEconomy.client.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.SpecimenPreviewModel",
+      "source": "src/hunting/SpecimenPreviewModel.luau"
+    }
+  ],
+  "checksPassed": 139120,
+  "compiledScripts": 118,
+  "dinosaur": {
+    "anchors": 1,
+    "meshes": 21,
+    "motors": 7,
+    "parts": 255,
+    "welds": 247
+  },
+  "economy": {
+    "DataVersion": 2,
+    "HammerLevels": 2,
+    "MaxOwnedSpecimens": 100,
+    "NewSources": 1,
+    "OwnedSpecimens": 0,
+    "SpecimenSerial": 0,
+    "StarterCoins": 80,
+    "Storage": "ServerMemory"
+  },
+  "intentionalOriginalScriptChanges": [
+    "ReplicatedStorage.Shared.EquipmentInventory",
+    "ServerScriptService.HuntingRuntime.HuntCaptureController",
+    "ServerScriptService.HuntingRuntime.HuntEconomyRules",
+    "ServerScriptService.HuntingRuntime.HuntEconomyService",
+    "ServerScriptService.HuntingRuntime.HuntQuestService",
+    "StarterPlayer.StarterPlayerScripts.HunDinoHuntQuest"
+  ],
+  "map": {
+    "depth": 4500,
+    "paths": 16,
+    "trees": 2400,
+    "width": 4000,
+    "zones": 9
+  },
+  "newSources": [
+    "ServerScriptService.HuntingRuntime.SpecimenPreviewModel|ModuleScript"
+  ],
+  "originalScriptsPreserved": 105,
+  "petConfig": {
+    "AttackDamage": 12,
+    "AttackInterval": 4,
+    "AttackRange": 6,
+    "HealCastSeconds": 0.8,
+    "HealCooldown": 119,
+    "HealFraction": 0.7,
+    "HealRange": 3.8,
+    "MaxHealth": 100,
+    "MoveSpeed": 18,
+    "StunSeconds": 30
+  },
+  "preservedBaseParts": 43775,
+  "preservedJoints": 845,
+  "preservedWorkspaceBaseParts": 35064,
+  "preservedWorkspaceJoints": 723,
+  "questConfig": {
+    "CaptureSeconds": 3,
+    "Duration": 2400,
+    "HarvestSeconds": 120,
+    "MaxDeaths": 4,
+    "PotionCount": 3,
+    "RespawnDelay": 5,
+    "TrapCount": 3,
+    "TrapHoldSeconds": 13,
+    "TrapLifetime": 60,
+    "TrapPlaceSeconds": 1,
+    "WeakRatio": 0.1
+  },
+  "savedBytes": 4220334,
+  "savedPlace": "HunDino_DarkJungle_v2_4.rbxl",
+  "terrain": "Not decoded or serialized; this inspector never writes a place",
+  "validation": "passed",
+  "verifiedOriginalSourceBackups": 6,
+  "version": "SpecimenCollectionSavedValidation.1"
+}

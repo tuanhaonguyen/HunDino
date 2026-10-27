@@ -1,6 +1,16 @@
 # Túi đồ Người và Pet — 15/10/2026
 
-Đã lưu trực tiếp bằng Roblox Studio vào `HunDino_DarkJungle_v2_3.rbxl` trong Documents/ChatGPT/game roblox/HunDino.
+**Cập nhật lớp lưu 20/10/2026:** v2.4 đã nối dữ liệu tiến trình vào hồ sơ tài khoản; xem [PERSISTENCE.md](PERSISTENCE.md) và thiết kế mục 39. Kiểm logic/Studio test đã có; nghiệm thu cloud qua thoát/vào còn chờ game xuất bản. Các câu chỉ giữ trong phiên và số liệu dưới đây thuộc mốc trước lớp lưu.
+
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Mở [bản v2.4](HunDino_DarkJungle_v2_4.rbxl). **I / Túi đồ** hiện có Người, Pet, **Vật phẩm**, **Khủng long** và Chế tạo. Người/Pet có lựa chọn vũ khí và năm vị trí giáp độc lập; đổi vũ khí của chủ không đổi vũ khí Pet.
+
+Vật phẩm theo dõi xu, nguyên liệu và vật tư đang mang; Khủng long xem từng T-Rex đã bắt theo mã riêng, thời điểm UTC+7 và mô hình 3D kéo xoay. Kho thử tối đa 100, giữ trong cùng máy chủ; **chưa lưu tài khoản**. Chế tạo trong Inventory chỉ là khung chờ; bàn chế/nâng P1-E tại base đã có. Xem [Vật phẩm](INVENTORY_ITEMS.md), [kho cá thể](SPECIMEN_COLLECTION.md) và [kinh tế](HUNT_ECONOMY.md).
+
+Phần dưới mô tả hệ Người/Pet và bằng chứng ngày 15/10, được kế thừa vào v2.4; các số đo/bản sao lưu v2.3 không phải kết quả kiểm tra mới.
+
+Mốc Người/Pet ngày 15/10 được lưu trực tiếp bằng Roblox Studio vào `HunDino_DarkJungle_v2_3.rbxl` trong Documents; bản phát triển tiếp là v2.4 ở cùng thư mục.
 
 Cất vũ khí rồi bấm I hoặc icon Túi đồ trong bãi tập. Chọn Người/Pet, sau đó chọn Vũ khí/Giáp. Danh sách vũ khí chỉ hiện tên bảy loại; hướng dẫn combo tiếp tục nằm trên HUD chiến đấu.
 
@@ -20,7 +30,7 @@ Chọn ô để xem trước, bấm TRANG BỊ để mặc. Vũ khí và năm m�
 
 Server kiểm tra target, loại trang bị, slot và ID; chỉ thay đồ khi ở bãi tập và cất vũ khí. Giáp gắn trên nhân vật không tạo va chạm hoặc neo nhân vật.
 
-## Kiểm tra
+## Kiểm tra mốc Người/Pet — 15/10/2026
 
 - Play Studio: mở I, đổi tab, chọn/mặc/tháo giáp, preview Người/Pet; trang bị người Katana và pet Cung độc lập.
 - Thay đủ năm món cho từng target, kiểm tra mười lựa chọn riêng, hồi sinh giữ lựa chọn và chỉ có một pet.

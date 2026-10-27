@@ -1,0 +1,59 @@
+{
+  "baseline": "backups/Hub_v24_before_admin_fly_20261019.rbxl",
+  "baselineBytes": 4161272,
+  "canonicalSources": [
+    {
+      "saved": "ServerScriptService.HunDinoTraining",
+      "source": "studio-pet-integration/Training.server.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoTraining",
+      "source": "studio-pet-integration/Training.client.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurCombat",
+      "source": "src/hunting/DinosaurCombat.luau"
+    },
+    {
+      "saved": "ServerScriptService.AdminFly.Main",
+      "source": "src/admin/AdminFly.server.luau"
+    },
+    {
+      "saved": "ServerScriptService.AdminFly.AdminFlyPolicy",
+      "source": "src/admin/AdminFlyPolicy.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoAdminFly",
+      "source": "src/admin/AdminFly.client.luau"
+    }
+  ],
+  "checksPassed": 83012,
+  "compiledScripts": 81,
+  "dinosaur": {
+    "anchors": 1,
+    "meshes": 21,
+    "motors": 7,
+    "parts": 255,
+    "welds": 247
+  },
+  "intentionalOriginalScriptChanges": [
+    "ServerScriptService.HunDinoTraining",
+    "ServerScriptService.HuntingRuntime.DinosaurCombat",
+    "StarterPlayer.StarterPlayerScripts.HunDinoTraining"
+  ],
+  "map": {
+    "depth": 4500,
+    "paths": 16,
+    "trees": 2400,
+    "width": 4000,
+    "zones": 9
+  },
+  "originalScriptsPreserved": 72,
+  "preservedWorkspaceBaseParts": 35064,
+  "preservedWorkspaceJoints": 723,
+  "savedBytes": 4168290,
+  "savedPlace": "HunDino_DarkJungle_v2_4.rbxl",
+  "terrain": "Not decoded or serialized; this inspector never writes a place",
+  "validation": "passed",
+  "version": "AdminFlySavedValidation.1"
+}

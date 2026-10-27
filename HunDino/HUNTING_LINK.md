@@ -1,8 +1,18 @@
 # Sảnh ↔ Rừng cổ H1.2 — 16/10/2026
 
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Bản chung hiện hành là [v2.4](HunDino_DarkJungle_v2_4.rbxl) trong Documents, nối sảnh/12 base/bãi tập với **H2.0 Thung Lũng Sương Xám 4.000 × 4.500**. Nhận nhiệm vụ bằng **J** tại sảnh; khi chưa có nhiệm vụ, menu Chơi/cổng G vẫn cho thám hiểm. Mỗi máy chủ chỉ có một lượt nhiệm vụ solo với một T-Rex chung. Trong nhiệm vụ, ba lần chết đầu về trại, lần thứ tư/hết 40 phút thì thất bại; ra biên giữ lượt, thắng có 120 giây rồi về sảnh.
+
+Pet chiến đấu/hồi máu, bẫy/bắt, thưởng và kho cá thể đã nối; chưa có săn đội, ống trưng bày hoặc lưu tài khoản. Xem [H2](GREY_MIST_VALLEY.md), [nhiệm vụ](HUNT_QUEST.md), [kinh tế](HUNT_ECONOMY.md) và [cá thể](SPECIMEN_COLLECTION.md). Các mô tả chết về sảnh/chưa combat hoặc thưởng dưới đây chỉ áp dụng H1.2.
+
+## Hồ sơ nối sảnh H1.2 — 16/10/2026
+
+**Cảnh quan hiện hành H2.0 — 19/10/2026:** sảnh đã nối với Thung Lũng Sương Xám 4.000 × 4.500; vào bằng Chơi → Vào săn. Xem [bản nâng cấp và kiểm chứng mới](GREY_MIST_VALLEY.md). Nội dung và hash H1 bên dưới là lịch sử.
+
 **Bản hiện hành đã lên H1.3:** nghỉ 60 giây tại mọi điểm, thanh máu/hitbox và phản công đã nối với vũ khí; xem [DINOSAUR_COMBAT.md](DINOSAUR_COMBAT.md). Các số kiểm tra và hash H1.2 bên dưới là hồ sơ của mốc ghép sảnh.
 
-**Mở `HunDino_DarkJungle_v2_3.rbxl` rồi Play.** Đây là bản chung đã có sảnh, 12 base, bãi tập, khu săn và con mẫu tuần tra. File `HunDino_HuntingRainforest_v1.rbxl` vẫn là bản nguồn xem riêng H1.1.
+**Bản chung của mốc H1.2: `HunDino_DarkJungle_v2_3.rbxl`.** Đây là bản chung đã có sảnh, 12 base, bãi tập, khu săn và con mẫu tuần tra. File `HunDino_HuntingRainforest_v1.rbxl` vẫn là bản nguồn xem riêng H1.1.
 
 ## Cách đi và về
 

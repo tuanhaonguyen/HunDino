@@ -1,5 +1,11 @@
 # Bộ bảy vũ khí Pro — 15/10/2026
 
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Bộ bảy model/VFX Pro cho Người/Pet và mẫu trưng bày được kế thừa trong [v2.4](HunDino_DarkJungle_v2_4.rbxl). Người/Pet chọn vũ khí độc lập qua [Inventory](INVENTORY.md); [combo](COMBOS_V2_3.md) và [tụ lực cung](BOW_CHARGE_RESTORE.md) tiếp tục áp dụng. Chỉ chuột trái tụ lực cung, Q là đòn mạnh. [Pet P1-C](PET_COMPANION.md) hỗ trợ trong rừng; nâng búa P1-E +15% chỉ áp dụng búa của chủ, không tăng sát thương Pet hoặc vũ khí khác. Bảng model/VFX và kiểm chứng bên dưới thuộc mốc 15/10.
+
+## Hồ sơ bộ Pro — 15/10/2026
+
 Đã ghép bộ mẫu mới của người dùng vào game và lưu bằng Roblox Studio:
 `C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/HunDino_DarkJungle_v2_3.rbxl`.
 Đợt này tiếp tục từ bản đã có pet đứng và katana Pro. Bản Desktop không được ghi đè.

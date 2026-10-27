@@ -147,13 +147,14 @@ local success, failure = xpcall(function()
 			local previous = activeController:GetSnapshot().SupportPosition
 			local previousZone = "A"
 			local obstacles = {}
-			for step = 1, 10000 do
+			-- H2 covers 4,000 x 4,500 studs; allow the longest full patrol to finish.
+			for step = 1, 30000 do
 				activeController:Step(0.1)
 				item.steps = step
 				local snapshot = activeController:GetSnapshot()
 				local p = body.Position
 				local localPosition = p - worldOffset
-				if not finite(p) or math.abs(localPosition.X) > config.MapSize / 2 or math.abs(localPosition.Z) > config.MapSize / 2 or p.Y < config.TerrainMin then
+				if not finite(p) or math.abs(localPosition.X) > (config.MapWidth or config.MapSize) / 2 or math.abs(localPosition.Z) > (config.MapDepth or config.MapSize) / 2 or p.Y < config.TerrainMin then
 					error("Nonfinite or out-of-bounds route position " .. tostring(p))
 				end
 				local zone = snapshot.CurrentZone

@@ -1,0 +1,103 @@
+{
+  "version": "SpecimenCollectionPlay.1",
+  "date": "2026-10-19",
+  "boundary": "One genuine solo capture in first Play session using normal purchases, ore gathering, existing bench and combat remote/hitboxes. Test character was repositioned and temporarily given1000 HP; original dinosaur HP was reduced only by normal hammer hits. Character restored100 HP. Final framing verified after restart with a view-only snapshot fixture; this fixture did not award to a server profile.",
+  "rules": {
+    "checks": 2134,
+    "groups": 31
+  },
+  "captureHarness": {
+    "ok": true,
+    "boundary": "Real controller/rules/Instance/Humanoid/raycast/overlap; fake owner attributes and dinosaur sink. No production player or dinosaur mutation.",
+    "checks": 195,
+    "skipped": {
+      "1": "Native water case skipped: no unobstructed existing lake sample found; Terrain is never modified."
+    },
+    "passed": 195,
+    "version": "HuntCaptureIntegration.2",
+    "failures": [],
+    "elapsed": 0.23939895629882812,
+    "cases": 27
+  },
+  "previewHarness": {
+    "ok": true,
+    "meshes": 21,
+    "checks": 4858,
+    "passed": 4858,
+    "version": "SpecimenPreviewIntegration.2",
+    "boundary": "Installed preview builder, real original dinosaur and disposable runtime-helper clone; no original source, geometry, attributes, tags or Terrain mutation.",
+    "failures": [],
+    "protectedAttributes": {
+      "1": "RBX_AI_GENERATED",
+      "2": "RBX_AI_GENERATION_ID",
+      "3": "RBX_AI_GENERATION_TYPE",
+      "4": "RBX_AI_MODEL_FLOW"
+    },
+    "parts": 255
+  },
+  "genuineCapture": {
+    "state": "Harvest",
+    "potions": 0,
+    "count": 1,
+    "hp": 120,
+    "result": "Captured",
+    "message": "",
+    "traps": 0,
+    "coins": 100
+  },
+  "lobbyAfterAutoReturn": {
+    "scale": 1,
+    "identity": "Mã cá thể: 275d20fb-baee-4a26-9bd2-d58f3480ba73",
+    "coins": 100,
+    "bone": 1,
+    "opaque": 255,
+    "area": "Lobby",
+    "meshes": 21,
+    "parts": 255,
+    "metadata": "Loài: T-Rex\n\nBiến thể: Thường\n\nNguyên tố: Không\n\nKích thước: 100%\n\nBắt lúc:\n19/10/2026 · 21:16 (UTC+7)",
+    "state": "Closed",
+    "skin": 0,
+    "count": "1 / 100",
+    "tooth": 3,
+    "name": "T-Rex  #001",
+    "liveScale": 3.716229200363159,
+    "templateScale": 3.716229200363159,
+    "unsafe": 0
+  },
+  "orbitBeforeFit": {
+    "mainType": "Custom",
+    "camera": "23.9412575, 18.1462021, -74.0170441, -0.973777771, -0.0607970394, 0.219227061, 0, 0.963630497, 0.267238379, -0.227501154, 0.26023078, -0.938362002"
+  },
+  "craftingDeferred": {
+    "status": "CHƯA TRIỂN KHAI",
+    "previewCleared": 0,
+    "craftVisible": true
+  },
+  "afterRespawn": {
+    "identity": "Mã cá thể: 275d20fb-baee-4a26-9bd2-d58f3480ba73",
+    "cameraType": "Custom",
+    "count": "1 / 100",
+    "parts": 277
+  },
+  "freshServer": {
+    "fresh": {
+      "count": 0,
+      "coins": 80
+    },
+    "boundary": "View-only snapshot fixture after restart; real profile unchanged, earlier genuine capture is separately recorded."
+  },
+  "finalRotatedFraming": {
+    "vertical": 0.8621390080979543,
+    "boundsFit": true,
+    "horizontal": 0.6784364010365289,
+    "cameraRestored": "Custom",
+    "camera": "0.507107258, 87.4553833, -94.97686, -0.998857319, 0.0322238058, -0.0352928042, 0, 0.738486111, 0.674268723, 0.0477907471, 0.673498273, -0.737642288"
+  },
+  "meshLoading": {
+    "assets": 29,
+    "failures": 0
+  },
+  "noDataStore": true,
+  "finalMode": "Edit",
+  "savedValidation": "specimen-collection-saved.json"
+}

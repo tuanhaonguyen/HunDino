@@ -1,0 +1,33 @@
+name: Main approval
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: main-approval-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  owner-approval:
+    name: Owner approval
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: main-approval
+      url: ${{ github.event.pull_request.html_url }}
+    steps:
+      - name: Require the developer branch from this repository
+        env:
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          THIS_REPO: ${{ github.repository }}
+        run: test "$HEAD_BRANCH" = developer && test "$HEAD_REPO" = "$THIS_REPO"
+      - name: Record owner-approved commit
+        env:
+          APPROVED_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: echo "Owner approved developer commit $APPROVED_HEAD. Check Validate before manually merging the Pull Request." >> "$GITHUB_STEP_SUMMARY"

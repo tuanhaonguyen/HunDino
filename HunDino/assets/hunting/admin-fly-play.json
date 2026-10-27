@@ -1,0 +1,57 @@
+{
+  "version": "AdminFlyPlayValidation.1",
+  "savedPlace": "HunDino_DarkJungle_v2_4.rbxl",
+  "date": "2026-10-19",
+  "validation": "passed",
+  "measured": {
+    "walkAfterFlight": 9.86651611328125,
+    "hoverVelocitySettled": 0.3029787540435791,
+    "finalHealth": 100,
+    "huntFlight": true,
+    "userId": 11605296816,
+    "preLandY": 262.46282958984375,
+    "descendQ": 263.3071594238281,
+    "speed260": 260,
+    "rise160": 240.23842958984375,
+    "buttonOff": true,
+    "invalidSpeedRejected": true,
+    "bindingRemoved": true,
+    "hoverVelocity": 4.317667484283447,
+    "beforeTravel": true,
+    "chatUiUnavailable": true,
+    "huntArea": "Hunting",
+    "travel80": 83.73883056640625,
+    "huntTravel": 397.560791015625,
+    "boost260": 543.2661743164062,
+    "restored": true,
+    "speed80": 80,
+    "health": 100,
+    "huntRise": 584.7641925811768,
+    "initialY": 22.2244,
+    "noVelocity": true,
+    "travelCancels": true,
+    "landedY": 25.093461990356445
+  },
+  "checks": [
+    "Admin-only HUD shown for verified UserId11605296816",
+    "HUD toggle enables server flight physics",
+    "Space rises approximately240studs at160studs/s over1.5seconds",
+    "Speed80 HUD changes server speed and W travels83.74studs over1second including acceleration/deceleration",
+    "Speed260 with Shift travels543.27studs over1second including acceleration/deceleration",
+    "Hunting session flight active; Q descends263.31studs over1second",
+    "Unlisted speed99999 rejected by server",
+    "Button stop removes flight actuators, restores AutoRotate/PlatformStand and lands alive",
+    "Travel to lobby cancels flight safely",
+    "Normal walking and ContextActionService binding cleanup confirmed"
+  ],
+  "chat": {
+    "commandRegistered": true,
+    "aliases": [
+      "/fly",
+      "/unfly"
+    ],
+    "parserChecksPassed": 85,
+    "endToEnd": "Unavailable: Roblox core chat UI says chat is not available in this region. Button tested successfully."
+  },
+  "geometryValidation": "assets/hunting/admin-fly-saved.json"
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "className": "Script",
+    "existing": true,
+    "file": "studio-pet-integration/Training.server.luau",
+    "key": "TrainingServer",
+    "newHash": 1109874880,
+    "oldHash": 1423873100,
+    "path": "ServerScriptService.HunDinoTraining"
+  },
+  {
+    "className": "LocalScript",
+    "existing": true,
+    "file": "studio-pet-integration/Training.client.luau",
+    "key": "TrainingClient",
+    "newHash": 2364028664,
+    "oldHash": 571327700,
+    "path": "StarterPlayer.StarterPlayerScripts.HunDinoTraining"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/hunting/DinosaurCombat.luau",
+    "key": "DinosaurCombat",
+    "newHash": 1953930864,
+    "oldHash": 3873425087,
+    "path": "ServerScriptService.HuntingRuntime.DinosaurCombat"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/hunting/HuntQuestService.luau",
+    "key": "HuntQuestService",
+    "newHash": 2142119928,
+    "oldHash": 4015600358,
+    "path": "ServerScriptService.HuntingRuntime.HuntQuestService"
+  },
+  {
+    "className": "LocalScript",
+    "existing": true,
+    "file": "src/hunting/HuntQuest.client.luau",
+    "key": "HuntQuestClient",
+    "newHash": 3054173106,
+    "oldHash": 1379140623,
+    "path": "StarterPlayer.StarterPlayerScripts.HunDinoHuntQuest"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/dark-jungle/HubUI.luau",
+    "key": "HubUI",
+    "newHash": 818589289,
+    "oldHash": 826947226,
+    "path": "ReplicatedStorage.Shared.HubUI"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": false,
+    "file": "src/hunting/HuntEconomyRules.luau",
+    "key": "HuntEconomyRules",
+    "newHash": 2209246928,
+    "path": "ServerScriptService.HuntingRuntime.HuntEconomyRules"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": false,
+    "file": "src/hunting/HuntEconomyService.luau",
+    "key": "HuntEconomyService",
+    "newHash": 1495163432,
+    "path": "ServerScriptService.HuntingRuntime.HuntEconomyService"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": false,
+    "file": "src/hunting/HuntHarvestController.luau",
+    "key": "HuntHarvestController",
+    "newHash": 1626581435,
+    "path": "ServerScriptService.HuntingRuntime.HuntHarvestController"
+  },
+  {
+    "className": "LocalScript",
+    "existing": false,
+    "file": "src/hunting/HuntEconomy.client.luau",
+    "key": "HuntEconomyClient",
+    "newHash": 3587619381,
+    "path": "StarterPlayer.StarterPlayerScripts.HunDinoEconomy"
+  }
+]

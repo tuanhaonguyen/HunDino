@@ -1,0 +1,151 @@
+{
+  "version": "UIModernizationPlayValidation.1",
+  "nativePlace": "HunDino_DarkJungle_v2_4.rbxl",
+  "date": "2026-10-20",
+  "timezone": "Asia/Bangkok",
+  "installation": {
+    "existingSources": 7,
+    "newSources": 2,
+    "originalBackups": 7,
+    "backupFolder": "ServerStorage.UIBackup_20261020",
+    "stagingRemoved": true,
+    "nativeSaved": true,
+    "nativeSaveBytes": 4250777
+  },
+  "desktop": {
+    "viewport": [
+      1453,
+      808
+    ],
+    "inventoryTabs": 5,
+    "itemsStoredFilter": [
+      "RawTrap",
+      "IronTrap",
+      "SleepPotion"
+    ],
+    "petArmorMetal": "5/5",
+    "playerWeaponChange": "Katana; Pet remained Hammer",
+    "petWeaponChange": "SwordShield; Player remained Katana",
+    "weaponsRestored": "Hammer / Hammer",
+    "specimenMouseDragChangedCamera": true,
+    "specimenResetRestoredExactCamera": true
+  },
+  "realServerActions": {
+    "merchant": {
+      "coinsBefore": 80,
+      "coinsAfter": 60,
+      "rawTraps": 1,
+      "sleepPotions": 1
+    },
+    "ore": {
+      "ironGranted": 1
+    },
+    "abandon": {
+      "state": "Closed",
+      "unusedPotionReturned": true
+    },
+    "craft": {
+      "ironTraps": 1,
+      "ironAfter": 0
+    },
+    "trapHold": {
+      "durationSeconds": 1,
+      "ringSeen": true,
+      "screenshotProgress": "42%",
+      "maxRecordedProgress": "100%",
+      "result": "Waiting",
+      "remainingTraps": 0
+    },
+    "heal": {
+      "healthBefore": 30,
+      "healthAfter": 100,
+      "cooldownObserved": 118,
+      "petDistanceAssistStuds": 2
+    }
+  },
+  "renderingFixtures": {
+    "scope": "Client presentation only; no server capture/harvest/specimen ownership or rewards created",
+    "bossWeak": {
+      "hp": 120,
+      "max": 1200,
+      "badgeVisible": true
+    },
+    "trapWarning": {
+      "seconds": 2.8,
+      "orangePulseAndShake": true
+    },
+    "capture": {
+      "seconds": 3,
+      "ringSeen": true,
+      "maxRecordedProgress": "100%",
+      "petStatus": "Ngừng đánh (Đang bắt)"
+    },
+    "carve": {
+      "seconds": 1.5,
+      "ringSeen": true,
+      "recordedProgress": "88%",
+      "resetHidRing": true
+    },
+    "petStunned": {
+      "hp": 1,
+      "countdown": "30s",
+      "healButtonActive": false
+    },
+    "specimen": {
+      "count": "1 / 100",
+      "species": "TRex",
+      "serial": 1,
+      "element": "None",
+      "variant": "Normal",
+      "sizePercent": 100,
+      "source": "UI_RENDER_FIXTURE_ONLY",
+      "staticModelVisible": true,
+      "originalDTOrestored": true
+    }
+  },
+  "compact": {
+    "preset": "iPhone 17 Pro",
+    "orientation": "LandscapeLeft",
+    "viewport": [
+      750,
+      381
+    ],
+    "safeGui": [
+      750,
+      323
+    ],
+    "hudOverlapFixed": true,
+    "bossBounds": [
+      213.8,
+      66,
+      322.4,
+      73.16
+    ],
+    "petBounds": [
+      12,
+      141,
+      196.8,
+      90
+    ],
+    "questBounds": [
+      564.77,
+      132,
+      173.23,
+      179
+    ],
+    "inventoryFits": true,
+    "optionalComboGuideHidden": true,
+    "defaultViewportRestored": true,
+    "fullTouchGameplayAccepted": false
+  },
+  "assistance": [
+    "Character placement near merchant, ore and owner's craft station",
+    "Pet placement within 2 studs before real H heal",
+    "Client-only attributes and snapshot for rendering edge cases; restored before Stop"
+  ],
+  "limits": [
+    "No actual live capture or carcass harvest in this UI test",
+    "No account persistence, display tubes, team hunt, or full P1-G acceptance",
+    "Roblox CoreGui/FoundationProvider and existing asset-type warnings remain; no UI script runtime error observed"
+  ]
+}

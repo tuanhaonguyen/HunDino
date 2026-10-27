@@ -1,0 +1,13 @@
+{
+  "Baseline": "backups/iron-mining-20261026/HunDino_MerchantWeapons_20261026.rbxl",
+  "BaselineBytes": 4373461,
+  "BaselineSHA256": "10ff67e69b8d8151c35160d7c5a4b918d85d54dbe7b804c835a5c848f55a535a",
+  "Boundary": "Four original source edits, six new sources, four original StringValues and exactly thirty fixed ore models. Native Terrain bytes remain opaque.",
+  "Bytes": 4480005,
+  "Checks": 386,
+  "Error": "C:\\Users\\khanh\\OneDrive\\Documents\\ChatGPT\\game roblox\\HunDino\\tools/inspect-iron-mining-saved:16: Unexpected instances outside the permitted mining additions\nC:\\Users\\khanh\\OneDrive\\Documents\\ChatGPT\\game roblox\\HunDino\\tools/inspect-iron-mining-saved:16 function check\nC:\\Users\\khanh\\OneDrive\\Documents\\ChatGPT\\game roblox\\HunDino\\tools/inspect-iron-mining-saved:139 function main\nC:\\Users\\khanh\\OneDrive\\Documents\\ChatGPT\\game roblox\\HunDino\\tools/inspect-iron-mining-saved:202\n",
+  "Ok": false,
+  "SHA256": "73bb353d2869484800e7c75a888389d453284b5a7fa42b8f63f412d27943ae9e",
+  "Target": "HunDino_MerchantWeapons_20261026.rbxl",
+  "Version": "IronMiningSavedValidation.1"
+}

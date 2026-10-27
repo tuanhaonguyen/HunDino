@@ -1,0 +1,155 @@
+{
+  "System": "P1-F.2",
+  "Geometry": "BioTubeGeometry.4",
+  "StudioServer": {
+    "StorageMode": "TestMemory",
+    "Errors": [],
+    "Passed": 258,
+    "Cases": {
+      "MalformedSpecimen": true,
+      "InvalidSlot": true,
+      "InvalidSpecimen": true,
+      "WeaponDrawn": true,
+      "OtherBase": true,
+      "TooFar": true
+    },
+    "Version": "BioTubePlayQA.1",
+    "OwnedSpecimens": 5,
+    "Ok": true,
+    "Checks": 258,
+    "BaseId": 8,
+    "Slots": {
+      "1": {
+        "Beams": 14,
+        "Radius": 3.8,
+        "SurfaceRaycasts": 14,
+        "DegreesPerSecond": 10,
+        "Fluid": 4,
+        "Height": 4.152756214141846,
+        "Parts": 255,
+        "Pierces": 14
+      },
+      "2": {
+        "Beams": 14,
+        "Radius": 3.8,
+        "SurfaceRaycasts": 14,
+        "DegreesPerSecond": 10,
+        "Fluid": 4,
+        "Height": 4.152756214141846,
+        "Parts": 255,
+        "Pierces": 14
+      },
+      "3": {
+        "Beams": 14,
+        "Radius": 3.8,
+        "SurfaceRaycasts": 14,
+        "DegreesPerSecond": 10,
+        "Fluid": 4,
+        "Height": 4.152756214141846,
+        "Parts": 255,
+        "Pierces": 14
+      },
+      "4": {
+        "Beams": 14,
+        "Radius": 3.8,
+        "SurfaceRaycasts": 14,
+        "DegreesPerSecond": 10,
+        "Fluid": 4,
+        "Height": 4.152756214141846,
+        "Parts": 255,
+        "Pierces": 14
+      },
+      "5": {
+        "Beams": 14,
+        "Radius": 3.8,
+        "SurfaceRaycasts": 14,
+        "DegreesPerSecond": 0,
+        "Fluid": 4,
+        "Height": 4.152756214141846,
+        "Parts": 255,
+        "Pierces": 14
+      }
+    }
+  },
+  "StudioClient": {
+    "passed": true,
+    "version": "BioTubeClientQA.1",
+    "checks": 535,
+    "Slots": {
+      "1": {
+        "bobStuds": -0.09733963012695312,
+        "cables": 14,
+        "rotationDegrees": 10.536517044812946,
+        "expectedDegrees": 10.544331000055536,
+        "fixedCenter": false,
+        "injectorHeightConstant": true,
+        "elapsedSeconds": 1.0544331000055536
+      },
+      "2": {
+        "bobStuds": -0.09733963012695312,
+        "cables": 14,
+        "rotationDegrees": 10.536293356117628,
+        "expectedDegrees": 10.544331000055536,
+        "fixedCenter": false,
+        "injectorHeightConstant": true,
+        "elapsedSeconds": 1.0544331000055536
+      },
+      "3": {
+        "bobStuds": -0.09733963012695312,
+        "cables": 14,
+        "rotationDegrees": 10.536293356117628,
+        "expectedDegrees": 10.544331000055536,
+        "fixedCenter": false,
+        "injectorHeightConstant": true,
+        "elapsedSeconds": 1.0544331000055536
+      },
+      "4": {
+        "bobStuds": -0.09733963012695312,
+        "cables": 14,
+        "rotationDegrees": 10.536628889160605,
+        "expectedDegrees": 10.544331000055536,
+        "fixedCenter": false,
+        "injectorHeightConstant": true,
+        "elapsedSeconds": 1.0544331000055536
+      },
+      "5": {
+        "bobStuds": -0.09733963012695312,
+        "cables": 14,
+        "rotationDegrees": 0,
+        "expectedDegrees": 0,
+        "fixedCenter": true,
+        "injectorHeightConstant": true,
+        "elapsedSeconds": 1.0544331000055536
+      }
+    }
+  },
+  "ManualUI": [
+    "G mở Inventory → Khủng long và chọn đúng ống #5",
+    "Tháo khỏi ống: kho vẫn giữ 5 cá thể",
+    "Đặt lại cá thể vào ống #5 thành công",
+    "Kéo chuột xoay và nghiêng preview thành công"
+  ],
+  "SourceTests": {
+    "InventoryCompile": true,
+    "Economy": 2272,
+    "PersistenceRoundtrip": 549,
+    "Schema": 682
+  },
+  "NativeSave": {
+    "CompiledScripts": 133,
+    "StudioMemoryTest": false,
+    "PreservedOriginalParts": 43775,
+    "Validation": "passed",
+    "Checks": 1785285,
+    "TemporaryQAScripts": 0,
+    "Tubes": {
+      "bases": 12,
+      "gPrompts": 60,
+      "savedSpecimens": 0,
+      "staticParts": 12000,
+      "tubes": 60
+    },
+    "SavedSha256": "c263aca4c15b7a36a3ed7df91612bdcf24b125cd1d4199dc098a6a78c68c4aab",
+    "PreservedJoints": 845
+  }
+}

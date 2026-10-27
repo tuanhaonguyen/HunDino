@@ -1,0 +1,22 @@
+{
+  "SevenWeaponsFit": true,
+  "Actions": [
+    "Icon opens unified shop",
+    "Merchant buys consumables",
+    "Owner base crafts iron trap",
+    "Seven independent upgrades via UI",
+    "Inventory shows seven level badges",
+    "Native JSON round trip retains levels",
+    "Five forged/stale/location requests rejected",
+    "Refresh does not drop purchase"
+  ],
+  "CheckedViewports": [
+    "1453x808 desktop",
+    "1279x719 HD 720"
+  ],
+  "SaveHUDRemoved": true,
+  "Place": "Game",
+  "PanelFits": true,
+  "TestStorage": "TestMemory",
+  "RealAccountDataTouched": false
+}

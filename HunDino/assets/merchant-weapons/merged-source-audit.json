@@ -1,0 +1,19 @@
+{
+  "Checks": 25,
+  "CombatSourceBindings": 9,
+  "HiddenSaveHUDRetained": true,
+  "LaunchersAgree": true,
+  "MerchantSourceBindings": {
+    "ReplicatedStorage.Shared.EquipmentInventory": "ab2c864ce5d438d2e731bee225a53f8fbb0d821ff86c96b1918b72d4d0263dbe",
+    "ReplicatedStorage.Shared.HubUI": "c5d665dc82d8c5eb1f28ccef7c384885886555117718691071f91c2da95a5dcc",
+    "ServerScriptService.HuntingRuntime.HuntEconomyRules": "15c0487653a9fa2dcc2a2cc426a34613b62c61b4d98525411c74101623ae8eb2",
+    "ServerScriptService.HuntingRuntime.HuntEconomyService": "4fea185a6e7542e155fda40117e487886f091b1f9bd97574364ea4a5a57b23a4",
+    "StarterPlayer.StarterPlayerScripts.HunDinoEconomy": "b11ea7fab2c0631a26751978111c73173442070d275728e2491a8446f68be154",
+    "StarterPlayer.StarterPlayerScripts.HunDinoProfileStatus": "af0a9c2d0860daef1ea3166f46ce7e67413396421983b92f3a544bdd2473239a"
+  },
+  "Ok": true,
+  "Published": false,
+  "SHA256": "10ff67e69b8d8151c35160d7c5a4b918d85d54dbe7b804c835a5c848f55a535a",
+  "Target": "HunDino_MerchantWeapons_20261026.rbxl",
+  "TestFlagsRemoved": true
+}

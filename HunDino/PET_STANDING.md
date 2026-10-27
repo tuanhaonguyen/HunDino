@@ -1,5 +1,11 @@
 # Pet đứng — cập nhật 14/10/2026
 
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Rig Pet đứng/hoạt ảnh được kế thừa trong [v2.4](HunDino_DarkJungle_v2_4.rbxl). Người/Pet đã chọn vũ khí và giáp **độc lập** trong [Inventory](INVENTORY.md). [Pet P1-C](PET_COMPANION.md) hiện có tìm đường quanh vật cản, hỗ trợ đánh 12 mỗi 4 giây, 100 HP/choáng 30 giây và gọi hồi 70% bằng H, hồi chiêu 119 giây; giữ dữ liệu trong cùng máy chủ. Pet dừng đánh khi chủ cho uống thuốc bắt. Các câu dùng chung vũ khí/chưa tìm đường bên dưới chỉ mô tả mốc 14/10.
+
+## Hồ sơ rig và kiểm chứng — 14/10/2026
+
 Đã sửa và lưu bằng Roblox Studio vào bản đang mở của người dùng:
 `C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/HunDino_DarkJungle_v2_3.rbxl`.
 Bản Desktop không được ghi đè trong đợt này.

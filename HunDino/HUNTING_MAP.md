@@ -1,6 +1,16 @@
 # Khu săn Rừng cổ — bản nối sảnh H1.2
 
-**Hiện hành 16/10/2026:** khu săn đã được ghép vào **HunDino_DarkJungle_v2_3.rbxl**. Mở bản sảnh này rồi **Play → Chơi → VÀO KHU SĂN · RỪNG CỔ**, hoặc giữ G tại cổng đá rêu bên trái sảnh. Người/Pet đi cùng, đồng hồ riêng, có nút/cổng về sảnh và tự về hết giờ. Xem [hướng dẫn bản nối và kết quả kiểm tra](HUNTING_LINK.md).
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Bản để chơi tiếp là [v2.4](HunDino_DarkJungle_v2_4.rbxl) với [Thung Lũng Sương Xám H2.0](GREY_MIST_VALLEY.md), **4.000 × 4.500 studs, 2.400 cây, 16 đường, 9 node**. Đã có tuần tra/nghỉ 60 giây, combat H1.3.1, Pet, nhiệm vụ/bắt, quặng/mổ/thưởng và kho cá thể trong phiên. Nhận nhiệm vụ bằng J ở sảnh; xem [nhiệm vụ](HUNT_QUEST.md) và [kho cá thể](SPECIMEN_COLLECTION.md).
+
+File săn riêng H1.1 và nội dung bên dưới giữ làm nguồn/lịch sử; các thông số 1.620 × 1.620, Space nhảy và thời gian nghỉ 5/20/6/4 giây **không áp dụng bản chung v2.4**. Chưa có DataStore, ống trưng bày, săn đội hoặc nghiệm thu điện thoại.
+
+## Hồ sơ H1.0–H1.2 và bản nguồn riêng
+
+**Cảnh quan hiện hành H2.0 — 19/10/2026:** đã mở rộng thành Thung Lũng Sương Xám 4.000 × 4.500 studs trong bản chung; xem [GREY_MIST_VALLEY.md](GREY_MIST_VALLEY.md). Nội dung H1 bên dưới giữ làm hồ sơ lịch sử.
+
+**Mốc nối sảnh 16/10/2026:** khu săn đã được ghép vào **HunDino_DarkJungle_v2_3.rbxl**. Mở bản sảnh này rồi **Play → Chơi → VÀO KHU SĂN · RỪNG CỔ**, hoặc giữ G tại cổng đá rêu bên trái sảnh. Người/Pet đi cùng, đồng hồ riêng, có nút/cổng về sảnh và tự về hết giờ. Xem [hướng dẫn bản nối và kết quả kiểm tra](HUNTING_LINK.md).
 
 Phần dưới là hồ sơ **bản nguồn săn riêng H1.1**, vẫn giữ để xem/chỉnh cảnh quan độc lập; trạng thái chưa nối sảnh trong hồ sơ cũ chỉ áp dụng cho file nguồn đó.
 
@@ -56,7 +66,7 @@ Kết quả: `assets/hunting/validation.json`, `assets/hunting/saved-place.json`
 
 Lune phát cảnh báo đọc thuộc tính Terrain `VoxelGridAssetContentMap` chưa hỗ trợ. Công cụ kiểm tra chỉ đọc; **không dùng Lune ghi lại file map có Terrain**. Kiểm chứng nền/va chạm thực hiện trực tiếp trong Studio; lưu map bằng Studio.
 
-## Phần tiếp theo
+## Phần tiếp theo được ghi ở mốc H1.1 — đối chiếu hiện hành ở đầu tài liệu
 
 - Người dùng đi thử và chỉnh cảm giác quy mô, mật độ cây, màu/vách đá và các bãi chiến đấu.
 - Bộ đi tuyến hiện là tuần tra theo mạng đường đã dựng. Còn phản ứng khi bị săn, đuổi người chơi, chiến đấu, né vật cản động và chọn tuyến theo tình huống. Chưa coi đây là AI săn hoàn chỉnh.

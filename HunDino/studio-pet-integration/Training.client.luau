@@ -10,26 +10,32 @@ local player = Players.LocalPlayer
 local remote = ReplicatedStorage:WaitForChild("HunDinoTrainingAction")
 local Config = require(ReplicatedStorage.Shared.TrainingConfig)
 local Weapons = require(ReplicatedStorage.Shared.Weapons)
+local Theme = require(ReplicatedStorage.Shared:WaitForChild("UITheme"))
+local C = Theme.Colors
 local gui = Instance.new("ScreenGui"); gui.Name = "HunDinoTrainingHUD"; gui.ResetOnSpawn = false; gui.ZIndexBehavior=Enum.ZIndexBehavior.Sibling; gui.Parent = player:WaitForChild("PlayerGui")
 local function text(name, pos, size, value, textSize)
 	local t = Instance.new("TextLabel"); t.Name = name; t.Position = pos; t.Size = size
-	t.BackgroundColor3 = Color3.fromRGB(16, 31, 30); t.BackgroundTransparency = 0.12
-	t.TextColor3 = Color3.fromRGB(240, 230, 203); t.Font = Enum.Font.GothamMedium
+	t.BackgroundColor3 = C.Panel; t.BackgroundTransparency = 0.12
+	t.TextColor3 = C.Text; t.Font = Enum.Font.GothamMedium
 	t.TextSize = textSize or 16; t.TextWrapped = true; t.Text = value; t.Parent = gui
-	local corner = Instance.new("UICorner"); corner.CornerRadius = UDim.new(0, 8); corner.Parent = t
+	Theme.panel(t)
 	return t
 end
 local title = text("Title", UDim2.fromOffset(20, 14), UDim2.fromOffset(330, 55), "HUNDINO • TRẠI THỢ SĂN", 19)
+title.TextColor3=C.Gold; title.Font=Enum.Font.GothamBold
 local stats = text("Stats", UDim2.new(0, 20, 1, -136), UDim2.fromOffset(330, 64), "", 16)
 local staminaBG = text("Stamina", UDim2.new(0, 20, 1, -60), UDim2.fromOffset(330, 26), "", 14)
-local bar = Instance.new("Frame"); bar.BorderSizePixel = 0; bar.BackgroundColor3 = Color3.fromRGB(70, 195, 147)
+local bar = Instance.new("Frame"); bar.BorderSizePixel = 0; bar.BackgroundColor3 = C.Stamina
 bar.Size = UDim2.fromScale(1, 1); bar.Parent = staminaBG
+Theme.round(bar,8);staminaBG.ClipsDescendants=true
 local staminaText = Instance.new("TextLabel"); staminaText.Size = UDim2.fromScale(1, 1); staminaText.BackgroundTransparency = 1
-staminaText.TextColor3 = Color3.fromRGB(14, 29, 26); staminaText.Font = Enum.Font.GothamBold; staminaText.TextSize = 14; staminaText.Parent = staminaBG
+staminaText.TextColor3 = C.Text; staminaText.TextStrokeTransparency=.45; staminaText.Font = Enum.Font.GothamBold; staminaText.TextSize = 14; staminaText.Parent = staminaBG
 local help = text("Help", UDim2.new(1, -375, 1, -209), UDim2.fromOffset(355, 190), "", 15)
 local notice = text("Notice", UDim2.new(0.5, -245, 0, 18), UDim2.fromOffset(490, 48), "Đến cổng tại sân đón, giữ G để vào bãi tập.", 17)
+notice.Visible=false
 local center = text("Crosshair", UDim2.new(0.5, -10, 0.5, -10), UDim2.fromOffset(20, 20), "+", 21)
 center.BackgroundTransparency = 1; center.Visible = false
+local centerBorder=center:FindFirstChildOfClass("UIStroke");if centerBorder then centerBorder:Destroy() end
 -- Match Camera.ViewportPointToRay, rather than the HUD's top-bar safe inset.
 local reticleGui=Instance.new("ScreenGui"); reticleGui.Name="HunDinoReticle"; reticleGui.IgnoreGuiInset=true
 reticleGui.ResetOnSpawn=false; reticleGui.Parent=player.PlayerGui; center.Parent=reticleGui
@@ -63,6 +69,7 @@ local readyAt=0; local inputSerial=0
 local held={Light=false}
 local chargeId=0;local activeCharge
 local chargeHUD=text("Charge",UDim2.new(.5,-170,.65,0),UDim2.fromOffset(340,44),"",16)
+chargeHUD.AnchorPoint=Vector2.new(.5,1);chargeHUD.Position=UDim2.new(.5,0,1,-200)
 chargeHUD.Visible=false
 local function cancelHeld(sendCancel: boolean?)
  for k in held do held[k]=false end
@@ -84,6 +91,45 @@ local function recipes(weapon)
 end
 local comboHUD=text("ComboGuide",UDim2.new(0,20,.5,-90),UDim2.fromOffset(330,220),"",14)
 comboHUD.Visible=false
+local comboScale=Instance.new("UIScale");comboScale.Parent=comboHUD
+local compactHUD=false
+local refresh
+local hudScales={}
+for _,item in {title,stats,staminaBG,notice,chargeHUD} do local scale=Instance.new("UIScale");scale.Parent=item;hudScales[item]=scale end
+local function resizeHUD()
+ local camera=workspace.CurrentCamera;if not camera then return end
+ local size=gui.AbsoluteSize
+ if size.X<=0 or size.Y<=0 then size=camera.ViewportSize end
+ compactHUD=size.X<1000 or size.Y<560
+ local compact=compactHUD
+ local factor=if compact then math.min(.65,(size.X-32)/650) else 1
+ for _,scale in hudScales do scale.Scale=factor end
+ title.Position=UDim2.fromOffset(if compact then 12 else 20,if compact then 8 else 14)
+ stats.Position=UDim2.new(0,if compact then 12 else 20,1,if compact then -80 else -136)
+ staminaBG.Position=UDim2.new(0,if compact then 12 else 20,1,if compact then -30 else -60)
+ notice.AnchorPoint=Vector2.new(.5,1)
+ notice.Size=UDim2.fromOffset(420,36);notice.TextSize=13
+ notice.Position=UDim2.new(.5,0,1,if compact then -12 else -86)
+ chargeHUD.Position=UDim2.new(.5,0,1,if compact then -64 else -200)
+ comboHUD.AnchorPoint=Vector2.new(.5,1)
+ comboHUD.Position=UDim2.new(.5,0,1,-24)
+ comboHUD.Size=UDim2.fromOffset(360,164);comboHUD.TextSize=12
+ comboScale.Scale=math.min(1,math.max(.5,(size.X-740)/360))
+ if compact then comboHUD.Visible=false end
+ local admin=player.PlayerGui:FindFirstChild("HunDinoAdminFlyHUD")
+ local flight=admin and admin:FindFirstChild("FlightPanel")
+ if flight then
+  local scale=flight:FindFirstChild("UICompactScale") or Instance.new("UIScale")
+  scale.Name="UICompactScale";scale.Scale=if compact then .55 else .8;scale.Parent=flight
+  local inset=GuiService:GetGuiInset()
+  flight.AnchorPoint=if compact then Vector2.zero else Vector2.new(1,0)
+  flight.Position=if compact then UDim2.new(0,12,0,inset.Y+56) else UDim2.new(1,-184,0,inset.Y+14)
+ end
+ if refresh then refresh() end
+end
+workspace.CurrentCamera:GetPropertyChangedSignal("ViewportSize"):Connect(resizeHUD);resizeHUD()
+gui:GetPropertyChangedSignal("AbsoluteSize"):Connect(resizeHUD)
+player.PlayerGui.ChildAdded:Connect(function(child) if child.Name=="HunDinoAdminFlyHUD" then task.defer(resizeHUD) end end)
 local function toggleMenu()
  baseTransit:Close()
 	inputSerial+=1
@@ -108,6 +154,15 @@ hub=require(ReplicatedStorage.Shared.HubUI).create(player,gui,{
  Preferences=function() refreshPreferences() end,
 })
 local function menuOpen()
+ local economyGUI=player.PlayerGui:FindFirstChild("HunDinoEconomy")
+ local economyPanel=economyGUI and economyGUI:FindFirstChild("Panel")
+ if economyPanel and economyPanel.Visible then return true end
+ local questGUI=player.PlayerGui:FindFirstChild("HunDinoHuntQuest")
+ if questGUI then
+  for _,name in {"QuestBoard","ResultModal"} do
+   local menu=questGUI:FindFirstChild(name);if menu and menu.Visible then return true end
+  end
+ end
  local forestGUI=player.PlayerGui:FindFirstChild("HuntingMapViewer")
  local picker=forestGUI and forestGUI:FindFirstChild("ZonePicker")
  return panel.Visible or hub:IsOpen() or baseTransit:IsOpen() or (forestGUI and forestGUI.Enabled and picker and picker.Visible) or false
@@ -135,7 +190,7 @@ local function aimDirection(ranged, dodge)
 end
 local function send(action)
  local function dispatch()
-  if menuOpen() or GuiService.MenuIsOpen or UIS:GetFocusedTextBox() then return end
+  if player:GetAttribute("AdminFlying")==true or menuOpen() or GuiService.MenuIsOpen or UIS:GetFocusedTextBox() then return end
   local ranged=player:GetAttribute("WeaponId")=="Bow"
   local direction=aimDirection(ranged and (action=="Light" or action=="Heavy" or action=="Skill"),action=="Dodge")
   if ranged and action=="Light" then
@@ -154,6 +209,7 @@ end
 -- Consume Space before Roblox's default jump binding. The server arbitrates
 -- jump/dodge together, so simultaneous keys cannot combine their impulses.
 local function movementAction(actionName, inputState)
+	if player:GetAttribute("AdminFlying")==true then return Enum.ContextActionResult.Pass end
 	if inputState == Enum.UserInputState.Begin and not menuOpen() and not UIS:GetFocusedTextBox() and not GuiService.MenuIsOpen then
 		if actionName == "HunDinoJump" then send("Jump") else send("Dodge") end
 	end
@@ -163,6 +219,7 @@ ContextActionService:BindActionAtPriority("HunDinoJump", movementAction, false, 
 ContextActionService:BindActionAtPriority("HunDinoDodge", movementAction, false, 3001, Enum.KeyCode.Space)
 -- I also zooms Roblox's default camera; consume it when opening the armory.
 ContextActionService:BindActionAtPriority("HunDinoArmory", function(_, inputState)
+	if player:GetAttribute("AdminFlying")==true then return Enum.ContextActionResult.Sink end
 	if inputState == Enum.UserInputState.Begin and not UIS:GetFocusedTextBox() and not GuiService.MenuIsOpen then toggleMenu() end
 	return Enum.ContextActionResult.Sink
 end, false, 3001, Enum.KeyCode.I)
@@ -176,6 +233,7 @@ script.Destroying:Connect(function()
 	RunService:UnbindFromRenderStep("HunDinoBowView")
 end)
 UIS.InputBegan:Connect(function(input, processed)
+	if player:GetAttribute("AdminFlying")==true then return end
 	if processed or UIS:GetFocusedTextBox() then return end
 	if menuOpen() or GuiService.MenuIsOpen then return end
 	if input.UserInputType == Enum.UserInputType.MouseButton1 then held.Light=true; send("Light")
@@ -245,6 +303,11 @@ RunService:BindToRenderStep("HunDinoBowView", Enum.RenderPriority.Camera.Value-1
 	if not want and bowBlend<.001 then setZoom(bowView.Distance); restoreBowView() end
 end)
 RunService:BindToRenderStep("HunDinoTrainingCamera", Enum.RenderPriority.Camera.Value + 1, function()
+	if player:GetAttribute("AdminFlying")==true then
+		restoreBowView();aiming=false;locked=false;center.Visible=false
+		if appliedMouseLock then UIS.MouseBehavior=Enum.MouseBehavior.Default;appliedMouseLock=false end
+		return
+	end
 	local character = player.Character
 	local hum = character and character:FindFirstChildOfClass("Humanoid")
 	if hum and hum.MoveDirection.Magnitude > 0.1 then lastDirection = hum.MoveDirection.Unit end
@@ -274,28 +337,34 @@ RunService.RenderStepped:Connect(function(dt)
  local alpha=math.clamp((os.clock()-activeCharge.Started)/activeCharge.Time,0,1)
  chargeHUD.Visible=not menuOpen()
  chargeHUD.Text=(if alpha>=1 then "ĐẦY LỰC" else "TỤ LỰC "..math.floor(alpha*100).."%").." • Nhả để bắn"
- chargeHUD.TextColor3=if alpha>=1 then Color3.fromRGB(255,211,90) else Color3.fromRGB(200,244,224)
+ chargeHUD.TextColor3=C.Stamina
  chargeClock+=dt
  if chargeClock>=.12 then chargeClock=0;remote:FireServer("ChargeAim",aimDirection(true,false)) end
 end)
-local function refresh()
+refresh=function()
 	local inTraining = player:GetAttribute("InTraining")
  local inHunting = player:GetAttribute("InHunting")==true
+	local centeredNotice=inHunting or compactHUD
+	notice.AnchorPoint=Vector2.new(if centeredNotice then .5 else 1,1)
+	notice.Position=UDim2.new(if centeredNotice then .5 else 1,if centeredNotice then 0 else -20,1,if compactHUD then -12 elseif inHunting then -86 else -222)
 	
 	local id=player:GetAttribute("WeaponId") or "Hammer"; local weapon=Weapons[id]
 	local chain=player:GetAttribute("ComboChain") or ""
-	comboHUD.Visible=(inTraining==true or inHunting) and player:GetAttribute("Drawn")==true and not menuOpen() and player:GetAttribute("ShowComboGuide")~=false
+	comboHUD.Visible=not compactHUD and (inTraining==true or inHunting) and player:GetAttribute("Drawn")==true and not menuOpen() and player:GetAttribute("ShowComboGuide")~=false
 	local nextKeys={}
 	for _,combo in weapon.Combos do
 		if #chain>0 and combo.Input:sub(1,#chain)==chain then
 			table.insert(nextKeys,recipe(combo.Input:sub(#chain+1)))
 		end
 	end
-	comboHUD.Text="COMBO • "..weapon.Name.."\n"..recipes(weapon)
+	comboHUD.Size=UDim2.fromOffset(if inHunting then 420 else 360,if inHunting then 52 else 164)
+	comboHUD.Text=if inHunting then "COMBO · "..weapon.Name.."\n"..(if #chain>0 then recipe(chain).."  →  "..table.concat(nextKeys," / ") else "Trái · Q · E  |  Xem chuỗi trong Túi đồ")
+		else "COMBO • "..weapon.Name.."\n"..recipes(weapon)
 		.."\n"..(if #chain>0 then "Đã nối: "..recipe(chain).." | Tiếp: "..table.concat(nextKeys," / ") else "Nối sau mỗi đòn, trong 1,35 giây")
 	
-	title.Text = "HUNDINO • " .. (if inHunting then "RỪNG CỔ" elseif inTraining then "BÃI LUYỆN TẬP" else "TRẠI THỢ SĂN")
+	title.Text = "HUNDINO • " .. (if inHunting then "THUNG LŨNG SƯƠNG XÁM" elseif inTraining then "BÃI LUYỆN TẬP" else "TRẠI THỢ SĂN")
 		.. "\nBase " .. tostring(player:GetAttribute("BaseId") or "…") .. " / 12"
+	if compactHUD then title.Text="HUNDINO · "..(if inHunting then "KHU SĂN" elseif inTraining then "BÃI TẬP" else "TRẠI THỢ SĂN").."\nBase "..tostring(player:GetAttribute("BaseId") or "…").." / 12" end
 	stats.Visible=true
  local value = player:GetAttribute("Stamina") or Config.MaxStamina
 	bar.Size = UDim2.fromScale(value / Config.MaxStamina, 1); staminaText.Text = "THỂ LỰC " .. value .. " / " .. Config.MaxStamina
@@ -306,15 +375,22 @@ local function refresh()
 		.."\nSát thương săn: "..(player:GetAttribute("HuntingDamage") or 0) end
 	help.Text="R: Rút / cất • I: Túi đồ\nChuột trái: Đánh thường • Q: Đánh mạnh\nE: "..weapon.Skill.."\nV: Nhảy • Space: Lướt\nShift: Chạy • Ctrl: Ghim tâm • G: Tương tác"
 		..(if id=="Bow" then "\nPhải: Ngắm • Giữ Trái: Tụ lực"..(if player:GetAttribute("BowBoost") then " • MŨI TÊN CƯỜNG HÓA" else "") elseif id=="SwordShield" then "\nF: Giữ thế đỡ" else "")
- if inHunting then help.Text..="\nKhủng long sẽ phản công khi bị đánh." end
+	if inHunting then help.Text..="\nKhủng long sẽ phản công khi bị đánh." end
+	help.Visible=not compactHUD and not inHunting and not menuOpen()
+	if player:GetAttribute("AdminFlying")==true then help.Text="ADMIN • BAY XEM MAP\nWASD: Di chuyển • Space / E: Lên\nCtrl / Q: Xuống • Shift: Bay nhanh\nBấm Dừng bay hoặc chat /fly để đáp xuống." end
 end
-for _, attr in {"InTraining", "InHunting", "BaseId", "Stamina", "Drawn", "TrainingArmor", "TrainingDamage", "HuntingDamage", "PetDamage", "WeaponId", "Blocking", "BowBoost", "ComboChain"} do
+for _, attr in {"InTraining", "InHunting", "BaseId", "Stamina", "Drawn", "TrainingArmor", "TrainingDamage", "HuntingDamage", "PetDamage", "WeaponId", "Blocking", "BowBoost", "ComboChain", "AdminFlying", "ShowComboGuide"} do
 	player:GetAttributeChangedSignal(attr):Connect(refresh)
 end
 player:GetAttributeChangedSignal("InHunting"):Connect(function()
  baseTransit:Close(); hub:Close(); panel.Visible=false
  cancelHeld(); inputSerial+=1; aiming=false; locked=false; center.Visible=false
  restoreBowView()
+end)
+player:GetAttributeChangedSignal("AdminFlying"):Connect(function()
+ if player:GetAttribute("AdminFlying")~=true then return end
+ baseTransit:Close();hub:Close();panel.Visible=false
+ cancelHeld();inputSerial+=1;aiming=false;locked=false;center.Visible=false;restoreBowView()
 end)
 refreshPreferences=refresh
 panel:GetPropertyChangedSignal("Visible"):Connect(refresh)

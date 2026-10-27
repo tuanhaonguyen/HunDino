@@ -1,0 +1,21 @@
+{
+  "version": "DinosaurCombatTest.2",
+  "ok": true,
+  "checks": 96,
+  "passed": 96,
+  "failures": [],
+  "biteWindupSeconds": 0.95,
+  "biteCooldownSeconds": 3.5,
+  "restSecondsByZone": {
+    "A": 60,
+    "B": 60,
+    "C": 60,
+    "R1": 60,
+    "R2": 60,
+    "R3": 60,
+    "R4": 60,
+    "R5": 60
+  },
+  "context": "Isolated native Studio integration test with real H2 ground; live dinosaur preserved",
+  "source": "tools/test-dinosaur-combat.luau"
+}

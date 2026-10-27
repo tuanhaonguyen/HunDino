@@ -107,5 +107,10 @@ weapons.GreatAxe.Attacks.Break=strike(166,28,0.35,1.2,14,{Name="Lướt phá đ�
 table.insert(weapons.GreatAxe.Combos,{Input="HLLS",Attack="Dance"})
 weapons.GreatAxe.Attacks.Dance=strike(60,34,0.3,1.5,15,{Name="Vũ điệu bão rìu",Hits=3,HitInterval=0.3,Arc=-1,Style="Spin"})
 
-weapons.Bow.Charge={Time=1.2,Multiplier=3.6,HeavyMultiplier=2.4,MaxHold=4.2}
+weapons.Bow.Charge={Time=1.2,Multiplier=3.6,HeavyMultiplier=2.4,MaxHold=4.2,MinRange=40,MaxRange=120}
+-- All uncharged bow shots use 40 studs. Held shots interpolate to 120.
+for _, spec in weapons.Bow.Attacks do spec.Range=40 end
+weapons.Bow.Attacks.Skill.Damage=24
+weapons.Bow.Attacks.Skill.Spread=0
+weapons.Bow.Attacks.Skill.ShotInterval=.12
 return weapons

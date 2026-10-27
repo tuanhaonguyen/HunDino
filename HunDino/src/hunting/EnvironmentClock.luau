@@ -13,6 +13,12 @@ local LIGHTING_PROPERTIES = {
 }
 local ATMOSPHERE_PROPERTIES = { "Density", "Offset", "Color", "Decay", "Glare", "Haze" }
 local READABILITY_PROPERTIES = { "Brightness", "Contrast", "Saturation", "TintColor", "Enabled" }
+local VALLEY_TERRAIN = {
+	Grass=Color3.fromRGB(142,156,91),LeafyGrass=Color3.fromRGB(107,135,78),
+	Ground=Color3.fromRGB(103,86,64),Rock=Color3.fromRGB(99,114,116),
+	Slate=Color3.fromRGB(122,133,134),Mud=Color3.fromRGB(75,80,60),
+	Sandstone=Color3.fromRGB(132,132,117),Sand=Color3.fromRGB(151,143,111),
+}
 
 local function wallTime()
 	return DateTime.now().UnixTimestampMillis / 1000
@@ -55,6 +61,7 @@ function EnvironmentClock.new(root, config)
 	local readability = Lighting:FindFirstChild("HunDinoNightReadability")
 	local self = setmetatable({
 		Root = root,
+		Style = config.EnvironmentStyle,
 		TimezoneOffsetMinutes = finiteNumber(config.TimezoneOffsetMinutes, 420),
 		TimeScale = math.max(0.01, finiteNumber(config.TimeScale, 30)),
 		Latitude = math.clamp(finiteNumber(config.ClockLatitude, -8), -90, 90),
@@ -72,6 +79,17 @@ function EnvironmentClock.new(root, config)
 		EntryClockHours = nil,
 		Destroyed = false,
 	}, EnvironmentClock)
+	if self.Style=="GreyMist" then
+		self.SavedSceneCorrections={}
+		for _,effect in Lighting:GetChildren() do
+			if effect:IsA("ColorCorrectionEffect") and effect~=readability then
+				self.SavedSceneCorrections[effect]=effect.Enabled
+			end
+		end
+		self.SavedTerrainColors={}
+		for name in VALLEY_TERRAIN do self.SavedTerrainColors[name]=workspace.Terrain:GetMaterialColor(Enum.Material[name]) end
+		self.SavedWater=capture(workspace.Terrain,{"WaterColor","WaterTransparency","WaterReflectance","WaterWaveSize","WaterWaveSpeed"})
+	end
 	return self
 end
 
@@ -135,6 +153,29 @@ function EnvironmentClock:Step(unixSeconds)
 	atmosphere.Decay = Color3.fromRGB(90, 112, 143):Lerp(Color3.fromRGB(118, 139, 113), daylight)
 	atmosphere.Glare = daylight * 0.08
 	atmosphere.Haze = mix(1.15, 0.85, daylight)
+	if self.Style == "GreyMist" then
+		-- The hub's cool grading belongs to its own scene. Restore it on exit.
+		for effect in self.SavedSceneCorrections do
+			if effect.Parent==Lighting then effect.Enabled=false end
+		end
+		if not self.TerrainPaletteApplied then
+			for name,color in VALLEY_TERRAIN do workspace.Terrain:SetMaterialColor(Enum.Material[name],color) end
+			workspace.Terrain.WaterColor=Color3.fromRGB(70,111,104)
+			workspace.Terrain.WaterTransparency=.32;workspace.Terrain.WaterReflectance=.12
+			workspace.Terrain.WaterWaveSize=.12;workspace.Terrain.WaterWaveSpeed=5
+			self.TerrainPaletteApplied=true
+		end
+		Lighting.Brightness = mix(1.85, 2.9, daylight)
+		Lighting.Ambient = Color3.fromRGB(84,106,132):Lerp(Color3.fromRGB(100,112,105),daylight)
+		Lighting.OutdoorAmbient = Color3.fromRGB(116,137,157):Lerp(Color3.fromRGB(140,150,138),daylight)
+		Lighting.FogStart=900;Lighting.FogEnd=8500
+		Lighting.EnvironmentDiffuseScale=.68
+		atmosphere.Density=mix(.24,.20,daylight)
+		atmosphere.Color=Color3.fromRGB(155,178,200):Lerp(Color3.fromRGB(199,210,202),daylight)
+			:Lerp(Color3.fromRGB(233,202,163),warmth*.4)
+		atmosphere.Decay=Color3.fromRGB(89,111,140):Lerp(Color3.fromRGB(127,144,137),daylight)
+		atmosphere.Haze=mix(1.7,1.35,daylight);atmosphere.Glare=.12*daylight
+	end
 	-- Lift the darkest shadows instead of turning night into daytime.
 	if not self.Readability or self.Readability.Parent ~= Lighting then
 		self.Readability=Lighting:FindFirstChild("HunDinoNightReadability")
@@ -182,6 +223,15 @@ function EnvironmentClock:Destroy(restoreOriginal)
 	end
 	self:Stop()
 	if restoreOriginal ~= false then
+		if self.SavedSceneCorrections then
+			for effect,enabled in self.SavedSceneCorrections do
+				if effect.Parent==Lighting then effect.Enabled=enabled end
+			end
+		end
+		if self.SavedTerrainColors then
+			for name,color in self.SavedTerrainColors do workspace.Terrain:SetMaterialColor(Enum.Material[name],color) end
+			if self.SavedWater then restore(workspace.Terrain,self.SavedWater) end
+		end
 		restore(Lighting, self.SavedLighting)
 		if self.OwnedAtmosphere and self.Atmosphere then
 			self.Atmosphere:Destroy()

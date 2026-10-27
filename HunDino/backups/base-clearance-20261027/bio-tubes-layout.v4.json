@@ -1,0 +1,1495 @@
+{
+  "Baseline": "backups/Hub_v24_before_5_specimen_tubes_20261021.rbxl",
+  "Bases": [
+    {
+      "BaseId": 1,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.7215957641601562,
+          "MinY": -1.6916885375976562,
+          "Part": "Workspace.DarkJungle.Paths.Base1_Forest.MossEdging",
+          "Slot": 1
+        },
+        {
+          "MaxY": 0.7215957641601562,
+          "MinY": -1.6916885375976562,
+          "Part": "Workspace.DarkJungle.Paths.Base1_Forest.MossEdging",
+          "Slot": 2
+        }
+      ],
+      "Origin": [
+        0,
+        37.41654968261719,
+        -795
+      ],
+      "ShelterLocal": [
+        -0.0,
+        0,
+        36
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        -0.0,
+        0.3000030517578125,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          28,
+          37.41654968261719,
+          -785
+        ],
+        [
+          15,
+          37.41654968261719,
+          -795
+        ],
+        [
+          -15,
+          37.41654968261719,
+          -795
+        ],
+        [
+          -28,
+          37.41654968261719,
+          -785
+        ],
+        [
+          0,
+          37.41654968261719,
+          -800
+        ]
+      ]
+    },
+    {
+      "BaseId": 2,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.729736328125,
+          "MinY": -2.0103759765625,
+          "Part": "Workspace.DarkJungle.Paths.Base2_Safe.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.729736328125,
+          "MinY": -2.0103759765625,
+          "Part": "Workspace.DarkJungle.Paths.Base2_Safe.MossEdging",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        547.0787963867188,
+        37.77740478515625,
+        -565.0787963867188
+      ],
+      "ShelterLocal": [
+        -8,
+        0.0000152587890625,
+        36
+      ],
+      "ShiftX": 8,
+      "SpawnLocal": [
+        -8,
+        0.3000030517578125,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          575.0787963867188,
+          37.77740478515625,
+          -555.0787963867188
+        ],
+        [
+          562.0787963867188,
+          37.77740478515625,
+          -565.0787963867188
+        ],
+        [
+          532.0787963867188,
+          37.77740478515625,
+          -565.0787963867188
+        ],
+        [
+          519.0787963867188,
+          37.77740478515625,
+          -555.0787963867188
+        ],
+        [
+          547.0787963867188,
+          37.77740478515625,
+          -570.0787963867188
+        ]
+      ]
+    },
+    {
+      "BaseId": 3,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.71270751953125,
+          "MinY": -1.277130126953125,
+          "Part": "Workspace.DarkJungle.Paths.Base3_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7213630676269531,
+          "MinY": -1.6307868957519531,
+          "Part": "Workspace.DarkJungle.Paths.Base3_Safe.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.71270751953125,
+          "MinY": -1.277130126953125,
+          "Part": "Workspace.DarkJungle.Paths.Base3_Forest.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6250038146972656,
+          "MinY": 0.4750022888183594,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Core",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.4750022888183594,
+          "MinY": 0.025005340576171875,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base3.Platform",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7213630676269531,
+          "MinY": -1.6307868957519531,
+          "Part": "Workspace.DarkJungle.Paths.Base3_Safe.MossEdging",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        785,
+        34.43000793457031,
+        -10
+      ],
+      "ShelterLocal": [
+        0,
+        0,
+        36
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000030517578125,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          813,
+          34.43000793457031,
+          0
+        ],
+        [
+          800,
+          34.43000793457031,
+          -10
+        ],
+        [
+          770,
+          34.43000793457031,
+          -10
+        ],
+        [
+          757,
+          34.43000793457031,
+          0
+        ],
+        [
+          785,
+          34.43000793457031,
+          -15
+        ]
+      ]
+    },
+    {
+      "BaseId": 4,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.7235870361328125,
+          "MinY": -1.7880020141601562,
+          "Part": "Workspace.DarkJungle.Paths.Base4_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7297401428222656,
+          "MinY": -2.0103721618652344,
+          "Part": "Workspace.DarkJungle.Paths.Base4_Safe.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base4.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base4.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base4.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base4.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base4.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.475006103515625,
+          "MinY": 0.0250091552734375,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base4.Platform",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7235870361328125,
+          "MinY": -1.7880020141601562,
+          "Part": "Workspace.DarkJungle.Paths.Base4_Forest.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7297401428222656,
+          "MinY": -2.0103721618652344,
+          "Part": "Workspace.DarkJungle.Paths.Base4_Safe.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7235870361328125,
+          "MinY": -1.7880020141601562,
+          "Part": "Workspace.DarkJungle.Paths.Base4_Forest.MossEdging",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.7297401428222656,
+          "MinY": -2.0103721618652344,
+          "Part": "Workspace.DarkJungle.Paths.Base4_Safe.MossEdging",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        557.6669921875,
+        37.77740478515625,
+        545.4195556640625
+      ],
+      "ShelterLocal": [
+        0,
+        0.000019073486328125,
+        35.99993896484375
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000068664550781,
+        -9.99993896484375
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          582.1246948242188,
+          37.77740478515625,
+          562.3257446289062
+        ],
+        [
+          572.1558837890625,
+          37.77740478515625,
+          549.3018188476562
+        ],
+        [
+          543.1781005859375,
+          37.77740478515625,
+          541.5372924804688
+        ],
+        [
+          528.0328979492188,
+          37.77740478515625,
+          547.8318481445312
+        ],
+        [
+          558.9610595703125,
+          37.77740478515625,
+          540.5899047851562
+        ]
+      ]
+    },
+    {
+      "BaseId": 5,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.7256622314453125,
+          "MinY": -1.8268280029296875,
+          "Part": "Workspace.DarkJungle.Paths.Base5_Safe.MossEdging",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.7111282348632812,
+          "MinY": -1.2023696899414062,
+          "Part": "Workspace.DarkJungle.Paths.Base5_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6250038146972656,
+          "MinY": 0.4750022888183594,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Core",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100044250488281,
+          "MinY": 0.4900016784667969,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.4750022888183594,
+          "MinY": 0.025005340576171875,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base5.Platform",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7111282348632812,
+          "MinY": -1.2023696899414062,
+          "Part": "Workspace.DarkJungle.Paths.Base5_Forest.MossEdging",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.7256622314453125,
+          "MinY": -1.8268280029296875,
+          "Part": "Workspace.DarkJungle.Paths.Base5_Safe.MossEdging",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        4.660247802734375,
+        37.41654968261719,
+        773.07177734375
+      ],
+      "ShelterLocal": [
+        -8,
+        0,
+        35.999908447265625
+      ],
+      "ShiftX": 8,
+      "SpawnLocal": [
+        -8,
+        0.3000030517578125,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          10,
+          37.41654968261719,
+          802.3204956054688
+        ],
+        [
+          12.160247802734375,
+          37.41654968261719,
+          786.0621337890625
+        ],
+        [
+          -2.839752197265625,
+          37.41654968261719,
+          760.0814208984375
+        ],
+        [
+          -18,
+          37.41654968261719,
+          753.8230590820312
+        ],
+        [
+          8.990386962890625,
+          37.41654968261719,
+          770.57177734375
+        ]
+      ]
+    },
+    {
+      "BaseId": 6,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.7216796875,
+          "MinY": -1.6433334350585938,
+          "Part": "Workspace.DarkJungle.Paths.Base6_Safe.MossEdging",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.7160568237304688,
+          "MinY": -1.4284210205078125,
+          "Part": "Workspace.DarkJungle.Paths.Base6_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6250076293945312,
+          "MinY": 0.475006103515625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Core",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.475006103515625,
+          "MinY": 0.0250091552734375,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base6.Platform",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7160568237304688,
+          "MinY": -1.4284210205078125,
+          "Part": "Workspace.DarkJungle.Paths.Base6_Forest.MossEdging",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.7216796875,
+          "MinY": -1.6433334350585938,
+          "Part": "Workspace.DarkJungle.Paths.Base6_Safe.MossEdging",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        -543.3489990234375,
+        37.05567932128906,
+        549.9395751953125
+      ],
+      "ShelterLocal": [
+        -7.99993896484375,
+        3.814697265625e-6,
+        35.9998779296875
+      ],
+      "ShiftX": 8,
+      "SpawnLocal": [
+        -7.99993896484375,
+        0.3000068664550781,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          -560.2551879882812,
+          37.05567932128906,
+          574.3972778320312
+        ],
+        [
+          -547.2312622070312,
+          37.05567932128906,
+          564.428466796875
+        ],
+        [
+          -539.4667358398438,
+          37.05567932128906,
+          535.45068359375
+        ],
+        [
+          -545.7612915039062,
+          37.05567932128906,
+          520.3054809570312
+        ],
+        [
+          -538.5193481445312,
+          37.05567932128906,
+          551.233642578125
+        ]
+      ]
+    },
+    {
+      "BaseId": 7,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.7200241088867188,
+          "MinY": -1.6169281005859375,
+          "Part": "Workspace.DarkJungle.Paths.Base7_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7298774719238281,
+          "MinY": -2.022777557373047,
+          "Part": "Workspace.DarkJungle.Paths.Base7_Safe.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base7.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base7.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base7.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base7.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6100082397460938,
+          "MinY": 0.4900054931640625,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base7.Rune",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.475006103515625,
+          "MinY": 0.0250091552734375,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base7.Platform",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7200241088867188,
+          "MinY": -1.6169281005859375,
+          "Part": "Workspace.DarkJungle.Paths.Base7_Forest.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7298774719238281,
+          "MinY": -2.022777557373047,
+          "Part": "Workspace.DarkJungle.Paths.Base7_Safe.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7200241088867188,
+          "MinY": -1.6169281005859375,
+          "Part": "Workspace.DarkJungle.Paths.Base7_Forest.MossEdging",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.7298774719238281,
+          "MinY": -2.022777557373047,
+          "Part": "Workspace.DarkJungle.Paths.Base7_Safe.MossEdging",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        -780,
+        40.40309143066406,
+        8.660247802734375
+      ],
+      "ShelterLocal": [
+        0,
+        3.814697265625e-6,
+        35.999908447265625
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000068664550781,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          -809.2487182617188,
+          40.40309143066406,
+          14
+        ],
+        [
+          -792.9903564453125,
+          40.40309143066406,
+          16.160247802734375
+        ],
+        [
+          -767.0096435546875,
+          40.40309143066406,
+          1.160247802734375
+        ],
+        [
+          -760.7512817382812,
+          40.40309143066406,
+          -14
+        ],
+        [
+          -777.5,
+          40.40309143066406,
+          12.990386962890625
+        ]
+      ]
+    },
+    {
+      "BaseId": 8,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.7216758728027344,
+          "MinY": -1.6433372497558594,
+          "Part": "Workspace.DarkJungle.Paths.Base8_Safe.MossEdging",
+          "Slot": 1
+        },
+        {
+          "MaxY": 0.7089347839355469,
+          "MinY": -1.1058158874511719,
+          "Part": "Workspace.DarkJungle.Paths.Base8_Forest.MossEdging",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.7216758728027344,
+          "MinY": -1.6433372497558594,
+          "Part": "Workspace.DarkJungle.Paths.Base8_Safe.MossEdging",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.7089347839355469,
+          "MinY": -1.1058158874511719,
+          "Part": "Workspace.DarkJungle.Paths.Base8_Forest.MossEdging",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        -555.0787963867188,
+        37.05567932128906,
+        -565.0787963867188
+      ],
+      "ShelterLocal": [
+        0,
+        0,
+        36
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000030517578125,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          -527.0787963867188,
+          37.05567932128906,
+          -555.0787963867188
+        ],
+        [
+          -540.0787963867188,
+          37.05567932128906,
+          -565.0787963867188
+        ],
+        [
+          -570.0787963867188,
+          37.05567932128906,
+          -565.0787963867188
+        ],
+        [
+          -583.0787963867188,
+          37.05567932128906,
+          -555.0787963867188
+        ],
+        [
+          -555.0787963867188,
+          37.05567932128906,
+          -570.0787963867188
+        ]
+      ]
+    },
+    {
+      "BaseId": 9,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.2305316925048828,
+          "MinY": -2.006834030151367,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Safe.WalkSurface",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.7129840850830078,
+          "MinY": -1.2061748504638672,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7129840850830078,
+          "MinY": -1.2061748504638672,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.9293918609619141,
+          "MinY": -0.7056941986083984,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Safe.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.2305316925048828,
+          "MinY": -2.006834030151367,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Safe.WalkSurface",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.4542102813720703,
+          "MinY": -1.7831554412841797,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Safe.WalkSurface",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.9293918609619141,
+          "MinY": -0.7056941986083984,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Safe.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.2305316925048828,
+          "MinY": -2.006834030151367,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Safe.WalkSurface",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7129840850830078,
+          "MinY": -1.2061748504638672,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Forest.MossEdging",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.2305316925048828,
+          "MinY": -2.006834030151367,
+          "Part": "Workspace.DarkJungle.Paths.Base9_Safe.WalkSurface",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.475006103515625,
+          "MinY": 0.025005340576171875,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base9.Platform",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        -2.58819580078125,
+        21.866943359375,
+        -445.3407287597656
+      ],
+      "ShelterLocal": [
+        0.0000152587890625,
+        1.9073486328125e-6,
+        35.99993896484375
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000049591064453,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          -27.045928955078125,
+          21.866943359375,
+          -462.2469177246094
+        ],
+        [
+          -17.077072143554688,
+          21.866943359375,
+          -449.2230224609375
+        ],
+        [
+          11.90069580078125,
+          21.866943359375,
+          -441.45843505859375
+        ],
+        [
+          27.045928955078125,
+          21.866943359375,
+          -447.7530517578125
+        ],
+        [
+          -3.8822784423828125,
+          21.866943359375,
+          -440.5111083984375
+        ]
+      ]
+    },
+    {
+      "BaseId": 10,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.9833126068115234,
+          "MinY": -0.7070980072021484,
+          "Part": "Workspace.DarkJungle.Paths.Base10_Safe.MossEdging",
+          "Slot": 1
+        },
+        {
+          "MaxY": 0.2847156524658203,
+          "MinY": -2.0085010528564453,
+          "Part": "Workspace.DarkJungle.Paths.Base10_Safe.WalkSurface",
+          "Slot": 1
+        },
+        {
+          "MaxY": 0.9833126068115234,
+          "MinY": -0.7070980072021484,
+          "Part": "Workspace.DarkJungle.Paths.Base10_Safe.MossEdging",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.2847156524658203,
+          "MinY": -2.0085010528564453,
+          "Part": "Workspace.DarkJungle.Paths.Base10_Safe.WalkSurface",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.70684814453125,
+          "MinY": -0.966094970703125,
+          "Part": "Workspace.DarkJungle.Paths.Base10_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.2847156524658203,
+          "MinY": -2.0085010528564453,
+          "Part": "Workspace.DarkJungle.Paths.Base10_Safe.WalkSurface",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6250038146972656,
+          "MinY": 0.4750022888183594,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Core",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6100025177001953,
+          "MinY": 0.4900035858154297,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Rune",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.4750041961669922,
+          "MinY": 0.025003433227539062,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base10.Platform",
+          "Slot": 4
+        }
+      ],
+      "Origin": [
+        455,
+        23.212539672851562,
+        -10
+      ],
+      "ShelterLocal": [
+        0,
+        0,
+        36
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000030517578125,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          483,
+          23.212539672851562,
+          0
+        ],
+        [
+          470,
+          23.212539672851562,
+          -10
+        ],
+        [
+          440,
+          23.212539672851562,
+          -10
+        ],
+        [
+          427,
+          23.212539672851562,
+          0
+        ],
+        [
+          455,
+          23.212539672851562,
+          -15
+        ]
+      ]
+    },
+    {
+      "BaseId": 11,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.7335071563720703,
+          "MinY": -2.0214061737060547,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Safe.WalkSurface",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.7091751098632812,
+          "MinY": -1.0570106506347656,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7091751098632812,
+          "MinY": -1.0570106506347656,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 1.4301109313964844,
+          "MinY": -0.7180099487304688,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Safe.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7335071563720703,
+          "MinY": -2.0214061737060547,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Safe.WalkSurface",
+          "Slot": 3
+        },
+        {
+          "MaxY": 1.4456634521484375,
+          "MinY": -1.3094291687011719,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Safe.WalkSurface",
+          "Slot": 4
+        },
+        {
+          "MaxY": 1.4301109313964844,
+          "MinY": -0.7180099487304688,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Safe.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7335071563720703,
+          "MinY": -2.0214061737060547,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Safe.WalkSurface",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7091751098632812,
+          "MinY": -1.0570106506347656,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Forest.MossEdging",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.7335071563720703,
+          "MinY": -2.0214061737060547,
+          "Part": "Workspace.DarkJungle.Paths.Base11_Safe.WalkSurface",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.475006103515625,
+          "MinY": 0.025005340576171875,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base11.Platform",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        2.58819580078125,
+        21.866943359375,
+        445.3407287597656
+      ],
+      "ShelterLocal": [
+        0.0000152587890625,
+        1.9073486328125e-6,
+        35.99993896484375
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000049591064453,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          27.045928955078125,
+          21.866943359375,
+          462.2469177246094
+        ],
+        [
+          17.077072143554688,
+          21.866943359375,
+          449.2230224609375
+        ],
+        [
+          -11.90069580078125,
+          21.866943359375,
+          441.45843505859375
+        ],
+        [
+          -27.045928955078125,
+          21.866943359375,
+          447.7530517578125
+        ],
+        [
+          3.8822784423828125,
+          21.866943359375,
+          440.5111083984375
+        ]
+      ]
+    },
+    {
+      "BaseId": 12,
+      "BlockedSightlines": {},
+      "Distance": 10,
+      "LowTrimContacts": [
+        {
+          "MaxY": 0.6794242858886719,
+          "MinY": -2.019847869873047,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Safe.WalkSurface",
+          "Slot": 2
+        },
+        {
+          "MaxY": 0.7152500152587891,
+          "MinY": -1.297037124633789,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.7152500152587891,
+          "MinY": -1.297037124633789,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Forest.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 1.3761825561523438,
+          "MinY": -0.7166061401367188,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Safe.MossEdging",
+          "Slot": 3
+        },
+        {
+          "MaxY": 0.6794242858886719,
+          "MinY": -2.019847869873047,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Safe.WalkSurface",
+          "Slot": 3
+        },
+        {
+          "MaxY": 1.3389701843261719,
+          "MinY": -1.3603019714355469,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Safe.WalkSurface",
+          "Slot": 4
+        },
+        {
+          "MaxY": 1.3761825561523438,
+          "MinY": -0.7166061401367188,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Safe.MossEdging",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.6794242858886719,
+          "MinY": -2.019847869873047,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Safe.WalkSurface",
+          "Slot": 4
+        },
+        {
+          "MaxY": 0.7152500152587891,
+          "MinY": -1.297037124633789,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Forest.MossEdging",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.6794242858886719,
+          "MinY": -2.019847869873047,
+          "Part": "Workspace.DarkJungle.Paths.Base12_Safe.WalkSurface",
+          "Slot": 5
+        },
+        {
+          "MaxY": 0.4750041961669922,
+          "MinY": 0.025003433227539062,
+          "Part": "Workspace.HunDinoL0.BaseTransit.Bases.Base12.Platform",
+          "Slot": 5
+        }
+      ],
+      "Origin": [
+        -445.3407287597656,
+        20.521347045898438,
+        2.58819580078125
+      ],
+      "ShelterLocal": [
+        0.0000152587890625,
+        0.0000152587890625,
+        35.99993896484375
+      ],
+      "ShiftX": 0,
+      "SpawnLocal": [
+        0,
+        0.3000030517578125,
+        -10
+      ],
+      "StructuralObstructions": {},
+      "TubeCenters": [
+        [
+          -462.2469177246094,
+          20.521347045898438,
+          27.045928955078125
+        ],
+        [
+          -449.2230224609375,
+          20.521347045898438,
+          17.077072143554688
+        ],
+        [
+          -441.45843505859375,
+          20.521347045898438,
+          -11.90069580078125
+        ],
+        [
+          -447.7530517578125,
+          20.521347045898438,
+          -27.045928955078125
+        ],
+        [
+          -440.5111083984375,
+          20.521347045898438,
+          3.8822784423828125
+        ]
+      ]
+    }
+  ],
+  "BlockedSightlines": 0,
+  "Method": "Conservative radius6 x height19.2 cylinder against projected part OBB bounds; exact OBB segment sightlines from spawn/front to specimen/cap. Terrain's non-geometric wrapper, foundations and flat rune/floor art excluded. Contacts belowY1.5 are separately recorded within the2.35-high plinth.",
+  "SightlinesChecked": 240,
+  "StaticPartCount": 12000,
+  "StructuralObstructions": 0,
+  "TubeCount": 60,
+  "Validation": "passed",
+  "Version": "BioTubeGeometry.4"
+}

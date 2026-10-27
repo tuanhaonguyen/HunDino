@@ -1,0 +1,48 @@
+{
+  "Version": "PersistencePlayQA.1",
+  "Date": "2026-10-20",
+  "Mode": "Explicit Studio TestMemory",
+  "CloudVerified": false,
+  "GameId": 0,
+  "PlaceId": 0,
+  "LoadoutRoundtrip": {
+    "ShowDamage": false,
+    "PetHead": "Leather",
+    "AimSensitivity": 0.5,
+    "PlayerWeapon": "Bow",
+    "PlayerChest": "Bone",
+    "PetWeapon": "Katana",
+    "SaveReleaseLoad": true
+  },
+  "PurchaseRoundtrip": {
+    "OperationReceipts": 2,
+    "StartingCoins": 80,
+    "SleepPotion": 1,
+    "EndingCoins": 60,
+    "RawTrap": 1
+  },
+  "Outage": {
+    "DuplicateGrants": 0,
+    "RecoveredCoins": 60,
+    "InjectedWriteFailures": 4,
+    "RecoveredPotions": 1,
+    "UnconfirmedCoins": 70,
+    "UnconfirmedPotions": 0
+  },
+  "PetCooldown": {
+    "ActualHeal": true,
+    "OwnerHealthAfter": 100,
+    "DeadlinePreserved": true,
+    "OwnerHealthBefore": 30
+  },
+  "Tests": {
+    "EconomyRules": 2134,
+    "Store": 160,
+    "CaptureController": 195,
+    "QuestRules": 231,
+    "JSONRoundtrip": 547,
+    "EngineService": 65,
+    "Schema": 597
+  },
+  "CloudAcceptance": "Pending published private game and real leave/rejoin across sessions. No live DataStore read or write performed."
+}

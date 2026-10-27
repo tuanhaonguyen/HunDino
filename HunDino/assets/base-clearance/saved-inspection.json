@@ -1,0 +1,20 @@
+{
+  "Bytes": 4495025,
+  "Checks": 129779,
+  "MinimumTubeCenterToWalkCorridor": 10,
+  "Ok": true,
+  "OutsideMapHash": "fb9cc80b8dcd002fea69b5385aea145b0c692d873b6a4bb0dd280ba560ef96a7",
+  "OutsideMapInstances": 49221,
+  "PersistenceUnchanged": true,
+  "PlayBases": 12,
+  "SHA256": "8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf",
+  "ScriptsCompiled": 164,
+  "Target": "HunDino_MerchantWeapons_20261026.rbxl",
+  "TerrainProperties": 70,
+  "TubeParts": 12000,
+  "Tubes": 60,
+  "VoxelContentMap": {
+    "bytes": 38,
+    "sha256": "477acdbf3c01127e049662ab2f85568da85c24f63e8c4222d0395ab9e035032d"
+  }
+}

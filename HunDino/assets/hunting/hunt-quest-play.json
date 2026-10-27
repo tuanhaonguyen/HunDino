@@ -1,0 +1,222 @@
+{
+  "version": "HuntQuestPlayValidation.1",
+  "date": "2026-10-19",
+  "place": "HunDino_DarkJungle_v2_4.rbxl",
+  "nativePlay": {
+    "firstSession": {
+      "CaptureRunId": "d0d27440-563f-4579-9656-50d889132966",
+      "StartId": "2812e639-8617-4027-8771-fcf8b432a038",
+      "DamagedHP": 1152,
+      "Respawns": [
+        {
+          "death": 1,
+          "questDeaths": 1,
+          "beforeHP": 1152,
+          "afterHP": 1152,
+          "sameDeadline": true,
+          "sameRun": true,
+          "state": "Hunting",
+          "activeHunters": 1,
+          "alive": true,
+          "area": "Hunting"
+        },
+        {
+          "death": 2,
+          "questDeaths": 2,
+          "beforeHP": 1152,
+          "afterHP": 1152,
+          "sameDeadline": true,
+          "sameRun": true,
+          "state": "Hunting",
+          "activeHunters": 1,
+          "alive": true,
+          "area": "Hunting"
+        },
+        {
+          "death": 3,
+          "questDeaths": 3,
+          "beforeHP": 1152,
+          "afterHP": 1152,
+          "sameDeadline": true,
+          "sameRun": true,
+          "state": "Hunting",
+          "activeHunters": 1,
+          "alive": true,
+          "area": "Hunting"
+        },
+        {
+          "death": 4,
+          "questDeaths": 4,
+          "beforeHP": 1152,
+          "afterHP": 1200,
+          "sameDeadline": true,
+          "sameRun": true,
+          "state": "Closed",
+          "activeHunters": 0,
+          "alive": true,
+          "area": "Lobby",
+          "result": "Failed"
+        }
+      ],
+      "WeakHealth": 120,
+      "Capture": {
+        "potions": 2,
+        "traps": 1,
+        "state": "Harvest",
+        "petCaptureActive": false,
+        "clockStopped": 1792399083.14941,
+        "harvestUntil": 1792399203.130263,
+        "hp": 84,
+        "result": "Captured",
+        "captured": true
+      },
+      "HarvestDeath": {
+        "state": "Harvest",
+        "sameDeaths": true,
+        "remaining": 53.2707,
+        "captured": true,
+        "sameEnd": true,
+        "result": "Captured",
+        "area": "Hunting"
+      },
+      "AutoReturn": {
+        "Scale": 3.716229200363159,
+        "State": "Closed",
+        "InHunting": false,
+        "Now": 1792399373.138314,
+        "HarvestUntil": 1792399203.130263,
+        "Captured": false,
+        "Result": "Captured",
+        "Area": "Lobby"
+      }
+    },
+    "finalSession": {
+      "EarlyReturn": {
+        "Potions": 3,
+        "Scale": 3.716229200363159,
+        "Traps": 3,
+        "State": "Closed",
+        "InHunting": false,
+        "Hunters": 0,
+        "DinoHP": 1200,
+        "Result": "Defeated",
+        "Area": "Lobby"
+      },
+      "Boundary": {
+        "state": "Hunting",
+        "sameDeaths": true,
+        "position": "0, 23.37481689453125, 4650",
+        "sameRun": true,
+        "sameDeadline": true,
+        "area": "Hunting"
+      },
+      "KillRun": {
+        "id": "6b84627c-887c-408e-9c0d-a7d07c309257",
+        "deaths": 0,
+        "deadline": 1792414409.592062
+      },
+      "Kill": {
+        "State": "Harvest",
+        "Traps": 3,
+        "Now": 1792412074.916356,
+        "Result": "Defeated",
+        "HarvestUntil": 1792412172.931086,
+        "Potions": 3,
+        "HP": 0,
+        "Captured": false
+      }
+    },
+    "harvestDaylight": {
+      "beforeHours": 19.76944351196289,
+      "afterHours": 19.84166717529297,
+      "elapsedSeconds": 8.7131929397583,
+      "expectedHoursAdvance": 0.07260994911193848
+    }
+  },
+  "engineTests": {
+    "capture": {
+      "ok": true,
+      "boundary": "Real controller/rules/Instance/Humanoid/raycast/overlap; fake owner attributes and dinosaur sink. No production player or dinosaur mutation.",
+      "checks": 163,
+      "skipped": {
+        "1": "Native water case skipped: no unobstructed existing lake sample found; Terrain is never modified."
+      },
+      "passed": 163,
+      "version": "HuntCaptureIntegration.1",
+      "failures": [],
+      "elapsed": 0.11838197708129883,
+      "cases": 24
+    },
+    "combat": {
+      "ok": true,
+      "checks": 96,
+      "passed": 96,
+      "final": {
+        "AttackSequence": 0,
+        "AttackBoxSize": "26, 16, 36",
+        "Time": 12.860000000000051,
+        "Health": 1200,
+        "State": "Idle",
+        "TargetUserId": 0,
+        "AttackHits": 0,
+        "AttackPhase": "Idle",
+        "Trapped": false,
+        "AttackBoxCFrame": {
+          "Rotation": "-0.9702715873718262, -4.440892098500626e-15, -0.24201864004135132, 3.019806626980426e-14, 1.0000003576278687, -1.7763568394002505e-15, 0.24201864004135132, -1.2434497875801753e-14, -0.9702715873718262",
+          "Position": "-430.6436767578125, 98.14999389648438, 6437.46484375"
+        },
+        "MaxHealth": 1200,
+        "Captured": false
+      },
+      "biteCooldownSeconds": 3.5,
+      "version": "DinosaurCombatTest.2",
+      "meleePoint": {
+        "heightAbovePlayer": 1.9999923706054688,
+        "distance": 7.540188312530518
+      },
+      "biteWindupSeconds": 0.95,
+      "failures": [],
+      "initial": {
+        "AttackSequence": 0,
+        "AttackBoxSize": "26, 16, 36",
+        "Time": 0,
+        "Health": 1200,
+        "State": "Idle",
+        "TargetUserId": 0,
+        "AttackHits": 0,
+        "AttackPhase": "Idle",
+        "Trapped": false,
+        "AttackBoxCFrame": {
+          "Rotation": "-0.9702715873718262, 0, -0.24201858043670654, 1.0658141036401503e-14, 1.0000003576278687, 4.440892098500626e-16, 0.24201858043670654, -4.440892098500626e-16, -0.9702715873718262",
+          "Position": "-430.6434326171875, 98.14999389648438, 6437.46484375"
+        },
+        "MaxHealth": 1200,
+        "Captured": false
+      },
+      "restSecondsByZone": {
+        "R5": 60,
+        "R4": 60,
+        "C": 60,
+        "B": 60,
+        "A": 60,
+        "R1": 60,
+        "R2": 60,
+        "R3": 60
+      }
+    }
+  },
+  "pureRules": {
+    "checks": 231,
+    "groups": 15,
+    "passed": true
+  },
+  "boundaries": [
+    "Native melee tests use actual weapon Light requests and server validation, with tool-assisted player positioning and temporary 1000 hero HP only in Play; restored to 100 before stopping.",
+    "Capture was completed with B placement and G administration input; first expired trap did not consume a potion.",
+    "120-second harvest return was allowed to elapse naturally; ordinary death and post-success death used test-only Humanoid health changes.",
+    "40-minute deadline equality/late completion covered by pure rules; no full 40-minute wall-clock mission was waited.",
+    "Existing unobstructed Terrain lake sampling found no usable fixture; water case skipped, never edited Terrain.",
+    "Mouse hold and keyboard UI present; complete mobile experience and multiple players not validated.",
+    "No economic rewards, carving, persistent specimen or account storage in P1-D."
+  ]
+}

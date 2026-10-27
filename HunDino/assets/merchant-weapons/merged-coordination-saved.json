@@ -1,0 +1,19 @@
+{
+  "Baseline": "backups/bow-pet-20261026/HunDino_MerchantWeapons_20261026.rbxl",
+  "Bytes": 4372018,
+  "Checks": 83644,
+  "Ok": true,
+  "OpaqueTerrainProperties": 70,
+  "QAFlagsRemoved": true,
+  "SHA256": "6265cf48569a69fe28b7700704685d132fd3be4b569195378e5bc90d9325729e",
+  "SceneHash": "d8cca91b673788676d4aa98213969f51e55f32c21f7dc332eb545492d67655d8",
+  "ScriptsCompiled": 155,
+  "SourceBindings": 9,
+  "Target": "HunDino_MerchantWeapons_20261026.rbxl",
+  "VoxelContentMap": {
+    "bytes": 38,
+    "sha256": "477acdbf3c01127e049662ab2f85568da85c24f63e8c4222d0395ab9e035032d"
+  },
+  "WorkspaceJoints": 723,
+  "WorkspaceParts": 47064
+}

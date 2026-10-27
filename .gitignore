@@ -1,0 +1,14 @@
+# Local tooling, reports, credentials and player saves
+/.tools/
+/.reports/
+**/__pycache__/
+**/*.py[cod]
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+**/local-save/
+**/*.rbxl.lock
+**/*.rbxlx.lock
+

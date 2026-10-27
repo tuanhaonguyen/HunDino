@@ -1,0 +1,93 @@
+{
+  "version": "PetCompanionPlay.1",
+  "date": "2026-10-19",
+  "place": "HunDino_DarkJungle_v2_4.rbxl",
+  "validation": "passed",
+  "rulesChecks": 150,
+  "mockedControllerChecks": 29,
+  "engineIntegration": {
+    "ok": true,
+    "boundary": "Real controller/rules/physics queries; animation marks and dinosaur sink adapted. Remote authorization tested separately.",
+    "version": "PetCompanionIntegration.1",
+    "checks": 79,
+    "failures": [],
+    "passed": 79,
+    "fixtures": 15
+  },
+  "dinosaurRegressionChecks": 96,
+  "weaponRuleGroups": 6,
+  "live": {
+    "training": {
+      "Area": "Training",
+      "PetDamageDelta": 12,
+      "PlayerDamage": 36
+    },
+    "lifecycle": {
+      "Respawn": {
+        "CooldownUnchanged": true,
+        "Alive": true,
+        "PetHealth": 100,
+        "PetPresent": true,
+        "NewCharacter": true,
+        "Area": "Lobby"
+      },
+      "Flight": {
+        "CooldownUnchanged": true,
+        "Flying": true,
+        "HPUnchanged": true,
+        "OwnerY": 39.5234375,
+        "PetY": 36.33000946044922,
+        "PetState": "Waiting"
+      }
+    },
+    "measure": {
+      "CooldownAtHeal": 118.99962902069092,
+      "Heal": {
+        "Before": 21.0162296295166,
+        "At": 1792396894.737086,
+        "After": 91.01622772216797,
+        "Amount": 69.99999809265137
+      }
+    },
+    "firstSession": {
+      "noAttackBeforeOwner": true,
+      "ownerOpeningDamage": 36,
+      "petDamageAfterOpening": 12,
+      "petHuntingDamageObserved": 60,
+      "observedPetHealth": [
+        100,
+        4,
+        1,
+        100
+      ],
+      "stunAt": 1792388437.196398,
+      "recoveredAt": 1792388467.280034,
+      "recoveredHealth": 100,
+      "stunSecondsMeasured": 30.083636045455933,
+      "stunNotExtended": true,
+      "healNotQueuedWhileStunned": true,
+      "spamCooldownUnchanged": true
+    },
+    "note": "Native Play was restarted during work. First-session values come from observed server output. Second-session measurements above were collected again after reopening the saved v2.4."
+  },
+  "pathfinding": {
+    "version": "PetCompanionPath.1",
+    "ok": true,
+    "seconds": 4.378131866455078,
+    "steps": 40,
+    "detoured": true,
+    "pathObserved": true,
+    "crossedWall": false,
+    "remainingDistance": 0.668699324131012
+  },
+  "limits": [
+    "P1-C only: quests/capture/rewards/account saving are later stages",
+    "Health and cooldown persist across character respawn within this server; not across server shutdown",
+    "PC verified; full mobile combat and multiple real clients not verified",
+    "Navigation test used isolated floor/wall geometry; not an exhaustive survey of all natural obstacles"
+  ],
+  "evidence": {
+    "stunImage": "assets/hunting/pet-stunned-p1c.png",
+    "saved": "assets/hunting/pet-companion-saved.json"
+  }
+}

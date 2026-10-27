@@ -1,5 +1,11 @@
 # Khủng long đầu tiên — mẫu ngoại hình 15/10/2026
 
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+`Dinosaur01_TRex_Visual.rbxl` là file mẫu ngoại hình riêng. Con mẫu đã tích hợp vào [v2.4](HunDino_DarkJungle_v2_4.rbxl): rig **255 Part/21 MeshPart/7 Motor6D/247 weld/1 anchor**, tuần tra/nghỉ 60 giây trên H2, có combat và bắt sống. Xem [combat](DINOSAUR_COMBAT.md), [nhiệm vụ/bắt](HUNT_QUEST.md) và [kho cá thể](SPECIMEN_COLLECTION.md). Các phím F/G/R/C hoặc E thử cắn và những câu chưa AI/sát thương bên dưới thuộc phiên xem model riêng; không dùng làm điều khiển bản chung.
+
+## Hồ sơ ngoại hình và rig riêng — 15/10/2026
+
 ## Cập nhật theo ảnh tham khảo
 
 ### Đầu gọn hơn, thử cắn và đi bộ — bản hiện hành

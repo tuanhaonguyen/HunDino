@@ -1,0 +1,106 @@
+[
+  {
+    "className": "Script",
+    "existing": true,
+    "file": "studio-pet-integration/Training.server.luau",
+    "key": "TrainingServer",
+    "newHash": 1423873100,
+    "oldHash": 2390858414,
+    "path": "ServerScriptService.HunDinoTraining"
+  },
+  {
+    "className": "LocalScript",
+    "existing": true,
+    "file": "studio-pet-integration/Training.client.luau",
+    "key": "TrainingClient",
+    "newHash": 571327700,
+    "oldHash": 3984188098,
+    "path": "StarterPlayer.StarterPlayerScripts.HunDinoTraining"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/hunting/DinosaurCombat.luau",
+    "key": "DinosaurCombat",
+    "newHash": 3873425087,
+    "oldHash": 4226217425,
+    "path": "ServerScriptService.HuntingRuntime.DinosaurCombat"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/hunting/DinosaurRouteController.luau",
+    "key": "DinosaurRouteController",
+    "newHash": 3513376562,
+    "oldHash": 1737970751,
+    "path": "ServerScriptService.HuntingRuntime.DinosaurRouteController"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/hunting/HuntingSession.luau",
+    "key": "HuntingSession",
+    "newHash": 3879358015,
+    "oldHash": 872661882,
+    "path": "ServerScriptService.HuntingRuntime.HuntingSession"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/hunting/PetCompanionController.luau",
+    "key": "PetCompanionController",
+    "newHash": 3579278114,
+    "oldHash": 2168129057,
+    "path": "ServerScriptService.HuntingRuntime.PetCompanionController"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": true,
+    "file": "src/dark-jungle/HubUI.luau",
+    "key": "HubUI",
+    "newHash": 826947226,
+    "oldHash": 2279852194,
+    "path": "ReplicatedStorage.Shared.HubUI"
+  },
+  {
+    "className": "LocalScript",
+    "existing": true,
+    "file": "src/hunting/ConnectedHuntingViewer.client.luau",
+    "key": "ConnectedHuntingViewer",
+    "newHash": 1350125202,
+    "oldHash": 4047057909,
+    "path": "StarterPlayer.StarterPlayerScripts.ConnectedHuntingViewer"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": false,
+    "file": "src/hunting/HuntQuestRules.luau",
+    "key": "HuntQuestRules",
+    "newHash": 3789922571,
+    "path": "ServerScriptService.HuntingRuntime.HuntQuestRules"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": false,
+    "file": "src/hunting/HuntCaptureController.luau",
+    "key": "HuntCaptureController",
+    "newHash": 1359476411,
+    "path": "ServerScriptService.HuntingRuntime.HuntCaptureController"
+  },
+  {
+    "className": "ModuleScript",
+    "existing": false,
+    "file": "src/hunting/HuntQuestService.luau",
+    "key": "HuntQuestService",
+    "newHash": 4015600358,
+    "path": "ServerScriptService.HuntingRuntime.HuntQuestService"
+  },
+  {
+    "className": "LocalScript",
+    "existing": false,
+    "file": "src/hunting/HuntQuest.client.luau",
+    "key": "HuntQuestClient",
+    "newHash": 1379140623,
+    "path": "StarterPlayer.StarterPlayerScripts.HunDinoHuntQuest"
+  }
+]

@@ -1,5 +1,9 @@
 # Combo, thể lực và giao diện v2.3
 
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Bộ **7 vũ khí × 4 combo** từ v2.3 tiếp tục dùng trên [v2.4](HunDino_DarkJungle_v2_4.rbxl). Bảng đòn kết thúc bên dưới là thông số gốc; [nâng búa P1-E](HUNT_ECONOMY.md) cộng 15% sát thương búa của chủ khi đã nâng, không áp dụng Pet hoặc vũ khí khác. Lướt hiện 72 studs/giây trong 0,5 giây, tốn 6 thể lực; [cung](BOW_CHARGE_RESTORE.md) chỉ chuột trái tụ lực, Q mạnh ngay. Thông số vẫn là bản thử, chưa cân bằng toàn game.
+
 Cập nhật 08/10/2026 theo yêu cầu người dùng. Đây là cấu hình bãi tập, chưa phải cân bằng cuối của săn khủng long.
 
 ## Cách thử
@@ -50,14 +54,14 @@ Sát thương thực tế phụ thuộc tầm, góc, vật cản và số hit/m�
 - **Mọi chi phí còn 30% trước đây**, tức giảm 70%. `StaminaCostScale=0.30` được áp dụng một lần tại máy chủ, gồm cả combo mới.
 - Lướt: 20 → **6**; chạy: 10 → **3/giây**; giữ khiên: 4 → **1,2/giây**.
 - Búa thường: 8 → **2,4**; mạnh: 16 → **4,8**; kỹ năng: 12 → **3,6**. Máu/thể lực tối đa và tốc độ hồi giữ nguyên.
-- Lướt 0,4 giây, giảm tốc từ 34 về 16 studs/giây; giữ vận tốc đi bộ khi còn di chuyển. Không ép tốc độ đi bộ về 8 trong cú lướt. Trọng lực vẫn hoạt động trên dốc/mép.
+- Lướt hiện giảm tốc từ tốc độ đầu **72 studs/giây** trong **0,5 giây**, thực chi **6 thể lực**; đo Play H1.3.1 khoảng 16,5–16,8 studs trên nền thoáng. Trọng lực vẫn hoạt động trên dốc/mép; không có bất tử. Thông số 34/0,4 thuộc mốc combo 08/10, đã được thay bằng [Dark Step hiện hành](DARK_STEP.md).
 
 ## Bốn icon
 
-- **Túi đồ:** danh sách bảy vũ khí, bốn combo mỗi loại; chỉ trang bị khi cất và trong bãi tập. Không phải kho chiến lợi phẩm lưu tài khoản.
-- **Chơi:** vào bãi tập hoặc về trại bằng yêu cầu máy chủ kiểm tra; cần cất vũ khí/dừng động tác. Cổng G vẫn dùng được. Săn nhiệm vụ chưa mở.
+- **Túi đồ:** Người/Pet có vũ khí và giáp độc lập, chỉ đổi trang bị khi cất và ở bãi tập; thêm Vật phẩm và Khủng long để xem chiến lợi phẩm trong phiên. Chế tạo trong Inventory là khung chờ; chưa lưu tài khoản. Xem [Inventory](INVENTORY.md).
+- **Chơi:** vào bãi tập/về sảnh hoặc thám hiểm khu săn khi không có nhiệm vụ. Nhận nhiệm vụ săn bằng **J** tại sảnh; máy chủ kiểm tra điều kiện. Cổng G vẫn dùng được. Xem [nhiệm vụ](HUNT_QUEST.md).
 - **Cài đặt:** bật/tắt bảng combo, số sát thương, hiệu ứng kết thúc; độ nhạy ngắm cung 100/75/50%. Chỉ lưu trong phiên.
-- **Cửa hàng:** UI xem bình hồi, bộ bẫy, thuốc ngủ với nhãn Sắp mở. Chưa bán, trừ tiền hay cấp vật phẩm.
+- **Cửa hàng:** icon Shop mẫu vẫn là giao diện xem/Sắp mở. Giao dịch P1-E thực hiện tại **quầy tiếp tế ở sảnh** và **bàn chế/nâng tại base chủ**, không phải tính năng đã mở của icon Shop. Xem [kinh tế](HUNT_ECONOMY.md).
 - Dùng PNG gốc của người dùng tại assets/icons; asset Roblox đã tải trong Studio. Module `HubUI.luau` chứa ID.
 
 ## Giới hạn thử nghiệm

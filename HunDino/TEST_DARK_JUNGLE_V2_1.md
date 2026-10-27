@@ -1,5 +1,11 @@
 # Kiểm tra HunDino Dark Jungle v2.1
 
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Báo cáo này giữ nguyên kết quả **v2.1 ngày 07/10/2026**; không phải biên bản nghiệm thu v2.4. Bản hiện hành để mở là [HunDino_DarkJungle_v2_4.rbxl](HunDino_DarkJungle_v2_4.rbxl) trong Documents. Lướt hiện tốn **6 thể lực**, cấu hình **72 studs/giây trong 0,5 giây**, đo cũ H1.3.1 khoảng **16,5–16,8 studs**; xem [Dark Step](DARK_STEP.md). Báo cáo mới nhất sau kho cá thể ở [SPECIMEN_COLLECTION.md](SPECIMEN_COLLECTION.md); chưa nghiệm thu 12 client hoặc điện thoại. Đợt 20/10 không chạy lại gameplay.
+
+## Kết quả gốc v2.1 — giữ nguyên
+
 Ngày 07/10/2026. Kiểm tra trong Roblox Studio, Play solo PC, trên file `HunDino_DarkJungle_v2_1.rbxlx` ở Desktop. Phép đo chuyển động lấy mẫu Humanoid và vị trí nhân vật khi gửi phím vào client bằng công cụ Studio. Mọi đối tượng đo chỉ tồn tại trong phiên thử; đã dừng Play sau kiểm tra.
 
 | Trường hợp | Kết quả thực tế |

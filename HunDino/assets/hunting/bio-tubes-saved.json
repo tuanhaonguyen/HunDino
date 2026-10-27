@@ -1,0 +1,123 @@
+{
+  "baseline": "backups/Hub_v24_before_5_specimen_tubes_20261021.rbxl",
+  "baselineCounts": {
+    "instances": 61214,
+    "joints": 845,
+    "parts": 43775,
+    "sources": 125,
+    "workspaceJoints": 723,
+    "workspaceParts": 35064
+  },
+  "baselineSha256": "6e64e2be559d42d13a5b2ffa6baa5248bae31db16c477c8341a95a9703dcb99e",
+  "baselineTerrainSha256": "bb69618db046a716645db4252ab8fe8d56f6a1f848c72adf66f7c9239210a71b",
+  "boundary": "Reads native places only; never serializes a place, writes rbxl, decodes Terrain, or creates player records.",
+  "bytes": 4348341,
+  "canonicalSources": [
+    [
+      "ServerScriptService.HuntingRuntime.BioTubeGeometry",
+      "src/hunting/BioTubeGeometry.luau",
+      "ModuleScript",
+      true
+    ],
+    [
+      "ServerScriptService.HuntingRuntime.BioTubeSpecimen",
+      "src/hunting/BioTubeSpecimen.luau",
+      "ModuleScript",
+      true
+    ],
+    [
+      "ServerScriptService.HuntingRuntime.BioTubeService",
+      "src/hunting/BioTubeService.luau",
+      "ModuleScript",
+      true
+    ],
+    [
+      "StarterPlayer.StarterPlayerScripts.HunDinoBioTubeMotion",
+      "src/hunting/BioTubeMotion.client.luau",
+      "LocalScript",
+      true
+    ],
+    [
+      "ServerScriptService.HuntingRuntime.HuntEconomyService",
+      "src/hunting/HuntEconomyService.luau",
+      "ModuleScript"
+    ],
+    [
+      "ServerScriptService.HuntingRuntime.HuntEconomyRules",
+      "src/hunting/HuntEconomyRules.luau",
+      "ModuleScript"
+    ],
+    [
+      "ServerScriptService.AccountData.ProfileSchema",
+      "src/data/ProfileSchema.luau",
+      "ModuleScript"
+    ],
+    [
+      "ReplicatedStorage.Shared.EquipmentInventory",
+      "src/dark-jungle/EquipmentInventory.luau",
+      "ModuleScript"
+    ]
+  ],
+  "checksPassed": 1785285,
+  "compiledScripts": 133,
+  "map": {
+    "depth": 4500,
+    "paths": 16,
+    "reportedTrees": 2400,
+    "rig": {
+      "anchors": 1,
+      "meshes": 21,
+      "motors": 7,
+      "parts": 255,
+      "welds": 247
+    },
+    "trees": 2400,
+    "version": "H2.0",
+    "width": 4000,
+    "zones": 9
+  },
+  "mode": "native-save",
+  "nativePlaceBytesUnchanged": true,
+  "originalSourceBackups": 4,
+  "preserved": {
+    "instances": 61209,
+    "joints": 845,
+    "meshOrAppearanceObjects": 15424,
+    "properties": 734531
+  },
+  "productionSafety": {
+    "savedRuntimeSpecimens": 0,
+    "studioMemoryTest": false,
+    "temporaryQAScripts": 0
+  },
+  "savedCounts": {
+    "instances": 74315,
+    "joints": 845,
+    "parts": 55775,
+    "sources": 133,
+    "workspaceJoints": 723,
+    "workspaceParts": 47064
+  },
+  "savedPlace": "HunDino_DarkJungle_v2_4.rbxl",
+  "savedSha256": "c263aca4c15b7a36a3ed7df91612bdcf24b125cd1d4199dc098a6a78c68c4aab",
+  "savedTerrainSha256": "bb69618db046a716645db4252ab8fe8d56f6a1f848c72adf66f7c9239210a71b",
+  "terrainScope": "Hashes all Terrain fields readable by bundled Lune. Its parser does not support native type 0x23 (Terrain.VoxelGridAssetContentMap); this field is not claimed as binary-verified.",
+  "tubes": {
+    "bases": 12,
+    "gPrompts": 60,
+    "savedSpecimens": 0,
+    "staticParts": 12000,
+    "tubes": 60
+  },
+  "unreadableTerrainProperties": [
+    "ClusterGrid",
+    "ClusterGridV2",
+    "ClusterGridV3",
+    "IsSmooth",
+    "LastUsedModificationMethod",
+    "MaterialColors",
+    "MaxExtents"
+  ],
+  "validation": "passed",
+  "version": "BioTubesSavedValidation.1"
+}

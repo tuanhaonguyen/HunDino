@@ -1,0 +1,19 @@
+{
+  "Baseline": "backups/inventory-crafting-20261026/HunDino_MerchantWeapons_20261026.rbxl",
+  "Bytes": 4373461,
+  "Checks": 83656,
+  "Ok": true,
+  "OpaqueTerrainProperties": 70,
+  "QAFlagsRemoved": true,
+  "SHA256": "10ff67e69b8d8151c35160d7c5a4b918d85d54dbe7b804c835a5c848f55a535a",
+  "SceneHash": "d8cca91b673788676d4aa98213969f51e55f32c21f7dc332eb545492d67655d8",
+  "ScriptsCompiled": 157,
+  "SourceBindings": 2,
+  "Target": "HunDino_MerchantWeapons_20261026.rbxl",
+  "VoxelContentMap": {
+    "bytes": 38,
+    "sha256": "477acdbf3c01127e049662ab2f85568da85c24f63e8c4222d0395ab9e035032d"
+  },
+  "WorkspaceJoints": 723,
+  "WorkspaceParts": 47064
+}

@@ -2,10 +2,27 @@
 local Session = {}
 Session.__index = Session
 
-local ATTRIBUTES = {"HuntStartedAt", "HuntStartServerTime", "HuntEntryClockHours", "HuntTimeScale", "HuntDuration", "HuntRemainingSeconds"}
+local ATTRIBUTES = {"HuntStartedAt", "HuntStartServerTime", "HuntEntryClockHours", "HuntTimeScale", "HuntDuration", "HuntRemainingSeconds", "HuntClockStoppedAt"}
 
 local function wallTime()
 	return DateTime.now().UnixTimestampMillis / 1000
+end
+
+function Session:RestartClock(player, duration)
+	local visit = self.Players[player]; if not visit then return end
+	local started = wallTime()
+	visit.StartedAt, visit.Duration, visit.FrozenAt = started, duration or self.Duration, nil
+	player:SetAttribute("HuntStartedAt", started)
+	player:SetAttribute("HuntStartServerTime", workspace:GetServerTimeNow())
+	player:SetAttribute("HuntEntryClockHours", ((started + (self.Config.TimezoneOffsetMinutes or 420) * 60) % 86400) / 3600)
+	player:SetAttribute("HuntDuration", visit.Duration); player:SetAttribute("HuntRemainingSeconds", visit.Duration)
+	player:SetAttribute("HuntClockStoppedAt", nil)
+end
+
+function Session:FreezeClock(player)
+	local visit = self.Players[player]; if not visit or visit.FrozenAt then return end
+	visit.FrozenAt = wallTime()
+	player:SetAttribute("HuntClockStoppedAt", workspace:GetServerTimeNow())
 end
 
 function Session.new(forest, config, dinosaur, routeController)
@@ -56,7 +73,7 @@ end
 function Session:Expired()
 	local now, expired = wallTime(), {}
 	for player, visit in self.Players do
-		local remaining = math.max(0, math.ceil(visit.Duration - (now - visit.StartedAt)))
+		local remaining = math.max(0, math.ceil(visit.Duration - ((visit.FrozenAt or now) - visit.StartedAt)))
 		if player:GetAttribute("HuntRemainingSeconds") ~= remaining then player:SetAttribute("HuntRemainingSeconds", remaining) end
 		if remaining == 0 then table.insert(expired, player) end
 	end
@@ -66,9 +83,10 @@ end
 function Session:IsOutside(position)
 	local offset = self.Config.WorldOffset or self.Forest:GetAttribute("WorldOffset") or Vector3.new(0, 0, 6500)
 	local localPosition = position - offset
-	local limit = (self.Config.MapSize or 1620) / 2 + 105
+	local limitX = (self.Config.MapWidth or self.Config.MapSize or 1620) / 2 + 105
+	local limitZ = (self.Config.MapDepth or self.Config.MapSize or 1620) / 2 + 105
 	return localPosition.Y < (self.Config.TerrainMin or -48) - 20
-		or math.abs(localPosition.X) > limit or math.abs(localPosition.Z) > limit
+		or math.abs(localPosition.X) > limitX or math.abs(localPosition.Z) > limitZ
 end
 
 function Session:Destroy()

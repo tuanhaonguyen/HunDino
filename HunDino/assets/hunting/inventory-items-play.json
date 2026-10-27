@@ -1,0 +1,118 @@
+{
+  "version": "InventoryItemsPlayValidation.1",
+  "date": "2026-10-19",
+  "place": "HunDino_DarkJungle_v2_4.rbxl",
+  "play": {
+    "Initial": {
+      "Visible": true,
+      "Summary": "Xu: 80     ·     Búa cấp 1",
+      "Crafting": false,
+      "Rows": {
+        "SleepPotion": {
+          "Location": "Trong túi: 0 · Mang đi săn: 0",
+          "Quantity": "×0",
+          "Visible": true
+        },
+        "IronTrap": {
+          "Location": "Trong túi: 0 · Mang đi săn: 0",
+          "Quantity": "×0",
+          "Visible": true
+        },
+        "Iron": {
+          "Location": "Đã sở hữu: 0",
+          "Quantity": "×0",
+          "Visible": true
+        },
+        "Skin": {
+          "Location": "Đã sở hữu: 0",
+          "Quantity": "×0",
+          "Visible": true
+        },
+        "Scale": {
+          "Location": "Đã sở hữu: 0",
+          "Quantity": "×0",
+          "Visible": true
+        },
+        "Tooth": {
+          "Location": "Đã sở hữu: 0",
+          "Quantity": "×0",
+          "Visible": true
+        },
+        "RawTrap": {
+          "Location": "Đã sở hữu: 0",
+          "Quantity": "×0",
+          "Visible": true
+        },
+        "Bone": {
+          "Location": "Đã sở hữu: 0",
+          "Quantity": "×0",
+          "Visible": true
+        }
+      },
+      "OutsideButton": false,
+      "Items": true
+    },
+    "OldSnapshot": {
+      "Summary": "Xu: 60     ·     Búa cấp 1",
+      "RawTrap": "×1",
+      "Potion": "×1"
+    },
+    "Carried": {
+      "Potion": "×1",
+      "Location": "Trong túi: 0 · Mang đi săn: 1"
+    },
+    "PetArmor": {
+      "Armor": true,
+      "Preview": 1,
+      "Name": "PET ĐỒNG HÀNH",
+      "Equip": true
+    },
+    "Refunded": {
+      "Location": "Trong túi: 1 · Mang đi săn: 0",
+      "Potion": "×1",
+      "Iron": "×1"
+    },
+    "Crafting": {
+      "Visible": true,
+      "Text": "CHƯA TRIỂN KHAI",
+      "Equip": false,
+      "Buttons": 0
+    },
+    "Pickup": {
+      "Location": "Đã sở hữu: 1",
+      "Iron": "×1"
+    },
+    "Purchased": {
+      "Revision": 2,
+      "Summary": "Xu: 60     ·     Búa cấp 1",
+      "Location": "Trong túi: 1 · Mang đi săn: 0",
+      "RawTrap": "×1",
+      "Potion": "×1"
+    },
+    "MaterialFilter": 5,
+    "SupplyFilter": 3
+  },
+  "finalSource": {
+    "opened": {
+      "Items": true,
+      "Summary": "Xu: 80     ·     Búa cấp 1",
+      "Layer": 100,
+      "Open": true,
+      "OutsideButton": false
+    },
+    "closed": {
+      "Camera": "Enum.CameraType.Custom",
+      "Layer": 0,
+      "Closed": true
+    },
+    "inventoryConsoleErrors": []
+  },
+  "scope": [
+    "Items show all currently implemented five materials and three consumables, from server snapshots.",
+    "Totals use stored consumables plus ActiveRun remaining; stale post-return Quest attributes are never added.",
+    "Inventory Crafting tab has a placeholder with zero action buttons and no transaction request.",
+    "Existing merchant and base workbench prototype retained; standalone inventory button and harvest material totals removed.",
+    "No new reward/crafting/account storage mechanics or balances added.",
+    "Manual Play uses tool-assisted positioning at merchant and ore; no economy quantities or monster HP edited."
+  ]
+}
