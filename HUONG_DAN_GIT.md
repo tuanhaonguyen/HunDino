@@ -1,5 +1,13 @@
 # Hướng dẫn Git cho HunDino
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Commit quan sát 677f3da trên developer, workspace sạch trước đợt sửa tài liệu. Đợt cập nhật tiến độ không commit/push/merge, không kiểm lại cấu hình GitHub; tiếp tục dùng quy trình được mô tả bên dưới.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](HunDino/BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
 Cấu hình ngày 27/10/2026 cho https://github.com/tunz2146/HunDino.
 
 ## Luồng làm việc
@@ -97,10 +105,12 @@ Bạn cũng có thể dùng từng lệnh:
 
 ```powershell
 git switch developer
-git add .
+git add -A
 git commit -m "Mô tả thay đổi"
 git push -u origin developer
 ```
+
+`git add -A` lấy các thay đổi trong toàn repo, kể cả khi terminal đang ở thư mục con `HunDino`. Nếu dùng `git add .` ở thư mục con, tài liệu ở thư mục cha có thể chưa được commit và hook sẽ chặn push do working tree còn thay đổi. Cảnh báo LF/CRLF là thông báo chuẩn hóa ký tự xuống dòng, không phải lỗi push.
 
 Hook vẫn chạy khi push từ terminal hoặc nút **Push/Sync** của VS Code. Nếu muốn kiểm tra trước khi commit:
 
