@@ -1,0 +1,28 @@
+{
+  "rojo": {
+    "platforms": {
+      "windows": {
+        "sha256": "2179c44862a10ecbd725bdfeb4abc64e16dc4aad9b6c8f3e1a7c46a87280b949",
+        "url": "https://github.com/rojo-rbx/rojo/releases/download/v7.7.0/rojo-7.7.0-windows-x86_64.zip"
+      },
+      "linux": {
+        "sha256": "22503e5839864f9d7c2171c48b536fc229f2cc4d8774c9cc149f60941d864073",
+        "url": "https://github.com/rojo-rbx/rojo/releases/download/v7.7.0/rojo-7.7.0-linux-x86_64.zip"
+      }
+    },
+    "version": "7.7.0"
+  },
+  "lune": {
+    "platforms": {
+      "windows": {
+        "sha256": "ad0305f5cc6d7ff20996644b40bf7de0de613812f431ca241456e16f9fc89cda",
+        "url": "https://github.com/lune-org/lune/releases/download/v0.10.5/lune-0.10.5-windows-x86_64.zip"
+      },
+      "linux": {
+        "sha256": "1fb5dee6a1afa1d300092805c6e660fe06144d29dd68c45cf6956f040667f791",
+        "url": "https://github.com/lune-org/lune/releases/download/v0.10.5/lune-0.10.5-linux-x86_64.zip"
+      }
+    },
+    "version": "0.10.5"
+  }
+}

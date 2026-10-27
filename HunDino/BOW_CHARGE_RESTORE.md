@@ -1,5 +1,23 @@
 # Khôi phục tụ lực cung — 15/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Tính năng trong tài liệu này được đối chiếu cùng bản chính hiện hành; các file v2.x/SaveGame, tham số và kết quả thử cũ trong phần dưới là mốc lịch sử, không tự chứng nhận toàn bộ bản mới. Phạm vi còn chờ: P1-G toàn vòng, cloud kinh tế/cá thể/ống, nhiều client và thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
+**Hiện hành 26/10/2026:** đã gộp vào **HunDino_MerchantWeapons_20261026.rbxl** theo lựa chọn người dùng. Tầm cung từ **40 → 120 studs** theo mức tụ; E hội tụ ba mũi **24 × 3 = 72** ở cấp 1, giữ nâng cấp riêng của cửa hàng. Sửa hướng bắn khi đi ngang, Pet che camera và hướng nhân vật khi xoay camera. Mở **CHOI_CUA_HANG.cmd** hoặc **CHOI_VA_LUU.cmd**; xem [BOW_PET_FIXES.md](BOW_PET_FIXES.md). Các thông số và tên bản cũ bên dưới ghi lịch sử từng mốc.
+
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Điều khiển hiện hành trên [v2.4](HunDino_DarkJungle_v2_4.rbxl): **chỉ giữ/nhả chuột trái để tụ lực và bắn; Q đánh mạnh ngay, E kỹ năng; chuột phải ngắm**. Cất cung bằng R, chạy hoặc mở menu hủy tụ. Giữ bộ model/VFX [Pro](WEAPONS_PRO.md) và [combo](COMBOS_V2_3.md).
+
+Phần dưới ghi quá trình sửa ngày 15/10: các phép đo tụ bằng Q là mốc đầu đã bị thay thế. Không dùng chúng làm hướng dẫn hiện hành hoặc kết quả thử lại trên v2.4.
+
+## Hồ sơ sửa cung — 15/10/2026
+
 **Điều chỉnh theo yêu cầu tiếp theo:** chỉ chuột trái tụ lực; Q bắn đòn mạnh ngay khi nhấn, E vẫn là kỹ năng. Server từ chối ChargeStart với Heavy. Đã kiểm tra Q thật không tụ lực, chuột trái vẫn tụ và combo HLS vẫn ra ba phát kết thúc. Các mô tả Trái/Q và hệ số tụ Q bên dưới là hồ sơ của lượt sửa đầu, đã được thay bằng điều khiển này.
 
 Người dùng báo cung mất tụ lực sau cập nhật vũ khí. Bản đang mở trong Studio thiếu ChargeStart/ChargeRelease ở server và client, thiếu hàm tụ lực trong TrainingRules và cấu hình Bow.Charge. Source trong src/dark-jungle vốn có cơ chế này nhưng chưa có trong bản Studio đang mở.
@@ -22,4 +40,4 @@ Kiểm tra:
 - Chết trong lúc tụ xóa Charging, hồi sinh bình thường và chỉ có một pet.
 - Lần kiểm tra đầu dùng thông số sát thương của source khác và tọa độ input không phù hợp; đã kiểm tra lại bằng thông số của bản đang mở và input đúng vào viewport. Các lỗi đó thuộc lệnh kiểm tra tạm, không được lưu vào script game.
 
-Thử lại: R rút cung trong bãi tập, giữ chuột trái hoặc Q cho tới ĐẦY LỰC rồi nhả. Giữ chuột phải để ngắm trong khi tụ.
+Cách thử hiện hành: R rút cung trong bãi tập, giữ chuột trái cho tới ĐẦY LỰC rồi nhả; Q bắn mạnh ngay, không tụ. Giữ chuột phải để ngắm trong khi tụ. Đây là hướng dẫn thử, không phải lượt kiểm chứng mới của đợt tài liệu.

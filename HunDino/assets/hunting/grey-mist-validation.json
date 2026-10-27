@@ -1,0 +1,638 @@
+{
+  "ok": true,
+  "network": {
+    "ok": true,
+    "routes": 9,
+    "paths": 13,
+    "errors": []
+  },
+  "checks": 39081,
+  "passed": 39081,
+  "meshSources": [
+    {
+      "meshIds": [
+        "rbxassetid://113638336870612",
+        "rbxassetid://120615938093308",
+        "rbxassetid://96055897935026"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_01",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://107431480752613",
+        "rbxassetid://90116814867758"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_02",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://135974560430452",
+        "rbxassetid://74030110324292"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_03",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://87765311815033",
+        "rbxassetid://98416655622270"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_04",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://107129739355437",
+        "rbxassetid://81200861466286"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_05",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://116882934598454",
+        "rbxassetid://98796039687733"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_06",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://118470689208046",
+        "rbxassetid://127026121555632"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_07",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://74592415499646",
+        "rbxassetid://76178437725298"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_08",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://127163432661708",
+        "rbxassetid://138559907629675"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_09",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://104132989247603",
+        "rbxassetid://94701783438313"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_10",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://89614960810760",
+        "rbxassetid://97824257482781"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_11",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://110402428240877",
+        "rbxassetid://84353089448531"
+      ],
+      "sourceAssetId": "130515502281374",
+      "template": "ServerStorage.ValleyTreeTemplates.pine.pine_12",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11351706545",
+        "rbxassetid://11351706555",
+        "rbxassetid://11351706561",
+        "rbxassetid://11351706572"
+      ],
+      "sourceAssetId": "11351912067",
+      "template": "ServerStorage.ValleyTreeTemplates.birch.birch_01",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11351701073",
+        "rbxassetid://11351701090",
+        "rbxassetid://11351701100",
+        "rbxassetid://11351701102"
+      ],
+      "sourceAssetId": "11351912067",
+      "template": "ServerStorage.ValleyTreeTemplates.birch.birch_02",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11351677531",
+        "rbxassetid://11351677538",
+        "rbxassetid://11351677540",
+        "rbxassetid://11351677547"
+      ],
+      "sourceAssetId": "11351912067",
+      "template": "ServerStorage.ValleyTreeTemplates.birch.birch_03",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11351885100",
+        "rbxassetid://11351885108",
+        "rbxassetid://11351885113",
+        "rbxassetid://11351885136"
+      ],
+      "sourceAssetId": "11351912067",
+      "template": "ServerStorage.ValleyTreeTemplates.birch.birch_04",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11351890427",
+        "rbxassetid://11351890430",
+        "rbxassetid://11351890431",
+        "rbxassetid://11351890441"
+      ],
+      "sourceAssetId": "11351912067",
+      "template": "ServerStorage.ValleyTreeTemplates.birch.birch_05",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11351894771",
+        "rbxassetid://11351894780"
+      ],
+      "sourceAssetId": "11351912067",
+      "template": "ServerStorage.ValleyTreeTemplates.birch.birch_06",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11827543128",
+        "rbxassetid://11827543224",
+        "rbxassetid://11827543225"
+      ],
+      "sourceAssetId": "98950444096614",
+      "template": "ServerStorage.ValleyTreeTemplates.oak.oak_01",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11827543129",
+        "rbxassetid://11827543216",
+        "rbxassetid://11827543218"
+      ],
+      "sourceAssetId": "98950444096614",
+      "template": "ServerStorage.ValleyTreeTemplates.oak.oak_02",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11827543151",
+        "rbxassetid://11827543194",
+        "rbxassetid://11827543203"
+      ],
+      "sourceAssetId": "98950444096614",
+      "template": "ServerStorage.ValleyTreeTemplates.oak.oak_03",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11827543167",
+        "rbxassetid://11827543199"
+      ],
+      "sourceAssetId": "98950444096614",
+      "template": "ServerStorage.ValleyTreeTemplates.oak.oak_04",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11827543140",
+        "rbxassetid://11827543230"
+      ],
+      "sourceAssetId": "98950444096614",
+      "template": "ServerStorage.ValleyTreeTemplates.oak.oak_05",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://11827543212",
+        "rbxassetid://11827543237"
+      ],
+      "sourceAssetId": "98950444096614",
+      "template": "ServerStorage.ValleyTreeTemplates.oak.oak_06",
+      "sourceCreator": "Letaij"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://1052992111"
+      ],
+      "sourceAssetId": "131598559195257",
+      "template": "ServerStorage.ValleyTreeTemplates.willow.willow_01",
+      "sourceCreator": "NORTHPORTINATOR"
+    },
+    {
+      "meshIds": [
+        "rbxassetid://5547037341"
+      ],
+      "sourceAssetId": "78043214487511",
+      "template": "ServerStorage.ValleyRockTemplates.MossGranite_01",
+      "sourceCreator": "EchoShadow064Fir3635"
+    }
+  ],
+  "water": [
+    {
+      "actualY": 65,
+      "material": "Water",
+      "name": "Lake",
+      "position": {
+        "y": 0,
+        "x": -80,
+        "z": 6600
+      }
+    },
+    {
+      "actualY": 84,
+      "material": "LeafyGrass",
+      "name": "Island",
+      "position": {
+        "y": 0,
+        "x": 120,
+        "z": 6600
+      }
+    },
+    {
+      "actualY": 650.101,
+      "material": "Rock",
+      "name": "Summit",
+      "position": {
+        "y": 0,
+        "x": 120,
+        "z": 8660
+      }
+    },
+    {
+      "name": "Swamp",
+      "position": {
+        "y": 0,
+        "x": 1150,
+        "z": 5950
+      },
+      "expectedY": 62,
+      "material": "Water",
+      "actualY": 62
+    },
+    {
+      "name": "Swamp",
+      "position": {
+        "y": 0,
+        "x": 1150,
+        "z": 6450
+      },
+      "expectedY": 62,
+      "material": "Water",
+      "actualY": 62
+    },
+    {
+      "name": "Swamp",
+      "position": {
+        "y": 0,
+        "x": 1250,
+        "z": 5950
+      },
+      "expectedY": 62,
+      "material": "Water",
+      "actualY": 62
+    },
+    {
+      "name": "Swamp",
+      "position": {
+        "y": 0,
+        "x": 1400,
+        "z": 6700
+      },
+      "expectedY": 62,
+      "material": "Water",
+      "actualY": 62
+    },
+    {
+      "name": "Swamp",
+      "position": {
+        "y": 0,
+        "x": 1500,
+        "z": 5950
+      },
+      "expectedY": 62,
+      "material": "Water",
+      "actualY": 62
+    },
+    {
+      "name": "Swamp",
+      "position": {
+        "y": 0,
+        "x": 1600,
+        "z": 6450
+      },
+      "expectedY": 62,
+      "material": "Water",
+      "actualY": 62
+    }
+  ],
+  "blockers": [],
+  "version": "GreyMistValleyValidation.1",
+  "metrics": {
+    "maxRoadSlopeDegrees": 17.433,
+    "trees": 2400,
+    "uniqueDecorBlockers": 0,
+    "dinosaurClearanceSamples": 578,
+    "allowedMeshIds": 64,
+    "dinosaurBoundsCenter": {
+      "y": 18.613,
+      "x": 0.241,
+      "z": -1.018
+    },
+    "approvedEnvironmentMeshParts": 5675,
+    "templateMeshParts": 64,
+    "environmentMeshParts": 5675,
+    "overlapQueries": 578,
+    "dinosaurBounds": {
+      "y": 38.226,
+      "x": 51.559,
+      "z": 69.723
+    },
+    "environmentParts": 17844,
+    "meshTemplates": 26,
+    "swampWaterProbes": 6,
+    "raycasts": 1640,
+    "pathSurfaces": 1851
+  },
+  "paths": [
+    {
+      "groundProbes": 39,
+      "name": "A_R1",
+      "maxSlope": 12.091,
+      "humanOnly": false,
+      "segments": 68
+    },
+    {
+      "groundProbes": 39,
+      "name": "R1_R5",
+      "maxSlope": 7.822,
+      "humanOnly": false,
+      "segments": 70
+    },
+    {
+      "groundProbes": 60,
+      "name": "R5_R4",
+      "maxSlope": 1.739,
+      "humanOnly": false,
+      "segments": 110
+    },
+    {
+      "groundProbes": 66,
+      "name": "R4_B",
+      "maxSlope": 10.296,
+      "humanOnly": false,
+      "segments": 123
+    },
+    {
+      "groundProbes": 39,
+      "name": "B_R3",
+      "maxSlope": 17.4,
+      "humanOnly": false,
+      "segments": 70
+    },
+    {
+      "groundProbes": 45,
+      "name": "R3_C",
+      "maxSlope": 17.433,
+      "humanOnly": false,
+      "segments": 80
+    },
+    {
+      "groundProbes": 96,
+      "name": "C_R2",
+      "maxSlope": 10.395,
+      "humanOnly": false,
+      "segments": 184
+    },
+    {
+      "groundProbes": 33,
+      "name": "R2_A",
+      "maxSlope": 17.4,
+      "humanOnly": false,
+      "segments": 59
+    },
+    {
+      "groundProbes": 48,
+      "name": "A_R5",
+      "maxSlope": 6.06,
+      "humanOnly": false,
+      "segments": 88
+    },
+    {
+      "groundProbes": 87,
+      "name": "R5_B",
+      "maxSlope": 17.4,
+      "humanOnly": false,
+      "segments": 164
+    },
+    {
+      "groundProbes": 99,
+      "name": "B_R1",
+      "maxSlope": 17.4,
+      "humanOnly": false,
+      "segments": 187
+    },
+    {
+      "groundProbes": 54,
+      "name": "C_B",
+      "maxSlope": 12.514,
+      "humanOnly": false,
+      "segments": 100
+    },
+    {
+      "groundProbes": 132,
+      "name": "C_R5",
+      "maxSlope": 17.404,
+      "humanOnly": false,
+      "segments": 257
+    },
+    {
+      "groundProbes": 42,
+      "name": "Camp_R1",
+      "maxSlope": 9.076,
+      "humanOnly": true,
+      "segments": 76
+    },
+    {
+      "groundProbes": 84,
+      "name": "Camp_R4",
+      "maxSlope": 2.488,
+      "humanOnly": true,
+      "segments": 162
+    },
+    {
+      "groundProbes": 30,
+      "name": "Camp_R5",
+      "maxSlope": 8.209,
+      "humanOnly": true,
+      "segments": 53
+    }
+  ],
+  "failures": [],
+  "context": "Edit",
+  "zones": [
+    {
+      "walkingY": 90.2,
+      "id": "A",
+      "expected": {
+        "y": 90,
+        "x": -520,
+        "z": 6420
+      },
+      "terrainY": 90,
+      "actual": {
+        "y": 90,
+        "x": -520,
+        "z": 6420
+      }
+    },
+    {
+      "walkingY": 260.2,
+      "id": "B",
+      "expected": {
+        "y": 260,
+        "x": 450,
+        "z": 7550
+      },
+      "terrainY": 260,
+      "actual": {
+        "y": 260,
+        "x": 450,
+        "z": 7550
+      }
+    },
+    {
+      "walkingY": 430.2,
+      "id": "C",
+      "expected": {
+        "y": 430,
+        "x": -100,
+        "z": 8275
+      },
+      "terrainY": 430,
+      "actual": {
+        "y": 430,
+        "x": -100,
+        "z": 8275
+      }
+    },
+    {
+      "walkingY": 75.2,
+      "id": "R1",
+      "expected": {
+        "y": 75,
+        "x": -850,
+        "z": 5400
+      },
+      "terrainY": 75,
+      "actual": {
+        "y": 75,
+        "x": -850,
+        "z": 5400
+      }
+    },
+    {
+      "walkingY": 150.2,
+      "id": "R2",
+      "expected": {
+        "y": 150,
+        "x": -1250,
+        "z": 6550
+      },
+      "terrainY": 150,
+      "actual": {
+        "y": 150,
+        "x": -1250,
+        "z": 6550
+      }
+    },
+    {
+      "walkingY": 210.2,
+      "id": "R3",
+      "expected": {
+        "y": 210,
+        "x": -650,
+        "z": 7450
+      },
+      "terrainY": 210,
+      "actual": {
+        "y": 210,
+        "x": -650,
+        "z": 7450
+      }
+    },
+    {
+      "walkingY": 62.2,
+      "id": "R4",
+      "expected": {
+        "y": 62,
+        "x": 1350,
+        "z": 6300
+      },
+      "terrainY": 62,
+      "actual": {
+        "y": 62,
+        "x": 1350,
+        "z": 6300
+      }
+    },
+    {
+      "walkingY": 48.2,
+      "id": "R5",
+      "expected": {
+        "y": 48,
+        "x": 250,
+        "z": 5400
+      },
+      "terrainY": 48,
+      "actual": {
+        "y": 48,
+        "x": 250,
+        "z": 5400
+      }
+    },
+    {
+      "walkingY": 20.2,
+      "id": "Camp",
+      "expected": {
+        "y": 20,
+        "x": 0,
+        "z": 4600
+      },
+      "terrainY": 20,
+      "actual": {
+        "y": 20,
+        "x": 0,
+        "z": 4600
+      }
+    }
+  ]
+}

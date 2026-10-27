@@ -46,15 +46,15 @@ function Combat.new(model, forest, mapConfig, session, options)
 	local self = setmetatable({
 		Model = model, Forest = forest, MapConfig = mapConfig, Session = session,
 		Root = root, Settings = settings(options.Settings),
-		_health = 0, _state = "Idle", _time = 0, _target = nil, _tokens = {}, _lastHits = {},
+		_health = 0, _state = "Idle", _time = 0, _target = nil, _tokens = {}, _lastHits = {}, _petLastHits = {},
 		_attackSequence = 0, _attackHits = 0, _lastAttack = -math.huge,
 		_phase = "Idle", _phaseUntil = 0, _lastDamaged = -math.huge,
 		_autoConnect = options.AutoConnect ~= false, _running = false, _destroyed = false,
-		_original = {}, _hurtboxes = {}, _damagePlayer = options.DamagePlayer,
+		_original = {}, _hurtboxes = {}, _damagePlayer = options.DamagePlayer, _damagePets = options.DamagePets,
 		_blockedFor = 0, _publishElapsed = 0,
 	}, Combat)
 	assert(finite(self.Settings.MaxHealth) and self.Settings.MaxHealth > 0, "MaxHealth must be positive")
-	for _, key in {"Health", "MaxHealth", "CombatState", "CombatTargetUserId", "AttackReady", "AttackSequence", "AttackPhase", "AttackHits", "DinosaurDead"} do
+	for _, key in {"Health", "MaxHealth", "CombatState", "CombatTargetUserId", "AttackReady", "AttackSequence", "AttackPhase", "AttackHits", "DinosaurDead", "Weak", "Trapped", "Captured", "TrapUntil", "CapturePoint"} do
 		self._original[key] = { value = model:GetAttribute(key) }
 	end
 	if model:GetAttribute("ShowCombatHitboxes") == nil then model:SetAttribute("ShowCombatHitboxes", false) end
@@ -115,12 +115,19 @@ function Combat:_publish()
 	model:SetAttribute("CombatTargetUserId", if self._target then self._target.UserId else 0)
 	model:SetAttribute("AttackPhase", self._phase); model:SetAttribute("AttackSequence", self._attackSequence)
 	model:SetAttribute("AttackHits", self._attackHits); model:SetAttribute("DinosaurDead", self._health <= 0)
-	model:SetAttribute("AttackReady", self._health > 0 and self._target ~= nil)
+	model:SetAttribute("Weak", self._health > 0 and self._health <= self.Settings.MaxHealth * .1)
+	model:SetAttribute("Trapped", self._trapOwner ~= nil); model:SetAttribute("TrapUntil", self._trapUntil or 0)
+	model:SetAttribute("Captured", self._captured == true)
+	model:SetAttribute("CapturePoint", self:GetCapturePoint())
+	model:SetAttribute("AttackReady", self._health > 0 and not self._captured and not self._trapOwner and self._target ~= nil)
 	local ratio = math.clamp(self._health / self.Settings.MaxHealth, 0, 1)
 	self._hpText.Text = string.format("T-REX  %d / %d", math.ceil(self._health), self.Settings.MaxHealth)
 	self._hpFill.Size = UDim2.fromScale(ratio, 1)
 	self._hpFill.BackgroundColor3 = if ratio > .5 then Color3.fromRGB(111, 181, 92) elseif ratio > .25 then Color3.fromRGB(232, 181, 71) else Color3.fromRGB(222, 85, 64)
-	self._statusText.Text = if self._health <= 0 then "ĐÃ HẠ" elseif self._phase == "Windup" then "CHUẨN BỊ CẮN — NÉ SANG BÊN!"
+	self._statusText.Text = if self._captured then "ĐÃ BẮT SỐNG" elseif self._health <= 0 then "ĐÃ HẠ"
+		elseif self._trapOwner then "MẮC BẪY — ĐẾN TRƯỚC MÕM ĐỂ CHO UỐNG"
+		elseif self._health <= self.Settings.MaxHealth * .1 then "ĐÃ YẾU — CÓ THỂ BẮT SỐNG"
+		elseif self._phase == "Windup" then "CHUẨN BỊ CẮN — NÉ SANG BÊN!"
 		elseif self._target then "ĐANG PHẢN CÔNG" elseif self._state == "Returning" then "QUAY LẠI TUYẾN" else "ĐANG TUẦN TRA / NGHỈ CHÂN"
 end
 function Combat:_showBoxes()
@@ -139,18 +146,24 @@ end
 function Combat:_patrol() return self.Session and self.Session.Patrol end
 function Combat:_character(player)
 	if typeof(player) ~= "Instance" or not player:IsA("Player") or player:GetAttribute("InHunting") ~= true then return nil end
+	local questOwner = self.Model:GetAttribute("QuestOwnerUserId")
+	if questOwner and (player.UserId ~= questOwner or self.Model:GetAttribute("QuestCombatAllowed") == false) then return nil end
+	if player:GetAttribute("AdminFlying")==true then return nil end
 	if not self.Session or not self.Session.Players[player] then return nil end
 	local character = player.Character
 	local humanoid = character and character:FindFirstChildOfClass("Humanoid")
 	local root = character and character:FindFirstChild("HumanoidRootPart")
 	if not character or not character.Parent or not humanoid or humanoid.Health <= 0 or not root or not root:IsA("BasePart") then return nil end
 	local offset = self.MapConfig.WorldOffset or self.Forest:GetAttribute("WorldOffset") or Vector3.zero
-	local p, limit = root.Position - offset, (self.MapConfig.MapSize or 1620) * .5 + 105
-	if math.abs(p.X) > limit or math.abs(p.Z) > limit or p.Y < (self.MapConfig.TerrainMin or -48) - 20 or p.Y > (self.MapConfig.TerrainMax or 128) + 120 then return nil end
+	local p = root.Position - offset
+	local limitX = (self.MapConfig.MapWidth or self.MapConfig.MapSize or 1620) * .5 + 105
+	local limitZ = (self.MapConfig.MapDepth or self.MapConfig.MapSize or 1620) * .5 + 105
+	if math.abs(p.X) > limitX or math.abs(p.Z) > limitZ or p.Y < (self.MapConfig.TerrainMin or -48) - 20 or p.Y > (self.MapConfig.TerrainMax or 128) + 120 then return nil end
 	local zones = self.Forest:FindFirstChild("Zones")
 	local camp = zones and zones:FindFirstChild("Camp")
 	local node = camp and camp:FindFirstChild("Node")
-	if node and (flat(root.Position - node.Position)).Magnitude < (camp:GetAttribute("Width") or 180) * .5 + self.Settings.CampMargin then return nil end
+	local safeRadius = self.MapConfig.CampSafeRadius or ((camp and camp:GetAttribute("Width") or 180) * .5 + self.Settings.CampMargin)
+	if node and (flat(root.Position - node.Position)).Magnitude < safeRadius then return nil end
 	return character, humanoid, root
 end
 function Combat:_lineOfSight(origin, destination, character)
@@ -169,7 +182,7 @@ function Combat:_lineOfSight(origin, destination, character)
 end
 function Combat:GetHurtboxes() return table.clone(self._hurtboxes) end
 function Combat:FromRayHit(instance)
-	if self._destroyed or self._health <= 0 or typeof(instance) ~= "Instance" or not instance:IsA("BasePart") then return false end
+	if self._destroyed or self._captured or self._health <= 0 or typeof(instance) ~= "Instance" or not instance:IsA("BasePart") then return false end
 	if instance == self._attackBox then return false end
 	if instance:GetAttribute("DinosaurHurtbox") == true and instance:IsDescendantOf(self.Model) then return true end
 	for _, groupName in {"body", "head", "left leg", "right leg"} do
@@ -182,7 +195,7 @@ function Combat:GetAimPoint()
 	return self._hurtboxes[1].Position
 end
 function Combat:GetClosestHitPoint(origin, range, direction, arc)
-	if self._destroyed or self._health <= 0 or not vector(origin) or not finite(range) or range < 0 then return nil end
+	if self._destroyed or self._captured or self._health <= 0 or not vector(origin) or not finite(range) or range < 0 then return nil end
 	local forward = if vector(direction) and flat(direction).Magnitude > .01 then flat(direction).Unit else nil
 	local threshold = if finite(arc) then math.clamp(arc, -1, 1) else -.1
 	local best, bestBox, bestDistance = nil, nil, math.min(range, self.Settings.MaxWeaponRange) + .001
@@ -198,6 +211,7 @@ function Combat:GetClosestHitPoint(origin, range, direction, arc)
 end
 function Combat:CanHit(player, point, maxRange)
 	if self._destroyed or not self._running then return false, "Inactive" end
+	if self._captured then return false, "Captured" end
 	if self._health <= 0 then return false, "Dead" end
 	local character, _, root = self:_character(player)
 	if not character then return false, "NotHunting" end
@@ -222,22 +236,33 @@ function Combat:MeleeStrike(player, origin, direction, range, arc, damage, token
 	local applied, damageReason = self:Damage(player, damage, point, token)
 	return applied, point, damageReason
 end
-function Combat:Damage(player, damage, point, token)
+function Combat:Damage(player, damage, point, token, source)
 	local allowed, reason = self:CanHit(player, point, self.Settings.MaxWeaponRange)
 	if not allowed then return 0, reason end
 	if not finite(damage) or damage <= 0 or damage > self.Settings.MaxDamagePerHit then return 0, "InvalidDamage" end
 	if token ~= nil and (type(token) ~= "string" or #token == 0 or #token > 160) then return 0, "InvalidToken" end
-	local last = self._lastHits[player]
-	if last and self._time - last < self.Settings.MinimumHitInterval - .0001 then return 0, "HitCooldown" end
+	-- A server-owned companion strike must not suppress a simultaneous player hit.
+	local hitTimes = if source == "Pet" then self._petLastHits else self._lastHits
+	local last = hitTimes[player]
+	-- A server-scheduled volley has several distinct arrows. Each still needs
+	-- its own once-only token, but must not suppress another arrow in the volley.
+	if source ~= "Projectile" and last and self._time - last < self.Settings.MinimumHitInterval - .0001 then return 0, "HitCooldown" end
 	local tokens = self._tokens[player]
 	if not tokens then tokens = {}; self._tokens[player] = tokens end
 	if token and tokens[token] and tokens[token] > self._time then return 0, "DuplicateHit" end
 	for previous, expires in tokens do if expires <= self._time then tokens[previous] = nil end end
 	if token then tokens[token] = self._time + self.Settings.AttackTokenLifetime end
-	self._lastHits[player] = self._time
+	hitTimes[player] = self._time
+	local beforeHP = self._health
 	local applied = math.min(self._health, damage)
+	if source == "Pet" then
+		local threshold = self.Settings.MaxHealth * .1
+		if beforeHP <= threshold then return 0, "CaptureProtected" end
+		applied = math.min(applied, beforeHP - threshold)
+	end
 	self._health -= applied; self._lastDamaged = self._time
 	if self._health <= 0 then
+		self:ReleaseTrap(self._trapOwner)
 		self:_clearTarget("Dead")
 		local patrol = self:_patrol(); if patrol then patrol:SetDead(true) end
 		self._state = "Dead"
@@ -251,6 +276,7 @@ function Combat:Damage(player, damage, point, token)
 		end
 	end
 	self:_publish()
+	if self.OnDamage then self.OnDamage(player,beforeHP,self._health) end
 	return applied
 end
 function Combat:_cancelAttack()
@@ -267,7 +293,7 @@ function Combat:_clearTarget(state)
 	self:_publish()
 end
 function Combat:PlayerExited(player)
-	self._tokens[player] = nil; self._lastHits[player] = nil
+	self._tokens[player] = nil; self._lastHits[player] = nil; self._petLastHits[player] = nil
 	if self._target == player or self._attackVictim == player then self:_clearTarget() end
 end
 function Combat:_supportAndForward()
@@ -279,6 +305,58 @@ function Combat:_supportAndForward()
 	direction = flat(direction)
 	if direction.Magnitude < .01 then direction = Vector3.new(0, 0, -1) else direction = direction.Unit end
 	return support, direction, snapshot
+end
+function Combat:GetSupportPoint()
+	local support = self:_supportAndForward()
+	return support
+end
+function Combat:GetCapturePoint()
+	local support, direction = self:_supportAndForward()
+	local point = support + direction * (self.Settings.BiteForwardOffset + 16)
+	local params = RaycastParams.new(); params.FilterType = Enum.RaycastFilterType.Include
+	params.FilterDescendantsInstances = {workspace.Terrain, self.Forest}; params.RespectCanCollide = true
+	local hit = workspace:Raycast(point + Vector3.new(0, 24, 0), Vector3.new(0, -64, 0), params)
+	return if hit and hit.Material ~= Enum.Material.Water and hit.Normal.Y > .6 then hit.Position + Vector3.new(0, 2.5, 0) else nil
+end
+function Combat:TrapFor(runId, untilTime)
+	if self._destroyed or self._captured or self._health <= 0 or type(runId) ~= "string"
+		or not finite(untilTime) or untilTime <= workspace:GetServerTimeNow() or self._trapOwner then return false end
+	self._trapOwner, self._trapUntil = runId, untilTime
+	self._trapRouteEnabled = self.Model:GetAttribute("RouteEnabled")
+	self.Model:SetAttribute("RouteEnabled", false)
+	self:_cancelAttack(); self._state = "Trapped"; self:_publish()
+	return true
+end
+function Combat:ReleaseTrap(runId)
+	if not self._trapOwner or (runId ~= nil and runId ~= self._trapOwner) then return false end
+	self._trapOwner, self._trapUntil = nil, nil
+	self.Model:SetAttribute("RouteEnabled", self._trapRouteEnabled)
+	self._trapRouteEnabled = nil
+	self._state = if self._target then "Chasing" else "Idle"
+	self:_publish(); return true
+end
+function Combat:Capture(runId, verifiedNow)
+	if self._destroyed or self._captured or self._health <= 0 or self._health > self.Settings.MaxHealth * .1
+		or self._trapOwner ~= runId or (verifiedNow or workspace:GetServerTimeNow()) > (self._trapUntil or 0) then return false end
+	self._captured = true; self._captureGeneration = (self._captureGeneration or 0) + 1
+	local generation = self._captureGeneration
+	self:_clearTarget("Captured"); self:ReleaseTrap(runId); self._state = "Captured"
+	local patrol = self:_patrol(); if patrol then patrol:SetDead(true); patrol:Stop() end
+	self._captureScale = self.Model:GetScale(); self._captureVisuals = {}
+	for _, part in self.Model:GetDescendants() do
+		if part:IsA("BasePart") then self._captureVisuals[part] = part.Transparency end
+	end
+	self._gui.Enabled = false; self:_publish()
+	task.spawn(function()
+		for step = 1, 20 do
+			if self._destroyed or not self._captured or self._captureGeneration ~= generation then return end
+			local alpha = step / 20
+			self.Model:ScaleTo(self._captureScale * (1 - .85 * alpha))
+			for part, original in self._captureVisuals do if part.Parent then part.Transparency = original + (1 - original) * alpha end end
+			task.wait(.1)
+		end
+	end)
+	return true
 end
 function Combat:_updateAttackBox()
 	local support, direction = self:_supportAndForward()
@@ -328,6 +406,12 @@ function Combat:_attackStep()
 				self:_publish()
 			end
 		end
+		-- Pets use the same short, server-owned bite volume and sequence. The
+		-- companion controller checks its body, line of sight and one hit per bite.
+		if self._damagePets and self._phase == "Active" and self._health > 0 then
+			self._damagePets(self._attackBox.CFrame, self.Settings.BiteHitboxSize,
+				self._attackSequence, self.Settings.BiteDamage, self.Model)
+		end
 		if self._time >= self._phaseUntil then self._state = "Recovering"; self:_setPhase("Recovery", self.Settings.BiteRecovery) end
 	elseif self._phase == "Recovery" and self._time >= self._phaseUntil then
 		self._state = "Chasing"; self:_setPhase("Idle")
@@ -338,6 +422,11 @@ function Combat:Step(dt)
 	if not finite(dt) or dt <= 0 then return end
 	dt = math.min(dt, .2); self._time += dt
 	if not self.Model.Parent or not self.Root.Parent then self:Destroy(); return end
+	if self._captured then return end
+	if self._trapOwner then
+		if self._health <= 0 or workspace:GetServerTimeNow() > self._trapUntil then self:ReleaseTrap(self._trapOwner)
+		else self._state = "Trapped"; self:_publish(); return end
+	end
 	self:_updateAttackBox()
 	if self._target and self._health > 0 then
 		local character, _, targetRoot = self:_character(self._target)
@@ -352,15 +441,15 @@ function Combat:Step(dt)
 			elseif self._phase ~= "Idle" then
 				-- The warning locks its direction. Running behind or sideways can evade
 				-- the actual short active volume; the dinosaur never snaps to a player.
-				patrol:SetCombatGoal(support, {StopDistance = 0, Speed = self.Settings.ChaseSpeed})
+				patrol:SetCombatGoal(support, {StopDistance = 0, Speed = self.Settings.ChaseSpeed * (if self._health <= self.Settings.MaxHealth * .1 then .6 else 1)})
 				self:_attackStep()
 			else
 				local distance = flat(targetRoot.Position - support).Magnitude
 				if distance <= self.Settings.BiteRange then
-					patrol:SetCombatGoal(support, {StopDistance = 0, Speed = self.Settings.ChaseSpeed})
+					patrol:SetCombatGoal(support, {StopDistance = 0, Speed = self.Settings.ChaseSpeed * (if self._health <= self.Settings.MaxHealth * .1 then .6 else 1)})
 					patrol:FaceCombat(targetRoot.Position)
 					if self._time - self._lastAttack >= self.Settings.BiteCooldown and self:_canBite(self._target) then self:_startAttack() end
-				elseif patrol:SetCombatGoal(targetRoot.Position, {StopDistance = self.Settings.ChaseStopDistance, Speed = self.Settings.ChaseSpeed}) == false then self:_clearTarget() end
+				elseif patrol:SetCombatGoal(targetRoot.Position, {StopDistance = self.Settings.ChaseStopDistance, Speed = self.Settings.ChaseSpeed * (if self._health <= self.Settings.MaxHealth * .1 then .6 else 1)}) == false then self:_clearTarget() end
 			end
 		end
 	elseif self._state == "Returning" then
@@ -373,6 +462,7 @@ function Combat:Step(dt)
 end
 function Combat:GetSnapshot()
 	return {Health = self._health, MaxHealth = self.Settings.MaxHealth, State = self._state,
+		Captured = self._captured == true, Trapped = self._trapOwner ~= nil, TrapUntil = self._trapUntil,
 		TargetUserId = if self._target then self._target.UserId else 0,
 		AttackSequence = self._attackSequence, AttackPhase = self._phase, AttackHits = self._attackHits,
 		Time = self._time, AttackBoxCFrame = self._attackBox.CFrame, AttackBoxSize = self._attackBox.Size}
@@ -386,9 +476,14 @@ function Combat:Start()
 end
 function Combat:Reset()
 	if self._destroyed then return end
+	self._captureGeneration = (self._captureGeneration or 0) + 1
+	self._captured = false; self:ReleaseTrap(self._trapOwner)
+	if self._captureScale then self.Model:ScaleTo(self._captureScale); self._captureScale = nil end
+	for part, transparency in self._captureVisuals or {} do if part.Parent then part.Transparency = transparency end end
+	self._captureVisuals = nil; self._gui.Enabled = true
 	self:_clearTarget("Idle")
 	self._health = self.Settings.MaxHealth; self._lastDamaged = -math.huge; self._lastAttack = -math.huge
-	self._tokens = {}; self._lastHits = {}; self._attackSequence = 0; self._attackHits = 0
+	self._tokens = {}; self._lastHits = {}; self._petLastHits = {}; self._attackSequence = 0; self._attackHits = 0
 	local patrol = self:_patrol(); if patrol then patrol:SetDead(false) end
 	self:_updateAttackBox(); self:_publish()
 end

@@ -1,0 +1,15 @@
+{
+  "Date": "2026-10-27",
+  "RootCause": "Native v12 receipt validation rejected an existing valid HelloHunDino Consumables receipt as Economy:InvalidProfile.",
+  "Repair": "Reapply public-code compatibility to the three current native modules; preserve current merchant/mining changes and all stored progress.",
+  "LogicChecks": {"CompatibilityRoundtrip":46,"HelloHunDino":350,"WeaponUpgrades":238,"IronMining":402,"Total":1036,"Passed":true},
+  "NativeSavedInspection": "assets/profile-compat/saved-inspection.json",
+  "LiveBefore": {"PlaceVersion":12,"ProfileReady":false,"ProfileErrorCode":"Economy:InvalidProfile","RecordRevision":257,"HelloHunDinoReceiptPresent":true},
+  "LiveAfter": {"AtLocal":"2026-10-27T05:05:26+07:00","PlaceVersion":14,"ProfileReady":true,"ProfileSaveState":"Saved","ProfileStorageMode":"DataStore","ProfileErrorCode":null,"RecordRevision":286,"RecordUpdatedAt":1793052324,"AimSensitivity":0.75,"Coins":210,"HelloHunDinoReceiptPresent":true},
+  "LiveEvidence": "Observed real Roblox Player VNG owner Server Developer Console; verification command only printed attributes and read GetAsync.",
+  "RejoinAfterSavedVerification": {"Performed":true,"OldPlayerWindowClosed":true,"FreshPlayerWindowOpened":true,"ProfileErrorOverlayAbsent":true,"SavedBowArmorAndPetVisible":true,"PostRejoinBalanceReadPerformed":false},
+  "RepairResetProgress": false,
+  "RepairGrantedReward": false,
+  "FullGameplayRegression": false,
+  "IconUpdated": false
+}

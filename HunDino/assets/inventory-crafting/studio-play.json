@@ -1,0 +1,24 @@
+{
+  "Ok": true,
+  "Date": "2026-10-26",
+  "DisabledWhenEmpty": true,
+  "RealAccountDataTouched": false,
+  "FirstCraft": {
+    "Revision": 1,
+    "Iron": 1,
+    "IronTrap": 1,
+    "RawTrap": 1,
+    "Coins": 80
+  },
+  "Formula": "1 RawTrap + 1 Iron -> 1 IronTrap",
+  "ActualUIInputUsed": true,
+  "DisabledAwayFromOwnerStation": true,
+  "TestStorage": "TestMemory",
+  "SecondCraft": {
+    "Revision": 2,
+    "Iron": 0,
+    "IronTrap": 2,
+    "RawTrap": 0,
+    "Coins": 80
+  }
+}

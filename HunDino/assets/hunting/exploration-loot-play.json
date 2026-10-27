@@ -1,0 +1,101 @@
+{
+  "version": "ExplorationLootPlay.1",
+  "date": "2026-10-21",
+  "placeId": 103261391098991,
+  "boundary": "Explicit TestMemory override during Play only. Normal travel and validated weapon damage; helper repositioned character and temporarily increased player health to1000, restored100. Dinosaur HP was not set. No production account, code redemption or live DataStore was used.",
+  "economyTests": {
+    "checks": 227,
+    "groups": 10
+  },
+  "nativeHarness": {
+    "ok": true,
+    "boundary": "Disposable actors and combat adapter; real exploration/economy/harvest code and native geometry. No real account or dinosaur mutation.",
+    "version": "ExplorationHarvestIntegration.1",
+    "checks": 25,
+    "failures": []
+  },
+  "harvestRegression": {
+    "ok": true,
+    "boundary": "Cloned production controller, native Humanoid/raycast/overlap/Instance; fake owner and idempotent inventory. No production source, player, dinosaur or Terrain mutation.",
+    "checks": 121,
+    "skipped": [],
+    "cases": 21,
+    "version": "HuntHarvestIntegration.1",
+    "elapsedSeconds": 0.15802502632141113,
+    "failures": [],
+    "passed": 121
+  },
+  "actualCarves": {
+    "stats": {
+      "HuntsCompleted": 0,
+      "HuntsFailed": 0,
+      "Captures": 0
+    },
+    "materials": {
+      "Skin": 2,
+      "Scale": 1,
+      "Tooth": 0,
+      "Bone": 0,
+      "Iron": 0
+    },
+    "carves": 3,
+    "mode": "TestMemory",
+    "activeMode": "Exploration",
+    "coins": 80
+  },
+  "fourthAttempt": {
+    "coins": 80,
+    "carves": 3,
+    "materials": {
+      "Skin": 2,
+      "Scale": 1,
+      "Tooth": 0,
+      "Bone": 0,
+      "Iron": 0
+    },
+    "carveAvailable": false
+  },
+  "lobby": {
+    "stats": {
+      "HuntsCompleted": 0,
+      "HuntsFailed": 0,
+      "Captures": 0
+    },
+    "loot": false,
+    "materials": {
+      "Skin": 2,
+      "Scale": 1,
+      "Tooth": 0,
+      "Iron": 0,
+      "Bone": 0
+    },
+    "saveReady": true,
+    "dinoHP": 1200,
+    "area": "Lobby"
+  },
+  "reload": {
+    "stats": {
+      "HuntsCompleted": 0,
+      "HuntsFailed": 0,
+      "Captures": 0
+    },
+    "materials": {
+      "Skin": 2,
+      "Scale": 1,
+      "Tooth": 0,
+      "Iron": 0,
+      "Bone": 0
+    },
+    "reloaded": true,
+    "mode": "TestMemory",
+    "coins": 80
+  },
+  "reenter": {
+    "dinosaurHP": 1200,
+    "loot": false,
+    "carveAvailable": false,
+    "forgedCarveDidNotGrant": true
+  },
+  "finalMode": "Edit",
+  "temporaryTestMemoryOverrideRemoved": true
+}

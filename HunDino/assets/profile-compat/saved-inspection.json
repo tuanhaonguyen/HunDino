@@ -1,0 +1,29 @@
+{
+  "AddedRows": {},
+  "AfterInstanceCount": 76451,
+  "Baseline": "backups/profile-compat-20261027/HunDino_MerchantWeapons_20261026.rbxl",
+  "BaselineSHA256": "73bb353d2869484800e7c75a888389d453284b5a7fa42b8f63f412d27943ae9e",
+  "BeforeInstanceCount": 76451,
+  "Bytes": 4481440,
+  "ChangedSources": 3,
+  "Checks": 85318,
+  "Geometry": {
+    "Joints": 845,
+    "Parts": 57605,
+    "WorkspaceJoints": 723,
+    "WorkspaceParts": 48894
+  },
+  "Ok": true,
+  "OpaqueTerrainProperties": 70,
+  "OriginalInstancesPreserved": 76451,
+  "RemovedRows": {},
+  "SHA256": "b935ea091751b0391baa5640350ac6b29d273ee7801ddf831fa4192409e2219f",
+  "SceneHash": "56197b2f432d2ee78477010ab1535edeb1fae7d553909a84e8e139807a5992af",
+  "ScriptsCompiled": 163,
+  "StudioSelectionBookkeeping": {
+    "After": 4,
+    "Before": 5
+  },
+  "Target": "HunDino_MerchantWeapons_20261026.rbxl",
+  "Version": "ProfileCompatSavedValidation.1"
+}

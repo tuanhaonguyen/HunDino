@@ -1,5 +1,19 @@
 # Nâng cấp katana theo mẫu — 15/10/2026
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Tính năng trong tài liệu này được đối chiếu cùng bản chính hiện hành; các file v2.x/SaveGame, tham số và kết quả thử cũ trong phần dưới là mốc lịch sử, không tự chứng nhận toàn bộ bản mới. Phạm vi còn chờ: P1-G toàn vòng, cloud kinh tế/cá thể/ống, nhiều client và thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Mẫu katana nâng cấp ngày 15/10 là mốc trước bộ bảy vũ khí Pro. Trên [v2.4](HunDino_DarkJungle_v2_4.rbxl), dùng hệ VFX chung trong [WEAPONS_PRO.md](WEAPONS_PRO.md); LocalScript katana riêng cũ không còn chạy. Giữ hồ sơ/model/backup bên dưới để truy nguồn, không cài lại KatanaEffects cũ lên bản chung. Xem [Inventory](INVENTORY.md) cho trang bị Người/Pet độc lập.
+
+## Hồ sơ nâng katana — trước bộ Pro chung
+
 Đã sửa và lưu bằng Studio vào `HunDino_DarkJungle_v2_3.rbxl` trong thư mục Documents hiện tại. Có map sao lưu trước sửa tại `backups/HunDino_v2_3_before_katana_20261015.rbxl`; code Studio trước sửa tại `backups/studio_before_katana_20261015.json`. Trong Studio có bản sao katana, mẫu trưng bày và code sửa trong `ServerStorage.KatanaUpgradeBackup_20261015`.
 
 ## Nội dung đã ghép

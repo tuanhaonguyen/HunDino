@@ -137,7 +137,7 @@ function Controller.new(model, map, config, options)
 		_decorParams = decorParams, _overlapParams = overlapParams,
 		_collisionSize = high - low + Vector3.new(2, 1, 2), _collisionCenter = (high + low) * .5,
 		_combatLeash = number(options.CombatLeashStuds or options.CombatLeash or config.CombatLeashStuds, 260, 20, 400),
-		_campSafeRadius = number(options.CampSafeRadius or config.CampSafeRadius, 110, 50, 180),
+		_campSafeRadius = number(options.CampSafeRadius or config.CampSafeRadius, 110, 50, 400),
 		_combatSpeed = number(options.CombatSpeed, 16, 1, 24),
 		_combatSlope = math.rad(number(options.CombatSlopeDegrees, 28, 5, 35)), _combatBlocked = false,
 		_speed = 0, _phase = 0, _blend = 0, _nod = 0, _attributeElapsed = 0,
@@ -197,8 +197,8 @@ function Controller:_outsideCombatBounds(position)
 	local camp = self.Config.position(self.Config.zone("Camp"))
 	local offset = self.Config.WorldOffset or self.Map:GetAttribute("WorldOffset") or Vector3.zero
 	local localPosition = position - offset
-	return math.abs(localPosition.X) > self.Config.MapSize * .5 - 36
-		or math.abs(localPosition.Z) > self.Config.MapSize * .5 - 36
+	return math.abs(localPosition.X) > (self.Config.MapWidth or self.Config.MapSize) * .5 - 36
+		or math.abs(localPosition.Z) > (self.Config.MapDepth or self.Config.MapSize) * .5 - 36
 		or (flat(position) - flat(camp)).Magnitude < self._campSafeRadius
 end
 function Controller:BeginCombat()
@@ -302,7 +302,7 @@ function Controller:_combatStep(dt)
 		direction = (self._combatFace - self._position).Unit
 	end
 	local turning = math.abs(angleDelta(self._yaw, math.atan2(direction.X, direction.Z))) > math.rad(45)
-	local desiredSpeed = if target and distance > stop and not turning then (if returning then self._maxSpeed else self._combatGoalSpeed) else 0
+	local desiredSpeed = if target and distance > stop and not turning then (if returning then self._maxSpeed * (if self.Model:GetAttribute("Weak") then .6 else 1) else self._combatGoalSpeed) else 0
 	self._speed = if desiredSpeed == 0 then 0 else approach(self._speed, desiredSpeed, self._acceleration * dt)
 	local step = math.min(math.max(0, distance - stop), self._speed * dt)
 	local candidate = self._position + direction * step
@@ -376,7 +376,7 @@ function Controller:_gait(dt, moving)
 	local bob = .18 * (1 - math.cos(phase * 2)) * .5 * blend
 	for name, sign in {LeftHip = 1, RightHip = -1} do
 		local data = self._motors[name]
-		local angle = math.sin(phase) * sign * math.rad(11) * blend
+		local angle = math.sin(phase) * sign * math.rad(11) * blend * (if self.Model:GetAttribute("Weak") and name == "LeftHip" then .5 else 1)
 		local lift = math.max(0, math.cos(phase) * sign) * .8 * blend
 		data.joint.C0 = data.rest * CFrame.new(0, footOffset(data, angle, lift, bob), 0) * CFrame.Angles(angle, 0, 0)
 	end
@@ -386,7 +386,7 @@ function Controller:_gait(dt, moving)
 	end
 	self._motors.Tail.joint.C0 = self._motors.Tail.rest * CFrame.Angles(0, math.sin(phase - .4) * .035 * blend, 0)
 	local bite = self.Model:GetAttribute("BitePhase")
-	local nod = if bite == "Closing" then -math.rad(5) elseif bite == "Opening" or bite == "Holding" then math.rad(1.5) else 0
+	local nod = if self.Model:GetAttribute("Trapped") then -math.rad(14) elseif bite == "Closing" then -math.rad(5) elseif bite == "Opening" or bite == "Holding" then math.rad(1.5) else 0
 	self._nod += (nod - self._nod) * math.min(1, dt * 15)
 	self._motors.Neck.joint.C0 = self._motors.Neck.rest * CFrame.Angles(self._nod + math.sin(phase * 2) * .012 * blend, 0, 0)
 	return bob
@@ -451,7 +451,7 @@ function Controller:Step(dt)
 			else
 				local remaining = distance
 				for i = self._sampleIndex, #self._points - 1 do remaining += (flat(self._points[i + 1]) - flat(self._points[i])).Magnitude end
-				local desiredSpeed = math.min(self._maxSpeed, math.sqrt(2 * self._acceleration * remaining))
+				local desiredSpeed = math.min(self._maxSpeed * (if self.Model:GetAttribute("Weak") then .6 else 1), math.sqrt(2 * self._acceleration * remaining))
 				local turning = math.abs(angleDelta(self._yaw, math.atan2(delta.X, delta.Z))) > math.rad(45)
 				-- Turn toward a newly selected road before advancing. This avoids
 				-- walking backwards out of a rest stop when reversing an itinerary.

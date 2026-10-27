@@ -1,21 +1,35 @@
 # Hồ sơ thiết kế game Roblox săn khủng long
 
-Phiên bản hồ sơ: 0.32 — Cập nhật: 17/10/2026 — Sảnh/bãi tập: v2.3 — Khu săn nối sảnh: H1.3.1
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Đã đồng bộ trạng thái theo báo cáo hôm nay; mục 45 ghi phát hành v14, sửa tương thích, local sửa 12 base và phạm vi còn chờ. Các mục thử cũ giữ số liệu theo thời điểm.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/BAO_CAO_TIEN_DO_2026-10-27.md>). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
 
-**Bản game hiện hành:** mở `HunDino/HunDino_DarkJungle_v2_3.rbxl` trong Documents. Sảnh ↔ Rừng cổ đã nối cùng Place, có nút Chơi/cổng G, Pet theo cùng và đồng hồ riêng. H1.3 thêm nghỉ 60 giây ở mọi điểm, thanh máu/hitbox và khủng long phản công người đánh; xem mục 30. File săn riêng H1.1 giữ làm nguồn. Chưa có mục tiêu nhiệm vụ hoặc thưởng.
+**Sửa nhận nguyên liệu Khám phá — 21/10/2026:** trên Place HunDino cloud (`103261391098991`), hạ T-Rex trong Khám phá cũng mở mổ xác: **R cất vũ khí, giữ G 1,5 giây**, tối đa **3 lượt/người/xác trong 120 giây**, đưa da/răng/vảy vào **I → Vật phẩm**. Người đã gây sát thương có phần riêng; không mở lại phần từ cùng xác khi rời/vào lại. Khám phá không dành bẫy/thuốc, cấp thưởng xu/xương của nhiệm vụ hoặc tăng thống kê nhiệm vụ. Đã kiểm luật **227/10 nhóm**, tích hợp native **25** và hồi quy mổ **121**; Play TestMemory thực nhận 2 da/1 vảy, giữ qua sảnh/tải lại hồ sơ thử. Đây không phải nghiệm thu DataStore thật. Source và bản sao native `HunDino_ExplorationLoot_20261021.rbxl` được ghi tại [EXPLORATION_LOOT.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/EXPLORATION_LOOT.md>); chưa Publish game live. Mục Chế tạo Inventory tiếp tục để sau.
 
-Tài liệu làm việc chung, được cập nhật trong suốt quá trình phát triển. **Sảnh/bãi tập v2.3 và khu săn Rừng cổ H1.3 đã đi–về và thử chiến đấu với con mẫu trong cùng bản game.** Vị trí/hình học các khu giữ theo backup mới nhất. Chưa hoàn thành game săn khủng long; nhiệm vụ, bắt giữ, thưởng và lưu tài khoản vẫn là các bước triển khai tiếp.
+Phiên bản hồ sơ: 0.45 — Cập nhật: 27/10/2026 — Sửa kẹt ống khi dịch chuyển đến 12 base — Giữ cửa hàng, chế tạo, chiến đấu, khai quặng và lưu tài khoản
 
-**Đọc nhanh:** mục 30 là combat hiện hành, mục 29 là mốc nối sảnh; mục 28/27 giữ mốc H1.1/H1.0; mục 26 giữ ý tưởng đã duyệt; mục 25 mô tả sảnh/bãi tập. Mục 1–22 giữ định hướng toàn game; mục 23–24 giữ kế hoạch vòng săn P1. Thông số bản thử không tự chốt cân bằng toàn game; nhật ký cũ không thay trạng thái mới.
+**Bản đang làm theo lựa chọn người dùng:** **HunDino/HunDino_MerchantWeapons_20261026.rbxl** trong Documents. Mở **HunDino/CHOI_CUA_HANG.cmd** hoặc **HunDino/CHOI_VA_LUU.cmd** rồi Play. Giữ cửa hàng/nâng riêng bảy vũ khí, công thức bẫy sắt, sửa cung/Pet/di chuyển, khai quặng và lớp lưu hiện hành. Cloud đã phát hành v14 với sửa tương thích hồ sơ; riêng sửa ống tại **mục 44** mới lưu local, **chưa Publish**. SaveGame và v2.4 là các mốc cũ để đối chiếu.
 
-| Nhóm | Cách sử dụng | Trạng thái hiện tại |
+**Lưu tiến trình — 20/10/2026:** đã nối lớp DataStore theo tài khoản vào trang bị Người/Pet, giáp từng ô, cài đặt, xu/nguyên liệu/vật tư, chế bẫy, nâng búa, kho cá thể, mã chống nhận trùng, thống kê săn và hồi chiêu hồi chủ của Pet. Mua/chế/nâng/thưởng ghi trước khi báo thành công; trang bị/cài đặt gom lưu sau 2 giây, tự lưu dự phòng 30 giây và lưu khi rời/đóng máy chủ. Có trạng thái tải/lưu/lỗi, nút lưu và thử tải lại. Xem **mục 39** và [PERSISTENCE.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/PERSISTENCE.md>).
+
+**Giới hạn kiểm chứng hiện hành:** local dùng bộ lưu trên máy qua launcher; các phép thử sửa chiến đấu/base dùng TestMemory riêng. Cloud v14 đã kiểm tải/lưu DataStore thực sau vá biên nhận HelloHunDino và vào lại thấy trang bị; chưa thay cho hồi quy kinh tế/cá thể/ống đầy đủ. Sửa đường base mới nhất chỉ local. Khi tải thất bại, hệ thống tiếp tục chặn tiến trình thay vì tạo hồ sơ trắng. Săn đội, hồi quy P1-G toàn vòng và nghiệm thu điện thoại/nhiều client còn chờ; phạm vi từng mốc cũ được giữ tại phần tương ứng.
+
+**Đọc nhanh:** mục 42 là sửa cung/Pet/di chuyển đã gộp; mục 41 là cửa hàng/cấp riêng bảy vũ khí; mục 39 là nền lưu tài khoản, mục 38 UI, mục 36 kho cá thể, mục 34 kinh tế, mục 33 nhiệm vụ/bẫy/bắt, mục 32 Pet, mục 31 H2 và mục 30 combat. Các câu “chỉ giữ trong phiên/chưa DataStore”, cấp búa duy nhất hoặc Pet đánh mỗi 4 giây tại mốc cũ là lịch sử; không thay quy tắc hiện hành ở mục mới. Mục 1–22 giữ định hướng; mục 23–24 giữ kế hoạch P1. Thông số thử chưa phải cân bằng toàn game.
+
+**Bổ sung 21/10/2026:** mục 40 ghi **Cài đặt → Nhập code**, mã thử nhận một lần dành riêng cho admin. Cài trên bản Studio cloud `PlaceId 103261391098991`; bản local v2.4 ở trên giữ nguyên. Chi tiết bản lưu và cách dùng tại [ADMIN_TEST_CODE.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/ADMIN_TEST_CODE.md>); chưa xuất bản thay đổi lên game live.
+
+| Phần | Hiện trạng | Cần làm tiếp |
 | --- | --- | --- |
-| Yêu cầu toàn game đã thống nhất | Giữ khi làm hệ thống tương ứng; xem nhãn từng mục | Một phần nền tảng đã triển khai; không đồng nghĩa mọi yêu cầu đã lập trình |
-| Ưu tiên hiện tại | Sảnh Dark Jungle 12 base, bãi tập 460 × 420, bảy vũ khí/28 combo, giáp/pet mẫu và UI | Đã có bản v2.3 chơi thử PC; chi tiết và giới hạn kiểm chứng tại mục 25 |
-| Vòng săn P1 tiếp theo | Một quái/một đòn, săn/bắt, thưởng, nâng cấp, một ống và lưu | Chưa hoàn thành vòng săn; tái sử dụng nền tảng hiện có, không dựng lại từ đầu |
-| Định hướng mở rộng | Săn đội, nhiều loài/hệ, năm ống, pet nâng cao, điện thoại | Chưa triển khai; sảnh 12 base và bảy vũ khí đã có ở bãi tập, chưa chứng minh săn đội/hiệu năng 12 người |
-| Cấu hình thử hiện hành | Phím, combo, thể lực, camera và UI v2.3 tại mục 25 | Đã triển khai thử; còn cần phản hồi cảm giác chơi và cân bằng |
-| Chưa chốt | Quyết định toàn game và lựa chọn được đánh dấu còn mở | Chỉ giải quyết trước bước triển khai phụ thuộc; không coi góp ý chưa duyệt là quyết định |
+| Gameplay v2.4 | Sảnh/base, bãi tập, săn/bắt con mẫu, Pet và UI đã chơi thử PC | Cân bằng, hiệu năng, điện thoại và nhiều client |
+| Kinh tế/kho | Mua, nhặt, mổ, thưởng, chế bẫy, cấp riêng bảy vũ khí và cá thể đã nối vào tài khoản | Hồi quy cloud toàn bộ bằng phiên/server mới |
+| Trang bị/cài đặt | Vũ khí/giáp Người và Pet độc lập; tùy chọn UI/độ nhạy được lưu | Kiểm tra trên tài khoản đã xuất bản |
+| Lớp lưu | UpdateAsync, khóa phiên, retry, receipt, recovery, shutdown và thông báo lỗi | Nghiệm thu DataStore thật, quota và shutdown nhiều người |
+| Phần mở rộng | Một ống/năm ống, thêm công thức/cấp, săn đội, hệ/loài | Chưa triển khai; giữ yêu cầu đã thống nhất |
+| P1-G | Có các bộ kiểm riêng từng hệ thống | Chưa nghiệm thu hồi quy toàn vòng game |
 
 ## 1. Cách đọc và cập nhật
 
@@ -250,9 +264,15 @@ Không cần trả lời tất cả cùng lúc. Chỉ chốt phần cần cho m�
 
 > Hãy đọc THIET_KE_GAME.md trong thư mục dự án và dùng làm hồ sơ thiết kế hiện tại. Phân biệt yêu cầu đã thống nhất, đề xuất và phần chưa chốt. Tiếp tục từ mốc thực tế đã hoàn thành; đừng coi lộ trình là những gì đã được lập trình. Tôi là người mới: giải thích rõ từng bước. Khi tôi sửa ý tưởng, cập nhật mục liên quan và nhật ký quyết định, giữ những yêu cầu khác còn hiệu lực. Không tự đổi điều kiện thưởng, giới hạn trưng bày hoặc cơ chế pet. Với phần chưa chốt, hỏi điều thật sự cần trước khi làm phụ thuộc vào nó; vẫn tiếp tục phần độc lập. Sau mỗi mốc, ghi những gì đã làm, đã kiểm tra, hạn chế và việc tiếp theo vào chính tài liệu này.
 
-Trạng thái hiện tại: đang triển khai L0 tại mục 25 trên map 12 base hiện có. Mở `HunDino_L0.rbxlx`, đọc README và source, tiếp tục kiểm tra phần đang dở; không dựng lại từ đầu hoặc ghi đè chỉnh sửa map thủ công. P1 săn/bắt tại mục 23–24 nối sau L0. Chỉ số thử không phải quyết định cuối. PC kiểm tra trước; chưa có cảm ứng hoàn chỉnh, nhiệm vụ, kinh tế hay lưu tài khoản. Chỉ đánh dấu hoàn thành sau khi có bằng chứng kiểm tra tương ứng.
+Trạng thái hiện tại: **v2.4 có map H2, combat, Pet P1-C, nhiệm vụ/bắt P1-D, kinh tế P1-E và Inventory/Vật phẩm**, xem mục 33–35. Kho cá thể bắt sống P1-F đã thử bắt thực/giữ qua về sảnh và hồi sinh tại mục 36; Chế tạo trong Inventory tiếp tục chờ. Mở `HunDino/HunDino_DarkJungle_v2_4.rbxl`, đọc README/source và tiếp tục từ phần đang có; không dựng lại L0 hoặc ghi đè sửa map thủ công. P1-F còn phần trưng bày/lưu tài khoản; chỉ số thử không phải quyết định cuối, chưa có cảm ứng hoàn chỉnh. Chỉ đánh dấu hoàn thành sau khi có bằng chứng kiểm tra tương ứng.
 
 ## 15. Tiến độ và nhật ký
+
+- **20/10/2026 — v0.39:** Đồng bộ 27 tài liệu Markdown hiện hành theo bản v2.4 đã lưu ngày 19/10. Cập nhật hướng dẫn mở bản Documents, trạng thái Pet/nhiệm vụ/kinh tế/kho cá thể và bảng đối chiếu map H2; phân biệt kết quả lịch sử với trạng thái mới. P1-F mới có kho cá thể trong cùng máy chủ, chưa ống/DataStore; Chế tạo trong Inventory, săn đội và nghiệm thu điện thoại còn chờ. Chỉ cập nhật tài liệu, không sửa source/map/backup/JSON và không chạy lại gameplay. Bảng tổng hợp ở mục 37.
+
+- **19/10/2026 — v0.38:** Theo yêu cầu bắt đầu kho cá thể bắt sống, thêm Inventory → Khủng long, mã/số thứ tự/thời điểm riêng, xem 3D tĩnh và kho thử 100. Hồ sơ bộ nhớ v2 chuyển dữ liệu v1 không cấp lại tiền; một giao dịch bắt ghi cá thể cùng thưởng hiện có, chống lặp. Luật đạt 2.134 kiểm tra, preview native 4.858; Play bắt thực tạo đúng một con và giữ qua tự về sảnh/hồi sinh. Đã lưu native Studio. Mục Chế tạo trong Inventory, ống trưng bày và DataStore chưa làm trong bước này. Xem mục 36.
+
+- **19/10/2026 — v0.35:** Triển khai P1-D trên v2.4: bảng nhiệm vụ J/G, lượt săn solo 40 phút, 3 bẫy/3 thuốc thử, B giữ 1 giây đặt bẫy, G giữ 3 giây bắt quái sống ≤10% HP trong bẫy. Ba lần chết đầu giữ lượt/HP/hạn, lần thứ tư thất bại; thành công có 120 giây xem hiện trường, ngày/đêm vẫn chạy tới khi về sảnh. Đã bắt sống trong Play, thử hồi sinh/thất bại và tự về sau 120 giây; bản lưu qua 139.055 kiểm tra. Xem mục 33; chưa triển khai mổ/nhặt/thưởng/kho cá thể/DataStore.
 
 - **21/09/2026 — v0.1:** Tổng hợp trao đổi, tạo hồ sơ chung. Chưa có code hoặc bản game chạy được.
 - Xác nhận năm ô trưng bày tự do, kho lớn hơn phần trưng bày; bỏ ràng buộc một hệ/một loài mỗi ống.
@@ -540,7 +560,7 @@ Phương án số của v0.20 được giữ để tham khảo **sau P1**, chưa
 
 ## 20. Làm rõ từng phần — Nhiệm vụ, thắng/thua và giữ chiến lợi phẩm
 
-**Trạng thái:** phần nhiệm vụ đã được ghi nhận. Không tự lấp các điểm chưa chốt bằng quy tắc của MHW; lựa chọn dùng thử được tách ở mục 23.
+**Trạng thái:** yêu cầu toàn game được giữ bên dưới; nhiệm vụ săn thường solo đã có trong **P1-D tại mục 33**, dùng đồ thử, chưa có thưởng/kho/lưu. Không tự lấp các điểm chưa chốt bằng quy tắc của MHW; cấu hình dùng thử được tách ở mục 23–24.
 
 ### Nhiệm vụ và bản đồ — đã thống nhất
 
@@ -613,7 +633,7 @@ Phương án số của v0.20 được giữ để tham khảo **sau P1**, chưa
 
 ## 21. Làm rõ từng phần — Thương nhân, chế bẫy và bắt sống
 
-**Trạng thái:** phần bắt giữ đã được ghi nhận; chưa lập trình. Các thông số thiếu vẫn để mở cho toàn game, cấu hình thử ở mục 23.
+**Trạng thái:** bắt sống thử đã được lập trình và kiểm chứng trong **P1-D tại mục 33**; thương nhân/chế bẫy/thưởng bắt có ở **P1-E mục 34**. Kho cá thể bộ nhớ P1-F đã thử bắt thực và giữ qua sảnh/hồi sinh ở mục 36; chưa có ống trưng bày hoặc lưu tài khoản. Các thông số thiếu vẫn để mở cho toàn game, cấu hình thử ở mục 23–24.
 
 ### Thương nhân và chế tạo — đã thống nhất
 
@@ -737,6 +757,8 @@ Phương án số của v0.20 được giữ để tham khảo **sau P1**, chưa
 
 **Thứ tự mới ngày 28/09:** hoàn thiện và chơi thử sảnh/luyện tập L0 ở mục 25 trước. Nội dung P1 dưới đây là bước nối tiếp; những phần búa/điều khiển/pet đã làm ở L0 được tái sử dụng sau khi kiểm chứng.
 
+**Cập nhật trạng thái 20/10:** bản v2.4 đã có P1-D nhiệm vụ/bắt (mục 33), P1-E mổ/nhặt/thưởng/kinh tế (mục 34), Inventory/Vật phẩm (mục 35) và kho cá thể P1-F bước đầu (mục 36). P1-F còn một ống và lưu tài khoản; P1-G chưa nghiệm thu. Các bảng phạm vi/thông số P1 dự kiến giữ để tham khảo; phím dùng bảng đã cập nhật dưới đây, chỉ số triển khai xem mục 25/30/32–37.
+
 ### Mục tiêu, hai mốc kiểm tra và phạm vi
 
 **Yêu cầu giai đoạn:** dừng mở rộng hệ thống lớn, làm một bản nhỏ để kiểm chứng săn/bắt và cảm giác chiến đấu. **Mọi lựa chọn rút gọn/thông số mới dưới đây là đề xuất cấu hình thử của trợ lý**, chưa phải quyết định cuối toàn game.
@@ -777,22 +799,22 @@ Không xóa yêu cầu toàn game khi đưa chúng ra ngoài P1. Nhiệm vụ b�
 6. Thu hoạch 120 giây hoặc về sớm. Nếu thua, về với đồ đã nhặt. Đồ mang chưa dùng trả kho theo cấu hình thử.
 7. Nâng búa/chọn cá thể vào ống; sau xác nhận lưu, thoát/vào vẫn có tiến trình.
 
-### Bảng phím PC thử — dùng thống nhất, chưa phải cấu hình cuối
+### Bảng phím PC hiện hành v2.4 — cập nhật 20/10/2026
 
 | Thao tác | Hành động |
 | --- | --- |
 | WASD / chuột | Di chuyển / camera |
 | Chuột trái | Đánh thường N |
-| R | Đánh mạnh H |
+| Q | Đánh mạnh H |
 | E | Kỹ năng K; đúng chuỗi thì thành chiêu kết thúc |
-| Space | Né lộn; chưa làm nhảy chiến đấu |
-| X | Rút/cất búa chủ động |
+| Space / V | Lướt / nhảy |
+| R | Rút/cất vũ khí |
 | Giữ Shift / Ctrl / giữ chuột phải | Chạy / bật-tắt ghim tâm / ngắm theo hướng tâm |
-| Q | Gọi pet hồi máu |
-| F | Tương tác theo ngữ cảnh: NPC, quặng, mổ, đặt bẫy hoặc cho uống |
-| Tab / 1–2 | Túi đồ / chọn bẫy hoặc thuốc, sau đó F để dùng |
+| H | Gọi Pet hồi máu |
+| G / giữ B | Tương tác/nhặt/mổ/cho uống / đặt bẫy; F giữ khiên khi dùng kiếm & khiên |
+| I / J | Inventory / bảng nhiệm vụ tại sảnh |
 
-Giữ bảng phím v0.20 để tránh đổi không cần thiết: E chỉ cho kỹ năng, F cho tương tác, Q gọi pet, R đánh mạnh, X rút/cất. Nếu đang giữ tương tác thì không nhận lệnh tương tác thứ hai. P1 không có cung; giữ chuột phải chỉ điều khiển hướng đánh búa, không thêm buff/lướt cung. Chưa yêu cầu dựng nút cảm ứng trong P1.
+Bảng trên thay cấu hình phím dự kiến v0.20: Q mạnh, R rút/cất, H gọi Pet, G tương tác và B đặt bẫy. v2.4 kế thừa cả bảy vũ khí/28 combo; cung giữ chuột phải ngắm, chỉ chuột trái tụ lực, Q mạnh ngay. Bản nhiệm vụ vẫn một lượt solo với một T-Rex. UI có hỗ trợ nút cảm ứng ở một số thao tác nhưng chưa nghiệm thu điện thoại. Các bảng búa/quái P1 dự kiến bên dưới là cấu hình thiết kế 27/09; thông số triển khai mới đọc mục 25/30/32–36 và bảng tổng hợp 37, không cài ngược số cũ.
 
 ### Búa và combo ngắn dùng thử
 
@@ -855,7 +877,7 @@ Trong P1 quái nhận sát thương máu tổng, chưa có tích ngưỡng đầ
 | P1-F | Cá thể/kho/một ống; thay lớp kho thử bằng lưu tài khoản ở môi trường test | Năm ống, tham quan base, dữ liệu người chơi thật | Sau xác nhận lưu, thoát/vào còn đồ/cấp/cá thể/ống; tải lỗi không ghi đè; giao dịch có dấu chống lặp cùng dữ liệu |
 | P1-G | Kiểm tra lỗi và hồi quy toàn vòng chơi; lưu, mất kết nối, nhận trùng, quyền máy chủ | Săn đội, điện thoại hoàn chỉnh, mở rộng nội dung | Checklist 24.13 đạt với bằng chứng; lỗi mất/nhân đồ chưa giải quyết thì chưa đánh dấu P1 hoàn thành |
 
-Vật dụng cấp phục vụ P1-D chỉ nằm trong chế độ kiểm tra; P1-E thay bằng nguồn mua/chế hợp lệ, không mang vật dụng debug sang hồ sơ lưu. Mọi bước hiện **chưa làm**, chưa có test đạt. Kiểm tra lại phần đã làm sau mỗi bước, tập trung vào các liên hệ vừa thay đổi.
+Vật dụng cấp phục vụ P1-D chỉ nằm trong chế độ kiểm tra; P1-E thay bằng nguồn mua/chế hợp lệ, không mang vật dụng debug sang hồ sơ lưu. **Cập nhật 19/10:** nền tảng đánh/né/AI đã có ở L0/H1, Pet cơ bản P1-C ở mục 32 và nhiệm vụ/bắt P1-D ở mục 33. Thông số mới tại mục 25/30/32/33 thay số thử cũ tương ứng. Kho/giao dịch thử và P1-E đã triển khai tại mục 34; kho cá thể P1-F bước đầu tại mục 36, phần một ống/lưu và P1-G chưa hoàn thành; không coi P1-D là hoàn thành toàn bộ P1. Kiểm tra lại phần đã làm sau mỗi bước, tập trung vào các liên hệ vừa thay đổi.
 
 ### Định nghĩa hoàn thành P1 đầy đủ
 
@@ -874,7 +896,7 @@ Mục tiêu trải nghiệm một lượt đầu khoảng 3–6 phút là giả 
 
 ### Tình trạng bàn giao
 
-Đã có project, map gốc và source L0.1; P1 săn/bắt/thưởng/lưu vẫn chưa triển khai. Hoàn thiện L0 trước, sau đó đối chiếu P1-0 và tái sử dụng các phần đã đạt để đi tiếp A–G. Không lấy kiểm tra ngoài Studio của L0 làm bằng chứng hoàn thành P1.
+Đã có sảnh/bãi tập, map H2, combat H1.3.1 và Pet P1-C chơi thử PC trong v2.4. Nhiệm vụ/bắt P1-D và kho/thưởng/chế tạo P1-E đã triển khai tại mục 33–34. Kho cá thể trong phiên P1-F đã có tại mục 36; một ống/lưu tài khoản còn chờ, nghiệm thu toàn vòng thuộc P1-G. Không lấy kiểm tra ngoài Studio hoặc mốc Pet làm bằng chứng hoàn thành toàn bộ P1.
 
 ## 24. Đối chiếu hai đợt góp ý và quy tắc kỹ thuật bản thử — 27/09/2026
 
@@ -911,7 +933,7 @@ Mục 23 xác định cấu hình và thứ tự; mục 24 giải thích vận h
 - **P1 đầy đủ 0–G:** thêm thưởng, thương nhân/chế bẫy, nâng cấp, cá thể/một ống và lưu qua lần thoát đã kiểm tra.
 - **Ngoài nghiệm thu vòng săn P1:** điện thoại hoàn chỉnh, săn đội/10%, ba quái/map, quái giao chiến, hệ/biến thể, nhiều đòn quái, đầu/chân/đuôi, nhiệm vụ chỉ bắt sống, năm ống, tham quan base, kỷ lục và pet nâng cao. Bảy vũ khí/combo dài và sảnh 12 base đã có trong bãi tập v2.3; việc cân bằng chúng cho săn và kiểm chứng đủ 12 người vẫn chưa làm.
 - **Còn mở toàn game:** máu theo đội/phạm vi thưởng 10%, quái kết liễu nhau, đuôi, chia biến thể, bố trí base; chỉ cần giải quyết trước mốc liên quan.
-- Chưa nghiệm thu mốc P1 nào theo đầy đủ tiêu chí vòng săn. Bãi tập v2.3 đã có nền tảng bảy vũ khí/28 combo, thể lực, UI, pet mẫu và sảnh; khi chuyển sang P1 phải đối chiếu lại tiêu chí và tái sử dụng phần đã đạt. Kho bộ nhớ không chứng minh lưu qua lần thoát; PC đạt không có nghĩa điện thoại đã được kiểm tra.
+- Chưa nghiệm thu toàn bộ vòng săn P1. Nền tảng bảy vũ khí/28 combo, thể lực, UI, sảnh, map và combat đã có; Pet cơ bản P1-C được kiểm tra tại mục 32, nhiệm vụ/bắt P1-D tại mục 33. Kho/giao dịch, thưởng và nâng búa thử đã có ở P1-E (mục 34); kho cá thể bộ nhớ P1-F đã thử tại mục 36, phần trưng bày và lưu còn lại để sau. Kho bộ nhớ không chứng minh lưu qua lần thoát; PC đạt không có nghĩa điện thoại đã được kiểm tra.
 
 ### 24.3. Vòng đời nhiệm vụ dùng thử
 
@@ -930,7 +952,7 @@ Luồng: **Sảnh → Chuẩn bị → Đang săn → Thành công/Thu hoạch h
 
 - Khi success đã khóa, chết trong thu hoạch không đổi kết quả; thử cho hồi tại trại và đồng hồ thu hoạch tiếp tục. Vật phẩm chưa nhặt/mổ khi về sớm hoặc hết 120 giây không tự được cấp.
 - Dùng thời gian máy chủ. Chỉ nhận hoàn tất thao tác trong hạn; thao tác bắt đầu trước hạn nhưng kết thúc sau hạn không được tính thắng. Nếu hoàn thành đúng thời điểm hết hạn, thử ưu tiên mục tiêu hoàn tất hợp lệ; sự kiện đến muộn không được lùi thời gian để thắng.
-- Từ P1-F, người chủ động rời lượt/mất kết nối không nối lại cuộc săn; lần vào sau về sảnh, giữ dữ liệu đã ghi thành công và xử lý đồ mang còn lại theo bản ghi chuyến săn. Không tạo lại mục tiêu cũ để nhận thưởng lần hai. Trước F kho bộ nhớ không giữ dữ liệu qua lần thoát và UI phải ghi rõ. Giới hạn khi máy chủ lỗi trước lúc lưu xem 24.8.
+- Khi hoàn thiện **phần lưu tài khoản của P1-F**, người chủ động rời lượt/mất kết nối không nối lại cuộc săn; lần vào sau về sảnh, giữ dữ liệu đã ghi thành công và xử lý đồ mang còn lại theo bản ghi chuyến săn. Không tạo lại mục tiêu cũ để nhận thưởng lần hai. **Hiện kho cá thể P1-F bước đầu vẫn là bộ nhớ máy chủ**, chưa bảo đảm giữ qua lần thoát/máy chủ mới; UI phải ghi rõ. Giới hạn khi máy chủ lỗi trước lúc lưu xem 24.8.
 - **Ngoài P1:** giết quái phụ không hoàn thành mục tiêu chính; cần chốt thưởng quái phụ trước map ba quái. Mục tiêu chính bị quái khác kết liễu là tình huống còn mở, không tự gán thắng/thua. Chưa có hai tình huống này trong P1 một quái.
 
 ### 24.4. Bắt giữ: kiểm tra và xử lý thất bại
@@ -1011,7 +1033,7 @@ Mã lượt dùng cả trong phiên và dấu thưởng đã lưu; đồ mang c�
 | Trưng bày | `DisplaySlot1 = specimenId` hoặc trống; mã phải thuộc kho người đó |
 | Chuyến săn/giao dịch | `ActiveRun` gồm mã lượt, đồ mang còn lại, kết quả đang chờ; các dấu giao dịch cần phục hồi/chống lặp |
 
-- Khởi đầu `DataVersion = 1`; số này là phiên bản cấu trúc lưu, khác phiên bản 0.21 của tài liệu. Chỉ cấp đồ đầu khi chắc chắn tài khoản chưa có hồ sơ, không cấp vì tải bị lỗi. Cấp đồ và đánh dấu `StarterGranted` cùng một giao dịch.
+- Hồ sơ bộ nhớ P1-E ban đầu `DataVersion = 1`; **hiện P1-F bước đầu là `DataVersion = 2`, `StorageMode = ServerMemory`**, thêm kho cá thể/số thứ tự và chuyển hồ sơ v1 hợp lệ mà không cấp lại 80 xu (mục 36). Đây là phiên bản cấu trúc dữ liệu, độc lập hồ sơ thiết kế 0.39. Khi làm lưu tài khoản, chỉ cấp đồ đầu khi chắc chắn chưa có hồ sơ, không cấp vì tải lỗi; cấp đồ và `StarterGranted` cùng giao dịch.
 - Nguyên liệu xếp chồng theo mã loại; cá thể luôn có mã riêng. UI phân biệt cá thể cùng loài bằng thứ tự/ngày bắt và mã rút gọn. Thay cá thể trưng bày chỉ đổi tham chiếu, không di chuyển/xóa sở hữu.
 - Kho cá thể thử từ P1-F tối đa 100; kiểm tra/dành chỗ trước lượt có thể bắt. Đầy thì báo trước: vẫn săn tiêu diệt nhưng không bắt thêm. Nhiệm vụ bắt sống sau P1 cần chặn vào khi hết chỗ. Đây là hạn mức thử, không phải giới hạn toàn game.
 - P1 chưa có bán/thả/xóa cá thể hoặc giao dịch giữa người chơi. Nếu dữ liệu ống tham chiếu mã không tồn tại, để ống trống và ghi lỗi; không tự tạo một cá thể mới.
@@ -1022,7 +1044,7 @@ Mã lượt dùng cả trong phiên và dấu thưởng đã lưu; đồ mang c�
 
 Mục tiêu là giữ tiến trình và tránh cấp lặp; đây là thiết kế cần kiểm chứng, không phải cam kết không bao giờ mất dữ liệu.
 
-**Trình tự:** P1-0 định nghĩa hồ sơ/lớp đọc ghi và dùng bảng trong bộ nhớ máy chủ, không cần dịch vụ MemoryStore và chưa nối DataStore. P1-E thử kinh tế trong phiên; P1-F thay lớp lưu bằng DataStore ở bản game test riêng; P1-G thử lỗi. Không tự chuyển sang hồ sơ tạm rồi ghi đè tài khoản thật khi tải lỗi; chế độ dữ liệu thử phải chọn rõ, không trộn đồ debug.
+**Trình tự:** P1-0 định nghĩa hồ sơ/lớp đọc ghi và dùng bảng trong bộ nhớ máy chủ, không cần dịch vụ MemoryStore và chưa nối DataStore. P1-E thử kinh tế trong phiên; P1-F bước đầu thêm cá thể nhưng **vẫn dùng bộ nhớ**. Phần P1-F tiếp theo mới thay lớp lưu bằng DataStore ở bản game test riêng; P1-G thử lỗi. Không tự chuyển sang hồ sơ tạm rồi ghi đè tài khoản thật khi tải lỗi; chế độ dữ liệu thử phải chọn rõ, không trộn đồ debug.
 
 Các quy tắc dưới đây áp dụng khi kết nối lưu tài khoản từ P1-F:
 
@@ -1101,9 +1123,11 @@ Weak bật khi 0 < HP ≤10% MaxHP: khập khiễng, thử đi còn 60% tốc đ
 - Chủ chết thì pet ngừng phát đòn, theo về trại khi có thể; nếu đang choáng vẫn chờ hết. Ưu tiên: choáng → ngừng đánh khi chủ cho uống → lệnh hồi → đánh/theo.
 - **Sau P1:** tự tìm chỗ an toàn hồi, né/đỡ/thu hút và chế/đổi vũ khí-mũ-giáp. Giữ ở mục 22; không yêu cầu để qua P1-C.
 
-### 24.13. Checklist lỗi và hồi quy — chưa kiểm tra đạt mục nào
+### 24.13. Checklist lỗi và hồi quy — cập nhật P1-C/D ngày 19/10/2026
 
 Sau mỗi bước thử phần mới và chạy lại trường hợp cũ bị ảnh hưởng. P1-G chạy toàn bộ mục thuộc P1; không đánh dấu đạt chỉ vì đã viết code/mô tả. Ghi bản build/bước, thao tác, mong đợi, thực tế, đạt/lỗi và cách tái hiện. Lưu qua lần thoát chỉ kiểm tra được từ P1-F với hồ sơ test riêng.
+
+Các dấu đạt P1-C/D bên dưới dựa trên kiểm chứng nêu tại mục 32–33, có phân biệt luật/controller và Play thật. Chưa chơi chờ đủ 40 phút thật, chưa xác nhận điện thoại; các mục kinh tế/lưu vẫn để trống. Các dòng P1-A/B giữ checklist toàn phạm vi P1, không thay báo cáo combat hiện hành tại mục 30.
 
 **P1-A/B — chiến đấu và AI:**
 
@@ -1118,26 +1142,31 @@ Sau mỗi bước thử phần mới và chạy lại trường hợp cũ bị �
 
 **P1-C/D — pet, bắt và nhiệm vụ:**
 
-- [ ] Pet theo/đánh đúng nhịp, không đánh xuyên tường, mỗi chu kỳ chỉ trừ máu một lần.
-- [ ] Gọi hồi nhiều lần chỉ có một lệnh; hồi 70% tối đa, không vượt trần.
-- [ ] Đòn lớn không làm pet chết; choáng đủ 30 giây, đòn mới không kéo dài; đứng dậy không reset kỹ năng.
-- [ ] Chủ chết/pet choáng lúc mang thuốc: hủy đúng, không hồi người chết; hồi sinh không làm mới kỹ năng.
-- [ ] Hết bẫy/đặt sai/hủy đặt: không tạo bẫy hoặc trừ nhầm; đặt xong trừ đúng một.
-- [ ] Quái >10% vẫn có thể bị giữ nhưng không cho uống; sống đúng 10% được; HP 0 không bắt.
-- [ ] Một bẫy kích hoạt một lần, giữ đúng 13 giây; bẫy mới không nối thời gian trên quái đang bị giữ.
-- [ ] Ra xa/bị đánh/hết bẫy trước uống xong: hủy không trừ bình; thử lại cần đủ 3 giây từ đầu.
-- [ ] Pet ngừng cả đòn đang chuẩn bị khi cho uống; hủy thao tác thì trở lại hành vi phù hợp.
-- [ ] Bắt/tiêu diệt đồng thời: một kết quả, không vừa thưởng bắt vừa mở mổ.
-- [ ] Ba lần chết đầu tiếp tục, thứ tư thua; hết 40 phút thua; hết bẫy/thuốc không làm thua săn thường.
-- [ ] Hoàn thành đúng/sau hạn theo 24.3; thắng có 120 giây/về sớm, không đổi kết quả vì chết sau đó.
+- [x] Pet theo/đánh đúng nhịp, không đánh xuyên tường, mỗi chu kỳ chỉ trừ máu một lần — kiểm chứng P1-C tại mục 32.
+- [x] Gọi hồi nhiều lần chỉ có một lệnh; hồi 70% tối đa, không vượt trần — luật/controller và Play P1-C.
+- [x] Đòn lớn không làm pet chết; choáng đủ 30 giây, đòn mới không kéo dài; đứng dậy không reset kỹ năng — P1-C.
+- [x] Chủ chết/pet choáng lúc mang thuốc: hủy đúng, không hồi người chết; hồi sinh không làm mới kỹ năng — P1-C.
+- [x] Hết bẫy/đặt sai/hủy đặt: không tạo bẫy hoặc trừ nhầm; đặt xong trừ đúng một — luật/controller P1-D; đặt thật trong Play.
+- [x] Quái >10% vẫn có thể bị giữ nhưng không cho uống; sống đúng 10% được; HP 0 không bắt — luật/controller; Play bắt tại 84 HP.
+- [x] Một bẫy kích hoạt một lần, giữ đúng 13 giây; bẫy mới không nối thời gian trên quái đang bị giữ — luật/controller P1-D.
+- [x] Ra xa/bị đánh/hết bẫy trước uống xong: hủy không trừ bình; thử lại cần đủ 3 giây từ đầu — luật/controller; Play bẫy đầu hết hạn không mất thuốc.
+- [x] Pet ngừng cả đòn đang chuẩn bị khi cho uống; hủy thao tác thì trở lại hành vi phù hợp — tích hợp/controller P1-D và Play.
+- [x] Bắt/tiêu diệt đồng thời khóa một kết quả — luật P1-D; thưởng/mổ đã kiểm chứng ở P1-E (mục 34), ghi cá thể cùng giao dịch ở P1-F bước đầu (mục 36).
+- [x] Ba lần chết đầu tiếp tục, thứ tư thua — Play giữ cùng mã/hạn và HP 1.152 qua ba lần đầu, lần thứ tư về sảnh.
+- [x] Hết hạn 2.400 giây thua; hết bẫy/thuốc không làm thua săn thường — luật Lune, chưa chờ đủ 40 phút thật.
+- [x] Hoàn thành đúng/sau hạn theo 24.3 — kiểm tra biên thời gian bằng luật P1-D.
+- [x] Thắng có 120 giây rồi tự về, không đổi kết quả hoặc mốc thời gian vì chết sau đó — Play `Captured` qua hồi sinh và tự về sảnh.
+- [x] Nút về sớm được thử sau hạ mục tiêu: `Harvest/Defeated` → `Closed/Defeated`, về sảnh và phục hồi con mẫu; không đổi kết quả.
+- [x] Ra ngoài biên nhiệm vụ trở về trại, giữ mã lượt, hạn và số lần chết — Play P1-D.
 
 **P1-E/F — thưởng, nâng cấp, cá thể:**
 
-- [ ] Ba lượt mổ nhận đủ ba phần; gửi lại lượt 1 không cấp thêm/không chặn lượt 2–3; không có lượt 4.
-- [ ] Bắt một lần đúng một cá thể/ba lượt nguyên liệu; gói nhiệm vụ riêng một lần. Từng lượt quay lượng độc lập; vài lần thử ngẫu nhiên không bắt buộc ra đúng tỷ lệ 50/50.
-- [ ] Cùng mã nhặt/giao dịch gửi lại không tăng đồ; mã các điểm quặng khác nhau vẫn nhận riêng.
-- [ ] Nhặt rồi thua giữ đồ; trả đồ mang dư/chưa dùng một lần, gọi kết thúc/về sảnh lần hai không cộng lại.
-- [ ] Thiếu nguyên liệu không nâng; đủ thì trừ/tăng cấp một lần; hết xu vẫn săn thường để tiếp tục.
+- [x] Ba lượt mổ nhận đủ ba phần; gửi lại lượt 1 không cấp thêm/không chặn lượt 2–3; không có lượt 4 — luật/controller và Play P1-E.
+- [x] Bắt nhận ba lượt nguyên liệu, lượng độc lập và gói nhiệm vụ riêng một lần — luật và Play P1-E.
+- [x] Bắt cấp đúng một cá thể riêng — P1-F bước đầu tại mục 36; luật đạt và native Play nhận đúng một GUID, giữ qua tự về sảnh/hồi sinh. Chỉ trong bộ nhớ máy chủ, chưa lưu tài khoản.
+- [x] Cùng mã nhặt/giao dịch gửi lại không tăng đồ; mã các điểm quặng khác nhau vẫn nhận riêng — luật/controller P1-E, Play sáu quặng và mã mua cũ.
+- [x] Nhặt rồi thua giữ đồ; trả đồ mang dư/chưa dùng một lần, gọi kết thúc/về sảnh lần hai không cộng lại — luật P1-E; Play trả thuốc và giữ sắt/vảy khi bỏ cuộc.
+- [x] Thiếu nguyên liệu không nâng; đủ thì trừ/tăng cấp một lần; hết xu vẫn săn thường — luật P1-E; Play nâng cấp và nhận săn khi không có vật tư.
 - [ ] Đổi ống đúng mã cá thể và giữ con cũ trong kho; đầy báo trước, không tự xóa/cấp lại.
 - [ ] Từ F, sau xác nhận lưu, thoát/vào giữ vật liệu, cấp búa, cá thể/ống; không cấp bộ đầu lần nữa.
 
@@ -1162,7 +1191,7 @@ Tra cứu ngày 27/09/2026; dùng làm căn cứ cho thiết kế kỹ thuật, 
 - [Roblox — Player data and purchasing](https://create.roblox.com/docs/cloud-services/data-stores/player-data-purchasing): quản lý dữ liệu người chơi, khóa phiên, xử lý lỗi và ghi dữ liệu theo thứ tự. Phần P1 bên trên là thiết kế riêng, chưa dùng mã ví dụ này để tuyên bố sẵn sàng phát hành.
 
 
-## 25. Giai đoạn hiện tại — sảnh Dark Jungle 12 base và bãi luyện tập v2.3
+## 25. Nền tảng kế thừa — sảnh Dark Jungle 12 base và bãi luyện tập v2.3 trong v2.4
 
 ### 25.1. Quyết định và giới hạn hiện hành
 
@@ -1171,6 +1200,8 @@ Tra cứu ngày 27/09/2026; dùng làm căn cứ cho thiết kế kỹ thuật, 
 **Phạm vi bản thử:** trại và bãi tập trong cùng Place, chuyển qua cổng G hoặc UI Chơi. Vũ khí/giáp/pet hiện là mô hình thử; hiệu ứng combo chưa phải bộ animation toàn thân hoàn chỉnh. Sảnh có 12 base nhưng chưa kiểm chứng đủ 12 client; cần kiểm tra MaxPlayers = 12 khi xuất bản.
 
 **Chưa triển khai trong giai đoạn này:** nhiệm vụ săn, quái săn thực, bẫy/bắt, phần thưởng/rơi đồ, chế/nâng cấp, tiền/giao dịch, kho cá thể/ống nghiệm, DataStore, quái giao chiến, hệ/biến thể, pet hồi/choáng và trang bị pet đầy đủ, điều khiển điện thoại hoàn chỉnh. Những yêu cầu này vẫn giữ trong hồ sơ.
+
+Đoạn trên ghi phạm vi lịch sử L0/v2.3; bản hiện hành v2.4 đã có combat, Pet, nhiệm vụ/bắt, kinh tế và kho cá thể bộ nhớ ở mục 30–36. Chưa ống trưng bày/DataStore/săn đội/điện thoại hoàn chỉnh. Bảng 25.2 giữ nội dung nền tảng ở mốc bãi tập, không thay trạng thái hiện hành tại mục 37.
 
 ### 25.2. Nội dung đã triển khai trong v2.3
 
@@ -1201,10 +1232,10 @@ Tra cứu ngày 27/09/2026; dùng làm căn cứ cho thiết kế kỹ thuật, 
 | Tương tác | Giữ G gần cổng, giá giáp, giá vũ khí hoặc bảng thống kê |
 | Chuyển trại ↔ bãi tập | Cổng hoặc Chơi; phải cất vũ khí/dừng động tác |
 
-- Bảy vũ khí có bốn chuỗi mỗi loại. Bảng 28 chuỗi, sát thương, số hit và thể lực đòn cuối ở [COMBOS_V2_3.md](COMBOS_V2_3.md); đây là cấu hình thử hiện tại.
+- Bảy vũ khí có bốn chuỗi mỗi loại. Bảng 28 chuỗi, sát thương, số hit và thể lực đòn cuối ở [COMBOS_V2_3.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/COMBOS_V2_3.md>); đây là cấu hình thử hiện tại.
 - Nối trong 1,35 giây sau đòn; cho nhập sớm một thao tác trong 0,2 giây cuối. Lướt giữ chuỗi; chuỗi có bước lướt sẽ ghi nhận bước đó. Cất/đổi, giữ khiên, chạy, nhảy, chuyển khu, chết hoặc hết hạn ngắt chuỗi.
 - Chi phí thể lực nhân 0,30 đúng một lần, tức còn 30% mức cũ: lướt 6; chạy 3/giây; khiên 1,2/giây. Búa thường/mạnh/kỹ năng: 2,4/4,8/3,6. Đòn cuối theo bảng combo.
-- Thể lực tối đa 100, hồi 20/giây sau 0,75 giây nghỉ. Lướt kéo dài 0,4 giây, giảm tốc 34 → 16 studs/giây, giữ vận tốc đi bộ khi tiếp tục di chuyển.
+- Thể lực tối đa 100, hồi 20/giây sau 0,75 giây nghỉ. Lướt hiện dùng tốc độ đầu **72 studs/giây** trong **0,5 giây**, thực chi **6 thể lực**, không có bất tử; đo Play H1.3.1 khoảng **16,5–16,8 studs** trên nền thoáng (mục 30.1). Cấu hình 34/0,4 là mốc bãi tập cũ.
 - Camera cung lệch vai phải, zoom 8,5 studs, FOV 58; độ nhạy ngắm cơ sở 65%, có tùy chọn trong Cài đặt. Nhả ngắm/cất/hồi sinh trả camera; menu Esc nhả chuột.
 - Hình nộm tự hồi để luyện, không phát thưởng. Pet và giáp vẫn là mẫu trong bãi tập.
 
@@ -1222,11 +1253,11 @@ Tra cứu ngày 27/09/2026; dùng làm căn cứ cho thiết kế kỹ thuật, 
 
 ### 25.5. File làm việc và cách tiếp tục
 
-- Map mở/chỉnh tiếp trong Studio: **C:/Users/khanh/OneDrive/Desktop/game roblox/HunDino/HunDino_DarkJungle_v2_3.rbxl**.
-- Source, công cụ, tài liệu và bản map đồng bộ: **C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino**. Giữ định dạng .rbxl; không dùng bản L0/v2.2 làm đầu vào thay thế v2.3.
-- File map đã lưu sau sửa TempleApproach có SHA256: 07cf65d9cb5432aef1ea254a16f032c395ad5db6b4618615cc6455858fa74593. Đây là dấu mốc đối chiếu, sẽ đổi khi lưu thêm.
-- Hồ sơ này được đồng bộ tới bản Desktop trong HunDino và bản THIET_KE_GAME.md ở thư mục cha Documents/game roblox. Phiên bản hồ sơ 0.23 độc lập với phiên bản map v2.3.
-- Source hiện hành ở src/dark-jungle, gồm điều khiển/chiến đấu, Weapons, TrainingRules, HubUI và chuyển khu. Không đồng bộ default.project.json dành cho L0 vào map hiện tại; không dựng lại toàn map bằng bộ dựng cũ.
+- Map mở/chỉnh tiếp trong Studio: **C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/HunDino_DarkJungle_v2_4.rbxl**. v2.3/Desktop là mốc trước, không dùng thay bản v2.4.
+- Source, công cụ, tài liệu và bản map đồng bộ: **C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino**. Giữ định dạng .rbxl; không dùng bản L0/v2.2/v2.3 làm đầu vào thay thế v2.4.
+- Hash lịch sử của mốc v2.3 sau sửa TempleApproach (không phải hash v2.4 hiện hành): 07cf65d9cb5432aef1ea254a16f032c395ad5db6b4618615cc6455858fa74593. Đây là dấu mốc đối chiếu, sẽ đổi khi lưu thêm.
+- Hai bản hồ sơ đồng bộ hiện tại là THIET_KE_GAME.md tại thư mục gốc dự án và HunDino/THIET_KE_GAME.md, cùng nội dung v0.39. Không ghi bản Desktop trong đợt này. Phiên bản hồ sơ độc lập với phiên bản map v2.4.
+- Training server/client/cấu hình khớp Studio ở studio-pet-integration; các module hiện hành dùng từ src/dark-jungle, src/hunting và src/admin. Không chép toàn bộ nhánh Training khác đè lên bản Studio. Không đồng bộ default.project.json dành cho L0 vào map hiện tại; không dựng lại toàn map bằng bộ dựng cũ.
 - Lưu bằng Studio để giữ Terrain; Lune chỉ dùng đọc/kiểm tra bản map hiện tại. Luôn bảo toàn sửa thủ công mới nhất trước khi đồng bộ file.
 - Bản trước sửa đường đền: backups/HunDino_v2_3_before_temple_8c866132b89a.rbxl. Danh sách file có thể dọn tại DON_DEP_DU_AN.md; chưa xóa file.
 - Kết quả thử chi tiết: TRAINING_SANCTUARY.md, COMBOS_V2_3.md và Training_v2_3_release.json.
@@ -1239,7 +1270,7 @@ Theo yêu cầu mới của người dùng, mở rộng bãi tập và đưa c�
 - Bảy mẫu: búa, kiếm & khiên, katana, thương cán dài, song dao, cung, rìu đại hai lưỡi. Có mô hình, thường/mạnh/kỹ năng, thể lực và nhịp riêng. Búa giữ chuỗi thử thường → mạnh → kỹ năng kết thúc. Cung có ngắm và buff một mũi sau ngắm/lướt.
 - I chọn vũ khí khi đang cất và ở bãi tập; R rút/cất, chuột trái/Q/E đánh, V nhảy, Space lướt, G tương tác. Kiếm & khiên dùng F giữ thế đỡ thử; chưa có giảm sát thương từ địch vì bãi chưa có địch tấn công.
 - Thông số/hoạt ảnh này phục vụ thử nghiệm, không tự chốt combo đầy đủ, cân bằng, cơ chế kỹ năng cuối hoặc kiến trúc nhiệm vụ săn. Trang bị/giáp/pet vẫn chưa có dữ liệu lưu tài khoản.
-- File tại mốc lịch sử này: **HunDino_DarkJungle_v2_2.rbxlx trên Desktop/game roblox/HunDino**; hiện đã chuyển sang v2.3 theo 25.5. Source hiện hành ở Documents/ChatGPT/game roblox/HunDino; xem TRAINING_SANCTUARY.md để đọc kết quả kiểm tra và cách cập nhật an toàn. Không dùng bản L0 hoặc đồng bộ cấu hình Rojo cũ vào map mới.
+- File tại mốc lịch sử này: **HunDino_DarkJungle_v2_2.rbxlx trên Desktop/game roblox/HunDino**; bản phát triển hiện đã chuyển sang v2.4 trong Documents theo 25.5. Source hiện hành ở Documents/ChatGPT/game roblox/HunDino; xem TRAINING_SANCTUARY.md để đọc kết quả kiểm tra và cách cập nhật an toàn. Không dùng bản L0 hoặc đồng bộ cấu hình Rojo cũ vào map mới.
 
 ### 25.7. Tiếp tục bản người dùng v2.3 — 08/10/2026
 
@@ -1251,7 +1282,7 @@ Theo yêu cầu mới của người dùng, mở rộng bãi tập và đưa c�
 
 **Yêu cầu mới:** mỗi vũ khí có bốn combo, có chuỗi kết hợp lướt và chuỗi múa; giảm mọi tiêu hao thể lực còn 30% mức trước; làm lướt bớt khựng. Dùng bộ icon Shop, Settings, Play, Inventory do người dùng tạo. Từ giai đoạn này cập nhật hồ sơ cùng mỗi đợt triển khai.
 
-**Cấu hình bãi tập đã triển khai thử:** bảy vũ khí, tổng 28 chuỗi. Búa có chuỗi ngắn Trái → Q → E và chuỗi dài Trái → Q → Trái → E → E. Mỗi loại thêm Trái → Space → E và một chuỗi múa riêng. Danh sách đầy đủ, số hit, mức tiêu hao đòn kết thúc: [COMBOS_V2_3.md](COMBOS_V2_3.md). Những câu chưa chốt ở mục 18 và giới hạn búa đầu tiên ở P1 là định hướng/lịch sử toàn game; không giới hạn bãi tập hiện tại.
+**Cấu hình bãi tập đã triển khai thử:** bảy vũ khí, tổng 28 chuỗi. Búa có chuỗi ngắn Trái → Q → E và chuỗi dài Trái → Q → Trái → E → E. Mỗi loại thêm Trái → Space → E và một chuỗi múa riêng. Danh sách đầy đủ, số hit, mức tiêu hao đòn kết thúc: [COMBOS_V2_3.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/COMBOS_V2_3.md>). Những câu chưa chốt ở mục 18 và giới hạn búa đầu tiên ở P1 là định hướng/lịch sử toàn game; không giới hạn bãi tập hiện tại.
 
 - Chờ đòn trước hết động tác rồi nối trong 1,35 giây; cho nhập sớm một đòn trong 0,2 giây cuối. Máy chủ vẫn quyết định thời gian, thể lực và sát thương.
 - Lướt giữ tiến trình combo; nếu chuỗi có bước lướt thì ghi nhận bước đó. Chuỗi không cần lướt vẫn tiếp tục được sau lướt. Cất/đổi, giữ khiên, chạy, nhảy, chuyển khu, chết hoặc hết hạn ngắt tiến trình. Đánh hụt vẫn có thể nối trong cấu hình thử.
@@ -1266,7 +1297,7 @@ Theo yêu cầu mới của người dùng, mở rộng bãi tập và đưa c�
 | Settings / Cài đặt | Bật/tắt hướng dẫn, số sát thương, hiệu ứng combo; độ nhạy ngắm 100/75/50% | Lưu cài đặt qua phiên, điều khiển điện thoại đầy đủ |
 | Shop / Cửa hàng | Giao diện bình hồi, bộ bẫy, thuốc ngủ; ghi rõ Sắp mở | Mua bán, tiền, giá và cấp vật phẩm |
 
-**Quản lý file:** tiếp tục cùng tên `HunDino_DarkJungle_v2_3.rbxl`; giữ bản trước sửa và đồng bộ tài liệu. Chưa xóa lịch sử. Danh sách file giữ/có thể dọn và đối chiếu bản trùng ở [DON_DEP_DU_AN.md](DON_DEP_DU_AN.md).
+**Quản lý file:** tiếp tục cùng tên `HunDino_DarkJungle_v2_3.rbxl`; giữ bản trước sửa và đồng bộ tài liệu. Chưa xóa lịch sử. Danh sách file giữ/có thể dọn và đối chiếu bản trùng ở [DON_DEP_DU_AN.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/DON_DEP_DU_AN.md>).
 
 **Kiểm chứng:** 28 chuỗi đã ra đúng đòn kết thúc trong Studio; kiểm tra nhập sớm/lướt bằng phím thật, thể lực chạy/khiên, bốn UI và chuyển trại/pet đạt. Kết quả sau lưu ở TRAINING_SANCTUARY.md. Bản Desktop đầu vào có 10 miếng đường TempleApproach không khớp điểm tuyến cũ; lỗi đã tồn tại trước đợt combo/UI. Đợt đó giữ nguyên hình học; lỗi đã được sửa sau theo yêu cầu người dùng ngày 09/10/2026, xem 25.9.
 
@@ -1282,12 +1313,12 @@ Theo yêu cầu mới của người dùng, mở rộng bãi tập và đưa c�
 
 ### 25.10. Việc còn mở và bước tiếp theo
 
-**Giai đoạn hiện tại vẫn là hoàn thiện bản luyện tập v2.3.** Bản có thể chơi thử trên PC; chưa gọi là hoàn thành toàn game hoặc vòng săn P1.
+**Giai đoạn hiện tại là v2.4, đến kho cá thể P1-F bước đầu.** Đã có sảnh/bãi tập, H2, combat/Pet, nhiệm vụ/bắt, kinh tế và bộ sưu tập trong cùng máy chủ; chưa hoàn thành toàn bộ P1.
 
-1. Người dùng thử bảy vũ khí/bốn combo, cảm giác lướt và ngắm cung; ghi nhận cụ thể để chỉnh tiếp trên v2.3.
-2. Tiếp tục hoàn thiện cảnh quan/UI/hoạt ảnh trong phạm vi luyện tập khi có yêu cầu; không tự chốt model hoặc bộ animation thử là bản cuối.
-3. Kiểm tra nhiều client, hiệu năng sảnh 12 base và đường đi pet trước khi xác nhận mốc tương ứng hoàn thành.
-4. Khi chuyển sang vòng săn, đối chiếu mục 23–24 với code có sẵn; bổ sung AI quái, bắt giữ, thưởng, nâng cấp/cá thể và lưu theo từng bước, tái sử dụng nền tảng hiện tại.
+1. P1-F còn chọn cá thể vào một ống trưng bày và lớp lưu tài khoản trong môi trường test riêng; không coi kho bộ nhớ là đã lưu bền vững.
+2. Chế tạo trong Inventory tiếp tục là khung chờ; bàn chế/nâng thử P1-E tại base đã có, không tự mở thêm giao dịch theo tab.
+3. P1-G còn hồi quy toàn vòng, lỗi lưu/mất kết nối/chống trùng. Săn đội, nhiều client thật, điện thoại và hiệu năng máy yếu cần nghiệm thu riêng.
+4. Tiếp tục thu phản hồi vũ khí/lướt/camera/cảnh quan/hoạt ảnh; thông số thử chưa phải cân bằng hoặc đồ họa cuối.
 
 **Chưa chốt toàn game vẫn giữ nguyên:** thông số/cân bằng vũ khí với quái, cơ chế săn đội và đóng góp 10%, chi tiết các loài/hệ/bộ phận, phần thưởng/công thức, kho/trưng bày, pet nâng cao và các mục đang gắn nhãn còn mở. Thông số thử v2.3 không tự thay các quyết định này.
 
@@ -1466,3 +1497,333 @@ Người dùng thấy đòn khủng long quá nhanh, muốn chậm thêm 0,3 gi�
 Lướt hiện hành dùng cấu hình Studio chính xác: tốc độ đầu **42 → 72 studs/giây**, thời lượng **0,4 → 0,5 giây**; vẫn thực chi 6 thể lực, giữ đường giảm tốc/VFX và các điều kiện đang bận/hết thể lực. Quãng lý thuyết 9,87 → 17,33 studs; client Play đo **16,55 studs**, lượt né ngang **16,77 studs** không tăng số lần trúng cắn. Đo cảnh báo 0,9504 giây và chu kỳ 3,5153 giây. Lướt đang bị khóa trong hồi động tác vũ khí hoặc lướt quá trễ vẫn có thể trúng; không thêm bất tử.
 
 96/96 kiểm tra combat đạt; kiểm tra dash, nguồn cấu hình/server/VFX sau Save đạt. Bằng chứng `HunDino/assets/hunting/combat-pacing-h131.json`. Backup `HunDino/backups/Hub_before_combat_pacing_20261017.rbxl`. Lưu bản chung bằng Studio; không thay file rừng riêng hoặc nguồn Evades hiện đại khác với bản đang cài.
+
+## 31. Thung Lũng Sương Xám H2.0 — 19/10/2026
+
+Người dùng yêu cầu nâng cấp cảnh quan dựa trên `thiết kế map săn.md` và xác nhận **mở rộng thành 4.000 × 4.500 studs theo prompt**, thay cho khung 1.620 × 1.620 cũ. Đã chuyển thành thung lũng ôn đới đầu thu, thiên nhiên bí hiểm nhưng vẫn dễ quan sát. Phía Bắc là +Z, map săn vẫn đặt ở offset (0, 0, 6500) để tiếp tục nối cùng sảnh.
+
+Tám vùng gồm trạm kiểm lâm phía Nam, đồng cỏ/rừng thưa, rừng thông già phía Tây, hồ trung tâm có đảo, đầm lầy phía Đông, trại gỗ bỏ hoang, khe đá/suối có thác và dãy núi có hang phía Bắc. Công trình, bến gỗ, đường ván, dấu tích và đá/cây giúp phân biệt vùng và tạo điểm khám phá; các vật cảnh này chưa phải nhiệm vụ hoặc vật phẩm có thưởng.
+
+Giữ 9 node (Camp, A/B/C, R1–R5), 13 đường khủng long hai chiều và 9 lịch trình đã duyệt; bổ sung 3 lối người chơi từ trạm. Đường khủng long có hành lang đi 72 studs, phần đất lộ hẹp hơn và cây/đá nằm ngoài khoảng trống của toàn thân con mẫu. Độ cao đường được làm liên tục qua điểm nghỉ và ngã rẽ. Cảnh dùng Terrain gốc của Studio cùng cây mesh nhiều biến thể, đá PBR, bụi dương xỉ và cỏ.
+
+Giữ đúng nghỉ **60 giây thực** tại mọi điểm; 1.200 HP, cắn 24 sát thương, báo trước 0,95 giây và chu kỳ đòn 3,5 giây. Lướt và điều kiện phản công vẫn theo H1.3.1. Đồng hồ vào map lấy giờ UTC+7, sau đó chạy ×30; 2 phút thực = 1 giờ trong map, phiên thử 40 phút. Ánh sáng, màu Terrain/nước và hiệu ứng màu của sảnh được khôi phục khi quay về. Pet tiếp tục đi cùng.
+
+Map và source được lưu trong bản chung `HunDino/HunDino_DarkJungle_v2_3.rbxl`; rừng H1.3.1 cũ được lưu ở ServerStorage và có backup file trước nâng cấp. Không ghi Terrain qua Lune, không thay hình học sảnh/base và không dựng lại project L0. File săn riêng H1.1 giữ nguyên. Nguồn tài sản, cách chơi và kết quả kiểm chứng H2 được ghi tại `HunDino/GREY_MIST_VALLEY.md` và `HunDino/assets/hunting/grey-mist-*.json`.
+
+Đã kiểm tra lại sau khi mở file native đã lưu: 39.081 kiểm tra địa hình/cảnh quan và 26.259 kiểm tra bản lưu đạt; 2.400 cây, 578 mẫu khoảng trống toàn thân không bị cảnh cản. 148 kiểm tra tuần tra/6 vòng thử, 96 kiểm tra combat và 12 kiểm tra đồng hồ đạt. Play thật xác nhận lối ra đảo, xuyên hang, đòn bắn trúng/phản công, quay về sảnh cùng Pet và phục hồi môi trường. Giữ nguyên 15.089 phần sảnh/base/cổng và rig con mẫu.
+
+## 32. Pet đồng hành P1-C và bay xem map — 19/10/2026
+
+Người dùng yêu cầu làm tiếp theo thiết kế sau khi dựng map. Chọn bước **P1-C** theo thứ tự mục 23–24.12, tái sử dụng Pet đứng, vũ khí và hoạt ảnh đã có; không dựng lại sảnh hoặc đổi nhịp combat vừa duyệt. Bản làm việc hiện hành là **HunDino_DarkJungle_v2_4.rbxl**. Backup trước bước này: `HunDino/backups/Hub_v24_before_pet_companion_20261019.rbxl`.
+
+- Pet trong khu săn chỉ tham chiến sau sát thương hợp lệ của chủ; hỗ trợ **12 sát thương mỗi 4 giây**, tầm **6 studs**, kiểm tra vật cản cả lúc phát đòn lẫn lúc trúng. Vũ khí có hai hit chia cùng tổng 12. Sát thương Pet được ghi riêng và gắn với chủ; chưa triển khai quyền thưởng săn đội.
+- Di chuyển bám mặt đất, kiểm tra bề rộng thân, dốc/nước/khe; gặp vật cản thì tìm đường vòng bất đồng bộ. Không dịch chuyển Pet xuyên vách để đuổi mục tiêu. Chuyển khu vẫn đặt cả chủ và Pet tới điểm đến theo luồng travel hiện có.
+- Pet có **100 HP**, cú cắn dùng cùng hitbox/thời điểm đang hoạt động của khủng long; mỗi cú chỉ trừ Pet một lần. Máu xuống **1** thì bất động **30 giây**, đòn mới không làm lại đồng hồ, sau đó hồi đầy. Pet không chết vĩnh viễn.
+- **H hoặc nút Gọi Pet hồi:** tới gần chủ trong khoảng thử 3,8 studs, mang viên thuốc lớn rồi ném **0,8 giây**; hồi **70% máu tối đa**, có trần. Hồi chiêu **119 giây** bắt đầu khi thực sự cộng máu. Đầy máu không tiêu kỹ năng; chết/chuyển khu/choáng/bay hủy thao tác chưa hoàn tất, không xếp lệnh chờ.
+- HP, choáng và hồi chiêu nằm trong bộ nhớ máy chủ theo người chơi, giữ qua đổi nhân vật/hồi sinh và chuyển khu. Hồi đầy sau choáng không làm mới kỹ năng. **Chưa lưu các dữ liệu này qua lần thoát hoặc máy chủ khởi động lại.**
+- HUD giữa đáy hiển thị HP, trạng thái và đếm hồi; có thanh HP trên Pet của chủ. H là phím mới dùng thử; giữ Q đánh mạnh, E kỹ năng, R rút/cất, F đỡ, G tương tác, V nhảy, Space lướt, I trang bị theo bản đang chơi.
+
+Đã kiểm tra **150 luật dữ liệu**, **29 tình huống controller mô phỏng**, **79 kiểm tra tích hợp với truy vấn va chạm thật**; 96 kiểm tra combat khủng long và sáu nhóm luật vũ khí tiếp tục đạt. Play với người thật: chủ mở đòn 36, Pet gây 12 và tiếp tục hỗ trợ; cú cắn đưa Pet tới 1 HP, hồi đầy sau **30,08 giây**. Phím H/nút hồi hoạt động, đo cộng **70 HP** với hồi chiêu **119 giây**; chết/hồi sinh giữ mốc hồi chiêu. Bãi tập vẫn có người/Pet đánh hình nộm. Tìm đường native qua tường thử đạt, không xuyên tường; chưa khảo sát hết mọi vật cản tự nhiên hoặc nhiều client/điện thoại.
+
+Bản lưu v2.4 qua **91.867 kiểm tra**, 86 script biên dịch, 79 source cũ không liên quan giữ nguyên. Giữ toàn bộ **43.775 Part/845 khớp** trong Place, gồm **35.064 Part/723 khớp trong Workspace**; hình học map, 2.400 cây, mạng đường và rig khủng long không đổi. Lune chỉ đọc để đối chiếu; Terrain được lưu native Studio. Chi tiết và giới hạn: `HunDino/PET_COMPANION.md`; bằng chứng tại `HunDino/assets/hunting/pet-companion-*.json`.
+
+Tiện ích admin ở mốc trước tiếp tục có nút **Bay xem map** và lệnh `/fly`: tốc độ 80/160/260, Shift tăng gấp đôi, Space/E lên và Ctrl/Q xuống. Chỉ tài khoản được server cấp quyền thấy nút/dùng được. Khi bay, Pet chờ dưới đất và giữ HP/hồi chiêu. Chat của tài khoản thử hiện bị Roblox giới hạn theo khu vực nên dùng nút. Có thể xóa riêng hai đối tượng theo `HunDino/ADMIN_FLY.md`.
+
+**Sau P1-C đã có P1-D** (mục 33), **P1-E thưởng/kinh tế** (mục 34) và **kho cá thể P1-F bước đầu** (mục 36). Chưa có ống hoặc DataStore; không gọi mốc này là hoàn thành toàn bộ P1.
+
+## 33. Nhiệm vụ săn và bắt sống P1-D — 19/10/2026
+
+Người dùng yêu cầu tiếp tục giai đoạn tiếp theo theo thiết kế. P1-D tái sử dụng bản **HunDino_DarkJungle_v2_4.rbxl**, map H2, combat H1.3.1 và Pet P1-C; không dựng lại map hoặc đổi phím chiến đấu. Backup: `HunDino/backups/Hub_v24_before_hunt_quest_20261019.rbxl`. Cách thử chi tiết tại `HunDino/HUNT_QUEST.md`.
+
+### 33.1. Luồng đang có
+
+- Tại sảnh, cất vũ khí và dừng động tác; nhấn **J**, nút nhiệm vụ hoặc giữ **G** gần bảng để xem/nhận nhiệm vụ. Server kiểm tra người chơi và vị trí, chỉ bắt đầu đồng hồ khi nhân vật đã vào khu săn và sẵn sàng điều khiển.
+- Nhiệm vụ săn thường **T-Rex · Không hệ**, **40 phút thật**, **1.200 HP**; hạ hoặc bắt đều ghi kết quả thành công. Chỉ một lượt solo trên toàn máy chủ vì dùng một con mẫu chung. Khu săn phải trống để nhận lượt; người khác chờ ở sảnh/bãi tập. Khi không có nhiệm vụ, vẫn có thể thám hiểm khu săn theo lối cũ.
+- Mỗi lượt có mã nhiệm vụ và mã cá thể mục tiêu riêng, giữ qua hồi sinh. **Hiện hành P1-E:** mang tối đa **3 bẫy sắt + 3 thuốc ngủ đang sở hữu** từ kho; đồ dư trả kho một lần khi đóng lượt. Không còn cấp bộ miễn phí. Thử P1-D ban đầu dùng 3/3 chỉ là lịch sử kiểm chứng.
+- **Giữ B 1 giây** để đặt bẫy khi cất vũ khí, đứng yên trên nền phù hợp ngoài vùng an toàn. Vòng bán kính **4 studs**, cần đủ nền và không vướng vật cản/nước; xong mới trừ bẫy. Mỗi lần chỉ có một bẫy hoạt động, chờ tối đa **60 giây**.
+- Quái bước vào bẫy thì bị giữ **13 giây**, kể cả khi còn trên 10% HP. Chỉ cho uống khi quái còn sống, **0 < HP ≤120/1.200**, đang mắc bẫy; tới dấu sáng tại miệng cách **≤4 studs**, **giữ G 3 giây**. Thả/ngắt/ra xa/bị đánh/rút vũ khí/chuyển khu/chết/bay sẽ hủy; chưa thành công thì chưa trừ thuốc. Pet dừng phát đòn và hủy đòn chưa trúng khi chủ cho uống.
+- Bắt thành công khóa `Captured` một lần, thu nhỏ khoảng **2 giây** rồi ẩn. Tiêu diệt khóa `Defeated`; không đồng thời có hai kết quả. P1-E cấp nguyên liệu/gói thưởng; P1-F bước đầu ghi thêm một cá thể riêng trong cùng giao dịch. Kho đầy chặn bắt trước khi trừ thuốc; chỉ lưu bộ nhớ máy chủ.
+
+### 33.2. Tử vong, đồng hồ và quay về
+
+Ba lần chết đầu hồi sinh tại trại sau khoảng **5 giây**, giữ HP quái, mã lượt, vật tư và hạn nhiệm vụ. Lần thứ tư thất bại; hết 40 phút cũng thất bại. Rời chủ động trước khi hoàn thành ghi bỏ cuộc. Trạng thái thao tác/bẫy được dọn khi kết thúc lượt.
+
+Thành công dừng ảnh hưởng của hạn nhiệm vụ, mở **120 giây xem hiện trường** và có nút về sớm. Chết sau thành công vẫn hồi sinh tại trại, không đảo kết quả, không tăng số chết của phần nhiệm vụ hoặc làm mới 120 giây. Hết 120 giây tự về sảnh, đóng lượt và khôi phục con mẫu để lượt sau dùng.
+
+**Ngày/đêm vẫn tăng tốc ×30 trong cả 120 giây sau thắng**, theo mục 26.2, tới khi thật sự rời khu săn. Dừng đồng hồ nhiệm vụ không dừng đồng hồ môi trường. Trở về khôi phục ánh sáng/màu Terrain/nước của sảnh.
+
+### 33.3. Kiểm chứng mốc P1-D và giới hạn — trước kinh tế/cá thể
+
+- **231 kiểm tra luật** và **163 kiểm tra controller/24 tình huống** đạt. Biên 2.400 giây được thử bằng luật; chưa chờ đủ 40 phút thật. Trường hợp lấy mẫu nước Terrain thật được bỏ qua vì không tìm thấy mẫu hồ phù hợp, nên chưa xác nhận mọi bờ hồ bằng Play. **96 kiểm tra combat** và **6 nhóm luật vũ khí** đạt sau tích hợp.
+- Play dùng bảng/nút nhận nhiệm vụ, lệnh đánh Light qua kiểm tra server, B đặt bẫy và G cho uống: bắt ở **84 HP**, thuốc từ **3 còn 2**. Bẫy đầu hết hạn không mất thuốc. Ba lần chết đầu giữ cùng mã/hạn và HP quái **1.152**; lần thứ tư trở về với thất bại.
+- Chết trong 120 giây sau bắt giữ cùng kết quả/mốc hết giờ. Đã chờ tự nhiên hết **120 giây**: về sảnh với `Closed/Captured`, con mẫu phục hồi tỉ lệ **3,716** và bỏ cờ Captured. Các lượt kiểm tra có hỗ trợ đặt vị trí và tạm tăng HP người lên 1.000 trong Play để lặp lại tình huống; không đưa các thiết lập này vào bản lưu hoặc coi là đánh giá cân bằng chiến đấu.
+- Đã hạ quái qua đòn **Light được server kiểm tra**: HP 0 → `Harvest/Defeated`, vật tư còn 3 bẫy/3 thuốc. Bấm nút **VỀ SẢNH NGAY** trên HUD → `Closed/Defeated`, về sảnh, số người săn về 0, con mẫu hồi **1.200 HP** và kích thước gốc. HP người dùng thử đã trả về **100**.
+- Đưa nhân vật ra biên trong nhiệm vụ → trở về trại với cùng mã/hạn, không tăng số lần chết. Trong Harvest đo **19,76944 → 19,84167 giờ** qua **8,713 giây**, xác nhận ánh sáng tiếp tục theo tốc độ ×30 khi đồng hồ nhiệm vụ đã dừng.
+- **Bản lưu native Studio đạt 139.055 kiểm tra đọc/đối chiếu**, **98 script** biên dịch, **78 source cũ không liên quan** giữ nguyên; **17 source chuẩn** khớp. Giữ toàn bộ **43.775 Part/845 khớp**, trong Workspace **35.064 Part/723 khớp**. Map vẫn **4.000 × 4.500**, **2.400 cây**, **9 node**, **16 đường**, rig con mẫu giữ **255 Part/7 Motor6D/247 weld/1 anchor**. Có backup tám source được sửa; Lune chỉ đọc Place, Terrain lưu bằng Studio. Báo cáo: `HunDino/assets/hunting/hunt-quest-saved.json`.
+
+Mốc P1-D khi kiểm chứng chưa có kinh tế/cá thể; **hiện P1-E đã có mổ/nhặt/thưởng/mua/chế/nâng/kho nguyên liệu và P1-F bước đầu đã có kho cá thể**. Chưa có ống trưng bày hoặc DataStore. UI có nút giữ bằng chuột/cảm ứng nhưng chưa kiểm chứng chơi điện thoại hoặc nhiều client thật. Thông số và giới hạn solo là cấu hình bản thử; không tự thay yêu cầu săn đội hay giới hạn toàn game.
+
+**Tiến độ nối tiếp:** P1-E đã triển khai ở mục 34, Inventory/Vật phẩm ở mục 35 và kho cá thể P1-F bước đầu ở mục 36. P1-F còn một ống/lưu tài khoản, sau đó P1-G hồi quy. Không coi P1-D là hoàn thành toàn bộ P1 hoặc game sẵn sàng phát hành.
+
+## 34. Nguyên liệu, thưởng và chế tạo P1-E — 19/10/2026
+
+Bản hiện hành vẫn là **HunDino_DarkJungle_v2_4.rbxl**. Backup trước thay đổi: `HunDino/backups/Hub_v24_before_hunt_economy_20261019.rbxl`. Tái sử dụng sảnh, base, map H2 và vòng nhiệm vụ P1-D; các quầy/bàn/nguồn nhặt tạo khi chạy, không đổi hình học map đã duyệt. Hướng dẫn hiện hành tại `HunDino/HUNT_ECONOMY.md`.
+
+### 34.1. Vòng tiến trình đang có
+
+- Mỗi hồ sơ mới trong bộ nhớ máy chủ nhận **80 xu một lần**, bắt đầu không có nguyên liệu hoặc vật tư. Hồi sinh/nhận lượt mới không cấp lại. Cùng máy chủ giữ tiến trình qua nhiều lượt; kết thúc máy chủ thì dữ liệu thử mất, chưa có DataStore.
+- Quầy tiếp tế ở sảnh bán **bẫy thô 10 xu**, **thuốc ngủ 10 xu**. Nhận nhiệm vụ tự chuyển tối đa **3 bẫy sắt và 3 thuốc đang sở hữu** sang hành trang lượt; hết đồ/xu vẫn được săn tiêu diệt và nhặt quặng. Đồ chưa dùng trả kho một lần khi lượt đóng, kể cả thất bại; lỗi vào map hoàn trả phần đã dành.
+- Mỗi lượt có **6 quặng sắt**, nằm trên nền thật ngoài vùng an toàn ở vòng cung phía bắc trại; mỗi điểm bấm G nhận **1 sắt**, không hồi lại do chết. Quái lần đầu qua 50% HP mà vẫn sống rơi **1 vảy** gần vị trí đó. Phải thực sự nhặt; không cấp đồ chưa nhặt khi về sớm/hết giờ.
+- Hạ quái mở **3 lượt mổ**, đứng gần thân/chân xác, cất vũ khí, giữ **G 1,5 giây** mỗi lượt. Hủy do thả, di chuyển, bị đánh, rút vũ khí, chết, menu hoặc bay không mất lượt. Mỗi lượt hoàn tất mới quay một loại: **da 50%, răng 25%, vảy 25%**, lượng 1.
+- Bắt sống không có xác/lượt mổ; cấp **ba lượt nguyên liệu độc lập**, mỗi lượt chọn loại như trên, rồi lượng 1/2 với xác suất 50% mỗi lượng. Hạ hoặc bắt còn có gói riêng **1 xương + 40 xu**, một lần. Thua/bỏ cuộc không có gói hoàn thành; đồ đã nhặt được giữ.
+- Bàn chế tạo chỉ dùng tại **base của chính người chơi**: **1 bẫy thô + 1 sắt → 1 bẫy sắt**; **2 xương + 2 sắt → búa cấp 2**, tăng 15% sát thương búa người chơi. Không tăng Pet hoặc vũ khí khác; cấp 2 là trần thử.
+- Phần xem đồ hiện đã chuyển vào **Inventory → Vật phẩm** theo mục 35; không còn nút KHO NGUYÊN LIỆU bên ngoài. Giao dịch vẫn phải gần đúng điểm. Dữ liệu hiện chỉ trong máy chủ, chưa lưu tài khoản.
+
+### 34.2. Chống nhận lặp và phạm vi dữ liệu
+
+Các thay đổi kho cùng dấu giao dịch được cập nhật nguyên tử trong bộ nhớ, không nhường luồng giữa trừ/cộng và ghi dấu. Server tạo mã người/lượt/cá thể/nguồn/lượt mổ, chọn giá/công thức và ngẫu nhiên. Gửi lại nguồn đã nhận trả kết quả cũ, không quay lại hoặc cấp thêm. Mua/chế/nâng dùng token do server cấp và phiên bản kho, kiểm tra lại vị trí/đủ tiền/nguyên liệu.
+
+Lượt đang chạy giữ đủ dấu nguồn; giữ tối đa 64 giao dịch cửa hàng và 8 lượt đóng gần nhất. Số thứ tự tăng dần từ chối yêu cầu cũ đã dọn. Không tạo nguồn mới khi hồi sinh. Vật tư bắt sống cùng nguyên liệu/gói kết quả được ghi trong một giao dịch; trả đồ dư có dấu riêng. Bảng bộ nhớ này là lớp thử để thay bằng lưu P1-F, chưa bảo vệ dữ liệu qua máy chủ sập hoặc kết thúc.
+
+### 34.3. Kiểm chứng
+
+- **767 kiểm tra luật / 23 nhóm** đạt: cấp đầu, vật tư mang/trả, nguồn riêng, mổ/bắt/thưởng, nguyên tử thiếu đồ/đầy kho, kết quả không đảo, mã lặp, dấu cũ và dọn có giới hạn. **121 kiểm tra controller / 21 tình huống** với truy vấn vật lý thật đạt; **231 kiểm tra nhiệm vụ** và **96 kiểm tra combat** tiếp tục đạt.
+- Play dùng nút mua và gửi lại token: một bẫy thô chỉ trừ 10 xu một lần. Nhặt đủ 6 quặng; hạ quái nhận 1 xương/40 xu, mổ đủ ba lượt; lần thứ tư không cấp. Về sảnh trả lại thuốc chưa dùng. Một lượt bỏ cuộc sau nhặt thêm quặng giữ tiến trình, không có gói thắng mới.
+- Chế một bẫy trừ một bẫy thô/một sắt; lượt sau mang đúng 1 bẫy/1 thuốc. Bắt ở **120 HP**, tiêu đúng hai vật dụng, nhận ba lượt nguyên liệu và gói thắng. Hai lượt thắng cho đủ hai xương; nâng búa trừ đúng **2 xương/2 sắt**, token cũ không trừ thêm. Đòn Light được server kiểm tra gây **41,4** thay cho 36.
+- Đã thử lại trong phiên Play mới với source cuối: **80 xu, búa cấp 1, 0 bẫy/thuốc** vẫn nhận nhiệm vụ; nhặt 1 sắt và vảy rơi bằng G; bỏ cuộc giữ **1 sắt/1 vảy**, xu vẫn 80, xương 0. Vảy dùng kiểm tra tường phía server để thân quái không che mất prompt. Đây cũng xác nhận dữ liệu chưa lưu giữa hai phiên máy chủ.
+- Các lượt chiến đấu có hỗ trợ đặt vị trí nhân vật và tăng HP tạm lên 1.000 trong Play để lặp tình huống, đã trả về 100; không sửa HP quái để nhận thưởng. Chưa nghiệm thu cân bằng, săn đội hoặc điện thoại.
+
+Bản lưu native Studio đạt **139.088 kiểm tra đọc/đối chiếu**, **108 script** biên dịch, **21 source chuẩn** khớp và **92 source cũ không liên quan** giữ nguyên. Giữ **43.775 Part/845 khớp**, gồm **35.064 Part/723 khớp trong Workspace**. Có sáu backup source cũ được đối chiếu đúng và đúng bốn source hệ thống mới. Inspector chỉ đọc `HunDino/tools/inspect-hunt-economy-saved.luau`; báo cáo `HunDino/assets/hunting/hunt-economy-saved.json`, bằng chứng Play `hunt-economy-play.json`. Không xuất lại Place/Terrain bằng Lune.
+
+**Tiến độ P1-F:** kho cá thể bộ nhớ đã triển khai tại mục 36; còn một ống, kết nối lớp lưu trong môi trường test riêng và xác nhận thoát/vào còn đồ. P1-G mới nghiệm thu lỗi/lưu và hồi quy toàn vòng; P1-E không phải game hoàn thiện hoặc đã lưu tài khoản.
+## 35. Inventory: Vật phẩm và tab Chế tạo chờ — 19/10/2026
+
+Người dùng yêu cầu theo dõi toàn bộ đồ qua Inventory, bỏ phần kho nguyên liệu độc lập bên ngoài; thêm mục Chế tạo nhưng chưa triển khai phần này trong Inventory. Bản v2.4 giữ hệ thống P1-E hiện có, chỉ tích hợp phần xem đồ và khung giao diện. Backup: `HunDino/backups/Hub_v24_before_inventory_items_20261019.rbxl`. Hướng dẫn: `HunDino/INVENTORY_ITEMS.md`.
+
+- Nhấn **I** hoặc biểu tượng Túi đồ. Thanh trên có **Người / Pet / Vật phẩm / Chế tạo**. Hai mục trang bị giữ vũ khí, giáp và xem trước nhân vật; Vật phẩm là dữ liệu dùng chung của người chơi, không tách một kho Pet riêng.
+- Vật phẩm gồm toàn bộ loại hiện đã có: **da, răng, vảy, xương, sắt, bẫy thô, bẫy sắt, thuốc ngủ**. Hiển thị mô hình biểu tượng, mô tả, số lượng và xu/cấp búa; lọc Tất cả/Nguyên liệu/Vật tư săn.
+- Tổng bẫy sắt/thuốc = phần dự trữ + phần còn lại trong lượt đang chạy; ghi rõ **Trong túi / Mang đi săn**. Chỉ dùng snapshot có phiên bản từ máy chủ, không cộng các thuộc tính nhiệm vụ cũ sau trả đồ. Mở Inventory lấy lại snapshot và hủy thao tác giữ đang diễn ra; không đổi quyền mua/chế hoặc tự cấp đồ.
+- **Chế tạo trong Inventory chỉ là khung “Chưa triển khai”**, chưa công thức, nút thao tác hoặc giao dịch. Bàn chế/nâng tại base từ P1-E vẫn giữ mốc thử cũ; không tự triển khai thêm theo tab mới.
+- Bỏ nút **KHO NGUYÊN LIỆU** độc lập và dòng tổng nguyên liệu trên HUD mổ. Giữ thông báo nhặt đồ và thanh tiến trình mổ theo hành động. Inventory nổi trên HUD admin/Pet khi mở và trả lớp hiển thị/camera khi đóng.
+
+Đã thử Play mua bẫy/thuốc, nhận vật tư vào lượt, nhặt quặng, bỏ cuộc/trả vật tư rồi mở Inventory: thuốc vẫn tổng 1 qua chuyển đi/trả về, sắt hiển thị 1; snapshot cũ không ghi đè. Bộ lọc đúng 5 nguyên liệu/3 vật tư; tab Chế tạo có 0 nút giao dịch; Pet/giáp/xem trước tiếp tục chạy. Source cuối mở Inventory ở lớp 100 và đóng về lớp 0/camera Custom, không có nút kho ngoài. Đây là kiểm chứng PC, chưa thử điện thoại đầy đủ.
+
+Ba source sửa: `EquipmentInventory`, `HuntEconomyService`, `HunDinoEconomy` client; có ba backup source khớp bản trước. Không đổi hình học map, luật thưởng, giá/công thức, AI hoặc dữ liệu lưu. Inspector chỉ đọc `tools/inspect-inventory-items-saved.luau`; báo cáo `assets/hunting/inventory-items-saved.json` và `inventory-items-play.json`. Dữ liệu vật phẩm vẫn chỉ giữ trong máy chủ.
+
+Bản lưu Inventory đã đạt **139.097 kiểm tra đọc/đối chiếu**, **111 script** biên dịch và **22 source chuẩn** khớp. Giữ **105 source cũ không liên quan** cùng toàn bộ **43.775 Part/845 khớp**, trong Workspace **35.064 Part/723 khớp**; ba bản sao source trước sửa khớp baseline. Bản v2.4 đã được lưu native Studio và để ở Edit.
+
+## 36. Kho cá thể bắt sống — bước đầu P1-F — 19/10/2026
+
+Người dùng chọn làm kho cá thể trước và để Chế tạo trong Inventory làm sau. Bản v2.4 tái sử dụng vòng bắt P1-D, kho/thưởng P1-E và giao diện mục 35. Giai đoạn này chỉ thêm bộ sưu tập trong bộ nhớ máy chủ; chưa làm ống tại base, vòng đời nuôi hoặc lưu tài khoản. Backup: `HunDino/backups/Hub_v24_before_specimen_collection_20261019.rbxl`. Hướng dẫn: `HunDino/SPECIMEN_COLLECTION.md`.
+
+### 36.1. Sở hữu và cách xem
+
+- **I → KHỦNG LONG** trong Inventory. Một lần bắt sống thành công tạo đúng một cá thể; hạ quái không tạo. Danh sách hiện số lượng `n / 100`, tên **T-Rex #001…**, mã rút gọn và thời điểm bắt theo **UTC+7**, con nhận gần nhất xếp trước. Trang chi tiết hiện mã đầy đủ và xoay được mô hình 3D tĩnh bằng kéo chuột.
+- P1 dùng ngoại hình cố định: `SpeciesId=TRex`, `Name=T-Rex`, `Variant=Normal`, `Element=None`, `SizeScale=1` tương ứng Thường/Không hệ/100%. Chưa sinh biến thể, hệ hoặc kích thước ngẫu nhiên. Bản xem trước chỉ có hình dáng, không có AI/vùng đánh; tạo lúc chạy, không thêm hình học bản lưu.
+- Mỗi bản ghi có GUID riêng, `Serial` tăng theo lần ghi thành công, `CapturedAt` từ máy chủ, `SourceRunId` và `SourceMonsterId`. Hai con cùng loài vẫn là hai cá thể riêng; đổi lựa chọn trong UI chỉ đổi con đang xem.
+- **Tối đa 100 cá thể thử.** Khi đầy vẫn nhận nhiệm vụ săn thường/hạ quái, nhưng không bắt thêm. Máy chủ kiểm tra chỗ trước thao tác và ngay trước ghi bắt, không tiêu thuốc hoặc đổi kết quả khi đầy; không xóa cá thể cũ để nhường chỗ.
+- Kho giữ qua về sảnh, hồi sinh và các lượt trong cùng máy chủ. Chưa có DataStore; máy chủ/phiên Play mới không mang bộ sưu tập cũ sang. Không báo đã lưu tài khoản.
+- **Chế tạo trong Inventory vẫn là khung chờ**, chưa thêm công thức/nút giao dịch; bàn chế/nâng thử ở base thuộc mốc P1-E được giữ nguyên. Chưa có ống trưng bày, thả/bán/xóa/trao đổi hoặc nuôi lớn.
+
+### 36.2. Tính nguyên tử và chuyển dữ liệu
+
+Hồ sơ `DataVersion=2` thêm `OwnedSpecimens` và `SpecimenSerial`. Hồ sơ v1 hợp lệ được sao chép/chuyển phiên bản, giữ toàn bộ xu, nguyên liệu, vật tư, cấp búa, lượt đang chạy và dấu giao dịch; không cấp lại 80 xu. Hồ sơ sai định dạng bị từ chối thay vì tự tạo kho mới.
+
+Một giao dịch bắt chứa đúng một cá thể, tăng số thứ tự, ba kết quả nguyên liệu, gói xương/xu hiện có, vật tư còn lại và dấu hoàn tất. Gửi lại cùng lượt trả đúng cá thể/thưởng cũ, không quay lại hoặc trừ thuốc lần nữa. Kiểm tra nguồn/mã riêng ngăn một quái tạo hai cá thể, kể cả sau khi dấu lượt gần đây được dọn. UI dùng snapshot có phiên bản, bản sao của kho máy chủ; dữ liệu UI không quyết định sở hữu.
+
+### 36.3. Kiểm chứng đang có
+
+- **2.134 kiểm tra luật / 31 nhóm đạt**, giữ toàn bộ 767 kiểm tra kinh tế cũ. Có hai mã cá thể, thứ tự tăng, replay sau đóng lượt, 100 lần bắt độc lập, kho đầy không mất vật tư/không khóa nhánh tiêu diệt, chuyển v1 không reset, metadata sai/nguồn trùng và sửa bản sao không sửa kho gốc.
+- Controller bẫy/bắt **195 kiểm tra / 27 tình huống đạt**. Mẫu nước Terrain thật được bỏ qua vì không có vị trí hồ phù hợp; chưa xác nhận toàn bộ bờ nước.
+- Preview native đạt **4.858 kiểm tra**, **255 Part/21 MeshPart**, không thay đổi con gốc; giữ metadata nhập `RBX_` được engine bảo vệ và loại bỏ trạng thái gameplay khỏi bản xem trước.
+- Native Play đi từ 80 xu, mua bẫy thô/thuốc, nhặt quặng, dùng bàn chế hiện có rồi nhận lượt. Đòn búa hợp lệ gây **1.080 sát thương**, để quái **120 HP**, không đặt HP quái để nhận thưởng. Giữ B/G bắt → `Harvest/Captured`, đúng **1 cá thể**, **100 xu, 1 xương, 3 răng, 1 vảy**. Tự hết 120 giây về sảnh và chết/hồi sinh vẫn đúng GUID `275d20fb-baee-4a26-9bd2-d58f3480ba73`. Có hỗ trợ đặt vị trí/tạm tăng HP người lên 1.000 để thử, đã trả 100; chưa đánh giá cân bằng.
+- Kéo xoay hoạt động, camera trả `Custom`; mục Chế tạo vẫn chờ và dọn preview. Phiên máy chủ mới có **0 cá thể/80 xu** đúng phạm vi chưa lưu tài khoản. Khung cuối sau sửa căn đầu/đuôi được thử bằng snapshot **chỉ để xem** sau restart, không ghi cá thể lên server: cả tám góc hộp bao nằm trong khung trước/sau xoay, tỷ lệ ngang/dọc sau xoay **0,678/0,862**; **29 tài nguyên nạp, 0 lỗi**. Không tính fixture xem mẫu là lần bắt thực thứ hai.
+
+Sáu source cũ được sao lưu trong `ServerStorage.SpecimenCollectionBackup_20261019`; thêm module `SpecimenPreviewModel`, không dựng lại map. Đã lưu source cuối bằng native Studio vào v2.4, **4.220.334 byte**, để ở Edit. Bản lưu đạt **139.120 kiểm tra**, **118 script** biên dịch, **23 source chuẩn** khớp, **105 source cũ không liên quan** giữ nguyên và **6 backup** khớp baseline; đúng sáu source sản xuất sửa/một module mới. Giữ toàn bộ **43.775 Part/845 khớp**, trong Workspace **35.064 Part/723 khớp**; map H2 **4.000 × 4.500, 2.400 cây, 16 đường, 9 khu**, rig **255 Part/21 MeshPart/7 Motor6D/247 weld/1 anchor**. Inspector chỉ đọc `HunDino/tools/inspect-specimen-collection-saved.luau`, báo cáo `HunDino/assets/hunting/specimen-collection-saved.json`; không xuất lại Place/Terrain bằng Lune. Bằng chứng Play tại `HunDino/assets/hunting/specimen-collection-play.json` phân biệt lần bắt thực và fixture xem mẫu. Chưa nghiệm thu nhiều client/điện thoại, trưng bày hoặc lưu qua máy chủ mới. Phần tiếp theo P1-F còn ống trưng bày và lớp lưu tài khoản; tab Chế tạo tiếp tục chờ yêu cầu.
+
+
+## 37. Tổng hợp trước UI: v2.4 và đồng bộ hồ sơ v0.39 — 20/10/2026
+
+Đối chiếu bản game đã lưu ngày **19/10/2026**; đây là đợt cập nhật tài liệu trước bước UI ở mục 38, không thêm tính năng hoặc chạy lại gameplay. Các số trong mục này giữ làm mốc lịch sử; trạng thái UI/bản lưu mới xem mục 38. Hai bản THIET_KE_GAME.md ở gốc dự án và HunDino giữ cùng nội dung. README là chỉ mục các tài liệu chuyên đề; bản thiết kế map săn giữ yêu cầu gốc và thêm bảng đối chiếu H2.
+
+| Nhóm đã làm | Hiện trạng | Giới hạn còn lại |
+| --- | --- | --- |
+| Sảnh và base | 12 base, gán ngẫu nhiên số trống, giữ trong phiên; dịch chuyển base ↔ trung tâm, Pet đi cùng; sửa đường đền | Chưa nghiệm thu 12 client hoặc lưu bố trí/trưng bày tài khoản |
+| Bãi tập/vũ khí | Bãi 460 × 420, 7 vũ khí × 4 combo, model/VFX Pro, cung chuột trái tụ/Q mạnh, camera lệch vai | Chưa animation toàn thân/cân bằng cuối; nâng búa P1-E +15% chỉ áp dụng búa chủ |
+| Inventory/trang bị | Người/Pet độc lập vũ khí và 5 vị trí giáp, kéo xoay preview; Vật phẩm và Khủng long cùng snapshot có phiên bản | Giáp thử ngoại hình; Chế tạo trong Inventory chỉ là khung chờ |
+| Map săn H2.0 | 4.000 × 4.500, 2.400 cây, 16 đường, 9 node/khu kỹ thuật, đồng hồ UTC+7 ×30; giữ sảnh | Chưa thêm nhiều loài/hệ/theo dấu động, lái thuyền hoặc nghiệm thu điện thoại/máy yếu |
+| T-Rex/combat | Một con mẫu 1.200 HP, nghỉ 60 giây; cắn 24, báo 0,95 giây/chu kỳ 3,5; lướt 72 trong 0,5 giây, tốn 6 | Không i-frame; chưa đánh bộ phận, nhiều quái hoặc săn đội |
+| Admin/Pet | Bay có kiểm tra quyền; Pet đánh 12/4 giây, HP100/choáng30 giây, gọi hồi70% bằng H/hồi chiêu119 giây; dừng đánh khi cho uống | Dữ liệu Pet trong phiên; chưa Pet nâng cao/hiệu năng 12 Pet |
+| Nhiệm vụ P1-D | Một lượt solo/máy chủ, 40 phút, 3 lần hồi sinh; bẫy B/cho uống G khi quái sống ≤120 HP; thắng có 120 giây thu hoạch | Chưa nhiệm vụ chỉ bắt sống; chưa chờ đủ 40 phút thật, chưa kiểm chứng mọi bờ nước |
+| Kinh tế P1-E | 80 xu đầu, vật tư sở hữu, quặng/vảy/mổ/thưởng; mua/chế bẫy/nâng búa ở đúng điểm; trả đồ/chống trùng | Chưa DataStore; icon Shop mẫu chưa thành cửa hàng giao dịch, bàn base đã có |
+| Cá thể P1-F bước đầu | Một mã mỗi lần bắt, tối đa 100, metadata/preview 3D; giữ qua về sảnh/hồi sinh cùng máy chủ; kho đầy chặn bắt trước mất thuốc | Chưa ống/chọn vào base, lưu tài khoản, bán/thả/xóa/trao đổi/nuôi/biến thể ngẫu nhiên |
+
+**Còn chờ:** phần một ống và lưu tài khoản của P1-F, hồi quy P1-G, Chế tạo trong Inventory, săn đội, nhiều client thật, điện thoại và hiệu năng máy yếu. Không đánh dấu toàn bộ P1 hoàn thành; lưu file Studio không đồng nghĩa lưu tiến trình tài khoản.
+
+**Căn cứ hiện có:** bản v2.4 có **4.220.334 byte**; `specimen-collection-saved.json` ghi **139.120 kiểm tra**, **118 script** biên dịch, **23 source chuẩn** khớp, giữ **43.775 Part/845 khớp** và riêng Workspace **35.064 Part/723 khớp**. Hồ sơ `DataVersion=2`, `StorageMode=ServerMemory`, `MaxOwnedSpecimens=100`; báo cáo Play ghi rõ một lần bắt thực và fixture chỉ xem, không có DataStore. Số kiểm tra là phép đọc/đối chiếu hoặc kiểm tra luật theo từng báo cáo, không phải số tình huống chơi mới. Các số/hash H1/H2/P1-C/D/E giữ nhãn lịch sử tương ứng.
+
+Đợt này cập nhật đúng **27 file Markdown hiện hành**, giữ nguyên file trong backups, mã nguồn, bản game và JSON. Không chạy bộ dựng cũ, không đồng bộ default.project.json L0 lên bản chung. Danh mục tài liệu và thay đổi của từng file nằm trong README.
+
+## 38. Hiện đại hóa UI — 20/10/2026
+
+Bước đầu của yêu cầu “Modernize HunDino UI and gameplay” tập trung vào giao diện trên đúng bản v2.4. Đã sửa bảy source UI và thêm `UITheme` cùng `HunDinoHoldProgress`; không sửa source server, luật chiến đấu, giá/công thức, thưởng hoặc dữ liệu sở hữu. Backup Place trước cài: `HunDino/backups/Hub_v24_before_ui_modernization_20261020.rbxl`. Bảy source gốc được giữ trong `ServerStorage.UIBackup_20261020` và `HunDino/backups/ui-modernization-20261020/`. Hướng dẫn/bằng chứng đầy đủ: `HunDino/UI_MODERNIZATION.md`.
+
+### 38.1. Bảng màu và Inventory
+
+- Khung nền **RGB (16,20,26)**, trong suốt **0,12**, góc **14 px**, viền đồng **(165,135,65), 1,5 px** và gradient. Thẻ **(26,32,42)**, góc **8 px**; hover vàng **(235,195,95)** trong **0,15 giây Quad.Out**. HP xanh **(46,204,113)**, thể lực/tụ lực xanh **(52,172,224)**, cảnh báo **(235,95,45)**.
+- **I → Người / Pet / Vật phẩm / Khủng long / Chế tạo**. Trang bị Người/Pet vẫn độc lập. Preview có bục tối và nút đặt lại góc nhìn; bốn chuỗi combo có phím rõ ràng. Cấp nâng búa hiển thị theo dữ liệu chủ sở hữu, không tự tăng cấp Pet/vũ khí khác. Giáp có badge món đang mặc và số mảnh bộ.
+- Vật phẩm lọc toàn bộ/nguyên liệu/vật tư săn, tách phần trong kho và đang mang theo snapshot server. Khủng long giữ danh sách cá thể, mô hình 3D tĩnh kéo xoay, thời điểm UTC+7, hệ, biến thể, kích thước, GUID và nguồn lượt săn.
+- **Chế tạo trong Inventory tiếp tục chờ**, chưa thêm công thức/nút giao dịch. Bàn chế/nâng tại base và quầy tiếp tế giữ hoạt động P1-E hiện có. Không thêm ống trưng bày, DataStore hoặc giao dịch cá thể.
+
+### 38.2. HUD và vòng tiến độ
+
+Boss ở giữa phía trên; còn sống và ≤10% HP thì hiện trạng thái suy yếu để bắt. Thời gian mắc bẫy có thanh riêng, ba giây cuối dùng cảnh báo cam đỏ nhấp nháy/rung nhẹ. Nhiệm vụ ở bên phải với thời gian, lượt hồi sinh và gợi ý B/G; Pet ở bên trái phía dưới với HP, choáng, dừng đánh khi bắt và vòng hồi chiêu gọi hồi 119 giây. Hub, quầy tiếp tế/bàn chế, HUD thể lực và tụ cung dùng cùng bảng màu.
+
+Vòng giữa tâm theo thời gian hành động do server công bố: **B đặt bẫy 1 giây**, **G cho uống 3 giây**, **G mổ 1,5 giây**. Module vòng chỉ trình bày, không gửi remote hoặc trao thưởng. Client nhiệm vụ/kinh tế hiện có tiếp tục xử lý giữ/thả và hủy thao tác; không đổi phím hoặc điều kiện gameplay.
+
+### 38.3. Phạm vi kiểm chứng đợt UI
+
+- **Play desktop 1.453 × 808:** xem đủ năm tab, bộ lọc đúng ba vật tư săn, giáp Pet Kim loại `5/5`; đổi Katana cho Người rồi Kiếm/khiên cho Pet xác nhận hai phần độc lập, sau đó trả cả hai về Búa. Thực mua bẫy thô/thuốc (`80 → 60 xu`), nhặt một sắt, bỏ lượt trả thuốc dư, chế một bẫy sắt tại base chủ, giữ B đặt bẫy thật và gọi Pet H hồi chủ từ `30 → 100 HP`/hiện hồi chiêu `118 giây`. Có hỗ trợ vị trí khi thử, không dùng kết quả này để kết luận cân bằng hoặc tìm đường tự nhiên.
+- **Fixture phía client chỉ kiểm tra hiển thị:** Boss `120/1.200 HP`, bẫy còn `2,8 giây`, vòng cho uống đến `100%`, vòng mổ có mẫu `88%`, Pet choáng ở `1 HP`, cá thể mẫu `#001` và kéo/reset preview. Fixture không ghi cá thể hoặc kết quả bắt/mổ lên server; dữ liệu mẫu được khôi phục/dọn khi Stop. Không tính là lần bắt sống/thu hoạch thật trong đợt này.
+- **Bố cục màn hình ngang nhỏ:** Device Simulator preset iPhone 17 Pro/LandscapeLeft, camera thực tế `750 × 381`, vùng GUI an toàn `750 × 323`. Đã căn Boss/Pet/nhiệm vụ và giữ Inventory trong màn hình, rút gọn tiêu đề/hướng dẫn combo phụ. Đây là thử bố cục giả lập; chưa nghiệm thu đầy đủ cảm ứng, thiết bị thật hoặc kích thước nút mobile.
+- **Offline:** chín source UI biên dịch, 45 lệnh remote giữ nguyên action/payload; gói source thử DryRun/cài trong bộ nhớ/backup/chặn v2.3 đạt. Bộ kiểm Inventory và hunting source đạt; luật kinh tế `2.134/31 nhóm`, nhiệm vụ `231/15 nhóm`, Pet `150` đạt. Test vũ khí Pro lịch sử còn lỗi so baseline v2.3 tại dòng 40; giữ nguyên test, không dùng lỗi đó làm kết quả bảo toàn map của bước UI.
+
+Đã Stop Play, trả viewport mặc định, lưu bằng **native Roblox Studio** vào `HunDino_DarkJungle_v2_4.rbxl` và xác nhận Studio ở Edit. Bản lưu **4.250.777 byte**, SHA256 `d360c3763761c85156b6eb4cc4f3cd14be5941aa84ddad312dc9ac5ef7d040ab`. Inspector chỉ đọc `HunDino/tools/inspect-ui-modernization-saved.luau` đạt ở chế độ **`native-save`**: **8.784 kiểm tra**, **120 script biên dịch**, **9 source chuẩn khớp**, **7 backup khớp**. Giữ **43.775 Part/845 khớp**, riêng Workspace **35.064 Part/723 khớp**; hash các thuộc tính Terrain nhị phân giữ nguyên.
+
+Bộ đối chiếu so **61.193 Instance**, **5.334.152 lượt thuộc tính**, thuộc tính tùy chỉnh và tag, không ghi nhận khác biệt thuộc tính ngoài phạm vi source UI đã cho phép. Báo cáo có danh sách thuộc tính reflection không đọc được; số lượt đối chiếu không có nghĩa mọi thuộc tính engine đều đã đọc thành công. Hai ngoại lệ được ghi rõ: `HistoryId` là lịch sử chỉnh sửa native; các Instance rỗng `FilteredSelection` trực tiếp dưới DataModel là metadata chọn của Studio, số lượng **5 → 4**, không phải đối tượng gameplay. Không mở ngoại lệ cho Part, Joint, Terrain hoặc source server.
+
+Báo cáo bản lưu: `HunDino/assets/hunting/ui-modernization-saved.json`; bằng chứng Play: `HunDino/assets/ui/ui-modernization-play.json`. Không dùng Lune xuất lại Place/Terrain, không đồng bộ `default.project.json` L0.
+
+Phần tiếp theo vẫn là Chế tạo trong Inventory khi được yêu cầu, ống trưng bày/lưu tài khoản của P1-F và hồi quy P1-G. Bước UI không hoàn thành thay các phần đó; gameplay cảm ứng đầy đủ và nhiều client còn chờ.
+
+## 39. Lưu tiến trình tài khoản — 20/10/2026
+
+Yêu cầu của người dùng: trang bị đã đổi, đồ đã chế tạo/nâng cấp và tiến trình kiếm được phải dùng tiếp ở lần vào game sau. Triển khai trên bản v2.4 hiện có, giữ phạm vi gameplay và luật kinh tế P1-E/P1-F. Tài liệu vận hành đầy đủ: [PERSISTENCE.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/PERSISTENCE.md>).
+
+### 39.1. Dữ liệu được lưu
+
+- Vũ khí Người/Pet riêng biệt; năm ô giáp Đầu/Thân/Tay/Eo/Chân của từng bên; ba tùy chọn hướng dẫn/số sát thương/hiệu ứng và độ nhạy ngắm 100/75/50%.
+- Xu, da/răng/vảy/xương/sắt, bẫy thô/bẫy sắt/thuốc ngủ, cấp búa và dấu cấp tiền khởi đầu một lần. Công thức hiện có là bẫy sắt và nâng búa cấp 2 +15%; không tự coi các nâng cấp vũ khí/giáp khác đã được làm.
+- Từng cá thể với GUID/serial/thời điểm/nguồn bắt; giữ giới hạn hiện tại 100. Toàn bộ RunSerial/OperationSerial/SpecimenSerial, receipt, claims và lịch sử lượt gần nhất để không cấp lại đồ.
+- Thống kê săn thắng/thất bại/bắt và hạn hồi chiêu hồi chủ của Pet theo Unix. Máu/thể lực hiện tại, combo, AI/quái, bẫy đang đặt, đồng hồ nhiệm vụ, số base được bốc và vị trí là dữ liệu phiên; khi vào lại dựng ở sảnh.
+
+### 39.2. Giao dịch và vòng đời
+
+- Tải/kiểm schema/khóa tài khoản trước khi dựng trang bị hoặc cấp kho. Chỉ tạo mặc định khi khóa tài khoản chưa tồn tại thật; lỗi đọc, dữ liệu lỗi hoặc phiên bản mới hơn không được đặt lại.
+- Hồ sơ tài khoản DataVersion=1 bọc Economy.DataVersion=2; codec chuyển khóa receipt số thưa thành chuỗi khi ghi và trả lại số khi tải. Migration giữ receipt/cá thể, không cấp lại 80 xu.
+- Mua/chế/nâng/nhặt/mổ/thưởng dùng bản giao dịch tách, ghi thành công rồi mới công bố số dư/kết quả. Lỗi không rõ đã ghi hay chưa giữ cùng commit ID và bản chờ, khóa giao dịch mới, thử lại đúng thao tác; không tạo mã mới để phát bù.
+- Trang bị/cài đặt lưu sau 2 giây gom thao tác; tự lưu dự phòng mỗi 30 giây và có Lưu thủ công giới hạn 5 giây. PlayerRemoving đóng lượt/trả vật tư rồi lưu; BindToClose thực hiện song song cho các tài khoản và chờ trong thời gian đóng server.
+- UpdateAsync có khóa phiên 120 giây, kiểm revision, retry 4 lần có trễ tăng dần. Khóa hết hạn không cho server cũ ghi đè; hồ sơ chưa sẵn sàng/lưu lỗi hiển thị rõ trên UI.
+- Lượt săn bị đứt không tiếp tục con quái cũ: đóng bản ghi lượt và trả đúng vật tư chưa dùng một lần; đồ nhặt/thưởng/cá thể đã ghi vẫn còn. Không quay thưởng lại. Vật tư đặt bẫy được ghi trước khi tạo bẫy có tác dụng.
+
+### 39.3. Môi trường và kiểm chứng
+
+- Live: HunDinoProfiles_v1; Studio: HunDinoProfiles_Studio_v1; cùng scope accounts, khóa player_UserId. Không dùng kho live để thử Studio.
+- Cấu hình QA bộ nhớ mặc định tắt; chỉ bật tạm trong Play khi kiểm, có nhãn rõ không lưu qua Stop/Play. File native không chứa cờ QA hoặc probe runtime.
+- Kiểm dữ liệu: repository 160, schema 597, roundtrip JSON 547 kiểm tra đạt. Harness dịch vụ trong engine 65 kiểm tra/10 nhóm đạt; luật nhiệm vụ 231, kinh tế 2.134 và kiểm controller bắt trong engine 195 đạt (mẫu nước được báo skip vì không tìm thấy điểm mẫu).
+- Studio test giữ Cung của Người, Katana của Pet, giáp Xương/Da, tùy chọn 50%/tắt số sát thương qua save/release/load. Hai lần mua ghi 80 → 60 xu, 1 bẫy thô/1 thuốc, đúng 2 receipt. Chèn 4 lỗi ghi: chưa báo mua sớm, retry không nhân đôi. Hồi chủ thực giữ cùng hạn cooldown sau tải lại.
+- Kiểm bản native bằng tools/inspect-persistence-saved.luau đối chiếu source/cấu hình/hình học/Terrain. Bằng chứng ở assets/hunting/persistence-saved.json; không dùng bằng chứng UI v0.40 thay kết quả này.
+- **Cloud còn chờ:** xuất bản game riêng tư, kiểm DataStore thật và thoát/vào bằng phiên/server mới. Chưa gọi P1-F lưu cloud hoặc P1-G toàn vòng hoàn thành trước khi đạt checklist trong PERSISTENCE.md.
+
+### 39.4. File và phạm vi giữ nguyên
+
+Map tiếp tục cùng tên HunDino_DarkJungle_v2_4.rbxl trong Documents. Bản trước cài: backups/Hub_v24_before_persistence_20261020.rbxl. Nguồn lớp lưu ở src/data; server chuẩn tích hợp ở studio-pet-integration/Training.server.luau. Chỉ cài source và module/UI dữ liệu mới, không dựng lại map hoặc ghi Terrain bằng Lune. Không xóa bản cũ hoặc tạo nút reset tài khoản.
+
+## 40. Nhập code thử dành riêng cho admin — 21/10/2026
+
+Theo yêu cầu người dùng, thêm **Nhập code** trong **Cài đặt** để admin thử trước. Mã **`HUNDINO-ADMIN-500`** chỉ tài khoản **tunzdangcap / UserId 11605296816** được nhận: **500 xu, 10 da, 10 răng, 10 vảy, 10 xương và 10 sắt**. Không cấp bẫy hoặc thuốc. Cách dùng: **Cài đặt → Nhập code → nhập mã → Đổi mã**, sau đó xem **I → Vật phẩm**. Tài liệu vận hành: [ADMIN_TEST_CODE.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/ADMIN_TEST_CODE.md>).
+
+### 40.1. Quyền và một lần nhận
+
+Server kiểm UserId và mã; client chỉ gửi chuỗi mã, không được quyết định phần thưởng hoặc tài khoản nhận. Có giới hạn tần suất, chặn lúc hồ sơ chưa tải/lưu lỗi và phản hồi kết quả từ máy chủ. Tài khoản khác không được nhận dù biết mã hoặc gọi remote trực tiếp.
+
+Phần thưởng và dấu **`Economy.RedeemedCodes.AdminTest20261021`** được ghi cùng một giao dịch **`CommitEconomy`**. Chỉ báo thành công sau khi lớp lưu xác nhận; lỗi ghi không cộng riêng thưởng hoặc dùng riêng mã. Dấu dùng mã được giữ qua tải lại và qua việc dọn các receipt mua/chế cũ. Không có nút reset mã; đổi chuỗi mã mà giữ cùng CodeId không cho nhận thêm. Studio và game live tiếp tục dùng hai store riêng theo cấu hình persistence.
+
+### 40.2. Cài trên bản Studio đang mở
+
+Sau khi nối lại phiên Studio bị lag, bản đang mở là cloud **`PlaceId 103261391098991`**. Bản sao native trước cài: **`HunDino/backups/Hub_before_admin_redeem_20261021.rbxl`**, **4.262.220 byte**. Ba source cũ được giữ trong **`ServerStorage.AdminCodeBackup_20261021`** và **`HunDino/backups/redeem-admin-20261021/`**. Cài ba source sửa và bốn module mới; đã lưu bằng Studio, chưa xuất bản thay đổi lên game live.
+
+Bản xuất native sau cài: [HunDino_AdminTest_20261021.rbxl](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/HunDino_AdminTest_20261021.rbxl>), **4.285.326 byte**, SHA256 **`926f6b57297fe1ea103985cc26ec56a8e96414b7fb34657b64887632b687c8da`**. Giữ bản này riêng với file local v2.4 và bản sao trước cài.
+
+Bản cloud này đã có `HuntEconomyService` phụ thuộc `BioTubeService` nhưng thiếu module. Khôi phục ba module chuẩn `BioTubeGeometry`, `BioTubeSpecimen` và `BioTubeService` để dịch vụ khởi động; chỉ ghi source, không dựng hoặc sửa map đã biên tập. Trong Play, logic module hiện có dựng 60 ống theo 12 base tại runtime; kết quả này không thay cho nghiệm thu đầy đủ tính năng trưng bày. File **`HunDino_DarkJungle_v2_4.rbxl`** cục bộ giữ nguyên vì có thể khác bản cloud do các sửa mỹ thuật ở chat khác.
+
+### 40.3. Kiểm chứng và trạng thái mã thật
+
+- Offline **346 kiểm tra / 11 nhóm** đạt: quyền, đúng gói thưởng, nhận lại, chuyển dữ liệu/JSON, dọn receipt, giới hạn số dư và lỗi trước/sau ghi.
+- Trong Studio, **156 kiểm tra / 6 nhóm** dùng method dịch vụ thật với player/store giả đạt; không dùng kết quả này để khẳng định DataStore cloud thật đã nghiệm thu.
+- Đã bấm **Cài đặt → Nhập code**, gửi mã sai **`QA-INVALID-CODE`** và nhận từ chối; nút **Quay lại** hoạt động. Tài khoản admin thật vẫn **80 xu, cả năm loại nguyên liệu bằng 0**, dấu mã chưa dùng. Không tiêu thụ mã thật để làm QA.
+
+Inspector **`native-save`** đạt **8.683 kiểm tra**, **129 script biên dịch**, **7 source chuẩn khớp** và **3 backup source gốc khớp**. Đối chiếu **61.208 Instance hiện có / 5.334.543 lượt đọc và so thuộc tính**, không phát hiện khác biệt ngoài source đã cho phép; báo cáo liệt kê rõ các thuộc tính reflection không đọc được. Giữ **43.775 Part / 845 khớp**, riêng Workspace **35.064 Part / 723 khớp**, cùng hash dữ liệu thuộc tính Terrain nhị phân. `HistoryId` được loại khỏi metadata lịch sử chỉnh sửa; `FilteredSelection` ở gốc đều bằng 0 trước/sau. Báo cáo: **`HunDino/assets/redeem/admin-redeem-saved.json`**. Inspector chỉ đọc, không xuất lại Place/Terrain bằng Lune.
+
+Báo cáo Play nằm ở **`HunDino/assets/redeem/admin-redeem-play.json`**. Phạm vi đợt này là mã thử riêng admin; không mở mã cho mọi người, không đổi luật thưởng săn và không coi hồi quy P1-G hoặc lưu cloud qua phiên mới đã hoàn tất.
+
+## 41. Cửa hàng và nâng cấp riêng bảy vũ khí — 26/10/2026
+
+Đã sửa giao diện thương nhân/icon thành một bảng Vật tư & chế tạo / Nâng cấp vũ khí; sửa lớp nền che chữ và hiển thị đủ bảy hàng. Mỗi vũ khí của Người giữ cấp riêng trong Economy.WeaponLevels, nâng lên cấp 2 bằng 2 xương + 2 sắt, tăng 15% sát thương chỉ cho đúng vũ khí đó. Giữ HammerLevel tương thích dữ liệu cũ; server kiểm token, SnapshotVersion, operation serial và vị trí tại bàn base chủ. Bỏ thanh Đã lưu/LƯU trên HUD, giữ tự lưu ngầm và chặn khi chưa tải được tài khoản.
+
+Bản native cửa hàng trước gộp: HunDino_MerchantWeapons_20261026.rbxl, 4.368.355 byte. Người dùng đã chọn ghép sửa chiến đấu vào chính file này để dùng tiếp; kết quả hiện hành ở mục 42. Sao lưu cửa hàng tại backups/merchant-weapons-20261026/ và bảy script gốc trong ServerStorage.MerchantWeaponsBackup_20261026; bản ngay trước gộp tại backups/bow-pet-20261026/. Chưa Publish bản gộp.
+
+Đã thử giao dịch bằng UI trong Studio/TestMemory riêng, nâng đủ bảy loại và Inventory hiển thị đúng cấp; native JSON round trip giữ cấp. Đạt 238 kiểm tra mới cho cấp riêng, lưu qua phiên mới, chống replay và chuyển dữ liệu; hồi quy kinh tế, schema, session store, JSON round trip, mã thưởng và luật nhiệm vụ đều đạt. Desktop và HD 720 vừa màn hình, cả bảy vũ khí không bị cắt; Studio đã trở về viewport mặc định. Inspector đọc bản lưu đạt 523 kiểm tra, 146 script biên dịch, fingerprint Workspace/Part/Joint giữ nguyên, 66 thuộc tính Terrain đọc được khớp. Lune chưa đọc được VoxelGridAssetContentMap nên không chứng nhận riêng thuộc tính đó; chỉ Studio native lưu Place/Terrain. Không dùng tài khoản thật để cấp nguyên liệu QA và đã gỡ cờ TestMemory/script thử khỏi bản lưu.
+
+Chi tiết phạm vi, hạn chế và cách gộp an toàn: HunDino/MERCHANT_WEAPON_UPGRADES.md. Bằng chứng: HunDino/assets/merchant-weapons/studio-play.json và saved-inspection.json. Chưa coi đây là nghiệm thu đầy đủ bắt sống hoặc lưu cloud trên Roblox Player.
+
+## 42. Gộp MerchantWeapons với sửa cung, Pet và di chuyển — 26/10/2026
+
+Người dùng chọn **“Ghép vào MerchantWeapons mới rồi dùng bản đó”**. Bản chính từ đây là **HunDino_MerchantWeapons_20261026.rbxl**, mở bằng **CHOI_CUA_HANG.cmd** hoặc **CHOI_VA_LUU.cmd**. Cả hai bật bộ lưu cục bộ hiện có rồi mở cùng bản Studio. Không đổi namespace hoặc xóa dữ liệu tài khoản. Các thử nghiệm của đợt này dùng TestMemory riêng, không cấp/trừ đồ trên hồ sơ thật. Tài liệu vận hành: [BOW_PET_FIXES.md](<C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/BOW_PET_FIXES.md>).
+
+### 42.1. Cung và di chuyển
+
+- **Pet khi ngắm/tụ:** theo sau bên trái, lệch ngang 7 và lùi 7 studs; bỏ Pet khỏi ray ngắm/bắn. Phần Pet gần camera được ẩn cục bộ khi ngắm/tụ và khôi phục khi ngừng ngắm.
+- **Bắn khi đi ngang:** client gửi điểm ngắm; server tính hướng từ vị trí bắn hiện tại của từng mũi, kiểm vật cản/tầm/sát thương. Điểm client chỉ là ý định ngắm, không phải quyền xác nhận trúng.
+- **E Tam Tiễn:** ba mũi hội tụ, cách nhau 0,12 giây; mỗi mũi có mã đòn riêng, cùng trúng một mục tiêu gây **24 × 3 = 72** ở cấp 1. Vẫn chặn nhận lại cùng mã mũi tên và giữ cooldown đòn thường. Vật cản, trượt hoặc vượt tầm vẫn có thể làm một mũi không trúng.
+- **Tầm:** không tụ **40 studs**, đầy lực sau **1,2 giây là 120 studs**; nội suy `40 + 80 × mức_tụ` theo thời gian server. Q/E và combo không tụ dùng 40 studs. Điều khiển giữ/nhả chuột trái, Q/E và ngắm chuột phải giữ nguyên.
+- **Cấp riêng:** giữ hệ số +15% của đúng vũ khí từ mục 41, áp dụng cho cung lên cả hình nộm và khủng long. E cung cấp 2 làm tròn 28 mỗi mũi, tổng **84** nếu trúng đủ. Không thay cân bằng vũ khí khác.
+- **W và camera:** giữ di chuyển tương đối camera; thân theo camera khi ngắm, trả AutoRotate khi ngừng ngắm. Không dùng lại giá trị false tạm của đòn cũ hoặc ép hướng root về hướng bắn đã chụp trước đó.
+
+### 42.2. Pet trong khu săn
+
+- Một lần áp sát chỉ gây **một đòn 12 sát thương**, kể cả vũ khí có nhiều mốc hoạt ảnh. Sau đòn về cạnh chủ, chờ ít nhất **10 giây tính từ đòn trước** mới tiếp cận tiếp; đi đường có thể kéo dài khoảng giữa hai đòn.
+- Không mở đòn hoặc hoàn tất đòn khi quái còn ≤10% HP. Lớp sát thương server đồng thời clamp đòn Pet tại ngưỡng này (T-Rex 1.200 HP dừng ở 120); người chơi vẫn có thể hạ quái. Tiếp tục dừng đánh khi chủ cho uống thuốc ngủ.
+- **Tự hồi:** sau 5 giây không bị đánh, tại nơi an toàn hồi 10 HP/giây, tối đa 100. Khi HP ≤25%, chủ động rút ra xa quái hơn 40 studs, chọn điểm trong 80 studs quanh chủ và chỉ trở lại đánh khi hồi đủ. Vật cản/quái áp sát có thể trì hoãn tới chỗ an toàn.
+- HP còn 1 vẫn choáng 30 giây rồi đầy theo luật cũ. Về sảnh hoặc bắt đầu lượt săn mới đầy 100 HP/hết choáng; chuyển vị trí trong cùng lượt săn đang tiếp tục không được coi là lượt mới. Tự hồi/choáng/chuyển khu đều **giữ nguyên hạn hồi kỹ năng chữa chủ** (70% HP tối đa, 119 giây).
+
+### 42.3. Kiểm chứng và bản lưu
+
+- Play trên nhân vật với input thật: E cấp 1 làm hình nộm 1.000 → 928; tầm không tụ/nửa lực/đầy đo 40,01 / 81,19 / 120 studs. Giữ D ở tốc độ 8 vẫn trúng mặt mục tiêu. Phép thử đi ngang dùng camera QA giữ tâm vào đích để tách lỗi đường bắn khỏi rê chuột; không thêm tự khóa mục tiêu vào game.
+- Giữ W và xoay camera ba hướng: 32 mẫu tự do có dot hướng đi/camera = 1, thân/hướng đi tối thiểu 0,961; 32 mẫu ngắm/tụ đều bằng 1. Pet gần camera có 119/119 Part được ẩn rồi khôi phục đủ. Không cần video để thực hiện phép tái tạo này.
+- Pet 80 HP chưa hồi ở 4,5 giây, đạt 94,64 sau 6,5 giây; Pet 1 HP/choáng về sảnh rồi vào lượt mới đều đạt 100, giữ cùng hạn chữa chủ. Native rig/controller với mục tiêu cố định xác nhận đòn ở 1000,25 và 1011,75, 135 mẫu chờ tại chủ; rút cách quái 47,50 studs rồi hồi đầy. Tìm đường vòng tường riêng đạt 4,38 giây, không xuyên tường; không suy rộng thành mọi địa hình tự nhiên.
+- Trên chính bản MerchantWeapons sau ghép, Play E cấp 1 đạt 72, cấp 2 đạt 84. Bộ native combat **112**, Pet sortie **144** đạt; hồi quy thêm hình học cung **56**, luật Pet **159**, controller doubles **29**, controller engine **83**, sáu nhóm combat và tụ lực đạt. Đây là các bộ kiểm riêng, không cộng thành số tình huống chơi độc lập.
+
+Lưu bằng **native Roblox Studio**, không xuất lại Place bằng Lune. File chính **4.372.018 byte**, SHA256 `6265cf48569a69fe28b7700704685d132fd3be4b569195378e5bc90d9325729e`. Inspector chỉ đọc đạt **83.644 kiểm tra / 155 script biên dịch**, chín source cài và tám source backup khớp; source không liên quan giữ nguyên. Toàn bộ fingerprint Workspace giữ **47.064 Part / 723 khớp nối**; cả 70 thuộc tính Terrain nhị phân giữ nguyên byte, gồm VoxelGridAssetContentMap mà Lune chưa giải mã. Đã gỡ probe và cờ QA.
+
+Server bản chính: `src/savegame/TrainingMerchant.server.luau`; client: `src/savegame/Training.client.luau`; bộ luật cài từ `studio-pet-integration/Weapons.luau`, `TrainingRules.luau`; Pet/combat từ `src/hunting`; hình học cung `src/dark-jungle/BowBallistics.luau`. Không lấy các biến thể source khác ghi đè toàn bộ bản chính. Backup trước ghép: `backups/bow-pet-20261026/` và `ServerStorage.BowPetBackup_20261026`. Bằng chứng: `assets/qa/bow-pet-play.json`, `bow-pet-merchant-install.json`, `bow-pet-merchant-saved.json`.
+
+**Chưa Publish bản gộp**, chưa nghiệm thu điện thoại, multiplayer, mọi địa hình, bắt sống toàn vòng hoặc cloud Roblox Player cho đợt này. Cảnh báo asset 203785492 sai loại có từ bản nền; không dùng kết quả kiểm source thay cho nghiệm thu các phần còn chờ của P1-G.
+
+## 43. Công thức bẫy sắt trong Inventory — 26/10/2026
+
+Theo yêu cầu mới, đã mở công thức tại I → CHẾ TẠO: **1 bẫy thô + 1 sắt → 1 bẫy sắt**. Hiển thị mô hình bẫy, số nguyên liệu hiện có/yêu cầu, thanh đủ/thiếu, số bẫy trong kho và nút chế một bẫy. Xem được từ xa; giao dịch chỉ mở khi gần bàn chế tạo tại base chủ, đã cất vũ khí, không trong lượt săn và hồ sơ sẵn sàng. Server kiểm token, SnapshotVersion, OperationSerial; dùng CraftTrap hiện hành và lưu xác nhận trước khi báo thành công. Không tốn xu; không trừ một phần hoặc nhận trùng do gửi lại.
+
+Đã thử input thật trong Studio/TestMemory riêng: 2 bẫy thô/2 sắt → chế hai lần → 2 bẫy sắt, hết nguyên liệu; xu giữ 80. Nút khóa khi thiếu nguyên liệu và khi rời bàn dù đủ nguyên liệu. Handler server với dữ liệu giả đạt 22 kiểm tra; cấp riêng bảy vũ khí từ bản native đạt 238 kiểm tra; chín source chiến đấu cùng UI/lưu giữ đúng qua 25 kiểm tra đối chiếu. Không ghi tài khoản thật.
+
+Đã backup bản chính tại backups/inventory-crafting-20261026/ và hai script trong ServerStorage.InventoryCraftBackup_20261026. File chính MerchantWeapons lưu native Studio: 4.373.461 byte, SHA256 10ff67e69b8d8151c35160d7c5a4b918d85d54dbe7b804c835a5c848f55a535a. Inspector chỉ đọc đạt 83.656 kiểm tra / 157 script biên dịch, hai source sửa khớp, giữ 47.064 Part/723 khớp và toàn bộ byte của 70 thuộc tính Terrain. Cờ/script QA đã gỡ. Chưa Publish lên Roblox. Xem HunDino/INVENTORY_CRAFTING.md và assets/inventory-crafting/ để biết cách dùng, phạm vi và bằng chứng.
+
+## 44. Chừa đường dịch chuyển và đi lại tại toàn bộ 12 base — 27/10/2026
+
+Ảnh Base 3 cho thấy nhân vật đáp trong ống. Kiểm bản chính và các mốc cũ tìm được đều còn cụm ống v4 chồng điểm đến tại Base 3, 5, 6, 10. Base 11 từng dời thủ công nhưng metadata trưng bày vẫn trỏ vị trí cũ. Chưa tìm được bản cũ đã sửa đủ 12 base.
+
+Đã dùng `BioTubeGeometry.5 / TransitClearance.1`, điều chỉnh cụm 3–7, 9–10, 12 để chừa đường từ sảnh qua bệ đến SpawnPad; giữ bố cục an toàn tại 1, 2, 8, 11. Đồng bộ mã dựng lại, vị trí 60 ống và `StaticOrigin`/`ClusterOrigin`/anchor. Giữ toàn bộ 12.000 Part của ống và thuộc tính va chạm; không dời điểm dịch chuyển. Tâm ống cách tuyến đi ít nhất 10 studs. Asset art-only và bộ dựng asset dùng cùng module hình học.
+
+Play thực tế với TestMemory riêng: giữ G mở bảng, bấm từng Base 1–12, xác nhận điểm đến không chạm ống, đi ra 22,33–22,78 studs rồi giữ G về sảnh; cả 12 đạt và giữ quyền sở hữu base. Sau chỉnh pivot cuối 0,025 studs theo Y, dò lại 252 mẫu hộp thân người trên 12 tuyến không giao ống có va chạm. Không dùng hồ sơ thật để thử. Cờ/script QA đã gỡ.
+
+Lưu native Studio vào bản chính: **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`. Inspector chỉ đọc đạt **129.779 kiểm tra / 164 source biên dịch** (thêm module backup); các source gameplay/lưu khác giữ nguyên. Fingerprint 49.221 instance ngoài cụm ống và byte của toàn bộ 70 trường Terrain khớp backup. Backup tại `HunDino/backups/base-clearance-20261027/` và `ServerStorage.BaseClearanceBackup_20261027`.
+
+Bằng chứng: `HunDino/assets/base-clearance/studio-play.json`, `survey.json`, `saved-inspection.json`; kiểm lại bằng `HunDino/tools/inspect-base-clearance-saved.luau`. Chi tiết vận hành: `HunDino/BIO_TUBES.md`. **Sửa ống này chưa Publish**; cloud v14 là mốc trước sửa. Chưa kiểm nhiều người cùng lúc hoặc Roblox Player với bố cục mới.
+
+## 45. Tổng hợp tiến độ toàn dự án — 27/10/2026
+
+Đã rà soát lại nhóm mã nguồn, tài sản, công cụ, tài liệu và các bản Place. Bản local chính sau sửa đường 12 base là 4.495.025 byte, hash `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`, inspector đạt 129.779 kiểm / 164 source. Bản cloud có bằng chứng mới nhất là v14, nguồn 4.481.440 byte; đã sửa từ chối biên nhận HelloHunDino cũ và giữ dữ liệu thật, Player xác nhận Saved/DataStore rồi vào lại thấy trang bị. Sửa bố cục ống 12 base chưa Publish.
+
+Khai thác sắt đã có 30 model trên bản nạp lại cloud, 402 kiểm logic đạt; báo cáo inspector thêm quặng cũ vẫn Ok=false cần đối soát riêng, không phải kiểm mới nhất. Cửa hàng, chế bẫy Inventory, Pet/cung, kho cá thể và ống đã triển khai. Còn hồi quy P1-G toàn vòng, cloud kinh tế/cá thể/ống qua phiên mới, nhiều client, thiết bị thật/hiệu năng và icon. Git hiện có mốc 677f3da trên developer; không còn dùng kết luận workspace chưa đồng bộ từ 18/10.
+
+Số liệu cũ ở mục 1–44 giữ nguyên theo thời điểm. Báo cáo 27/10 có bảng mốc local/cloud, bằng chứng, kiểm kê nhóm tệp, chỉ mục toàn bộ tài liệu và ưu tiên tiếp theo; đợt đồng bộ này chỉ sửa Markdown, không sửa mã/game/hồ sơ hoặc Publish.

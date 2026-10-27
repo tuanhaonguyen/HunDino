@@ -1,0 +1,239 @@
+{
+  "Version": "BowPetFixes.1",
+  "Date": "2026-10-26",
+  "MainPlace": "HunDino_MerchantWeapons_20261026.rbxl",
+  "UserSelectedMergedMain": true,
+  "Published": false,
+  "TestStorage": "Explicit Studio TestMemory; no live or local player progression modified",
+  "SaveGamePlay": {
+    "TamTienBase": {
+      "Arrows": 3,
+      "Each": 24,
+      "Total": 72,
+      "DummyHPBefore": 1000,
+      "DummyHPAfter": 928
+    },
+    "Range": {
+      "1": {
+        "Hold": 0,
+        "ShotLengths": {
+          "1": 40.00851821899414
+        }
+      },
+      "2": {
+        "Hold": 0.6,
+        "ShotLengths": {
+          "1": 81.18626403808594
+        }
+      },
+      "3": {
+        "Hold": 1.4,
+        "ShotLengths": {
+          "1": 120
+        }
+      }
+    },
+    "Strafe": {
+      "EndpointError": 1.0095359086990356,
+      "End": "2011.3092041015625, 40.74440383911133, -29.040008544921875",
+      "SpeedAtShot": 8,
+      "DamageGained": 88,
+      "Target": "2011.35595703125, 40.74520492553711, -29.040006637573242"
+    },
+    "FreeOrbitMovement": {
+      "Phases": 3,
+      "Samples": 32,
+      "MinMoveDirectionCameraDot": 1,
+      "MinBodyMoveDot": 0.9611830115318298,
+      "AutoRotate": true
+    },
+    "ChargedOrbitMovement": {
+      "Phases": 3,
+      "Samples": 32,
+      "ChargedSamples": 32,
+      "MinMoveDirectionCameraDot": 1,
+      "MinBodyMoveDot": 1,
+      "AutoRotate": false
+    },
+    "AimingPet": {
+      "LocalOffset": [
+        -7,
+        -3.19484,
+        7
+      ],
+      "HiddenNearbyParts": 119,
+      "TotalParts": 119,
+      "RestoredPartsAfterAim": 119
+    },
+    "PetHealth": {
+      "NewHunt": {
+        "PathFollowing": false,
+        "HealingUntil": 0,
+        "StunnedUntil": 0,
+        "NextAttackAt": 0,
+        "Destroyed": false,
+        "State": "Following",
+        "Healing": false,
+        "Health": 100,
+        "Position": "-3, 20.18000030517578, 4647",
+        "PathPending": false,
+        "HealReadyAt": 1792959188.376308,
+        "MaxHealth": 100,
+        "AttackSerial": 6
+      },
+      "Passive": {
+        "Before": 80,
+        "After6_5s": 94.64314937591553,
+        "After4_5s": 80
+      },
+      "BeforeTravel": {
+        "PathFollowing": false,
+        "HealingUntil": 0,
+        "StunnedUntil": 1792959158.376311,
+        "NextAttackAt": 0,
+        "Destroyed": false,
+        "State": "Stunned",
+        "Healing": false,
+        "Health": 1,
+        "Position": "2019.7225341796875, 36.44000244140625, -1.822434425354004",
+        "PathPending": false,
+        "HealReadyAt": 1792959188.376308,
+        "MaxHealth": 100,
+        "AttackSerial": 2
+      },
+      "Lobby": {
+        "PathFollowing": false,
+        "HealingUntil": 0,
+        "StunnedUntil": 0,
+        "NextAttackAt": 0,
+        "Destroyed": false,
+        "State": "Following",
+        "Healing": false,
+        "Health": 100,
+        "Position": "3, 19.030000686645508, 184",
+        "PathPending": false,
+        "HealReadyAt": 1792959188.376308,
+        "MaxHealth": 100,
+        "AttackSerial": 4
+      }
+    }
+  },
+  "MergedPlay": {
+    "BaseTamTienDamage": 72,
+    "Level2": {
+      "PetInterval": 10,
+      "DummyHealth": 916,
+      "Damage": 84
+    }
+  },
+  "MergedNativeEngine": {
+    "DinosaurCombat": {
+      "ok": true,
+      "checks": 112,
+      "passed": 112,
+      "final": {
+        "AttackSequence": 0,
+        "AttackBoxSize": "26, 16, 36",
+        "Time": 12.960000000000052,
+        "Health": 1200,
+        "State": "Idle",
+        "TargetUserId": 0,
+        "AttackHits": 0,
+        "AttackPhase": "Idle",
+        "Trapped": false,
+        "AttackBoxCFrame": {
+          "Rotation": "-0.9702715873718262, -4.440892098500626e-15, -0.24201864004135132, 3.019806626980426e-14, 1.0000003576278687, -1.7763568394002505e-15, 0.24201864004135132, -1.2434497875801753e-14, -0.9702715873718262",
+          "Position": "-430.6436767578125, 98.14999389648438, 6437.46484375"
+        },
+        "MaxHealth": 1200,
+        "Captured": false
+      },
+      "biteCooldownSeconds": 3.5,
+      "version": "DinosaurCombatTest.2",
+      "meleePoint": {
+        "heightAbovePlayer": 1.9999923706054688,
+        "distance": 7.540188312530518
+      },
+      "biteWindupSeconds": 0.95,
+      "failures": [],
+      "initial": {
+        "AttackSequence": 0,
+        "AttackBoxSize": "26, 16, 36",
+        "Time": 0,
+        "Health": 1200,
+        "State": "Idle",
+        "TargetUserId": 0,
+        "AttackHits": 0,
+        "AttackPhase": "Idle",
+        "Trapped": false,
+        "AttackBoxCFrame": {
+          "Rotation": "-0.9702715873718262, 0, -0.24201858043670654, 1.0658141036401503e-14, 1.0000003576278687, 4.440892098500626e-16, 0.24201858043670654, -4.440892098500626e-16, -0.9702715873718262",
+          "Position": "-430.6434326171875, 98.14999389648438, 6437.46484375"
+        },
+        "MaxHealth": 1200,
+        "Captured": false
+      },
+      "restSecondsByZone": {
+        "R5": 60,
+        "R4": 60,
+        "C": 60,
+        "B": 60,
+        "A": 60,
+        "R1": 60,
+        "R2": 60,
+        "R3": 60
+      }
+    },
+    "PetSortie": {
+      "RecoveredHealth": 100,
+      "RetreatDistance": 47.498111724853516,
+      "Checks": 144,
+      "HomeSamples": 135,
+      "Failures": [],
+      "Ok": true,
+      "Hits": {
+        "1": {
+          "At": 1000.25,
+          "Source": "Pet",
+          "Token": "pet:-2644:1000.050000:1:1",
+          "Amount": 12
+        },
+        "2": {
+          "At": 1011.75,
+          "Source": "Pet",
+          "Token": "pet:-2644:1011.550000:3:1",
+          "Amount": 12
+        },
+        "3": {
+          "At": 1041.55,
+          "Source": "Pet",
+          "Token": "pet:-2644:1041.350000:5:1",
+          "Amount": 12
+        }
+      }
+    }
+  },
+  "Offline": {
+    "BowChecks": 56,
+    "PetRulesChecks": 159,
+    "PetControllerDoubles": 29,
+    "HuntingCombatGroups": 6,
+    "BowChargeRegression": "passed"
+  },
+  "OtherEngine": {
+    "PetControllerRegressionChecks": 83,
+    "PetPath": {
+      "Seconds": 4.37864,
+      "PathObserved": true,
+      "Detoured": true,
+      "CrossedWall": false,
+      "RemainingDistance": 0.6687
+    }
+  },
+  "Boundary": [
+    "Pet sortie uses real controller/rig/animator and native queries on disposable geometry; fixed dinosaur damage sink is adapted.",
+    "Strafe Play test held D at speed8 with QA camera tracking the reticle onto the target; production code has no target lock.",
+    "No video was supplied; reproduced W movement with camera orbit at0/90/180 degrees.",
+    "No claim of testing every natural cliff/water edge, mobile device or concurrent multiplayer session."
+  ]
+}

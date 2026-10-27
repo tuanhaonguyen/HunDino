@@ -1,0 +1,204 @@
+{
+  "version": "HuntEconomyPlayValidation.1",
+  "place": "HunDino_DarkJungle_v2_4.rbxl",
+  "date": "2026-10-19",
+  "mainSession": {
+    "Initial": {
+      "Hammer": 1,
+      "Coins": 80
+    },
+    "DamageUpgrade": {
+      "Before": 2280,
+      "Hammer": 2,
+      "After": 2321.4,
+      "Delta": 41.40000000000009
+    },
+    "Returned": {
+      "State": "Closed",
+      "Iron": 6,
+      "PotionStored": 1,
+      "Result": "Defeated",
+      "Coins": 100
+    },
+    "Entry": {
+      "Potions": 1,
+      "Ores": 6,
+      "State": "Hunting",
+      "Traps": 0,
+      "Coins": 60
+    },
+    "Mining": {
+      "Remaining": 0,
+      "Iron": 6
+    },
+    "Defeated": {
+      "Iron": 6,
+      "Bone": 1,
+      "Drop": true,
+      "Carves": 0,
+      "Result": "Defeated",
+      "Coins": 100
+    },
+    "DropFinal": {
+      "Scale": 3,
+      "Collected": false
+    },
+    "Upgraded": {
+      "Hammer": 2,
+      "Bone": 0,
+      "Iron": 4,
+      "Multiplier": 1.15,
+      "Coins": 140
+    },
+    "Carved": {
+      "Carves": 2,
+      "Scale": 1,
+      "Tooth": 0,
+      "Bone": 1,
+      "Skin": 1
+    },
+    "FailedRetains": {
+      "State": "Closed",
+      "Iron": 7,
+      "Potions": 1,
+      "Bone": 1,
+      "Result": "Failed",
+      "Coins": 100
+    },
+    "Drop": {
+      "Scale": 1,
+      "Collected": false
+    },
+    "BuyReplay": {
+      "RawTrap": 1,
+      "Coins": 70
+    },
+    "CarvedFinal": {
+      "Scale": 1,
+      "Tooth": 0,
+      "Skin": 2,
+      "Carves": 3
+    },
+    "Crafted": {
+      "IronTrap": 1,
+      "RawTrap": 0,
+      "Iron": 6
+    },
+    "Captured": {
+      "Potions": 0,
+      "Scale": 3,
+      "Traps": 0,
+      "Coins": 140,
+      "State": "Harvest",
+      "Bone": 2,
+      "HP": 120,
+      "Tooth": 2,
+      "Result": "Captured",
+      "Skin": 3
+    }
+  },
+  "freshFinalSourceSession": {
+    "Potions": 0,
+    "PromptLOS": false,
+    "Closed": {
+      "State": "Closed",
+      "Iron": 1,
+      "Scale": 1,
+      "Bone": 0,
+      "Result": "Failed",
+      "Coins": 80
+    },
+    "Pickup": {
+      "Scale": 1,
+      "Collected": true,
+      "Iron": 1
+    },
+    "StartCoins": 80,
+    "Traps": 0,
+    "StartHammer": 1
+  },
+  "rules": {
+    "checks": 767,
+    "groups": 23,
+    "passed": true
+  },
+  "questRules": {
+    "checks": 231,
+    "groups": 15,
+    "passed": true
+  },
+  "nativeHarvest": {
+    "ok": true,
+    "boundary": "Cloned production controller, native Humanoid/raycast/overlap/Instance; fake owner and idempotent inventory. No production source, player, dinosaur or Terrain mutation.",
+    "checks": 121,
+    "skipped": [],
+    "cases": 21,
+    "version": "HuntHarvestIntegration.1",
+    "elapsedSeconds": 0.14085602760314941,
+    "failures": [],
+    "passed": 121
+  },
+  "nativeCombat": {
+    "ok": true,
+    "checks": 96,
+    "passed": 96,
+    "final": {
+      "AttackSequence": 0,
+      "AttackBoxSize": "26, 16, 36",
+      "Time": 12.860000000000051,
+      "Health": 1200,
+      "State": "Idle",
+      "TargetUserId": 0,
+      "AttackHits": 0,
+      "AttackPhase": "Idle",
+      "Trapped": false,
+      "AttackBoxCFrame": {
+        "Rotation": "-0.9702715873718262, -4.440892098500626e-15, -0.24201864004135132, 3.019806626980426e-14, 1.0000003576278687, -1.7763568394002505e-15, 0.24201864004135132, -1.2434497875801753e-14, -0.9702715873718262",
+        "Position": "-430.6436767578125, 98.14999389648438, 6437.46484375"
+      },
+      "MaxHealth": 1200,
+      "Captured": false
+    },
+    "biteCooldownSeconds": 3.5,
+    "version": "DinosaurCombatTest.2",
+    "meleePoint": {
+      "heightAbovePlayer": 1.9999923706054688,
+      "distance": 7.540188312530518
+    },
+    "biteWindupSeconds": 0.95,
+    "failures": [],
+    "initial": {
+      "AttackSequence": 0,
+      "AttackBoxSize": "26, 16, 36",
+      "Time": 0,
+      "Health": 1200,
+      "State": "Idle",
+      "TargetUserId": 0,
+      "AttackHits": 0,
+      "AttackPhase": "Idle",
+      "Trapped": false,
+      "AttackBoxCFrame": {
+        "Rotation": "-0.9702715873718262, 0, -0.24201858043670654, 1.0658141036401503e-14, 1.0000003576278687, 4.440892098500626e-16, 0.24201858043670654, -4.440892098500626e-16, -0.9702715873718262",
+        "Position": "-430.6434326171875, 98.14999389648438, 6437.46484375"
+      },
+      "MaxHealth": 1200,
+      "Captured": false
+    },
+    "restSecondsByZone": {
+      "R5": 60,
+      "R4": 60,
+      "C": 60,
+      "B": 60,
+      "A": 60,
+      "R1": 60,
+      "R2": 60,
+      "R3": 60
+    }
+  },
+  "limits": [
+    "Server-memory profile only; new Play starts at80coins/level1/no materials/consumables, explicitly verified.",
+    "Tool-assisted character positioning and temporary1000HP in Play for repeatability; restored100, never changed monster HP to grant rewards.",
+    "Old main-session scale prompt was occluded and uncollected; corrected prompt config and verified real G pickup + failed-run retention in fresh final-source Play.",
+    "No mobile, hunting teams or DataStore/specimen storage claimed."
+  ]
+}

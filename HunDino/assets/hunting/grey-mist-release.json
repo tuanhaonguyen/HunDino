@@ -1,0 +1,37 @@
+{
+  "version": "H2.0",
+  "date": "2026-10-19",
+  "file": "HunDino_DarkJungle_v2_3.rbxl",
+  "bytes": 4163257,
+  "sha256": "5e5323c4d59bfe1c815b1cb68674dc62106fb801904ad19711342358e5010521",
+  "savedBy": "Roblox Studio native Save",
+  "nativeSavedReopenValidation": {
+    "passed": 39081,
+    "failures": 0
+  },
+  "savedPlaceInspector": {
+    "passed": 26259,
+    "compiledScripts": 75,
+    "canonicalSourceBindings": 16,
+    "preservedLobbyBasePortalParts": 15089,
+    "archivedForestParts": 8348
+  },
+  "routeIntegration": {
+    "passed": 148,
+    "cycles": 6,
+    "groundAndFootprintQueriesEach": 5917
+  },
+  "combatIntegration": {
+    "passed": 96
+  },
+  "clockIntegration": {
+    "passed": 12
+  },
+  "offlineHuntingWeaponRuleGroups": 6,
+  "livePlayPassed": true,
+  "mainMapDimensions": [
+    4000,
+    4500
+  ],
+  "trees": 2400
+}

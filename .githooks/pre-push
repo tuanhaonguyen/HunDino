@@ -1,0 +1,8 @@
+#!/bin/sh
+root=$(git rev-parse --show-toplevel) || exit 1
+case "$(uname -s)" in
+  MINGW*|MSYS*|CYGWIN*)
+    exec powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$root/scripts/run-hook.ps1" "$@"
+    ;;
+  *) exec python3 "$root/scripts/pre_push.py" "$@" ;;
+esac

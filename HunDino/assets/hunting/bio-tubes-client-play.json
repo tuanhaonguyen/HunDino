@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "version": "BioTubeClientQA.1",
+  "checks": 535,
+  "Slots": {
+    "1": {
+      "bobStuds": -0.09733963012695312,
+      "cables": 14,
+      "rotationDegrees": 10.536517044812946,
+      "expectedDegrees": 10.544331000055536,
+      "fixedCenter": false,
+      "injectorHeightConstant": true,
+      "elapsedSeconds": 1.0544331000055536
+    },
+    "2": {
+      "bobStuds": -0.09733963012695312,
+      "cables": 14,
+      "rotationDegrees": 10.536293356117628,
+      "expectedDegrees": 10.544331000055536,
+      "fixedCenter": false,
+      "injectorHeightConstant": true,
+      "elapsedSeconds": 1.0544331000055536
+    },
+    "3": {
+      "bobStuds": -0.09733963012695312,
+      "cables": 14,
+      "rotationDegrees": 10.536293356117628,
+      "expectedDegrees": 10.544331000055536,
+      "fixedCenter": false,
+      "injectorHeightConstant": true,
+      "elapsedSeconds": 1.0544331000055536
+    },
+    "4": {
+      "bobStuds": -0.09733963012695312,
+      "cables": 14,
+      "rotationDegrees": 10.536628889160605,
+      "expectedDegrees": 10.544331000055536,
+      "fixedCenter": false,
+      "injectorHeightConstant": true,
+      "elapsedSeconds": 1.0544331000055536
+    },
+    "5": {
+      "bobStuds": -0.09733963012695312,
+      "cables": 14,
+      "rotationDegrees": 0,
+      "expectedDegrees": 0,
+      "fixedCenter": true,
+      "injectorHeightConstant": true,
+      "elapsedSeconds": 1.0544331000055536
+    }
+  }
+}

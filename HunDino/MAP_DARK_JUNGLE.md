@@ -1,6 +1,22 @@
 # HunDino — Dark Jungle DJ.2.3
 
-**Bản hiện tại để mở: `HunDino_DarkJungle_v2_3.rbxl` trên Desktop/game roblox/HunDino.** Tiếp tục bản người dùng lưu ngày 08/10/2026. Bãi tập có bảy vũ khí và camera cung lệch vai. Đọc [hướng dẫn v2.3](TRAINING_SANCTUARY.md) để xem điều khiển, phạm vi và kiểm tra mới. Nội dung bên dưới lưu lịch sử đảo chính/v2.1; các chỗ nhắc bãi ba hình nộm chỉ áp dụng bản cũ.
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Tính năng trong tài liệu này được đối chiếu cùng bản chính hiện hành; các file v2.x/SaveGame, tham số và kết quả thử cũ trong phần dưới là mốc lịch sử, không tự chứng nhận toàn bộ bản mới. Phạm vi còn chờ: P1-G toàn vòng, cloud kinh tế/cá thể/ống, nhiều client và thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Bản hiện hành để chơi/chỉnh là [HunDino_DarkJungle_v2_4.rbxl](HunDino_DarkJungle_v2_4.rbxl) trong Documents/ChatGPT/game roblox/HunDino. Sảnh Dark Jungle giữ 12 base, có gán base ngẫu nhiên trong phiên, [bệ dịch chuyển](BASE_TRANSIT.md), bãi tập bảy vũ khí và đường đền đã sửa. Khu săn H2.0 nằm riêng tại offset `(0,0,6500)` trong cùng Place, nối Pet/nhiệm vụ/kinh tế/kho cá thể; xem [README](README.md) và [Thung Lũng Sương Xám](GREY_MIST_VALLEY.md).
+
+Mô tả đảo v2.1, đường dẫn Desktop, hash, số lượng vật thể và kết quả thử bên dưới giữ lịch sử. Nước trang trí của sảnh không đại diện Terrain/nước của khu săn. Chưa có trưng bày cá thể hoặc lưu tài khoản.
+
+## Hồ sơ đảo Dark Jungle v2.1–v2.3
+
+**Mốc lịch sử 08/10: `HunDino_DarkJungle_v2_3.rbxl` trên Desktop/game roblox/HunDino.** Tiếp tục bản người dùng lưu ngày 08/10/2026. Bãi tập có bảy vũ khí và camera cung lệch vai. Đọc [hướng dẫn v2.3](TRAINING_SANCTUARY.md) để xem điều khiển, phạm vi và kiểm tra mới. Nội dung bên dưới lưu lịch sử đảo chính/v2.1; các chỗ nhắc bãi ba hình nộm chỉ áp dụng bản cũ.
 
 Ngày cập nhật: 07/10/2026. Bản v2.1 sửa trực tiếp từ **v2 trên Desktop đã được bạn lưu trong Studio**. Bản v2 gốc được giữ nguyên và sao lưu; không dựng lại cây, nhà, địa hình hay vị trí bãi tập từ bản cũ.
 
@@ -11,7 +27,7 @@ Ngày cập nhật: 07/10/2026. Bản v2.1 sửa trực tiếp từ **v2 trên D
 - Phủ kín 63 ô lòng hồ/sông/đầm bằng 23 mặt nước nối nhau, mặt nước tại Y = 2, thấp hơn đường/cầu. Di chuyển bọt nước ở chân thác lên mặt hồ. Đây vẫn là nước trang trí; chưa triển khai bơi/lặn.
 - Xác nhận trong Play bằng phím thực tế: V, Space, Space rồi V, V rồi Space/V, giữ Space và sau hồi sinh. Đi/về qua cổng bằng G, xóa thống kê và pet theo về cũng đã kiểm tra. Chi tiết tại [kết quả kiểm tra](TEST_DARK_JUNGLE_V2_1.md).
 
-## Mở đúng file
+## Cách mở mốc v2.1 cũ — không phải bản phát triển hiện hành
 
 Mở `C:\Users\khanh\OneDrive\Desktop\game roblox\HunDino\HunDino_DarkJungle_v2_1.rbxlx` bằng Roblox Studio. Nhấn **F5** để chơi thử; **Shift + F5** để dừng.
 

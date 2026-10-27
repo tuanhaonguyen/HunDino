@@ -1,0 +1,46 @@
+{
+  "Date": "2026-10-22",
+  "Timezone": "Asia/Bangkok",
+  "LocalPlace": "HunDino_SaveGame.rbxl",
+  "CloudPlaceId": 103801986821599,
+  "CloudGameId": 10772272829,
+  "Studio": {
+    "SettingsSaveAndRedeemVisible": true,
+    "EmptySubmitDisabled": true,
+    "PhysicalTextboxClickKeepsPanelOpenAndFocusesInput": true,
+    "InvalidCode": "QA-INVALID-CODE",
+    "ServerResponse": "Mã không hợp lệ. Kiểm tra lại code đã nhập.",
+    "CoinsAfterInvalidCode": 80,
+    "SkinAfterInvalidCode": 0,
+    "StorageMode": "LocalFile"
+  },
+  "RobloxPlayer": {
+    "Client": "Roblox Player VNG",
+    "RejoinedAfterPublishing": true,
+    "SettingsSaveAndRedeemVisible": true,
+    "PersistedAimSensitivityPercent": 75,
+    "EmptySubmitDisabled": true,
+    "TextboxAcceptsNativeKeyboardInput": true,
+    "BackdropNoLongerClosesPanelOnTextboxClick": true,
+    "InvalidCode": "QA-INVALID-CODE",
+    "ServerResponse": "Mã không hợp lệ. Kiểm tra lại code đã nhập.",
+    "AccountSavedAtDisplayed": "01:33:04 UTC+7"
+  },
+  "AdminCodeSubmitted": false,
+  "ProgressReset": false,
+  "Backup": "backups/savegame-before-redeem-20261022/",
+  "Validation": {
+    "MergedEconomyChecks": 346,
+    "MergedEconomyGroups": 11,
+    "NativePlaceChecks": 406,
+    "ScriptsCompiled": 139,
+    "WorkspaceParts": 47064,
+    "ReadableTerrainPropertiesCompared": 66,
+    "SHA256": "8e92ddca25f1211d2104c91031b7210706d7519248bd8354e895510f52eb8c5f"
+  },
+  "Limitations": [
+    "The valid admin code remains unused for its owner to redeem.",
+    "The cloud test verifies code UI, invalid-code server response and retention of saved preferences; it does not replace full economy regression testing.",
+    "The inspector cannot decode Terrain.VoxelGridAssetContentMap; the file was saved by native Roblox Studio."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "HunDino: setup", "type": "shell", "command": "powershell", "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/setup.ps1"], "problemMatcher": []},
+    {"label": "HunDino: check", "type": "shell", "command": "powershell", "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/check.ps1"], "problemMatcher": []},
+    {"label": "HunDino: push developer", "type": "shell", "command": "powershell", "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/push-developer.ps1", "-Message", "${input:commitMessage}"], "problemMatcher": []}
+  ],
+  "inputs": [{"id": "commitMessage", "type": "promptString", "description": "Mô tả thay đổi trong commit"}]
+}

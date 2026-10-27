@@ -1,0 +1,64 @@
+{
+  "version": "AdminRedeemPlayValidation.1",
+  "date": "2026-10-21",
+  "placeId": 103261391098991,
+  "adminUserId": 11605296816,
+  "codeConsumedOnRealAccount": false,
+  "serverQa": {
+    "RealPlayerTouched": false,
+    "Groups": 6,
+    "Checks": 156,
+    "Passed": [
+      "Server rejects other accounts and malformed client payloads",
+      "Missing durable profile and rate limiting block reward requests",
+      "Reward reply follows durable commit; duplicate and rejoin cannot grant again",
+      "Before-write outage never reports success; saved retry installs one reward",
+      "Lost write response preserves uncertainty and resolves exactly one committed grant",
+      "Concurrent redemption is gated while the first commit is in flight"
+    ],
+    "Backend": "IsolatedFakeUpdateAsync"
+  },
+  "client": {
+    "entry": "Settings -> Nhap code",
+    "entryClick": true,
+    "emptyInputDisabled": true,
+    "invalidCodeRequest": "QA-INVALID-CODE",
+    "invalidCodeReply": "Ma khong hop le",
+    "backToSettings": true,
+    "originalSettingsPreserved": true,
+    "coinsAfter": 80,
+    "materialsAfter": {
+      "Skin": 0,
+      "Tooth": 0,
+      "Scale": 0,
+      "Bone": 0,
+      "Iron": 0
+    }
+  },
+  "dependencyRepair": {
+    "reason": "Cloud place economy source already required missing BioTubeService; restored canonical source dependencies",
+    "modules": [
+      "BioTubeGeometry",
+      "BioTubeSpecimen",
+      "BioTubeService"
+    ],
+    "staticGeometryWrites": 0,
+    "runtimeTubeWorldBuilt": true
+  },
+  "limits": [
+    "Success/duplicate/failure cases use actual service methods with isolated fake accounts and UpdateAsync backends",
+    "Real admin reward left unclaimed"
+  ],
+  "nativeSave": {
+    "snapshot": "HunDino_AdminTest_20261021.rbxl",
+    "bytes": 4285326,
+    "sha256": "926f6b57297fe1ea103985cc26ec56a8e96414b7fb34657b64887632b687c8da",
+    "validation": "passed",
+    "compiledScripts": 129,
+    "canonicalSources": 7,
+    "sourceBackups": 3,
+    "staticGeometryPreserved": true,
+    "opaqueTerrainPreserved": true,
+    "publishedLive": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "HunDino",
+  "tree": {
+    "$className": "DataModel",
+    "$ignoreUnknownInstances": true,
+    "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
+      "Shared": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "EquipmentInventory": {
+          "$path": "src/dark-jungle/EquipmentInventory.luau"
+        }
+      }
+    },
+    "ServerScriptService": {
+      "$ignoreUnknownInstances": true,
+      "HuntingRuntime": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "HuntEconomyRules": {
+          "$path": "src/hunting/HuntEconomyRules.luau"
+        },
+        "HuntEconomyService": {
+          "$path": "src/hunting/HuntEconomyService.luau"
+        },
+        "BioTubeGeometry": {
+          "$path": "src/hunting/BioTubeGeometry.luau"
+        },
+        "BioTubeSpecimen": {
+          "$path": "src/hunting/BioTubeSpecimen.luau"
+        },
+        "BioTubeService": {
+          "$path": "src/hunting/BioTubeService.luau"
+        }
+      },
+      "AccountData": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "ProfileSchema": {
+          "$path": "src/data/ProfileSchema.luau"
+        },
+        "ProfileConfig": {
+          "$path": "src/data/ProfileConfig.luau"
+        }
+      }
+    },
+    "StarterPlayer": {
+      "$ignoreUnknownInstances": true,
+      "StarterPlayerScripts": {
+        "$ignoreUnknownInstances": true,
+        "HunDinoBioTubeMotion": {
+          "$path": "src/hunting/BioTubeMotion.client.luau"
+        }
+      }
+    },
+    "ServerStorage": {
+      "$ignoreUnknownInstances": true,
+      "SpecimenTubesBackup_20261021": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "EquipmentInventory": {
+          "$path": "backups/specimen_tubes_20261021/scripts/src__dark-jungle__EquipmentInventory.luau"
+        },
+        "HuntEconomyRules": {
+          "$path": "backups/specimen_tubes_20261021/scripts/src__hunting__HuntEconomyRules.luau"
+        },
+        "HuntEconomyService": {
+          "$path": "backups/specimen_tubes_20261021/scripts/HuntEconomyService.luau"
+        },
+        "ProfileSchema": {
+          "$path": "backups/specimen_tubes_20261021/scripts/src__data__ProfileSchema.luau"
+        }
+      }
+    },
+    "Workspace": {
+      "SpecimenTubeDisplays": {
+        "$path": "assets/hunting/BioTubeDisplays.rbxm"
+      },
+      "$ignoreUnknownInstances": true
+    }
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "Ok": true,
+  "BaseCount": 12,
+  "Version": "BaseClearancePlay.1",
+  "Storage": "TestMemory",
+  "Cases": [
+    {
+      "DistanceFromArrival": 952.4627075195312,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.48138504091494,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 1,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 919.82421875,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.699705123901367,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.679725997135236,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 2,
+      "DistanceFromCenter": 0.3502941131591797
+    },
+    {
+      "DistanceFromArrival": 805.6190185546875,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.539673613159064,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 3,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 657.0759887695312,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.780371166933264,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 4,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 566.7778930664062,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.662964624640825,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 5,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 618.34130859375,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.32893453218979,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 6,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 761.1952514648438,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.686402123858297,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 7,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 892.5657958984375,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.679553094433437,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 8,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 622.4334106445312,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.634003443969398,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 9,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 491.5015869140625,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.52423171914994,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 10,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 237.1399383544922,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.60937575924865,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 11,
+      "DistanceFromCenter": 0.3502922058105469
+    },
+    {
+      "DistanceFromArrival": 449.54254150390625,
+      "Arrived": true,
+      "Root": [
+        -23,
+        22.69970703125,
+        193
+      ],
+      "TubeBlockers": 0,
+      "ReturnedViaG": true,
+      "WalkDistance": 22.609284206517223,
+      "Area": "Lobby",
+      "ProfileReady": true,
+      "BaseOwnershipPreserved": true,
+      "Base": 12,
+      "DistanceFromCenter": 0.3502922058105469
+    }
+  ],
+  "RealAccountDataTouched": false
+}

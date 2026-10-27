@@ -1,0 +1,70 @@
+{
+  "StorageMode": "TestMemory",
+  "Errors": [],
+  "Passed": 258,
+  "Cases": {
+    "MalformedSpecimen": true,
+    "InvalidSlot": true,
+    "InvalidSpecimen": true,
+    "WeaponDrawn": true,
+    "OtherBase": true,
+    "TooFar": true
+  },
+  "Version": "BioTubePlayQA.1",
+  "OwnedSpecimens": 5,
+  "Ok": true,
+  "Checks": 258,
+  "BaseId": 8,
+  "Slots": {
+    "1": {
+      "Beams": 14,
+      "Radius": 3.8,
+      "SurfaceRaycasts": 14,
+      "DegreesPerSecond": 10,
+      "Fluid": 4,
+      "Height": 4.152756214141846,
+      "Parts": 255,
+      "Pierces": 14
+    },
+    "2": {
+      "Beams": 14,
+      "Radius": 3.8,
+      "SurfaceRaycasts": 14,
+      "DegreesPerSecond": 10,
+      "Fluid": 4,
+      "Height": 4.152756214141846,
+      "Parts": 255,
+      "Pierces": 14
+    },
+    "3": {
+      "Beams": 14,
+      "Radius": 3.8,
+      "SurfaceRaycasts": 14,
+      "DegreesPerSecond": 10,
+      "Fluid": 4,
+      "Height": 4.152756214141846,
+      "Parts": 255,
+      "Pierces": 14
+    },
+    "4": {
+      "Beams": 14,
+      "Radius": 3.8,
+      "SurfaceRaycasts": 14,
+      "DegreesPerSecond": 10,
+      "Fluid": 4,
+      "Height": 4.152756214141846,
+      "Parts": 255,
+      "Pierces": 14
+    },
+    "5": {
+      "Beams": 14,
+      "Radius": 3.8,
+      "SurfaceRaycasts": 14,
+      "DegreesPerSecond": 0,
+      "Fluid": 4,
+      "Height": 4.152756214141846,
+      "Parts": 255,
+      "Pierces": 14
+    }
+  }
+}

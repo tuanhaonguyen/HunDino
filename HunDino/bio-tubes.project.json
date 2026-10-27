@@ -1,0 +1,139 @@
+{
+  "name": "HunDino",
+  "tree": {
+    "$className": "DataModel",
+    "$ignoreUnknownInstances": true,
+    "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
+      "Shared": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "EquipmentInventory": {
+          "$path": "src/dark-jungle/EquipmentInventory.luau"
+        }
+      }
+    },
+    "ServerScriptService": {
+      "$ignoreUnknownInstances": true,
+      "AccountData": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "ProfileConfig": {
+          "$path": "src/data/ProfileConfig.luau"
+        },
+        "ProfileSchema": {
+          "$path": "src/data/ProfileSchema.luau"
+        }
+      },
+      "AdminFly": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true
+      },
+      "HunDinoTraining": {
+        "$className": "Script",
+        "$ignoreUnknownInstances": true
+      },
+      "HuntingRuntime": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "BioTubeGeometry": {
+          "$path": "src/hunting/BioTubeGeometry.luau"
+        },
+        "BioTubeService": {
+          "$path": "src/hunting/BioTubeService.luau"
+        },
+        "BioTubeSpecimen": {
+          "$path": "src/hunting/BioTubeSpecimen.luau"
+        },
+        "HuntEconomyRules": {
+          "$path": "src/hunting/HuntEconomyRules.luau"
+        },
+        "HuntEconomyService": {
+          "$path": "src/hunting/HuntEconomyService.luau"
+        }
+      },
+      "JungleTraversal": {
+        "$className": "Script",
+        "$ignoreUnknownInstances": true
+      }
+    },
+    "ServerStorage": {
+      "$ignoreUnknownInstances": true,
+      "SpecimenTubesBackup_20261021": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "EquipmentInventory": {
+          "$path": "backups/specimen_tubes_20261021/scripts/src__dark-jungle__EquipmentInventory.luau"
+        },
+        "HuntEconomyRules": {
+          "$path": "backups/specimen_tubes_20261021/scripts/src__hunting__HuntEconomyRules.luau"
+        },
+        "HuntEconomyService": {
+          "$path": "backups/specimen_tubes_20261021/scripts/HuntEconomyService.luau"
+        },
+        "ProfileSchema": {
+          "$path": "backups/specimen_tubes_20261021/scripts/src__data__ProfileSchema.luau"
+        }
+      }
+    },
+    "StarterPlayer": {
+      "$ignoreUnknownInstances": true,
+      "StarterPlayerScripts": {
+        "$ignoreUnknownInstances": true,
+        "ConnectedHuntingViewer": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoAdminFly": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoBioTubeMotion": {
+          "$path": "src/hunting/BioTubeMotion.client.luau"
+        },
+        "HunDinoDarkStep": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoEconomy": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoHoldProgress": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoHuntQuest": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoPetAnimation": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoPetCompanion": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoProfileStatus": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoTraining": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        },
+        "HunDinoWeaponEffects": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true
+        }
+      }
+    },
+    "Workspace": {
+      "$ignoreUnknownInstances": true,
+      "SpecimenTubeDisplays": {
+        "$path": "assets/hunting/BioTubeDisplays.rbxm"
+      }
+    }
+  }
+}

@@ -275,6 +275,26 @@ local success, errorMessage = xpcall(function()
 	check(combat:GetSnapshot().Health == combat:GetSnapshot().MaxHealth
 		and combat:GetSnapshot().AttackSequence == 0 and combat:GetSnapshot().AttackPhase == "Idle",
 		"Fresh session reset did not restore health and clear combat")
+	-- One E volley may hit one target three times, including in the same server
+	-- step. Network replays of a particular arrow remain idempotent.
+	point = assert(combat:GetClosestHitPoint(playerRoot.Position + Vector3.new(0,2,0),60))
+	local beforeVolley=combat:GetSnapshot().Health
+	for arrow=1,3 do
+		check(combat:Damage(hunter,24,point,"tam-tien:arrow:"..arrow,"Projectile")==24,"Each Tam Tien arrow deals 24")
+	end
+	check(combat:GetSnapshot().Health==beforeVolley-72,"Tam Tien single target total is 72")
+	check(combat:Damage(hunter,24,point,"tam-tien:arrow:2","Projectile")==0,"Replaying one arrow cannot deal damage twice")
+	check(combat:Damage(hunter,24,point,"ordinary-same-frame")==0,"Ordinary attack cooldown remains enforced")
+	combat:Reset()
+	point = assert(combat:GetClosestHitPoint(playerRoot.Position + Vector3.new(0,2,0),60))
+	for i=1,5 do check(combat:Damage(hunter,200,point,"weak-setup:"..i,"Projectile")==200,"Weak threshold setup") end
+	check(combat:Damage(hunter,79,point,"weak-setup:last","Projectile")==79,"Set target to 121 HP")
+	check(combat:Damage(hunter,12,point,"pet-threshold","Pet")==1,"Pet damage clamps exactly at ten percent")
+	check(combat:GetSnapshot().Health==120 and clone:GetAttribute("Weak")==true,"Capture threshold stays alive")
+	step(.1)
+	check(combat:Damage(hunter,12,point,"pet-below-threshold","Pet")==0,"Pet cannot damage a weak target")
+	check(combat:Damage(hunter,120,point,"player-may-finish","Projectile")==120,"Player still decides to defeat instead of capture")
+	combat:Reset()
 	report.final = combat:GetSnapshot()
 end, debug.traceback)
 

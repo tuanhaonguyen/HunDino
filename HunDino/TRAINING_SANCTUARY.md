@@ -1,5 +1,21 @@
 # HunDino — Bãi luyện tập v2.3
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> Tính năng trong tài liệu này được đối chiếu cùng bản chính hiện hành; các file v2.x/SaveGame, tham số và kết quả thử cũ trong phần dưới là mốc lịch sử, không tự chứng nhận toàn bộ bản mới. Phạm vi còn chờ: P1-G toàn vòng, cloud kinh tế/cá thể/ống, nhiều client và thiết bị thật.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
+**Cập nhật lớp lưu 20/10/2026:** v2.4 đã nối dữ liệu tiến trình vào hồ sơ tài khoản; xem [PERSISTENCE.md](PERSISTENCE.md) và thiết kế mục 39. Kiểm logic/Studio test đã có; nghiệm thu cloud qua thoát/vào còn chờ game xuất bản. Các câu chỉ giữ trong phiên và số liệu dưới đây thuộc mốc trước lớp lưu.
+
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Bãi tập v2.3 được kế thừa trong **v2.4** cùng sảnh 12 base và map săn H2.0. Hiện có model/VFX Pro, Người/Pet chọn trang bị độc lập, chuột trái tụ cung, lướt **72/0,5 giây/6 thể lực**, Pet P1-C, nhiệm vụ P1-D, kinh tế P1-E và kho cá thể P1-F bước đầu. Xem [bảng tài liệu hiện hành](README.md), [combo](COMBOS_V2_3.md) và [Inventory](INVENTORY.md).
+
+Các kết quả ngày 07–09/10 và quy trình dựng cũ bên dưới giữ lịch sử; không dùng chúng để kết luận v2.4 đã hoàn thành lưu tài khoản, săn đội hoặc điện thoại.
+
 **Đợt combo/UI 08/10/2026:** phạm vi và thông số mới ở [COMBOS_V2_3.md](COMBOS_V2_3.md), thay các mô tả combo/thể lực cũ bên dưới. Mỗi vũ khí có bốn chuỗi, có lướt nối và múa; mọi chi phí còn 30%. UI dùng bốn icon người dùng, Shop chưa giao dịch. Thiết kế cập nhật tại 25.8; việc dọn file ở [DON_DEP_DU_AN.md](DON_DEP_DU_AN.md).
 
 Kiểm tra đợt này:
@@ -16,7 +32,7 @@ Cập nhật ngày 08/10/2026, tiếp tục bản v2.3 người dùng đã lưu 
 
 ## File để chơi và chỉnh tiếp
 
-Mở **C:\Users\khanh\OneDrive\Desktop\game roblox\HunDino\HunDino_DarkJungle_v2_3.rbxl** bằng Roblox Studio, rồi nhấn Play. Tiếp tục lưu định dạng `.rbxl`: bản XML v2.2 từng bị đổi mã một số bảng khi Studio lưu lại. Bản người dùng v2.3 trước lần sửa này đã sao lưu trong `backups/HunDino_v2_3_user_6293a5ddc15f.rbxl`. Source ở Documents; khi chỉnh tiếp bằng Studio, dùng bản Desktop, không chép đè bằng bản Documents cũ.
+Mở [HunDino_DarkJungle_v2_4.rbxl](HunDino_DarkJungle_v2_4.rbxl) tại `C:/Users/khanh/OneDrive/Documents/ChatGPT/game roblox/HunDino/HunDino_DarkJungle_v2_4.rbxl` bằng Roblox Studio, rồi nhấn Play. Lưu tiếp bằng Studio ở định dạng `.rbxl` để giữ Terrain và tiếng Việt. v2.3/Desktop là mốc trước; không chép đè bản v2.4 bằng bản cũ. Backup `backups/HunDino_v2_3_user_6293a5ddc15f.rbxl` thuộc lần mở rộng bãi tập 08/10.
 
 ## Bãi tập mới
 
@@ -58,7 +74,7 @@ Ngắm cung dùng camera lệch vai phải: nhân vật nằm bên trái khung h
 | Cung | Ngắm, bắn thường/mạnh, kỹ năng ba mũi; ngắm rồi lướt tăng sát thương một mũi tên kế tiếp trong 4 giây, không cộng dồn |
 | Rìu đại hai lưỡi | Đòn chậm, sát thương và tiêu thể lực lớn |
 
-Mỗi loại có mô hình, sát thương, tầm đánh, nhịp và thể lực riêng trong `src/dark-jungle/Weapons.luau`. Đây là **thông số thử**, chưa chốt cân bằng toàn game. Mô hình và chuyển động vũ khí dùng Part/weld để thử chơi, chưa phải bộ mesh/animation cuối. Khiên hiện có thế đỡ; chưa kiểm chứng giảm sát thương vì bãi tập chưa có địch tấn công. Cung dùng raycast máy chủ và hiệu ứng mũi tên bay, chưa mô phỏng đường đạn cong. Không PvP, thưởng hoặc lưu trang bị theo tài khoản.
+Mỗi loại có mô hình, sát thương, tầm đánh, nhịp và thể lực riêng trong `src/dark-jungle/Weapons.luau`. Đây là **thông số thử**, chưa chốt cân bằng toàn game. Mô hình và chuyển động vũ khí dùng Part/weld để thử chơi, chưa phải bộ mesh/animation cuối. Khiên hiện có thế đỡ; chưa kiểm chứng giảm sát thương vì bãi tập chưa có địch tấn công. Cung dùng raycast máy chủ và hiệu ứng mũi tên bay, chưa mô phỏng đường đạn cong. Hình nộm bãi tập không phát thưởng; vòng săn hiện có thưởng P1-E. Chưa có PvP hoặc lưu trang bị theo tài khoản.
 
 ## Kiểm tra ngày 07/10/2026
 
@@ -77,11 +93,11 @@ Kiểm tra bổ sung 08/10/2026 trên bản `.rbxl` v2.3:
 - Đang ghim tâm bằng Ctrl, mở Esc: menu mở, chuột về Default, tâm ngắm ẩn. Không có lỗi gameplay trong Output.
 - Sau lưu lại v2.3 bằng Studio, kiểm tra UTF-8 và code nhúng khớp source đạt. Không ghi lại file bằng bộ dựng cũ.
 
-## Source và dựng lại
+## Source và quy trình dựng lịch sử — không dùng để cập nhật v2.4
 
 `tools/build-training-sanctuary.luau` chỉ tạo khu tập và mẫu vũ khí. `tools/merge-training-sanctuary.py` ghép vào bản v2.1 Desktop, sao lưu nguồn theo SHA256, bảo toàn hình học lobby/đảo và sửa mã chữ. Không dùng công cụ này để ghi đè các chỉnh sửa mới trong v2.2; nó kiểm tra hash bản dựng trước khi thay đầu ra. Kết quả nằm trong `TrainingSanctuary_manifest.json`.
 
-Chạy từ thư mục HunDino trong Documents:
+Các lệnh sau ghi lại quy trình dựng/kiểm tra bãi tập ở mốc cũ; **không chạy bộ dựng hoặc merge lên v2.4**. Khi cần sửa bản hiện hành, chỉnh đúng source trong Studio và lưu native. Lệnh lịch sử chạy từ thư mục HunDino trong Documents:
 
 ```powershell
 .\tools\lune\lune.exe run tools/build-training-sanctuary.luau

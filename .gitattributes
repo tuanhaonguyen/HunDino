@@ -1,0 +1,4 @@
+.githooks/* text eol=lf
+.github/** text eol=lf
+scripts/*.py text eol=lf
+scripts/*.luau text eol=lf

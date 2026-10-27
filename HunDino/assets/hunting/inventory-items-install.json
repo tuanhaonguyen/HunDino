@@ -1,0 +1,26 @@
+[
+  {
+    "className": "ModuleScript",
+    "file": "src/dark-jungle/EquipmentInventory.luau",
+    "key": "EquipmentInventory",
+    "newHash": 3191437693,
+    "oldHash": 1548962260,
+    "path": "ReplicatedStorage.Shared.EquipmentInventory"
+  },
+  {
+    "className": "ModuleScript",
+    "file": "src/hunting/HuntEconomyService.luau",
+    "key": "HuntEconomyService",
+    "newHash": 789924196,
+    "oldHash": 1495163432,
+    "path": "ServerScriptService.HuntingRuntime.HuntEconomyService"
+  },
+  {
+    "className": "LocalScript",
+    "file": "src/hunting/HuntEconomy.client.luau",
+    "key": "HuntEconomyClient",
+    "newHash": 885438404,
+    "oldHash": 3587619381,
+    "path": "StarterPlayer.StarterPlayerScripts.HunDinoEconomy"
+  }
+]

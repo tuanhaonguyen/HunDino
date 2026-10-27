@@ -1,0 +1,80 @@
+{
+  "baseline": "backups/Hub_v24_before_pet_companion_20261019.rbxl",
+  "baselineBytes": 4168290,
+  "canonicalSources": [
+    {
+      "saved": "ServerScriptService.HunDinoTraining",
+      "source": "studio-pet-integration/Training.server.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.DinosaurCombat",
+      "source": "src/hunting/DinosaurCombat.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.PetCombatRules",
+      "source": "src/hunting/PetCombatRules.luau"
+    },
+    {
+      "saved": "ServerScriptService.HuntingRuntime.PetCompanionController",
+      "source": "src/hunting/PetCompanionController.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoPetCompanion",
+      "source": "src/hunting/PetCompanion.client.luau"
+    },
+    {
+      "saved": "ServerScriptService.AdminFly.Main",
+      "source": "src/admin/AdminFly.server.luau"
+    },
+    {
+      "saved": "ServerScriptService.AdminFly.AdminFlyPolicy",
+      "source": "src/admin/AdminFlyPolicy.luau"
+    },
+    {
+      "saved": "StarterPlayer.StarterPlayerScripts.HunDinoAdminFly",
+      "source": "src/admin/AdminFly.client.luau"
+    }
+  ],
+  "checksPassed": 91867,
+  "compiledScripts": 86,
+  "dinosaur": {
+    "anchors": 1,
+    "meshes": 21,
+    "motors": 7,
+    "parts": 255,
+    "welds": 247
+  },
+  "intentionalOriginalScriptChanges": [
+    "ServerScriptService.HunDinoTraining",
+    "ServerScriptService.HuntingRuntime.DinosaurCombat"
+  ],
+  "map": {
+    "depth": 4500,
+    "paths": 16,
+    "trees": 2400,
+    "width": 4000,
+    "zones": 9
+  },
+  "originalScriptsPreserved": 79,
+  "petConfig": {
+    "AttackDamage": 12,
+    "AttackInterval": 4,
+    "AttackRange": 6,
+    "HealCastSeconds": 0.8,
+    "HealCooldown": 119,
+    "HealFraction": 0.7,
+    "HealRange": 3.8,
+    "MaxHealth": 100,
+    "MoveSpeed": 18,
+    "StunSeconds": 30
+  },
+  "preservedBaseParts": 43775,
+  "preservedJoints": 845,
+  "preservedWorkspaceBaseParts": 35064,
+  "preservedWorkspaceJoints": 723,
+  "savedBytes": 4177429,
+  "savedPlace": "HunDino_DarkJungle_v2_4.rbxl",
+  "terrain": "Not decoded or serialized; this inspector never writes a place",
+  "validation": "passed",
+  "version": "PetCompanionSavedValidation.1"
+}

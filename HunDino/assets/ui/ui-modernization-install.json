@@ -1,0 +1,77 @@
+{
+  "bindings": [
+    {
+      "className": "ModuleScript",
+      "existing": false,
+      "file": "src/dark-jungle/UITheme.luau",
+      "sourceSHA256": "28e5ab592154ecc354344c6d1f7c0b44d5c3b356ff1892cdba535f70eed64082",
+      "target": "ReplicatedStorage.Shared.UITheme"
+    },
+    {
+      "baselineSHA256": "d0377162506a2b6fe0b14b46382907f200a36e21ee3a2240c8361bc40ebe1c15",
+      "className": "ModuleScript",
+      "existing": true,
+      "file": "src/dark-jungle/EquipmentInventory.luau",
+      "sourceSHA256": "24b6c91fbdd28c834e8735b96af7a809ac7002201f84dcde5fbd4fe0ab0061cb",
+      "target": "ReplicatedStorage.Shared.EquipmentInventory"
+    },
+    {
+      "baselineSHA256": "a04441bc51f4432a998d55ac8527e984f4af8355e67e4b6360dbd9b67fcadd80",
+      "className": "ModuleScript",
+      "existing": true,
+      "file": "src/dark-jungle/HubUI.luau",
+      "sourceSHA256": "583cf2cc71d8b75c9e81c45ad77fdd27f2e7922b5536ee97989381ff18a2a81f",
+      "target": "ReplicatedStorage.Shared.HubUI"
+    },
+    {
+      "baselineSHA256": "188438677c5df2dd2423d99655a132d518ec3554001be519971924266b680a0f",
+      "className": "LocalScript",
+      "existing": true,
+      "file": "src/hunting/HuntQuest.client.luau",
+      "sourceSHA256": "48b1de2901023ec3ef10ddc1ce7fa6d5a29004cb769398f56960c68d2ac84702",
+      "target": "StarterPlayer.StarterPlayerScripts.HunDinoHuntQuest"
+    },
+    {
+      "baselineSHA256": "880120f4db87a94b4386b5cf58b4483dbfb5fb7c69419038e0d9bbfa55d7c015",
+      "className": "LocalScript",
+      "existing": true,
+      "file": "src/hunting/PetCompanion.client.luau",
+      "sourceSHA256": "2c2acd75e48e5b8785ab28191184f99acf121cbd4849b194f6f0dd1d3d598058",
+      "target": "StarterPlayer.StarterPlayerScripts.HunDinoPetCompanion"
+    },
+    {
+      "baselineSHA256": "b2ef9453ff72d7577cd6860c59ea183505f8a13aae83497db1a3fad7909b7147",
+      "className": "LocalScript",
+      "existing": true,
+      "file": "src/hunting/HuntEconomy.client.luau",
+      "sourceSHA256": "f43ac5e12d97aac044346a0516f12d3ed3b6c01ab0b52ac6f6c01d17534cbec7",
+      "target": "StarterPlayer.StarterPlayerScripts.HunDinoEconomy"
+    },
+    {
+      "baselineSHA256": "4645a51e9498e63e3e02c8bec715e5f136bd036c2a56456ac33aecef9592ec5d",
+      "className": "LocalScript",
+      "existing": true,
+      "file": "studio-pet-integration/Training.client.luau",
+      "sourceSHA256": "14d4971347190fb47fd755a19c2df42033f4cef33b6b2cb00fd46b5c722507cf",
+      "target": "StarterPlayer.StarterPlayerScripts.HunDinoTraining"
+    },
+    {
+      "baselineSHA256": "dc7d0e256426799302c5d401074ba3130cc7aaa0a5240e7075b336a8d702b00c",
+      "className": "LocalScript",
+      "existing": true,
+      "file": "src/hunting/ConnectedHuntingViewer.client.luau",
+      "sourceSHA256": "09119459b4cfe7e3edca96360900694a676fa441624dbae7bff293e8af1470d1",
+      "target": "StarterPlayer.StarterPlayerScripts.ConnectedHuntingViewer"
+    },
+    {
+      "className": "LocalScript",
+      "existing": false,
+      "file": "src/hunting/HoldProgress.client.luau",
+      "sourceSHA256": "bb617781379618ec77f296d52601f1a1d813f7a0d1d02f8ef4551feb4e836e1a",
+      "target": "StarterPlayer.StarterPlayerScripts.HunDinoHoldProgress"
+    }
+  ],
+  "package": "assets/ui/HunDinoUIModernization.rbxm",
+  "sourceOnly": true,
+  "version": "UI.20261020.1"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "className": "ModuleScript",
+    "file": "src/dark-jungle/EquipmentInventory.luau",
+    "key": "EquipmentInventory",
+    "newHash": 4107399850,
+    "oldHash": 3191437693,
+    "path": "ReplicatedStorage.Shared.EquipmentInventory"
+  },
+  {
+    "className": "ModuleScript",
+    "file": "src/hunting/HuntEconomyRules.luau",
+    "key": "HuntEconomyRules",
+    "newHash": 3622884994,
+    "oldHash": 2209246928,
+    "path": "ServerScriptService.HuntingRuntime.HuntEconomyRules"
+  },
+  {
+    "className": "ModuleScript",
+    "file": "src/hunting/HuntEconomyService.luau",
+    "key": "HuntEconomyService",
+    "newHash": 413398405,
+    "oldHash": 789924196,
+    "path": "ServerScriptService.HuntingRuntime.HuntEconomyService"
+  },
+  {
+    "className": "ModuleScript",
+    "file": "src/hunting/HuntQuestService.luau",
+    "key": "HuntQuestService",
+    "newHash": 1156542043,
+    "oldHash": 2142119928,
+    "path": "ServerScriptService.HuntingRuntime.HuntQuestService"
+  },
+  {
+    "className": "ModuleScript",
+    "file": "src/hunting/HuntCaptureController.luau",
+    "key": "HuntCaptureController",
+    "newHash": 3991347195,
+    "oldHash": 1359476411,
+    "path": "ServerScriptService.HuntingRuntime.HuntCaptureController"
+  },
+  {
+    "className": "LocalScript",
+    "file": "src/hunting/HuntQuest.client.luau",
+    "key": "HuntQuestClient",
+    "newHash": 1305097099,
+    "oldHash": 3054173106,
+    "path": "StarterPlayer.StarterPlayerScripts.HunDinoHuntQuest"
+  },
+  {
+    "className": "ModuleScript",
+    "file": "src/hunting/SpecimenPreviewModel.luau",
+    "isNew": true,
+    "key": "SpecimenPreviewModel",
+    "newHash": 1654794255,
+    "path": "ServerScriptService.HuntingRuntime.SpecimenPreviewModel"
+  }
+]

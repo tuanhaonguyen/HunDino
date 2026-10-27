@@ -1,0 +1,20 @@
+{
+  "Checks": 74468,
+  "Place": "HunDino_HelloHunDino_20261022.rbxl",
+  "PublicCode": "HelloHunDino",
+  "RealPlayerCodeRedeemedByQA": false,
+  "Rewards": {
+    "Coins": 50,
+    "IronTrap": 2,
+    "RawTrap": 2,
+    "SleepPotion": 2
+  },
+  "SHA256": "43ace6bc27fb24d1f313aeea2b264aab1c35730f7a24db424748ce24bbf48363",
+  "ScriptsCompiled": 139,
+  "SourceBindings": 3,
+  "Tests": {
+    "AdminRegressionChecks": 346,
+    "PureChecks": 243,
+    "StudioServiceChecks": 127
+  }
+}

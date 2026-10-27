@@ -1,8 +1,22 @@
 # File đang dùng và kế hoạch dọn HunDino
 
+<!-- TIEN_DO_20261027_BEGIN -->
+> **Trạng thái đối chiếu 27/10/2026, 09:48 UTC+7:** local chính `HunDino_MerchantWeapons_20261026.rbxl` **4.495.025 byte**, SHA256 `8626bc714aa7a0da39493ba1bbcc676a142038b2f8a2c06e602fe01d522229bf`; inspector **129.779 kiểm / 164 source**, đạt. Cloud có bằng chứng mới nhất **v14**, nguồn **4.481.440 byte**; sửa bố cục ống mới chỉ local, **chưa Publish**.
+>
+> File chơi chính là MerchantWeapons; v2.4/SaveGame và các bản cũ là mốc đối chiếu. Không xóa backup hoặc dữ liệu local khi đọc báo cáo; xem phụ lục kiểm kê toàn dự án.
+>
+> [Báo cáo tiến độ toàn dự án và hôm nay](BAO_CAO_TIEN_DO_2026-10-27.md). Ghi chú này cập nhật trạng thái; số liệu/hash của từng mốc cũ bên dưới giữ nguyên theo phạm vi lúc kiểm.
+<!-- TIEN_DO_20261027_END -->
+
+**Đồng bộ tài liệu: 20/10/2026 — đối chiếu bản v2.4 đã lưu ngày 19/10/2026.**
+
+Kiểm kê trạng thái ngày 20/10: **bản làm việc là v2.4 trong Documents**, kế thừa các đợt đến kho cá thể ngày 19/10. File `HunDino_DarkJungle_v2_4.rbxl` hiện **4.220.334 byte (~4,02 MiB)**. Giữ toàn bộ `src/`, `studio-pet-integration/`, `assets/`, `tools/`, `.git/` ở thư mục gốc dự án và mọi `backups/`; giữ cả v2.3 và file săn/model riêng làm mốc nguồn.
+
+Tài liệu hiện hành gồm **27 file Markdown**: hai bản thiết kế tổng giống nhau, thiết kế map săn ở thư mục cha, README và 23 tài liệu chuyên đề/báo cáo trong HunDino. Danh mục đầy đủ ở [README](README.md). Đợt này không xóa/di chuyển file hoặc xác nhận lại cặp Desktop/Documents trùng nhau. Các số dung lượng và SHA256 so trùng phía dưới là kiểm kê **08/10**, chỉ có giá trị cho mốc đó; không dùng làm căn cứ xóa bản hiện hành.
+
 Kiểm kê 08/10/2026. Chưa xóa file nào. Dung lượng dưới đây là tổng kích thước file logic, không đo dung lượng OneDrive thực chiếm trên ổ.
 
-## Giữ để làm tiếp
+## Giữ để làm tiếp — danh sách lịch sử 08/10
 
 - `HunDino_DarkJungle_v2_3.rbxl` trên Desktop: file mở trong Studio. Documents có bản đồng bộ để kiểm tra.
 - `src/`, `assets/`, `tools/`, `.git/`: mã nguồn, icon gốc, kiểm tra và lịch sử. Giữ `tools/lune/lune.exe`; có thể bỏ gói nén tải về `tools/lune.zip`.
@@ -10,7 +24,7 @@ Kiểm kê 08/10/2026. Chưa xóa file nào. Dung lượng dưới đây là t�
 - Ít nhất một bản sao lưu v2.3 trước lần sửa gần nhất. Các bản `.rbxl` chỉ khoảng 0,4 MiB, nên giữ.
 - `HunDino_original.rbxl`: map nguồn cho bộ dựng cũ, dung lượng nhỏ.
 
-## Không cần để mở/chơi v2.3
+## File phụ ở mốc v2.3 — kiểm kê lịch sử 08/10
 
 Các file sau có thể đưa sang kho lưu trữ hoặc xóa nếu không cần quay lại mốc cũ. Nên giữ một bản của mỗi mốc muốn khôi phục; không cần giữ cả bản Desktop và Documents giống nhau.
 
@@ -34,7 +48,7 @@ Bốn bản sao lưu XML lớn trong mỗi `backups/`:
 
 Chúng chiếm **171.25 MiB mỗi thư mục**. Không cần cho v2.3 đang chạy; chỉ phục vụ quay lại lịch sử.
 
-## Bản trùng đã đối chiếu SHA256
+## Bản trùng đã đối chiếu SHA256 ngày 08/10 — chưa kiểm tra lại
 
 - `HunDino_DarkJungle_v1.rbxlx`: 2 bản giống hệt, có thể giữ một bản nếu cần lịch sử (16.68 MiB/bản).
 - `HunDino_DarkJungle_v2_1.rbxlx`: 2 bản giống hệt, có thể giữ một bản nếu cần lịch sử (51.68 MiB/bản).
@@ -49,7 +63,7 @@ Chúng chiếm **171.25 MiB mỗi thư mục**. Không cần cho v2.3 đang ch�
 - `backups\v2_2_before_bow_camera_studio_saved.rbxlx`: 2 bản giống hệt, có thể giữ một bản nếu cần lịch sử (53.73 MiB/bản).
 - `tools\lune.zip`: 2 bản giống hệt, có thể giữ một bản nếu cần lịch sử (4.94 MiB/bản).
 
-## Thứ tự dọn đề xuất
+## Đề xuất dọn ở mốc 08/10 — chưa thực hiện
 
 1. Xóa hai `tools/lune.zip` sẽ giảm khoảng 9,88 MiB; giữ `tools/lune/lune.exe`.
 2. Gom các mốc XML cũ vào một kho lưu trữ, bỏ bản sao trùng ở thư mục còn lại sau khi kiểm tra. Không cần xóa `.git`.
