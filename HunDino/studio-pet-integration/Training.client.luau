@@ -785,7 +785,7 @@ refresh=function()
 	if inHunting then stats.Text=weapon.Name..(if player:GetAttribute("Drawn") then " • Đã rút" else " • Đang cất")
 		.."\nSát thương săn: "..(player:GetAttribute("HuntingDamage") or 0) end
 	help.Text="R: Rút / cất • 1-7: Chọn đồ • B: Đổi tư thế • K: Đổi chỗ katana • I: Túi đồ\nChuột trái: Đánh thường • Q: Đánh mạnh\nE: "..weapon.Skill.."\nV: Nhảy • Space: Lướt\nShift: Chạy • Ctrl: Ghim tâm • G: Tương tác"
-		..(if id=="Bow" then "\nTay trái: Cầm cung • Tay phải: Kéo dây\nChuột trái: Chạm bắn nhanh / giữ tụ lực • Phải: Ngắm thủ công\nTự ngắm (Cài đặt): "..(if player:GetAttribute("AutoBowAim")==true then "BẬT" else "TẮT")..(if player:GetAttribute("BowBoost") then " • MŨI TÊN CƯỜNG HÓA" else "") elseif id=="SwordShield" then "\nF: Giữ thế đỡ" else "")
+  		..(if id=="Bow" then "\nTay trái: Cầm cung • Tay phải: Kéo dây\nChuột trái: Chạm bắn nhanh / giữ tụ lực • Phải: Ngắm thủ công\nTự ngắm (Cài đặt): "..(if player:GetAttribute("AutoBowAim")==true then "BẬT" else "TẮT")..(if player:GetAttribute("BowBoost") then " • MŨI TÊN CƯỜNG HÓA" else "") elseif id=="SwordShield" then "\nF: Giữ thế đỡ" else "")
 	if inHunting then help.Text..="\nKhủng long sẽ phản công khi bị đánh." end
 	help.Visible=not compactHUD and not inHunting and not menuOpen()
 	if player:GetAttribute("AdminFlying")==true then help.Text="ADMIN • BAY XEM MAP\nWASD: Di chuyển • Space / E: Lên\nCtrl / Q: Xuống • Shift: Bay nhanh\nBấm Dừng bay hoặc chat /fly để đáp xuống." end
